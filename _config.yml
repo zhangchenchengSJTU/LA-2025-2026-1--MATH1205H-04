@@ -1,2 +1,19 @@
 theme: minima   # or leave blank for default
-markdown: GFM
+
+markdown: CustomKramdown
+kramdown:
+  toc_levels: 1..6
+  input: GFM
+  auto_ids: true
+  # 强制目录使用有序列表
+  html_to_native: true
+  hard_wrap: false               # 禁用硬换行干扰
+  syntax_highlighter: rouge      # 避免语法高亮冲突
+  
+  
+  math_engine: mathjax
+ 
+syntax_highlighter: rouge
+hard_wrap: false
+
+mathjax: true
