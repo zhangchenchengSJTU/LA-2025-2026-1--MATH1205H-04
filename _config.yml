@@ -11,7 +11,7 @@ author_gravatar:    0f20ebcc66f10f16c36a6013e485771f # Your Gravatar md5 hash he
 
 # Site Settings
 url:                "https://zhangchenchengsjtu.github.io" # Change to your site
-baseurl:            "/website"
+baseurl:            "/MATH1205H-04-HW"
 permalink:          posts/:title # Post permalink
 timezone:           Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 

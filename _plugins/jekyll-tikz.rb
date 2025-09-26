@@ -60,7 +60,7 @@ module Jekyll
         end
 
         # 返回嵌入标签
-        web_path = File.join("/website/svg", post_slug, "#{file_basename}.svg")
+        web_path = File.join("/MATH1205H-04-HW/svg", post_slug, "#{file_basename}.svg")
         "<center>
         <br>
         <div class=\"tikz-diagram\">

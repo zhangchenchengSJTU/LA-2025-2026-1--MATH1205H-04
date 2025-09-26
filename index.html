@@ -2,63 +2,109 @@
 layout: default
 ---
 
-<h1>This is a Jekyll LaTeX Website for Math Notes</h1>
+<h1>课程作业发布页</h1>
 
-<h2>Seminare (Last 2)</h2>
+<h2>说明</h2>
 
-{% assign sorted_posts=site.posts | where_exp: "post", "post.categories contains 'seminare'" | sort: "date" | reverse %}
-{% for post in sorted_posts limit:2 %}
+<span style="white-space: nowrap;">
+  <a href="https://oc.sjtu.edu.cn/courses/84452/assignments">Canvas (MATH1205H-04) 作业提交区</a>, <a href="https://github.com/zhangchenchengSJTU/MATH1205H-04-HW">网页仓库 (无源码)</a>, <a href="https://github.com/zhangchenchengSJTU/LA-2025-2026-1--MATH1205H-04/tree/main/_posts"><b>作业源码</b></a>.
+</span></span>
+
+<h2>作业 (最近三次)</h2>
+
+{% assign homework_posts = site.posts | where: "categories", "homework" %}
+{% for post in homework_posts limit:3 %}
   <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
-  <p>{{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}</p>
+  <p>
+    {{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }} • 
+    <span class="countdown"
+          data-deadline="{{ post.date | date: "%Y-%m-%d" }}">
+    </span>
+  </p>
 {% endfor %}
 
-<hr>
 
-<a href="seminare">More...</a>
+<h2>作业解答 (最近三次)</h2>
 
-<h2>Notes (Last 2)</h2>
-
-{% assign sorted_posts=site.posts | where_exp: "post", "post.categories contains 'notes'" | sort: "date" | reverse %}
-{% for post in sorted_posts limit:2 %}
+{% assign solution_posts = site.posts | where: "categories", "solution" %}
+{% for post in solution_posts limit:3 %}
   <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
-  <p>{{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}</p>
+  <p>
+    {{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}
+  </p>
 {% endfor %}
-
-<hr>
-
-<a href="notes">More...</a>
 
 <h2>Statistics</h2>
 
 {% assign total_posts=site.posts | size %}
 
-{% assign notes_posts=0 %}
+{% assign homework_posts=0 %}
 {% for post in site.posts %}
-  {% if post.categories contains "notes" %}
-    {% assign notes_posts=notes_posts | plus: 1 %}
+  {% if post.categories contains "homework" %}
+    {% assign homework_posts=homework_posts | plus: 1 %}
   {% endif %}
 {% endfor %}
 
-{% assign seminare_posts=0 %}
+{% assign solution_posts=0 %}
 {% for post in site.posts %}
-  {% if post.categories contains "seminare" %}
-    {% assign seminare_posts=seminare_posts | plus: 1 %}
+  {% if post.categories contains "solution" %}
+    {% assign solution_posts=solution_posts | plus: 1 %}
   {% endif %}
 {% endfor %}
 
-<p>The website was last built on {{ site.time | date: "%Y-%m-%d %H:%M:%S" }}, and <a href="directory">this</a> is a directory for {{ total_posts }} published posts, including {{ seminare_posts }} <a href="seminare">seminares</a>, {{ notes_posts }} <a href="notes">notes</a>, etc.
+<p>The website was last built on {{ site.time | date: "%Y-%m-%d %H:%M:%S" }}, and <a href="directory">this</a> is a directory for {{ total_posts }} published posts, including {{ homework_posts }} <a href="homework">homeworks</a> and {{ solution_posts }} <a href="solution">solutions</a>.
+
 
 <h2>Acknowledgement</h2>
 
 <p>This website is based on <a href="https://github.com/ryanmcdermott/jekyll-latex">this outstanding repository</a>, to whose author we extend our sincere gratitude.</p>
 
-<h2>Collections</h2>
 
-{% for post in site.posts %}
-  {% if
-    post.categories contains "collection"
-  %}
-    <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
-    <p>{{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}</p>
-  {% endif %}
-{% endfor %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const countdowns = document.querySelectorAll(".countdown");
+  countdowns.forEach(el => {
+    const baseDate = new Date(el.dataset.deadline);
+    const deadline = new Date(baseDate.getTime() + 8 * 24 * 60 * 60 * 1000 - 8 * 60 * 60 * 1000); // 8 天后, 减去 8 小时
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = deadline - now;
+
+      if (diff <= 0) {
+        el.textContent = "已截止😢😢😢";
+        el.style.color = "gray";
+        el.style.fontWeight = "normal";
+      } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+        el.textContent = `剩余 ${days} 天 ${hours} 小时 ${minutes} 分钟`;
+
+        // 清除旧样式
+        el.style.color = "";
+        el.style.fontWeight = "normal";
+
+        // 大于 96 小时 → 绿
+        if (diff > 96 * 60 * 60 * 1000) {
+          el.style.color = "green";
+        }
+        // 24 - 96 小时 → 黄
+        else if (diff <= 96 * 60 * 60 * 1000 && diff > 24 * 60 * 60 * 1000) {
+          el.style.color = "orange";
+          el.style.fontWeight = "bold";
+        }
+        // 0 - 24 小时 → 红
+        else if (diff <= 24 * 60 * 60 * 1000) {
+          el.style.color = "red";
+          el.style.fontWeight = "bold";
+        }
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // 每分钟刷新一次
+  });
+});
+</script>

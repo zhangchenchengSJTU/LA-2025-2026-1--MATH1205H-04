@@ -671,6 +671,26 @@ dl dd {
 }
 
 
+/* Exercise */
+.Exercise {
+  counter-increment: Exercise;
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+}
+
+.proposition::before {
+  content: 'Ex- ' counter(exercise) '. ';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.proposition p {
+  display: inline;  /* 取消段落换行 */
+  margin: 0 !important;  /* 清除默认边距 */
+}
+
+
 /* Center align author name, use small caps and add vertical spacing  */
 .author {
   margin: 0.85rem 0;
