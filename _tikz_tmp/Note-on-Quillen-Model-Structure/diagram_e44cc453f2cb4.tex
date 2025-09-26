@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXG1hdGhiZntDR0h9Il0sWzMsMCwiXFxtYXRoYmZ7U2V0c31ee1xcRGVsdGFee1xcbWF0aHJte29wfX19Il0sWzUsMCwiXFxtYXRoYmZ7Q2F0fSJdLFswLDAsIlxcb3ZlcnNldHt9e1xcdW5kZXJzZXR7XFx0ZXh0eyhvYnNvbGV0ZWQpfX17XFxtYXRoYmZ7VG9wfX19IixbMCwwLDUwLDFdXSxbMywwLCJrIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMCwwLDUwXX0sWzAsMCw1MCwxXV0sWzAsMywiIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMCwwLDUwXX1dLFswLDEsIlxcbWF0aHJte1Npbmd9IiwwLHsib2Zmc2V0IjotM31dLFsxLDAsInwtfCIsMCx7Im9mZnNldCI6LTN9XSxbMSwyLCJcXG1hdGhybSBoIiwwLHsib2Zmc2V0IjotM31dLFsyLDEsIlxcbWF0aHJtIE4iLDAseyJvZmZzZXQiOi0zfV0sWzYsNywiXFxib3QiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCw5LCJcXGJvdCIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDUsIlxcYm90IiwxLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfSwiY29sb3VyIjpbMCwwLDUwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fSxbMCwwLDUwLDFdXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+\color{rgb,255:red,128;green,128;blue,128}{\overset{}{\underset{\text{(obsoleted)}}{\mathbf{Top}}}} \& {\mathbf{CGH}} \&\& {\mathbf{Sets}^{\Delta^{\mathrm{op}}}} \&\& {\mathbf{Cat}}
+\arrow[""{name=0, anchor=center, inner sep=0}, "k", shift left=3, color={rgb,255:red,128;green,128;blue,128}, from=1-1, to=1-2]
+\arrow[""{name=1, anchor=center, inner sep=0}, shift left=3, color={rgb,255:red,128;green,128;blue,128}, from=1-2, to=1-1]
+\arrow[""{name=2, anchor=center, inner sep=0}, "{\mathrm{Sing}}", shift left=3, from=1-2, to=1-4]
+\arrow[""{name=3, anchor=center, inner sep=0}, "{|-|}", shift left=3, from=1-4, to=1-2]
+\arrow[""{name=4, anchor=center, inner sep=0}, "{\mathrm h}", shift left=3, from=1-4, to=1-6]
+\arrow[""{name=5, anchor=center, inner sep=0}, "{\mathrm N}", shift left=3, from=1-6, to=1-4]
+\arrow["\bot"{description}, color={rgb,255:red,128;green,128;blue,128}, draw=none, from=0, to=1]
+\arrow["\bot"{description}, draw=none, from=2, to=3]
+\arrow["\bot"{description}, draw=none, from=4, to=5]
+\end{tikzcd}
+\end{document}

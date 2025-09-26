@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzIsMywiKEZeMk0pIFxcb3RpbWVzIChUXjIsIFQpIl0sWzEsMywiKEZeMU0pIFxcb3RpbWVzIChUXjIsIFQpIl0sWzAsMywiRk1cXG90aW1lcyAoVF4yLCBUKSJdLFsyLDIsIihGXjJNKSBcXG90aW1lcyAoVF4xLCBUKSJdLFsxLDIsIihGXjFNKSBcXG90aW1lcyAoVF4xLCBUKSJdLFswLDIsIkZNXFxvdGltZXMgKFReMSwgVCkiXSxbMiwxLCIoRl4yTSkgXFxvdGltZXMgKFReMCwgVCkiXSxbMSwxLCIoRl4xTSkgXFxvdGltZXMgKFReMCwgVCkiXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIl0sWzIsMCwiRl4yTSBcXG90aW1lcyBUIixbMTgwLDYwLDYwLDFdXSxbMSwwLCJGXjJNIFxcb3RpbWVzIFQiLFsxODAsNjAsNjAsMV1dLFswLDAsIkZNIFxcb3RpbWVzIFQiLFsxODAsNjAsNjAsMV1dLFswLDNdLFsxLDRdLFsyLDVdLFszLDZdLFs0LDddLFs1LDhdXQ==
+\begin{tikzcd}
+	\textcolor{rgb,255:red,92;green,214;blue,214} & \textcolor{rgb,255:red,92;green,214;blue,214} & \textcolor{rgb,255:red,92;green,214;blue,214} \\
+	{FM\otimes (T^0, T)} & {(F^1M) \otimes (T^0, T)} & {(F^2M) \otimes (T^0, T)} \\
+	{FM\otimes (T^1, T)} & {(F^1M) \otimes (T^1, T)} & {(F^2M) \otimes (T^1, T)} \\
+	{FM\otimes (T^2, T)} & {(F^1M) \otimes (T^2, T)} & {(F^2M) \otimes (T^2, T)}
+	\arrow[from=3-1, to=2-1]
+	\arrow[from=3-2, to=2-2]
+	\arrow[from=3-3, to=2-3]
+	\arrow[from=4-1, to=3-1]
+	\arrow[from=4-2, to=3-2]
+	\arrow[from=4-3, to=3-3]
+\end{tikzcd}
+\end{document}

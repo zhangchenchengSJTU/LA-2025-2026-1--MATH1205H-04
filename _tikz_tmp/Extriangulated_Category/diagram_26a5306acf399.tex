@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+  % https://q.uiver.app/#q=WzAsNixbMCwwLCJYIl0sWzIsMCwiWSJdLFs0LDAsIloiXSxbMCwxLCJYIl0sWzIsMSwiWSciXSxbNCwxLCJaIl0sWzAsMSwiYSJdLFsxLDIsImIiXSxbMiw1LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDQsImEnIl0sWzQsNSwiYiciXSxbMCwzLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDQsIlxcdmFycGhpICJdLFsxLDQsIlxcc2ltZXEgIiwyLHsib2Zmc2V0IjoxLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+  \begin{tikzcd}[ampersand replacement=\&]
+  X \&\& Y \&\& Z \\
+  X \&\& {Y'} \&\& Z
+  \arrow["a", from=1-1, to=1-3]
+  \arrow[equals, from=1-1, to=2-1]
+  \arrow["b", from=1-3, to=1-5]
+  \arrow["{\varphi }", from=1-3, to=2-3]
+  \arrow["{\simeq }"', shift right, draw=none, from=1-3, to=2-3]
+  \arrow[equals, from=1-5, to=2-5]
+  \arrow["{a'}", from=2-1, to=2-3]
+  \arrow["{b'}", from=2-3, to=2-5]
+  \end{tikzcd}
+  \end{document}

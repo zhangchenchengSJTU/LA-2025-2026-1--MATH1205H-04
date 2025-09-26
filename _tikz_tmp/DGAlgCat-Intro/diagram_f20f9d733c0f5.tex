@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMyxbMSwwLCJcXG1hdGhiZntNb2R9X3soQSxkKX0iXSxbMiwxLCIoXFxtYXRoYmZ7TW9kfV97KEEsZCl9LCBcXHRleHR7ZHdzfSkvXFxzaW0gIl0sWzAsMSwiSyhcXG1hdGhiZntNb2R9X3soQSxkKX0pIl0sWzAsMiwiUV8xIiwyXSxbMCwxLCJRXzIiXSxbMiwxLCJcXGFscGhhICIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDIsIlxcYmV0YSIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+	& {\mathbf{Mod}_{(A,d)}} \\
+	{K(\mathbf{Mod}_{(A,d)})} && {(\mathbf{Mod}_{(A,d)}, \text{dws})/\sim }
+	\arrow["{Q_1}"', from=1-2, to=2-1]
+	\arrow["{Q_2}", from=1-2, to=2-3]
+	\arrow["{\alpha }", shift left, dashed, from=2-1, to=2-3]
+	\arrow["\beta", shift left, dashed, from=2-3, to=2-1]
+\end{tikzcd}
+\end{document}

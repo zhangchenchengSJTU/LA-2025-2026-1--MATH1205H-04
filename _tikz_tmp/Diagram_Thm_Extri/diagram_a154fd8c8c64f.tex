@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMiwwLCJBIl0sWzMsMCwiQiJdLFsyLDEsIkMiXSxbMywxLCJEIl0sWzQsMiwiWiJdLFswLDEsIlxcLCJdLFs2LDEsIlxcLCJdLFswLDEsImYiXSxbMSwzLCJ3Il0sWzAsMiwiZyJdLFsyLDMsImgiXSxbMSw0LCJcXGFscGhhICIsMCx7ImN1cnZlIjotM31dLFsyLDQsIlxcYmV0YSIsMCx7ImN1cnZlIjozfV0sWzMsNCwiXFxleGlzdHNcXHZhcnBoaSAiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}
+&& A & B \\
+{\,} && C & D &&& {\,} \\
+&&&& Z
+\arrow["f", from=1-3, to=1-4]
+\arrow["g", from=1-3, to=2-3]
+\arrow["w", from=1-4, to=2-4]
+\arrow["{\alpha }", curve={height=-18pt}, from=1-4, to=3-5]
+\arrow["h", from=2-3, to=2-4]
+\arrow["\beta", curve={height=18pt}, from=2-3, to=3-5]
+\arrow["{\exists\varphi }", dashed, from=2-4, to=3-5]
+\end{tikzcd}
+\end{document}

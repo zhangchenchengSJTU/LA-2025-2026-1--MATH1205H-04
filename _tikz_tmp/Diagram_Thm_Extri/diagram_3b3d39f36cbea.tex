@@ -1,0 +1,26 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzEsMiwiWiIsWzIzOCwxMDAsNjAsMV1dLFsyLDIsIlonIixbMjM4LDEwMCw2MCwxXV0sWzIsMSwiWSciLFsyMzgsMTAwLDYwLDFdXSxbMSwxLCJZIixbMjM4LDEwMCw2MCwxXV0sWzAsMCwiWSciXSxbMywwLCJYIl0sWzQsMSwiWSIsWzIzOCwxMDAsNjAsMV1dLFs1LDEsIlknIixbMjM4LDEwMCw2MCwxXV0sWzUsMiwiWiciLFsyMzgsMTAwLDYwLDFdXSxbNCwyLCJaIixbMjM4LDEwMCw2MCwxXV0sWzAsMSwicF9aIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbMiwxLCJiJyIsMCx7ImNvbG91ciI6WzIzOCwxMDAsNjBdfSxbMjM4LDEwMCw2MCwxXV0sWzMsMiwicF9ZIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbMywwLCJiIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbNCwwLCJpX1ogYiciLDIseyJjdXJ2ZSI6Mn1dLFs0LDIsIjFfe1knfSIsMCx7ImN1cnZlIjotMn1dLFs0LDMsImlfWSIsMCx7ImNvbG91ciI6WzM1OCwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFszNTgsMTAwLDYwLDFdXSxbNiw5LCJiIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbNyw4LCJiJyIsMCx7ImNvbG91ciI6WzIzOCwxMDAsNjBdfSxbMjM4LDEwMCw2MCwxXV0sWzYsNywicF9ZIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbOSw4LCJwX1oiLDAseyJjb2xvdXIiOlsyMzgsMTAwLDYwXX0sWzIzOCwxMDAsNjAsMV1dLFs1LDcsImEncF9YIiwwLHsiY3VydmUiOi0yfV0sWzUsOSwiZyIsMix7ImN1cnZlIjoyfV0sWzUsNiwiYSIsMCx7ImNvbG91ciI6WzM1OCwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFszNTgsMTAwLDYwLDFdXV0=
+\begin{tikzcd}
+{Y'} &&& X \\
+& \color{rgb,255:red,51;green,58;blue,255}{Y} & \color{rgb,255:red,51;green,58;blue,255}{Y'} && \color{rgb,255:red,51;green,58;blue,255}{Y} & \color{rgb,255:red,51;green,58;blue,255}{Y'} \\
+& \color{rgb,255:red,51;green,58;blue,255}{Z} & \color{rgb,255:red,51;green,58;blue,255}{Z'} && \color{rgb,255:red,51;green,58;blue,255}{Z} & \color{rgb,255:red,51;green,58;blue,255}{Z'}
+\arrow["{i_Y}", color={rgb,255:red,255;green,51;blue,58}, dashed, from=1-1, to=2-2]
+\arrow["{1_{Y'}}", curve={height=-12pt}, from=1-1, to=2-3]
+\arrow["{i_Z b'}"', curve={height=12pt}, from=1-1, to=3-2]
+\arrow["a", color={rgb,255:red,255;green,51;blue,58}, dashed, from=1-4, to=2-5]
+\arrow["{a'p_X}", curve={height=-12pt}, from=1-4, to=2-6]
+\arrow["g"', curve={height=12pt}, from=1-4, to=3-5]
+\arrow["{p_Y}", color={rgb,255:red,51;green,58;blue,255}, from=2-2, to=2-3]
+\arrow["b", color={rgb,255:red,51;green,58;blue,255}, from=2-2, to=3-2]
+\arrow["{b'}", color={rgb,255:red,51;green,58;blue,255}, from=2-3, to=3-3]
+\arrow["{p_Y}", color={rgb,255:red,51;green,58;blue,255}, from=2-5, to=2-6]
+\arrow["b", color={rgb,255:red,51;green,58;blue,255}, from=2-5, to=3-5]
+\arrow["{b'}", color={rgb,255:red,51;green,58;blue,255}, from=2-6, to=3-6]
+\arrow["{p_Z}", color={rgb,255:red,51;green,58;blue,255}, from=3-2, to=3-3]
+\arrow["{p_Z}", color={rgb,255:red,51;green,58;blue,255}, from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

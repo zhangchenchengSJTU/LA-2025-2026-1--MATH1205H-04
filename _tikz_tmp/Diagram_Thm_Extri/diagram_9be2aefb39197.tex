@@ -1,0 +1,32 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTUsWzAsMCwiWCJdLFsyLDAsIlkiXSxbNCwwLCJaIl0sWzUsMCwiXFwsIl0sWzQsMSwiWiJdLFswLDEsIkEiXSxbMiwxLCJCIl0sWzUsMSwiXFwsIl0sWzAsMiwiWCJdLFsyLDIsIkFcXG9wbHVzIFkiXSxbNCwyLCJCIl0sWzUsMiwiXFwsIl0sWzAsMywiWCJdLFs0LDMsIkIiXSxbMiwzLCJBIFxcb3BsdXMgWSJdLFswLDEsImEiXSxbMSwyLCJiIl0sWzIsMywiXFxkZWx0YSJdLFs1LDYsIngiXSxbNiw0LCJ5Il0sWzQsMiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSw2LCJ3JyIsMCx7Im9mZnNldCI6LTJ9XSxbNCw3LCJcXHZhcmVwc2lsb24gIl0sWzgsOSwiXFxiaW5vbSB7XFxsYW1iZGEnIH17YX0iXSxbOSwxMCwiKC14IFxcIHcpIl0sWzEwLDExLCJ5XlxcYXN0IFxcZGVsdGEiXSxbMCw1LCJcXGxhbWJkYSAnIl0sWzEsNiwidyIsMix7Im9mZnNldCI6Mn1dLFs4LDEyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMywiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxNCwiXFxiaW5vbSB7LTEgXFwgbH17XFwgMCBcXCAxfSJdLFsxMiwxNCwiXFxiaW5vbSB7XFxsYW1iZGEgfXthfSJdLFsxNCwxMywiKC14IFxcIHcnKSJdXQ==
+\begin{tikzcd}
+	X && Y && Z & {\,} \\
+	A && B && Z & {\,} \\
+	X && {A\oplus Y} && B & {\,} \\
+	X && {A \oplus Y} && B
+	\arrow["a", from=1-1, to=1-3]
+	\arrow["{\lambda '}", from=1-1, to=2-1]
+	\arrow["b", from=1-3, to=1-5]
+	\arrow["{w'}", shift left=2, from=1-3, to=2-3]
+	\arrow["w"', shift right=2, from=1-3, to=2-3]
+	\arrow["\delta", from=1-5, to=1-6]
+	\arrow["x", from=2-1, to=2-3]
+	\arrow["y", from=2-3, to=2-5]
+	\arrow[equals, from=2-5, to=1-5]
+	\arrow["{\varepsilon }", from=2-5, to=2-6]
+	\arrow["{\binom {\lambda' }{a}}", from=3-1, to=3-3]
+	\arrow[equals, from=3-1, to=4-1]
+	\arrow["{(-x \ w)}", from=3-3, to=3-5]
+	\arrow["{\binom {-1 \ l}{\ 0 \ 1}}", from=3-3, to=4-3]
+	\arrow["{y^\ast \delta}", from=3-5, to=3-6]
+	\arrow[equals, from=3-5, to=4-5]
+	\arrow["{\binom {\lambda }{a}}", from=4-1, to=4-3]
+	\arrow["{(-x \ w')}", from=4-3, to=4-5]
+\end{tikzcd}
+\end{document}

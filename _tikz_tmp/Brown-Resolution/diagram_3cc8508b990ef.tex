@@ -1,0 +1,26 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzIsMSwiKFMsIFhfaSlfe1xcbWF0aGNhbCBUfSJdLFszLDEsIkZTIl0sWzIsMiwiKFMsIFhfe2krMX0pX3tcXG1hdGhjYWwgVH0iXSxbMiwwLCIoUywgPylfe1xcbWF0aGNhbCBUfSJdLFszLDIsIkZTIl0sWzEsMSwiXFxrZXIgWyhcXHBpIF9pKV9TXSJdLFsxLDIsIlxca2VyIFsoXFxwaSBfe2krMX0pX1NdIl0sWzQsMiwiMCJdLFs0LDEsIjAiXSxbMCwyLCIwIl0sWzAsMSwiMCJdLFswLDIsIihcXHBoaSBfaSlfXFxhc3QiXSxbMywwLCIoXFxrYXBwYSBfaSlfXFxhc3QiXSxbMCwxLCIoXFxwaSBfaSlfUyJdLFsxLDQsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsNCwiKFxccGkgX3tpKzF9KV9TIl0sWzUsMF0sWzYsMl0sWzUsNl0sWzQsN10sWzEsOF0sWzksNl0sWzEwLDVdLFszLDEsIjAiLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDMsIiIsMCx7ImN1cnZlIjotMiwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}
+&& {(S, ?)_{\mathcal T}} \\
+0 & {\ker [(\pi _i)_S]} & {(S, X_i)_{\mathcal T}} & FS & 0 \\
+0 & {\ker [(\pi _{i+1})_S]} & {(S, X_{i+1})_{\mathcal T}} & FS & 0
+\arrow["{(\kappa _i)_\ast}", from=1-3, to=2-3]
+\arrow["0", curve={height=-12pt}, dashed, from=1-3, to=2-4]
+\arrow[from=2-1, to=2-2]
+\arrow[curve={height=-12pt}, dashed, from=2-2, to=1-3]
+\arrow[from=2-2, to=2-3]
+\arrow[from=2-2, to=3-2]
+\arrow["{(\pi _i)_S}", from=2-3, to=2-4]
+\arrow["{(\phi _i)_\ast}", from=2-3, to=3-3]
+\arrow[from=2-4, to=2-5]
+\arrow[equals, from=2-4, to=3-4]
+\arrow[from=3-1, to=3-2]
+\arrow[from=3-2, to=3-3]
+\arrow["{(\pi _{i+1})_S}", from=3-3, to=3-4]
+\arrow[from=3-4, to=3-5]
+\end{tikzcd}
+\end{document}

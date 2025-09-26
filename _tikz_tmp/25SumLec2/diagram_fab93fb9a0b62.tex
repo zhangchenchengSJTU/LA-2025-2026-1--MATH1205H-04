@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJYIFxcb3RpbWVzIF57XFxtYXRoYmZ7TH19IChZIFxcb3RpbWVzIF57XFxtYXRoYmZ7TH19WikiXSxbMCwxLCIoWCBcXG90aW1lcyBee1xcbWF0aGJme0x9fVkpIFxcb3RpbWVzIF57XFxtYXRoYmZ7TH19WiJdLFsxLDAsIlxccmhvIFggXFxvdGltZXMgKFkgXFxvdGltZXMgXntcXG1hdGhiZntMfX1aKSJdLFsyLDAsIlxccmhvIFggXFxvdGltZXMgIChZIFxcb3RpbWVzIFxccmhvIFopIl0sWzIsMSwiKFxccmhvIFggXFxvdGltZXMgIFkpIFxcb3RpbWVzIFxccmhvIFoiXSxbMSwxLCIoWCBcXG90aW1lcyBee1xcbWF0aGJme0x9fVkpIFxcb3RpbWVzIFxccmhvIFoiXSxbMiwwXSxbNSwxXSxbNCw1XSxbMywyXSxbMyw0LCJcXGFscGhhICJdLFszLDQsIlxcc2ltZXEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{X \otimes ^{\mathbf{L}} (Y \otimes ^{\mathbf{L}}Z)} \& {\rho X \otimes (Y \otimes ^{\mathbf{L}}Z)} \& {\rho X \otimes  (Y \otimes \rho Z)} \\
+	{(X \otimes ^{\mathbf{L}}Y) \otimes ^{\mathbf{L}}Z} \& {(X \otimes ^{\mathbf{L}}Y) \otimes \rho Z} \& {(\rho X \otimes  Y) \otimes \rho Z}
+	\arrow[dashed, from=1-1, to=2-1]
+	\arrow[from=1-2, to=1-1]
+	\arrow[from=1-3, to=1-2]
+	\arrow["{\alpha }", from=1-3, to=2-3]
+	\arrow["\simeq"', draw=none, from=1-3, to=2-3]
+	\arrow[from=2-2, to=2-1]
+	\arrow[from=2-3, to=2-2]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTcsWzAsMywiKFxcdW5kZXJsaW5lIFIgXFxvdGltZXMgXntcXG1hdGhiZiBMfVxcdW5kZXJsaW5lIFIpICBcXG90aW1lcyBee1xcbWF0aGJmIEx9WCJdLFswLDEsIlxcdW5kZXJsaW5lIFIgXFxvdGltZXMgXntcXG1hdGhiZiBMfShcXHVuZGVybGluZSBSICBcXG90aW1lcyBee1xcbWF0aGJmIEx9WCkiXSxbMCwwLCJcXHJobyBcXHVuZGVybGluZSBSXFxvdGltZXMgXFxyaG8gKFxccmhvIFxcdW5kZXJsaW5lIFIgXFxvdGltZXMgXFxyaG8gWCkiXSxbMCw0LCJcXHJobyAoXFxyaG8gXFx1bmRlcmxpbmUgUiBcXG90aW1lcyBcXHJobyBcXHVuZGVybGluZSBSKVxcb3RpbWVzIFxccmhvIFgiXSxbMSwxLCJcXHJobyBcXHVuZGVybGluZSBSXFxvdGltZXMgKFxccmhvIFxcdW5kZXJsaW5lIFJcXG90aW1lcyBcXHJobyBYKSJdLFsxLDMsIihcXHJobyBcXHVuZGVybGluZSBSXFxvdGltZXMgXFxyaG8gXFx1bmRlcmxpbmUgUilcXG90aW1lcyBcXHJobyBYIl0sWzIsMSwiXFxyaG8gXFx1bmRlcmxpbmUgUlxcb3RpbWVzIChcXHVuZGVybGluZSBSXFxvdGltZXMgXFxyaG8gWCkiXSxbMSwwLCJcXHJobyBcXHVuZGVybGluZSBSXFxvdGltZXMgXFxyaG8gKCBcXHVuZGVybGluZSBSIFxcb3RpbWVzIFxccmhvIFgpIl0sWzIsMywiKFxcdW5kZXJsaW5lIFJcXG90aW1lcyBcXHJobyBcXHVuZGVybGluZSBSKVxcb3RpbWVzIFxccmhvIFgiXSxbMSw0LCJcXHJobyAoXFx1bmRlcmxpbmUgUiBcXG90aW1lcyBcXHJobyBcXHVuZGVybGluZSBSKVxcb3RpbWVzIFxccmhvIFgiXSxbMiwwLCJcXHJobyBcXHVuZGVybGluZSBSIFxcb3RpbWVzIFxccmhvIFxccmhvIFgiXSxbMywwLCJcXHJobyBcXHVuZGVybGluZSBSIFxcb3RpbWVzIFxccmhvIFgiXSxbMyw0LCIgXFxyaG8gXFx1bmRlcmxpbmUgUlxcb3RpbWVzIFxccmhvIFgiXSxbMiw0LCJcXHJobyAgXFxyaG8gXFx1bmRlcmxpbmUgUlxcb3RpbWVzIFxccmhvIFgiXSxbMiwyLCIoXFxyaG8gXFx1bmRlcmxpbmUgUlxcb3RpbWVzIFxcdW5kZXJsaW5lIFIpXFxvdGltZXMgXFxyaG8gWCJdLFszLDEsIlxcdW5kZXJsaW5lIFIgIFxcb3RpbWVzIF57XFxtYXRoYmYgTH1YIl0sWzMsMywiXFx1bmRlcmxpbmUgUiAgXFxvdGltZXMgXntcXG1hdGhiZiBMfVgiXSxbMSwwLCJcXGFscGhhIF5cXHJobyAiLDJdLFsxLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMywiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw1LCJcXGFscGhhICJdLFsyLDQsIjEgXFxvdGltZXMgYyIsMCx7ImNvbG91ciI6WzIzNSwxMDAsNjBdfSxbMjM1LDEwMCw2MCwxXV0sWzUsMywiY1xcb3RpbWVzIDEiLDIseyJjb2xvdXIiOlsxMjQsMTAwLDMxXX0sWzEyNCwxMDAsMzEsMV1dLFs0LDYsIjFcXG90aW1lcyAoYyBcXG90aW1lcyAxKSIsMix7ImNvbG91ciI6WzM1NiwxMDAsNjBdfSxbMzU2LDEwMCw2MCwxXV0sWzIsN10sWzcsNiwiMSBcXG90aW1lcyBjIiwwLHsiY29sb3VyIjpbMjM1LDEwMCw2MF19LFsyMzUsMTAwLDYwLDFdXSxbOCw5LCJjIFxcb3RpbWVzIDEiLDIseyJjb2xvdXIiOlsxMjQsMTAwLDMxXX0sWzEyNCwxMDAsMzEsMV1dLFs1LDhdLFszLDldLFsxMCwxMSwiMSBcXG90aW1lcyBjIiwyLHsiY29sb3VyIjpbMjM1LDEwMCw2MF19LFsyMzUsMTAwLDYwLDFdXSxbMTIsMTMsImMgXFxvdGltZXMgMSIsMix7ImNvbG91ciI6WzEyNCwxMDAsMzFdfSxbMTI0LDEwMCwzMSwxXV0sWzcsMTAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMTEsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzksMTMsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMTQsIlxcYWxwaGEgIl0sWzE0LDgsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMTEsIlxcdW5kZXJsaW5lIFIgXFxvdGltZXMgXlxcbWF0aGJmIEwobF5cXHJobyBfe1xcdW5kZXJsaW5lIFIgXFxvdGltZXMgXlxcbWF0aGJmIExYfSkiLDAseyJvZmZzZXQiOi01fV0sWzMsMTIsIihsXlxccmhvIF97XFx1bmRlcmxpbmUgUiBcXG90aW1lcyBeXFxtYXRoYmYgTFxcdW5kZXJsaW5lIFJ9KVxcb3RpbWVzIF5cXG1hdGhiZiBMIFgiLDIseyJvZmZzZXQiOjR9XSxbMTEsMTUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE1LDE2LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwxMiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwxNCwiKDFcXG90aW1lcyBjKSBcXG90aW1lcyAxIiwwLHsiY29sb3VyIjpbMzU2LDEwMCw2MF19LFszNTYsMTAwLDYwLDFdXSxbMTcsMjAsIlxcYmxhY2t0cmlhbmdsZSIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNCw0MCwiXFxiaWdzdGFyIiwxLHsic2hvcnRlbiI6eyJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}
+	{\rho \underline R\otimes \rho (\rho \underline R \otimes \rho X)} & {\rho \underline R\otimes \rho ( \underline R \otimes \rho X)} & {\rho \underline R \otimes \rho \rho X} & {\rho \underline R \otimes \rho X} \\
+	{\underline R \otimes ^{\mathbf L}(\underline R  \otimes ^{\mathbf L}X)} & {\rho \underline R\otimes (\rho \underline R\otimes \rho X)} & {\rho \underline R\otimes (\underline R\otimes \rho X)} & {\underline R  \otimes ^{\mathbf L}X} \\
+	&& {(\rho \underline R\otimes \underline R)\otimes \rho X} \\
+	{(\underline R \otimes ^{\mathbf L}\underline R)  \otimes ^{\mathbf L}X} & {(\rho \underline R\otimes \rho \underline R)\otimes \rho X} & {(\underline R\otimes \rho \underline R)\otimes \rho X} & {\underline R  \otimes ^{\mathbf L}X} \\
+	{\rho (\rho \underline R \otimes \rho \underline R)\otimes \rho X} & {\rho (\underline R \otimes \rho \underline R)\otimes \rho X} & {\rho  \rho \underline R\otimes \rho X} & { \rho \underline R\otimes \rho X}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\underline R \otimes ^\mathbf L(l^\rho _{\underline R \otimes ^\mathbf LX})}", shift left=5, from=1-1, to=1-4]
+	\arrow["{1 \otimes c}", color={rgb,255:red,51;green,68;blue,255}, from=1-1, to=2-2]
+	\arrow[equals, from=1-2, to=1-3]
+	\arrow["{1 \otimes c}", color={rgb,255:red,51;green,68;blue,255}, from=1-2, to=2-3]
+	\arrow["{1 \otimes c}"', color={rgb,255:red,51;green,68;blue,255}, from=1-3, to=1-4]
+	\arrow[equals, from=1-4, to=2-4]
+	\arrow[equals, from=2-1, to=1-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{\alpha ^\rho }"', from=2-1, to=4-1]
+	\arrow["{1\otimes (c \otimes 1)}"', color={rgb,255:red,255;green,51;blue,65}, from=2-2, to=2-3]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\alpha }", from=2-2, to=4-2]
+	\arrow[equals, from=2-3, to=1-4]
+	\arrow["{\alpha }", from=2-3, to=3-3]
+	\arrow[""{name=2, anchor=center, inner sep=0}, equals, from=2-4, to=4-4]
+	\arrow[equals, from=3-3, to=4-3]
+	\arrow[equals, from=4-1, to=5-1]
+	\arrow["{(1\otimes c) \otimes 1}", color={rgb,255:red,255;green,51;blue,65}, from=4-2, to=3-3]
+	\arrow[from=4-2, to=4-3]
+	\arrow["{c\otimes 1}"', color={rgb,255:red,0;green,158;blue,11}, from=4-2, to=5-1]
+	\arrow["{c \otimes 1}"', color={rgb,255:red,0;green,158;blue,11}, from=4-3, to=5-2]
+	\arrow[equals, from=4-3, to=5-4]
+	\arrow[equals, from=4-4, to=5-4]
+	\arrow[from=5-1, to=5-2]
+	\arrow["{(l^\rho _{\underline R \otimes ^\mathbf L\underline R})\otimes ^\mathbf L X}"', shift right=4, from=5-1, to=5-4]
+	\arrow[equals, from=5-2, to=5-3]
+	\arrow["{c \otimes 1}"', color={rgb,255:red,0;green,158;blue,11}, from=5-4, to=5-3]
+	\arrow["\blacktriangle"{description}, draw=none, from=0, to=1]
+	\arrow["\bigstar"{description}, draw=none, from=3-3, to=2]
+\end{tikzcd}
+\end{document}

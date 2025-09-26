@@ -1,0 +1,26 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMCwxLCJRX2kiXSxbMiwxLCJRX3tcXHZhcnBoaSAoaSl9Il0sWzEsMiwiTV97XFx2YXJwaGkgKGkpfSJdLFszLDIsIk1fe2p9Il0sWzQsMSwiUV97an0iXSxbNSwyLCJNX3tcXHZhcnBoaSAoail9Il0sWzYsMSwiUV97XFx2YXJwaGkgKGopfSJdLFszLDAsIlFfbCJdLFs0LDAsIk1fe1xcdmFycGhpIChsKX0iXSxbMiwxXSxbMCwxLCIiLDIseyJsZXZlbCI6Mn1dLFsyLDNdLFsxLDQsIiIsMix7ImxldmVsIjoyfV0sWzMsNF0sWzEsM10sWzMsNV0sWzQsNV0sWzQsNiwiIiwxLHsibGV2ZWwiOjJ9XSxbNSw2XSxbNiw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCw3XSxbMCwyXSxbNyw4XV0=
+\begin{tikzcd}
+	&&& {Q_l} & {M_{\varphi (l)}} \\
+	{Q_i} && {Q_{\varphi (i)}} && {Q_{j}} && {Q_{\varphi (j)}} \\
+	& {M_{\varphi (i)}} && {M_{j}} && {M_{\varphi (j)}}
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=1-4]
+	\arrow[Rightarrow, from=2-1, to=2-3]
+	\arrow[from=2-1, to=3-2]
+	\arrow[Rightarrow, from=2-3, to=2-5]
+	\arrow[from=2-3, to=3-4]
+	\arrow[Rightarrow, from=2-5, to=2-7]
+	\arrow[from=2-5, to=3-6]
+	\arrow[dashed, from=2-7, to=1-4]
+	\arrow[from=3-2, to=2-3]
+	\arrow[from=3-2, to=3-4]
+	\arrow[from=3-4, to=2-5]
+	\arrow[from=3-4, to=3-6]
+	\arrow[from=3-6, to=2-7]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzEsMiwiXFxidWxsZXQiXSxbMywyLCJWIl0sWzIsMiwiXFxidWxsZXQiXSxbMywxLCJWXlUiXSxbMywwLCJWXlYiXSxbMSwxLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzIsMCwiVl5WIl0sWzQsMSwiXFxtYXRoc2NyIFUgXFxjYXAgXFxtYXRoc2NyIFYiXSxbMCwxLCJcXCwiXSxbNSwxLCJcXCwiXSxbMCwyLCJzIiwyXSxbMiwxXSxbMywxXSxbNCwzXSxbNSwwLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDYsIlxcbWF0aHNme1RDb2Z9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsMiwiXFxtYXRoc2Z7VEZpYn0iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNyw0LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDMsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDgsIlxcaW4iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+&& {V^V} & {V^V} \\
+{\,} & \bullet & \bullet & {V^U} & {\mathcal U \cap \mathcal V} & {\,} \\
+& \bullet & \bullet & V
+\arrow[equals, from=1-3, to=1-4]
+\arrow[dashed, from=1-3, to=2-3]
+\arrow[from=1-4, to=2-4]
+\arrow["{\mathsf{TCof}}", dashed, from=2-2, to=2-3]
+\arrow[equals, from=2-2, to=3-2]
+\arrow[dashed, from=2-3, to=2-4]
+\arrow["{\mathsf{TFib}}", dashed, from=2-3, to=3-3]
+\arrow["\in"{description}, draw=none, from=2-4, to=2-5]
+\arrow[from=2-4, to=3-4]
+\arrow["s"', from=3-2, to=3-3]
+\arrow[from=3-3, to=3-4]
+\end{tikzcd}
+\end{document}

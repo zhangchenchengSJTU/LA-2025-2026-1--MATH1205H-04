@@ -1,0 +1,13 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+ % https://q.uiver.app/#q=WzAsNCxbMSwxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzAsMCwiXFxidWxsZXQiXSxbMSwwLCJcXGJ1bGxldCJdLFsxLDBdLFsyLDEsImQnIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFszLDAsImQiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwzLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	\bullet \& \bullet \\
+	\bullet \& \bullet
+	\arrow[dashed, from=1-1, to=1-2]
+	\arrow["{d'}"', dashed, two heads, from=1-1, to=2-1]
+	\arrow["d", two heads, from=1-2, to=2-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd} \end{document}

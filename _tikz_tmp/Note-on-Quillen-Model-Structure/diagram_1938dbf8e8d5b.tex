@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNSxbMSwyLCJcXG1hdGhjYWwge0hvbX0oWCxBKSJdLFswLDAsIlxcbWF0aGNhbCB7SG9tfShZLEEpIl0sWzIsMSwiXFxtYXRoY2FsIHtIb219KFksQikiXSxbMiwyLCJcXG1hdGhjYWwge0hvbX0oWCxCKSJdLFsxLDEsIlxcbWF0aGNhbCB7SG9tfShYLEEpIFxcdGltZXMgX3tcXG1hdGhjYWwge0hvbX0oWCxCKX1cXG1hdGhjYWwge0hvbX0oWSxCKSJdLFsxLDAsImZeXFxhc3QiLDIseyJjdXJ2ZSI6NH1dLFsyLDMsImZeXFxhc3QiXSxbMSwyLCJnX1xcYXN0ICIsMCx7ImN1cnZlIjotM31dLFswLDMsImdfXFxhc3QgIl0sWzQsMCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsMiwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsNCwiXFxQaGkgKGYsZykiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}
+{\mathcal{HOM}(Y,A)} \\
+& {\mathcal{HOM}(X,A) \times _{\mathcal{HOM}(X,B)}\mathcal{HOM}(Y,B)} & {\mathcal{HOM}(Y,B)} \\
+& {\mathcal{HOM}(X,A)} & {\mathcal{HOM}(X,B)}
+\arrow["{\Phi (f,g)}", dashed, from=1-1, to=2-2]
+\arrow["{g_\ast }", curve={height=-18pt}, from=1-1, to=2-3]
+\arrow["{f^\ast}"', curve={height=24pt}, from=1-1, to=3-2]
+\arrow[dashed, from=2-2, to=2-3]
+\arrow[dashed, from=2-2, to=3-2]
+\arrow["{f^\ast}", from=2-3, to=3-3]
+\arrow["{g_\ast }", from=3-2, to=3-3]
+\end{tikzcd}
+\end{document}

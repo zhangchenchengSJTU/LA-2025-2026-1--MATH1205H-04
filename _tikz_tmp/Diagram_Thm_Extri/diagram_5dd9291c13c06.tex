@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTMsWzIsMiwiTSJdLFszLDIsIkJfMiJdLFszLDEsIkFfMiJdLFsyLDEsIkFfMiJdLFsxLDIsIkFfMSJdLFsxLDMsIkFfMSJdLFsyLDMsIkJfMSJdLFs0LDMsIlxcLCJdLFszLDMsIkMiXSxbMyw0LCJcXCwiXSxbMiw0LCJcXCwiXSxbNCwyLCJcXCwiXSxbMCwwLCJXIl0sWzAsMSwiXFxsYW1iZGFfMiJdLFsyLDEsInhfMiJdLFszLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsMCwibV8yIl0sWzAsNiwiXFxsYW1iZGFfMSJdLFs0LDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMCwibV8xIl0sWzEsOCwieV8yIl0sWzYsOCwieV8xIl0sWzUsNiwieF8xIl0sWzgsNywiXFxkZWx0YV8xIl0sWzgsOSwiXFxkZWx0YV8yIl0sWzYsMTAsIih5XzEpXlxcYXN0IFxcZGVsdGFfMiJdLFsxLDExLCIoeV8yKV5cXGFzdFxcZGVsdGEgXzEiXSxbMTIsNiwiXFxiZXRhIiwwLHsibGFiZWxfcG9zaXRpb24iOjIwLCJjdXJ2ZSI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEyLDEsIlxcYWxwaGEgIiwwLHsibGFiZWxfcG9zaXRpb24iOjIwLCJjdXJ2ZSI6LTMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+W \\
+&& {A_2} & {A_2} \\
+& {A_1} & M & {B_2} & {\,} \\
+& {A_1} & {B_1} & C & {\,} \\
+&& {\,} & {\,}
+\arrow["{\alpha }"{pos=0.2}, curve={height=-18pt}, dashed, from=1-1, to=3-4]
+\arrow["\beta"{pos=0.2}, curve={height=18pt}, dashed, from=1-1, to=4-3]
+\arrow[equals, from=2-3, to=2-4]
+\arrow["{m_2}", from=2-3, to=3-3]
+\arrow["{x_2}", from=2-4, to=3-4]
+\arrow["{m_1}", from=3-2, to=3-3]
+\arrow[equals, from=3-2, to=4-2]
+\arrow["{\lambda_2}", from=3-3, to=3-4]
+\arrow["{\lambda_1}", from=3-3, to=4-3]
+\arrow["{(y_2)^\ast\delta _1}", from=3-4, to=3-5]
+\arrow["{y_2}", from=3-4, to=4-4]
+\arrow["{x_1}", from=4-2, to=4-3]
+\arrow["{y_1}", from=4-3, to=4-4]
+\arrow["{(y_1)^\ast \delta_2}", from=4-3, to=5-3]
+\arrow["{\delta_1}", from=4-4, to=4-5]
+\arrow["{\delta_2}", from=4-4, to=5-4]
+\end{tikzcd}
+\end{document}

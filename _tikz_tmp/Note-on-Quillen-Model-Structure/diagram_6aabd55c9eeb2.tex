@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMiwxLCJcXGNkb3QgIl0sWzEsMiwiXFxjZG90ICJdLFszLDEsIlxcY2RvdCAiXSxbNCwyLCJcXGNkb3QgIl0sWzUsMCwiXFxjZG90ICJdLFswLDAsIlxcY2RvdCAiXSxbMCwxLCJmIl0sWzAsMiwiXFxhbHBoYV8xIl0sWzEsMywiXFxhbHBoYSBfMiJdLFsyLDMsImciLDJdLFsyLDQsIkxnIl0sWzAsNSwiTGYiLDJdLFs1LDQsIlxcZXRhX3tcXGFscGhhIF8yfSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDEsIlJmIiwyXSxbNCwzLCJSZyJdLFs2LDEzLCJcXGV0YV9mIiwyLHsiY3VydmUiOjEsInNob3J0ZW4iOnsic291cmNlIjozMCwidGFyZ2V0IjozMH19XSxbOSwxNCwiXFxldGFfZyIsMCx7ImN1cnZlIjotMSwic2hvcnRlbiI6eyJzb3VyY2UiOjMwLCJ0YXJnZXQiOjMwfX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+{\cdot } \&\&\&\&\& {\cdot } \\
+\&\& {\cdot } \& {\cdot } \\
+\& {\cdot } \&\&\& {\cdot }
+\arrow["{\eta_{\alpha _2}}", dashed, from=1-1, to=1-6]
+\arrow[""{name=0, anchor=center, inner sep=0}, "Rf"', from=1-1, to=3-2]
+\arrow[""{name=1, anchor=center, inner sep=0}, "Rg", from=1-6, to=3-5]
+\arrow["Lf"', from=2-3, to=1-1]
+\arrow["{\alpha_1}", from=2-3, to=2-4]
+\arrow[""{name=2, anchor=center, inner sep=0}, "f", from=2-3, to=3-2]
+\arrow["Lg", from=2-4, to=1-6]
+\arrow[""{name=3, anchor=center, inner sep=0}, "g"', from=2-4, to=3-5]
+\arrow["{\alpha _2}", from=3-2, to=3-5]
+\arrow["{\eta_f}"', curve={height=6pt}, between={0.3}{0.7}, Rightarrow, from=2, to=0]
+\arrow["{\eta_g}", curve={height=-6pt}, between={0.3}{0.7}, Rightarrow, from=3, to=1]
+\end{tikzcd}
+\end{document}

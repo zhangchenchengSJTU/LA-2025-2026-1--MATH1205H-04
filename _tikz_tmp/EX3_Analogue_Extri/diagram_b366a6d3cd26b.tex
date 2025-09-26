@@ -1,0 +1,22 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzEsMSwiWCJdLFsyLDEsIkUiXSxbMiwyLCJZIl0sWzEsMiwiWCJdLFszLDEsIlQiXSxbMiwwLCJXIl0sWzMsMCwiVyJdLFszLDIsIloiXSxbMCwyLCJcXCwiXSxbNCwyLCJcXCwiXSxbMCwxLCJmIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMiwiZyJdLFszLDIsImdmIl0sWzUsNiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiw0XSxbMSw0LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiw3LCJkIl0sWzQsN10sWzUsMV0sWzAsMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	&& W & W \\
+	& X & E & T \\
+	{\,} & X & Y & Z & {\,}
+	\arrow[equals, from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow["f", dashed, from=2-2, to=2-3]
+	\arrow[equals, from=2-2, to=3-2]
+	\arrow[dashed, from=2-3, to=2-4]
+	\arrow["g", from=2-3, to=3-3]
+	\arrow[from=2-4, to=3-4]
+	\arrow["gf", from=3-2, to=3-3]
+	\arrow["d", from=3-3, to=3-4]
+\end{tikzcd}
+\end{document}

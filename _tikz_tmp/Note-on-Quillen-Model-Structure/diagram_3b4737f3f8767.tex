@@ -1,0 +1,24 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCIoXFxtYXRoYmZ7U2V0fV57XFxEZWx0YSBee1xcbWF0aHJte29wfX19KV5cXHRvICJdLFsxLDAsIihcXG1hdGhiZntTZXR9XntcXERlbHRhIF57XFxtYXRocm17b3B9fX0pXlxcdG8gIl0sWzAsMSwiKFxcbWF0aGJme1NldH1ee1xcRGVsdGEgXntcXG1hdGhybXtvcH19fSlfKyJdLFsxLDEsIihcXG1hdGhiZntTZXR9XntcXERlbHRhIF57XFxtYXRocm17b3B9fX0pXysiXSxbMywxLCIoXFxtYXRoYmZ7U2V0fV57XFxEZWx0YSBee1xcbWF0aHJte29wfX19KV8rIl0sWzMsMCwiKFxcbWF0aGJme1NldH1ee1xcRGVsdGEgXntcXG1hdGhybXtvcH19fSleXFx0byAiXSxbMCwxLCJcXHRpbWVzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiXFx0aW1lcyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDUsIlxcd2VkZ2UiXSxbMyw0LCJcXHdlZGdlIl0sWzAsMiwiXFxvcGVyYXRvcm5hbWV7Y29rfSIsMix7Im9mZnNldCI6Mn1dLFsxLDMsIlxcb3BlcmF0b3JuYW1le2Nva30iLDIseyJvZmZzZXQiOjJ9XSxbNSw0LCJcXG9wZXJhdG9ybmFtZXtjb2t9IiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwiIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzMsMSwiIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzQsNSwiIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzExLDE0LCJcXGRhc2h2IiwxLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEyLDE1LCJcXGRhc2h2IiwxLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEwLDEzLCJcXGRhc2h2IiwxLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+{(\mathbf{Set}^{\Delta ^{\mathrm{op}}})^\to } \& {(\mathbf{Set}^{\Delta ^{\mathrm{op}}})^\to } \&\& {(\mathbf{Set}^{\Delta ^{\mathrm{op}}})^\to } \\
+{(\mathbf{Set}^{\Delta ^{\mathrm{op}}})_+} \& {(\mathbf{Set}^{\Delta ^{\mathrm{op}}})_+} \&\& {(\mathbf{Set}^{\Delta ^{\mathrm{op}}})_+}
+\arrow["\times"{description}, draw=none, from=1-1, to=1-2]
+\arrow[""{name=0, anchor=center, inner sep=0}, "{\operatorname{cok}}"', shift right=2, from=1-1, to=2-1]
+\arrow["\wedge", from=1-2, to=1-4]
+\arrow[""{name=1, anchor=center, inner sep=0}, "{\operatorname{cok}}"', shift right=2, from=1-2, to=2-2]
+\arrow[""{name=2, anchor=center, inner sep=0}, "{\operatorname{cok}}"', shift right=2, from=1-4, to=2-4]
+\arrow[""{name=3, anchor=center, inner sep=0}, shift right=2, tail, from=2-1, to=1-1]
+\arrow["\times"{description}, draw=none, from=2-1, to=2-2]
+\arrow[""{name=4, anchor=center, inner sep=0}, shift right=2, tail, from=2-2, to=1-2]
+\arrow["\wedge", from=2-2, to=2-4]
+\arrow[""{name=5, anchor=center, inner sep=0}, shift right=2, tail, from=2-4, to=1-4]
+\arrow["\dashv"{description}, draw=none, from=0, to=3]
+\arrow["\dashv"{description}, draw=none, from=1, to=4]
+\arrow["\dashv"{description}, draw=none, from=2, to=5]
+\end{tikzcd}
+\end{document}

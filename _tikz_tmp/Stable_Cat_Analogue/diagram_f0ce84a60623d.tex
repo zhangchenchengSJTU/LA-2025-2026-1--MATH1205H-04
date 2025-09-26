@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+
+% https://q.uiver.app/#q=WzAsMTEsWzIsMCwiQV8yIl0sWzIsMSwiQl8yIl0sWzEsMCwiQV8yIl0sWzAsMSwiQV8xIl0sWzAsMiwiQV8xIl0sWzEsMiwiQl8xIl0sWzIsMiwiQyJdLFsxLDEsIk0iXSxbMywyLCJcXGJ1bGxldCJdLFsyLDMsIlxcYnVsbGV0Il0sWzMsMywiXFxidWxsZXQiXSxbMCwxLCJ4XzIiXSxbMyw3LCJtXzEiLDJdLFsyLDcsIm1fMiIsMl0sWzQsNSwieF8xIiwyXSxbNSw2LCJ5XzEiLDJdLFs3LDUsIlxcbGFtYmRhXzEiLDJdLFs3LDYsImsiLDJdLFszLDQsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsMSwiXFxsYW1iZGFfMiJdLFsxLDYsInlfMiJdLFsyLDAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsOCwiXFxkZWx0YV8xIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsOSwiXFxkZWx0YV8yIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksMTAsIihtXzIpX1xcYXN0IiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzgsMTAsIihtXzEpX1xcYXN0IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsMTAsIlxcdGV4dHvlj419IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}
+	& {A_2} & {A_2} \\
+	{A_1} & M & {B_2} \\
+	{A_1} & {B_1} & C & \bullet \\
+	&& \bullet & \bullet
+	\arrow[equals, from=1-2, to=1-3]
+	\arrow["{m_2}"', from=1-2, to=2-2]
+	\arrow["{x_2}", from=1-3, to=2-3]
+	\arrow["{m_1}"', from=2-1, to=2-2]
+	\arrow[equals, from=2-1, to=3-1]
+	\arrow["{\lambda_2}", from=2-2, to=2-3]
+	\arrow["{\lambda_1}"', from=2-2, to=3-2]
+	\arrow["k"', from=2-2, to=3-3]
+	\arrow["{y_2}", from=2-3, to=3-3]
+	\arrow["{x_1}"', from=3-1, to=3-2]
+	\arrow["{y_1}"', from=3-2, to=3-3]
+	\arrow["{\delta_1}", dashed, from=3-3, to=3-4]
+	\arrow["{\delta_2}"', dashed, from=3-3, to=4-3]
+	\arrow["{\text{反}}"{description}, draw=none, from=3-3, to=4-4]
+	\arrow["{(m_1)_\ast}", dashed, from=3-4, to=4-4]
+	\arrow["{(m_2)_\ast}"', dashed, from=4-3, to=4-4]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjQsWzQsMCwiKFgsWSkiLFsyNjcsMTAwLDQ3LDFdXSxbNCwxLCIoWCxJXjApIixbMjM0LDEwMCw1NCwxXV0sWzQsMiwiKFgsSV4xKSIsWzIzNCwxMDAsNTQsMV1dLFs0LDMsIihYLEleMikiLFsyMzQsMTAwLDU0LDFdXSxbMywwLCIoUF57MH0sWSkiLFszNTcsMTAwLDQ1LDFdXSxbMiwwLCIoUF57LTF9LFkpIixbMzU3LDEwMCw0NSwxXV0sWzEsMCwiKFBeey0yfSxZKSIsWzM1NywxMDAsNDUsMV1dLFszLDEsIihQXnstMX0sSV4wKSJdLFszLDIsIihQXnstMX0sSV4xKSJdLFszLDMsIihQXnstMX0sSV4yKSJdLFsyLDEsIihQXnstMX0sSV4wKSJdLFsyLDIsIihQXnstMX0sSV4xKSJdLFsyLDMsIihQXnstMX0sSV4yKSJdLFsxLDEsIihQXnstMn0sSV4wKSJdLFsxLDIsIihQXnstMn0sSV4xKSJdLFsxLDMsIihQXnstMn0sSV4yKSJdLFs0LDQsIlxcdmRvdHMgIixbMjM0LDEwMCw1NCwxXV0sWzMsNCwiXFx2ZG90cyAiXSxbMiw0LCJcXHZkb3RzICJdLFsxLDQsIlxcdmRvdHMgIl0sWzAsMywiXFxjZG90cyAiXSxbMCwyLCJcXGNkb3RzICJdLFswLDEsIlxcY2RvdHMgIl0sWzAsMCwiXFxjZG90cyAiLFszNTcsMTAwLDQ1LDFdXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCIiLDAseyJjb2xvdXIiOlsyMzQsMTAwLDU0XX1dLFsyLDMsIiIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNTRdfV0sWzAsNCwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsNSwiIiwyLHsiY29sb3VyIjpbMzU3LDEwMCw0NV19XSxbNSw2LCIiLDIseyJjb2xvdXIiOlszNTcsMTAwLDQ1XX1dLFsxLDcsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDEwXSxbMTAsMTNdLFsyLDgsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDExXSxbMTEsMTRdLFszLDksIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs5LDEyXSxbMTIsMTVdLFs0LDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDhdLFs4LDldLFs1LDEwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTAsMTFdLFsxMSwxMl0sWzEzLDE0XSxbMTQsMTVdLFs2LDIzLCIiLDEseyJjb2xvdXIiOlszNTcsMTAwLDQ1XX1dLFs2LDEzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTMsMjJdLFsxNCwyMV0sWzE1LDIwXSxbMTUsMTldLFsxMiwxOF0sWzksMTddLFszLDE2LCIiLDEseyJjb2xvdXIiOlsyMzQsMTAwLDU0XX1dXQ==
+\begin{tikzcd}
+	\color{rgb,255:red,230;green,0;blue,11}{\cdots } & \color{rgb,255:red,230;green,0;blue,11}{(P^{-2},Y)} & \color{rgb,255:red,230;green,0;blue,11}{(P^{-1},Y)} & \color{rgb,255:red,230;green,0;blue,11}{(P^{0},Y)} & \color{rgb,255:red,108;green,0;blue,240}{(X,Y)} \\
+	{\cdots } & {(P^{-2},I^0)} & {(P^{-1},I^0)} & {(P^{-1},I^0)} & \color{rgb,255:red,20;green,44;blue,255}{(X,I^0)} \\
+	{\cdots } & {(P^{-2},I^1)} & {(P^{-1},I^1)} & {(P^{-1},I^1)} & \color{rgb,255:red,20;green,44;blue,255}{(X,I^1)} \\
+	{\cdots } & {(P^{-2},I^2)} & {(P^{-1},I^2)} & {(P^{-1},I^2)} & \color{rgb,255:red,20;green,44;blue,255}{(X,I^2)} \\
+	& {\vdots } & {\vdots } & {\vdots } & \color{rgb,255:red,20;green,44;blue,255}{\vdots }
+	\arrow[draw={rgb,255:red,230;green,0;blue,11}, from=1-2, to=1-1]
+	\arrow[dashed, from=1-2, to=2-2]
+	\arrow[draw={rgb,255:red,230;green,0;blue,11}, from=1-3, to=1-2]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow[draw={rgb,255:red,230;green,0;blue,11}, from=1-4, to=1-3]
+	\arrow[dashed, from=1-4, to=2-4]
+	\arrow[dotted, from=1-5, to=1-4]
+	\arrow[dotted, from=1-5, to=2-5]
+	\arrow[from=2-2, to=2-1]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=2-3, to=2-2]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-3]
+	\arrow[from=2-4, to=3-4]
+	\arrow[dashed, from=2-5, to=2-4]
+	\arrow[draw={rgb,255:red,20;green,44;blue,255}, from=2-5, to=3-5]
+	\arrow[from=3-2, to=3-1]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=3-3, to=3-2]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-4, to=3-3]
+	\arrow[from=3-4, to=4-4]
+	\arrow[dashed, from=3-5, to=3-4]
+	\arrow[draw={rgb,255:red,20;green,44;blue,255}, from=3-5, to=4-5]
+	\arrow[from=4-2, to=4-1]
+	\arrow[from=4-2, to=5-2]
+	\arrow[from=4-3, to=4-2]
+	\arrow[from=4-3, to=5-3]
+	\arrow[from=4-4, to=4-3]
+	\arrow[from=4-4, to=5-4]
+	\arrow[dashed, from=4-5, to=4-4]
+	\arrow[draw={rgb,255:red,20;green,44;blue,255}, from=4-5, to=5-5]
+\end{tikzcd}
+\end{document}

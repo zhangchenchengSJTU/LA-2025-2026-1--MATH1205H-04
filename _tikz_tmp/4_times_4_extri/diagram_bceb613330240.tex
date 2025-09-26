@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwxLCJBXzFcXG9wbHVzIEFfMiJdLFsyLDEsIkJfMVxcb3BsdXMgQl8yIl0sWzMsMSwiQ1xcb3BsdXMgQyJdLFszLDAsIkMiXSxbMSwwLCJBXzFcXG9wbHVzIEFfMiJdLFsyLDAsIk0iXSxbMCwxLCJcXGRlbHRhXzEgXFxvcGx1cyBcXGRlbHRhXzIiXSxbMCwwLCJcXGJpbm9tezF9ezF9XlxcYXN0IChcXGRlbHRhX3sxfSBcXG9wbHVzIFxcZGVsdGEgXzIpIl0sWzAsMSwieF8xIFxcb3BsdXMgeF8yIiwyXSxbMSwyLCJ5XzEgXFxvcGx1cyB5XzIiLDJdLFszLDIsIlxcYmlub20gMTEiXSxbNCwwLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDMsImsiXSxbNCw1LCJtIl0sWzUsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsN10sWzE1LDExLCJcXG1hdGhmcmFrIHMiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV1d
+\begin{tikzcd}
+	{\binom{1}{1}^\ast (\delta_{1} \oplus \delta _2)} & {A_1\oplus A_2} & M & C \\
+	{\delta_1 \oplus \delta_2} & {A_1\oplus A_2} & {B_1\oplus B_2} & {C\oplus C}
+	\arrow["m", from=1-2, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, equals, from=1-2, to=2-2]
+	\arrow["k", from=1-3, to=1-4]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow["{\binom 11}", from=1-4, to=2-4]
+	\arrow[""{name=1, anchor=center, inner sep=0}, from=2-1, to=1-1]
+	\arrow["{x_1 \oplus x_2}"', from=2-2, to=2-3]
+	\arrow["{y_1 \oplus y_2}"', from=2-3, to=2-4]
+	\arrow["{\mathfrak s}"{description}, shorten <=10pt, shorten >=10pt, Rightarrow, from=1, to=0]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMCwwLCJYJyJdLFsyLDAsIlgiXSxbNCwwLCJYJyJdLFsyLDIsIloiLFsyMzgsMTAwLDYwLDFdXSxbMCwyLCJaJyJdLFs0LDIsIlonIixbMjM4LDEwMCw2MCwxXV0sWzQsMSwiWSciXSxbMiwxLCJZIixbMjM4LDEwMCw2MCwxXV0sWzAsMSwiWSciXSxbMCwxLCJpX1giXSxbMSwyLCJwX1giXSxbNCwzLCJpX1oiLDJdLFszLDUsInBfWiIsMix7ImNvbG91ciI6WzIzOCwxMDAsNjBdfSxbMjM4LDEwMCw2MCwxXV0sWzIsNiwiYSciXSxbNiw1LCJiJyIsMCx7ImNvbG91ciI6WzIzOCwxMDAsNjBdfSxbMjM4LDEwMCw2MCwxXV0sWzcsNiwicF9ZIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbNywzLCJiIiwwLHsiY29sb3VyIjpbMjM4LDEwMCw2MF19LFsyMzgsMTAwLDYwLDFdXSxbOCw0LCJiJyIsMl0sWzAsOCwiYSciLDJdLFsxLDcsImEiLDAseyJjb2xvdXIiOlszNTgsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fSxbMzU4LDEwMCw2MCwxXV0sWzgsNywiaV9ZIiwwLHsiY29sb3VyIjpbMzU4LDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzM1OCwxMDAsNjAsMV1dLFs4LDQsIlxcbWF0aHNme1RGaWJ9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsNiwiXFxtYXRoc2Z7Q29maWJ9IiwyXSxbMCw4LCJcXG1hdGhzZntDb2ZpYn0iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiw1LCJcXG1hdGhzZntURmlifSIsMix7ImNvbG91ciI6WzIzOCwxMDAsNjBdfSxbMjM4LDEwMCw2MCwxXV0sWzcsMywiXFxtYXRoc2Z7VEZpYn0iLDIseyJjb2xvdXIiOlsyMzgsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fSxbMjM4LDEwMCw2MCwxXV0sWzEsNywiXFxtYXRoc2Z7V2VxfSIsMix7ImNvbG91ciI6WzM1OCwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19LFszNTgsMTAwLDYwLDFdXV0=
+\begin{tikzcd}
+{X'} && X && {X'} \\
+{Y'} && \color{rgb,255:red,51;green,58;blue,255}{Y} && {Y'} \\
+{Z'} && \color{rgb,255:red,51;green,58;blue,255}{Z} && \color{rgb,255:red,51;green,58;blue,255}{Z'}
+\arrow["{i_X}", from=1-1, to=1-3]
+\arrow["{a'}"', from=1-1, to=2-1]
+\arrow["{\mathsf{Cofib}}", draw=none, from=1-1, to=2-1]
+\arrow["{p_X}", from=1-3, to=1-5]
+\arrow["a", color={rgb,255:red,255;green,51;blue,58}, dashed, from=1-3, to=2-3]
+\arrow["{\mathsf{Weq}}"', color={rgb,255:red,255;green,51;blue,58}, draw=none, from=1-3, to=2-3]
+\arrow["{a'}", from=1-5, to=2-5]
+\arrow["{\mathsf{Cofib}}"', from=1-5, to=2-5]
+\arrow["{i_Y}", color={rgb,255:red,255;green,51;blue,58}, dashed, from=2-1, to=2-3]
+\arrow["{b'}"', from=2-1, to=3-1]
+\arrow["{\mathsf{TFib}}", draw=none, from=2-1, to=3-1]
+\arrow["{p_Y}", color={rgb,255:red,51;green,58;blue,255}, from=2-3, to=2-5]
+\arrow["b", color={rgb,255:red,51;green,58;blue,255}, from=2-3, to=3-3]
+\arrow["{\mathsf{TFib}}"', color={rgb,255:red,51;green,58;blue,255}, draw=none, from=2-3, to=3-3]
+\arrow["{b'}", color={rgb,255:red,51;green,58;blue,255}, from=2-5, to=3-5]
+\arrow["{\mathsf{TFib}}"', color={rgb,255:red,51;green,58;blue,255}, from=2-5, to=3-5]
+\arrow["{i_Z}"', from=3-1, to=3-3]
+\arrow["{p_Z}"', color={rgb,255:red,51;green,58;blue,255}, from=3-3, to=3-5]
+\end{tikzcd}
+\end{document}

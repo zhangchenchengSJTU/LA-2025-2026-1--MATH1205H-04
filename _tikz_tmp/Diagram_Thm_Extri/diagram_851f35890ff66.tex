@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJYIl0sWzIsMCwiWSJdLFs0LDAsIloiXSxbMCwxLCJYIl0sWzQsMSwiWiJdLFsyLDEsIlknIl0sWzUsMCwiXFwsIl0sWzUsMSwiXFwsIl0sWzEsMiwiXFx1bmRlcmxpbmUgZyJdLFswLDEsIlxcdW5kZXJsaW5lIGYiXSxbMCwzLCJcXHVuZGVybGluZSB7MV9YfSJdLFsyLDQsIlxcdW5kZXJsaW5lIHsxX1p9Il0sWzMsNSwiXFx1bmRlcmxpbmUge2YnfSJdLFs1LDQsIlxcdW5kZXJsaW5lIHtnJ30iXSxbMSw1LCJcXHVuZGVybGluZSB7XFx2YXJwaGkgfSJdLFsyLDZdLFs0LDddXQ==
+\begin{tikzcd}
+X && Y && Z & {\,} \\
+X && {Y'} && Z & {\,}
+\arrow["{\underline f}", from=1-1, to=1-3]
+\arrow["{\underline {1_X}}", from=1-1, to=2-1]
+\arrow["{\underline g}", from=1-3, to=1-5]
+\arrow["{\underline {\varphi }}", from=1-3, to=2-3]
+\arrow[from=1-5, to=1-6]
+\arrow["{\underline {1_Z}}", from=1-5, to=2-5]
+\arrow["{\underline {f'}}", from=2-1, to=2-3]
+\arrow["{\underline {g'}}", from=2-3, to=2-5]
+\arrow[from=2-5, to=2-6]
+\end{tikzcd}
+\end{document}

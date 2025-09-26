@@ -1,0 +1,22 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMCwyLCJcXGJveGVke1xcdGV4dHvnurV9fSJdLFszLDIsIlxcYm94ZWR7XFx0ZXh0e+aoqn19Il0sWzQsMiwiXFxidWxsZXQiXSxbNSwyLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzMsMCwiXFxidWxsZXQiXSxbMywwLCJkXzA9ZF9cXHVwYXJyb3cgIl0sWzMsMSwiZF8xPSBIX1xcdXBhcnJvdyAoZF9cXHRvICkiXSxbMywyLCJkXzIiLDJdLFs2LDcsImRfMCA9IGRfXFx0byAiLDJdLFs2LDgsImRfMSA9IEhfXFx0byAoZF9cXHVwYXJyb3cgKSIsMl0sWzYsOSwiZF8yIl0sWzAsMSwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxLDIsIiIsMSx7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNyw4LCIiLDEseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzgsOSwiIiwxLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dXQ==
+\begin{tikzcd}
+	\bullet &&& \bullet \\
+	\bullet & \bullet &&& \bullet \\
+	{\boxed{\text{纵}}} && \bullet & {\boxed{\text{横}}} & \bullet & \bullet
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=1-1, to=2-2]
+	\arrow["{d_0=d_\uparrow }", from=2-1, to=1-1]
+	\arrow["{d_1= H_\uparrow (d_\to )}", from=2-1, to=2-2]
+	\arrow["{d_2}"', from=2-1, to=3-3]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=2-2, to=3-3]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=2-5, to=1-4]
+	\arrow["{d_2}", from=3-5, to=1-4]
+	\arrow["{d_1 = H_\to (d_\uparrow )}"', from=3-5, to=2-5]
+	\arrow["{d_0 = d_\to }"', from=3-5, to=3-6]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=3-6, to=2-5]
+\end{tikzcd}
+\end{document}

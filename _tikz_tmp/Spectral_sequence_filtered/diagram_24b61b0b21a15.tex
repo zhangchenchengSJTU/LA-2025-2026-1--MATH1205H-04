@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMSwiXFxtYXRocm17RXh0fV4xKFgsIFxcdmFycHJvamxpbSBZX1xcYnVsbGV0ICkiXSxbMSwxLCIoRkcpXjEiXSxbMSwyLCJcXHZhcnByb2psaW1eMSAoWCwgWV9cXGJ1bGxldCkiXSxbMSwwLCJcXHZhcnByb2psaW1cXG1hdGhybXtFeHR9XjEoWCwgWV9cXGJ1bGxldCApIl0sWzIsMSwiKFgsIFxcdmFycHJvamxpbV4xWV9cXGJ1bGxldCkiXSxbMywxLCJcXG1hdGhybXtFeHR9XjIoWCwgXFx2YXJwcm9qbGltIFlfXFxidWxsZXQgKSJdLFs0LDEsIihGRyleMiJdLFs1LDEsIlxcbWF0aHJte0V4dH1eMShYLCBcXHZhcnByb2psaW1eMVlfXFxidWxsZXQgKSJdLFs0LDIsIlxcdmFycHJvamxpbV4xXFxtYXRocm17RXh0fV4xKFgsIFlfXFxidWxsZXQgKSJdLFs0LDAsIlxcdmFycHJvamxpbVxcbWF0aHJte0V4dH1eMihYLCBZX1xcYnVsbGV0ICkiXSxbMSw0XSxbNCw1XSxbNSw2XSxbNiw3XSxbMiwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDMsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs4LDYsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzYsOSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XV0=
+\begin{tikzcd}
+	& {\varprojlim\mathrm{Ext}^1(X, Y_\bullet )} &&& {\varprojlim\mathrm{Ext}^2(X, Y_\bullet )} \\
+	{\mathrm{Ext}^1(X, \varprojlim Y_\bullet )} & {(FG)^1} & {(X, \varprojlim^1Y_\bullet)} & {\mathrm{Ext}^2(X, \varprojlim Y_\bullet )} & {(FG)^2} & {\mathrm{Ext}^1(X, \varprojlim^1Y_\bullet )} \\
+	& {\varprojlim^1 (X, Y_\bullet)} &&& {\varprojlim^1\mathrm{Ext}^1(X, Y_\bullet )}
+	\arrow[hook, from=2-1, to=2-2]
+	\arrow[two heads, from=2-2, to=1-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[two heads, from=2-5, to=1-5]
+	\arrow[from=2-5, to=2-6]
+	\arrow[hook, from=3-2, to=2-2]
+	\arrow[hook, from=3-5, to=2-5]
+\end{tikzcd}
+\end{document}

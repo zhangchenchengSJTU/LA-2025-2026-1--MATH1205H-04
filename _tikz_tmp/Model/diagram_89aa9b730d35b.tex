@@ -1,0 +1,13 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+ % https://q.uiver.app/#q=WzAsNCxbMSwwLCJcXGJ1bGxldCJdLFswLDAsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFsxLDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzIsMywiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMSwyXSxbMCwzXV0=
+\begin{tikzcd}
+	\bullet & \bullet \\
+	\bullet & \bullet
+	\arrow[squiggly, hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow[squiggly, hook, from=2-1, to=2-2]
+\end{tikzcd} \end{document}

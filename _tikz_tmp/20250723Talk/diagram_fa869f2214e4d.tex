@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMiwiWF57bi0xfSJdLFswLDEsIlhebiJdLFswLDAsIlhee24rMX0iXSxbMSwxLCJJXjAgKEJee259KVxcb3BsdXMgSV4wKEhee259KVxcb3BsdXMgSV4wKEJee24rMX0pIl0sWzEsMiwiSV4wIChCXntuLTF9KVxcb3BsdXMgSV4wKEhee24tMX0pXFxvcGx1cyBJXjAoQl57bn0pIl0sWzEsMCwiSV4wIChCXntuKzF9KVxcXFxcXG9wbHVzIFxcXFxJXjAoSF57bisxfSlcXFxcXFxvcGx1cyBcXFxcSV4wKEJee24rMn0pIl0sWzIsMiwiSV4xIChCXntuLTF9KVxcb3BsdXMgSV4xKEhee24tMX0pXFxvcGx1cyBJXjEoQl57bn0pIl0sWzIsMSwiSV4xIChCXntufSlcXG9wbHVzIEleMShIXntufSlcXG9wbHVzIEleMShCXntuKzF9KSJdLFsyLDAsIkleMSAoQl57bisxfSlcXG9wbHVzIEleMShIXntuKzF9KVxcb3BsdXMgSV4xKEJee24rMn0pIl0sWzMsMiwiXFxjZG90cyJdLFszLDEsIlxcY2RvdHMiXSxbMywwLCJcXGNkb3RzIl0sWzAsNF0sWzAsMV0sWzEsMl0sWzEsM10sWzIsNV0sWzQsMywiZV8xcF8zIl0sWzMsNSwiZV8xcF8zIl0sWzQsNl0sWzYsNywiZV8xcF8zIl0sWzcsOCwiZV8xcF8zIl0sWzMsN10sWzUsOF0sWzYsOV0sWzcsMTBdLFs4LDExXV0=
+\begin{tikzcd}[ampersand replacement=\&,column sep=small]
+	{X^{n+1}} \& \begin{array}{c} I^0 (B^{n+1})\\\oplus \\I^0(H^{n+1})\\\oplus \\I^0(B^{n+2}) \end{array} \& {I^1 (B^{n+1})\oplus I^1(H^{n+1})\oplus I^1(B^{n+2})} \& \cdots \\
+	{X^n} \& {I^0 (B^{n})\oplus I^0(H^{n})\oplus I^0(B^{n+1})} \& {I^1 (B^{n})\oplus I^1(H^{n})\oplus I^1(B^{n+1})} \& \cdots \\
+	{X^{n-1}} \& {I^0 (B^{n-1})\oplus I^0(H^{n-1})\oplus I^0(B^{n})} \& {I^1 (B^{n-1})\oplus I^1(H^{n-1})\oplus I^1(B^{n})} \& \cdots
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=2-1, to=1-1]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{e_1p_3}", from=2-2, to=1-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["{e_1p_3}", from=2-3, to=1-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=3-1, to=2-1]
+	\arrow[from=3-1, to=3-2]
+	\arrow["{e_1p_3}", from=3-2, to=2-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow["{e_1p_3}", from=3-3, to=2-3]
+	\arrow[from=3-3, to=3-4]
+\end{tikzcd}
+\end{document}

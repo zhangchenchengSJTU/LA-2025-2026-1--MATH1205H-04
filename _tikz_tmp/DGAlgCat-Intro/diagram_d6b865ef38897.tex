@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJYXntuKzF9Il0sWzEsMSwiWV5uIl0sWzMsMCwiWF57bisyfSJdLFszLDEsIllee24rMX0iXSxbMSwyLCJcXG1hdGhybXtDb25lfShmKV5uIl0sWzMsMiwiXFxtYXRocm17Q29uZX0oZilee24rMX0iXSxbMCwxLCJcXCwiXSxbNCwxLCJcXCwiXSxbMCwxLCJcXG9wbHVzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiXFxvcGx1cyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDIsIi1kX1giXSxbMSwzLCJkX1kiLDJdLFswLDMsImZee24rMX0iLDFdLFs0LDUsIlxcYmlub217LWQgXFwgXFwgMH17XFwgXFwgZiBcXCBcXCBkfSJdXQ==
+\begin{tikzcd}
+	& {X^{n+1}} && {X^{n+2}} \\
+	{\,} & {Y^n} && {Y^{n+1}} & {\,} \\
+	& {\mathrm{Cone}(f)^n} && {\mathrm{Cone}(f)^{n+1}}
+	\arrow["{-d_X}", from=1-2, to=1-4]
+	\arrow["\oplus"{description}, draw=none, from=1-2, to=2-2]
+	\arrow["{f^{n+1}}"{description}, from=1-2, to=2-4]
+	\arrow["\oplus"{description}, draw=none, from=1-4, to=2-4]
+	\arrow["{d_Y}"', from=2-2, to=2-4]
+	\arrow["{\binom{-d \ \ 0}{\ f \ \ d}}", from=3-2, to=3-4]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCJYJyJdLFswLDIsIlknIl0sWzIsMCwiWCBcXG9wbHVzIEsiXSxbNCwwLCJYJyJdLFs0LDIsIlknIl0sWzIsMiwiRiBcXG9wbHVzIEsiXSxbMiwxLCJcXGJ1bGxldCJdLFswLDEsImEnIiwyXSxbMyw0LCJhJyIsMl0sWzAsMiwiXFxiaW5vbSB7aV9YfXtsIGlfWH0iXSxbMiwzLCIocF9YLCAwKSJdLFsxLDUsIlxcYmlub20ge2pfWX0wIl0sWzUsNCwiKHFfWSwgLXFfWSB4KSJdLFsyLDYsIlxcbWF0aHNme1RDb2ZpYn0iLDJdLFs2LDUsIlxcbWF0aHNme1RGaWJ9IiwyXSxbMSw2LCIiLDIseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDQsIiIsMix7ImN1cnZlIjotMn1dXQ==
+\begin{tikzcd}
+	{X'} && {X \oplus K} && {X'} \\
+	&& \bullet \\
+	{Y'} && {F \oplus K} && {Y'}
+	\arrow["{\binom {i_X}{l i_X}}", from=1-1, to=1-3]
+	\arrow["{a'}"', from=1-1, to=3-1]
+	\arrow["{(p_X, 0)}", from=1-3, to=1-5]
+	\arrow["{\mathsf{TCofib}}"', from=1-3, to=2-3]
+	\arrow["{a'}"', from=1-5, to=3-5]
+	\arrow["{\mathsf{TFib}}"', from=2-3, to=3-3]
+	\arrow[curve={height=-12pt}, from=2-3, to=3-5]
+	\arrow[curve={height=-12pt}, dashed, from=3-1, to=2-3]
+	\arrow["{\binom {j_Y}0}", from=3-1, to=3-3]
+	\arrow["{(q_Y, -q_Y x)}", from=3-3, to=3-5]
+\end{tikzcd}
+\end{document}

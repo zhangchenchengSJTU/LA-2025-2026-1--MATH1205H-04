@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFsxLDAsIlxca2VyIHAiXSxbMywwLCJQIl0sWzUsMCwiWCJdLFs2LDAsIjAiXSxbMSwxLCJcXGtlciBwIl0sWzMsMSwiUCJdLFs1LDEsIlgiXSxbNiwxLCIwIl0sWzAsMSwiMCJdLFswLDFdLFsyLDMsInAiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw0XSxbOSw1XSxbNSw2XSxbNiw3LCJwIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzcsOF0sWzEsMl0sWzEsNSwiXFxhbHBoYSB8X3tcXGtlciBwfSIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDYsIlxcYWxwaGEgIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw3LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	0 \& {\ker p} \&\& P \&\& X \& 0 \\
+	0 \& {\ker p} \&\& P \&\& X \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-4]
+	\arrow["{\alpha |_{\ker p}}"', dashed, hook, from=1-2, to=2-2]
+	\arrow["p", two heads, from=1-4, to=1-6]
+	\arrow["{\alpha }"', hook, from=1-4, to=2-4]
+	\arrow[from=1-6, to=1-7]
+	\arrow[equals, from=1-6, to=2-6]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-4]
+	\arrow["p", two heads, from=2-4, to=2-6]
+	\arrow[from=2-6, to=2-7]
+\end{tikzcd}
+\end{document}

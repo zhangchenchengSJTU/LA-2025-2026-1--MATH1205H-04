@@ -1,0 +1,16 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJNX2kgIl0sWzMsMCwiTV97XFx2YXJwaGkoaSl9Il0sWzIsMSwiUV9pIl0sWzQsMSwiUV97XFx2YXJwaGkoaSl9Il0sWzAsMCwiXFwsIl0sWzUsMSwiXFwsIl0sWzAsMSwibV97XFx2YXJwaGkgKGkpLGl9Il0sWzIsMywicV97XFx2YXJwaGkgKGkpLGl9IiwyXSxbMCwyLCJcXGFscGhhIF9pIiwyXSxbMSwzLCJcXGFscGhhIF97XFx2YXJwaGkgKGkpfSJdLFsyLDEsIlxcYmV0YV9pIl1d
+\begin{tikzcd}
+	{\,} & {M_i } && {M_{\varphi(i)}} \\
+	&& {Q_i} && {Q_{\varphi(i)}} & {\,}
+	\arrow["{m_{\varphi (i),i}}", from=1-2, to=1-4]
+	\arrow["{\alpha _i}"', from=1-2, to=2-3]
+	\arrow["{\alpha _{\varphi (i)}}", from=1-4, to=2-5]
+	\arrow["{\beta_i}", from=2-3, to=1-4]
+	\arrow["{q_{\varphi (i),i}}"', from=2-3, to=2-5]
+\end{tikzcd}
+\end{document}

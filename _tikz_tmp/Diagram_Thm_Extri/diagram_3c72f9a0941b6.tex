@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMSwwLCJcXG1hdGhzY3IgQSJdLFs0LDAsIlxcbWF0aHNjciBBXFx0aW1lcyBcXG1hdGhzY3IgQSJdLFswLDAsIlMiXSxbNSwwLCJTIFxcdGltZXMgUyJdLFsxLDIsIlxcbWF0aHNjciBBIFtTXnstMX1dIl0sWzQsMSwiKFxcbWF0aHNjciBBXFx0aW1lcyBcXG1hdGhzY3IgQSkgWyhTXFx0aW1lcyBTKV57LTF9XSJdLFs0LDIsIihcXG1hdGhzY3IgQSBbU157LTF9XSlcXHRpbWVzIChcXG1hdGhzY3IgQSBbU157LTF9XSkiXSxbMCwxLCJYIFxcbWFwc3RvIChYLFgpIiwyLHsib2Zmc2V0IjoyfV0sWzEsMCwiKFgsWSlcXG1hcHN0byBYXFxvcGx1cyBZIiwyLHsib2Zmc2V0IjoyfV0sWzAsNCwiUV9TIiwyXSxbMSw1LCJRX3tTXFx0aW1lcyBTfSIsMl0sWzUsNiwiXFxzaW0gIl0sWzYsNCwiKFgsWSlcXG1hcHN0byBYXFxvcGx1cyBZIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCw2LCJYIFxcbWFwc3RvIChYLFgpIiwyLHsib2Zmc2V0IjoyLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+S \& {\mathcal A} \&\&\& {\mathcal A\times \mathcal A} \& {S \times S} \\
+\&\&\&\& {(\mathcal A\times \mathcal A) [(S\times S)^{-1}]} \\
+\& {\mathcal A [S^{-1}]} \&\&\& {(\mathcal A [S^{-1}])\times (\mathcal A [S^{-1}])}
+\arrow["{X \mapsto (X,X)}"', shift right=2, from=1-2, to=1-5]
+\arrow["{Q_S}"', from=1-2, to=3-2]
+\arrow["{(X,Y)\mapsto X\oplus Y}"', shift right=2, from=1-5, to=1-2]
+\arrow["{Q_{S\times S}}"', from=1-5, to=2-5]
+\arrow["{\sim }", from=2-5, to=3-5]
+\arrow["{X \mapsto (X,X)}"', shift right=2, dashed, from=3-2, to=3-5]
+\arrow["{(X,Y)\mapsto X\oplus Y}"', shift right=2, dashed, from=3-5, to=3-2]
+\end{tikzcd}
+\end{document}

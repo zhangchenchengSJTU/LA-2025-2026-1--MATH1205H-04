@@ -1,0 +1,14 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXG1hdGhzY3IgQSJdLFs1LDAsIlxcbWF0aHNme0hvfVxcbWF0aHNjciBBIl0sWzMsMSwiXFxtYXRoc2Z7SG99XFxtYXRoc2NyIEEiXSxbMCwwLCJcXCwiXSxbNiwwLCJcXCwiXSxbMCwxLCJRKFVfXFxidWxsZXQgKSJdLFswLDIsIlEiLDJdLFsyLDEsIlsxXSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+{\,} \& {\mathcal A} \&\&\&\& {\mathsf{Ho}\mathcal A} \& {\,} \\
+\&\&\& {\mathsf{Ho}\mathcal A}
+\arrow["{Q(U_\bullet )}", from=1-2, to=1-6]
+\arrow["Q"', from=1-2, to=2-4]
+\arrow["{[1]}"', dashed, from=2-4, to=1-6]
+\end{tikzcd}
+\end{document}

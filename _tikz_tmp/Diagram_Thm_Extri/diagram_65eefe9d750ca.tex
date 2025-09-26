@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJaIl0sWzIsMCwiVyJdLFs0LDAsIlgiXSxbMiwxLCJXIl0sWzQsMSwiMCJdLFswLDEsIlciXSxbNSwwLCJcXCwiXSxbNSwxLCJcXCwiXSxbMCwxLCJmIl0sWzEsMiwiZyJdLFs1LDMsIjFfVyIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNywiMCJdLFsyLDYsIlxcZGVsdGEiXSxbMSwzLCIxX1ciLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDUsImYiXSxbMiw0LCJcXGdhbW1hIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsNF1d
+\begin{tikzcd}[ampersand replacement=\&]
+Z \&\& Y \&\& X \& {\,} \\
+Y \&\& Y \&\& 0 \& {\,}
+\arrow["f", from=1-1, to=1-3]
+\arrow["f", from=1-1, to=2-1]
+\arrow["g", from=1-3, to=1-5]
+\arrow["{1_Y}", equals, from=1-3, to=2-3]
+\arrow["\delta", from=1-5, to=1-6]
+\arrow["\gamma", dashed, from=1-5, to=2-5]
+\arrow["{1_Y}", equals, from=2-1, to=2-3]
+\arrow[from=2-3, to=2-5]
+\arrow["0", from=2-5, to=2-6]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjAsWzEsMiwiWF8xIl0sWzIsMiwiWF8yIl0sWzIsMywiWF8yJyAiLFsyMzQsMTAwLDYwLDFdXSxbMSwzLCJYXzEiXSxbMCwyLCJcXG1hdGhiZntyZXB9KFxccmlnaHRyaWdodGFycm93cykiXSxbMCwzLCJcXG1hdGhiZntyZXB9KFxcbGVmdGxlZnRhcnJvd3MpIl0sWzMsMywiWF8xIl0sWzQsMiwiWF8xIl0sWzMsMiwiWF8yJyIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlhfMiJdLFswLDEsIlxcbWF0aGJme3JlcH0oXFxyaWdodHJpZ2h0YXJyb3dzKSJdLFswLDAsIlxcbWF0aGJme3JlcH0oXFxsZWZ0bGVmdGFycm93cykiXSxbMSwxLCJYXzEiXSxbMSwwLCJYXzEnJyIsWzAsNjAsNjAsMV1dLFsyLDAsIlhfMiJdLFsyLDEsIlhfMiJdLFszLDAsIlhfMSJdLFs0LDEsIlhfMScnIixbMCw2MCw2MCwxXV0sWzMsMSwiWF8yIl0sWzQsMCwiWF8yIl0sWzAsMSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJnIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiZiciLDIseyJvZmZzZXQiOjIsImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzIsMywiZyciLDAseyJvZmZzZXQiOi0yLCJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFs0LDUsIkNfMl4rIiwyLHsibGV2ZWwiOjJ9XSxbOCw3LCJmJyIsMCx7ImNvbG91ciI6WzIzNCwxMDAsNjBdfSxbMjM0LDEwMCw2MCwxXV0sWzcsOSwiZiJdLFs4LDYsImcnIiwyLHsiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNiw5LCJnIiwyXSxbOCw5LCJcXHRleHR75ouJ5ZuefSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxNSwiZiIsMCx7Im9mZnNldCI6LTJ9XSxbMTIsMTUsImciLDIseyJvZmZzZXQiOjJ9XSxbMTQsMTMsImYnJyIsMix7Im9mZnNldCI6MiwiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTQsMTMsImcnJyIsMCx7Im9mZnNldCI6LTIsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzE2LDE3LCJcXHRleHR75o6o5Ye6fSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxMSwiQ18xXi0iLDAseyJsZXZlbCI6Mn1dLFsxNiwxOSwiZiJdLFsxNiwxOCwiZyIsMl0sWzE5LDE3LCJnJyciLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxOCwxNywiZicnIiwyLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXV0=
+\begin{tikzcd}
+	{\mathbf{rep}(\leftleftarrows)} & \color{rgb,255:red,214;green,92;blue,92}{X_1''} & {X_2} & {X_1} & {X_2} \\
+	{\mathbf{rep}(\rightrightarrows)} & {X_1} & {X_2} & {X_2} & \color{rgb,255:red,214;green,92;blue,92}{X_1''} \\
+	{\mathbf{rep}(\rightrightarrows)} & {X_1} & {X_2} & \color{rgb,255:red,51;green,71;blue,255}{X_2'} & {X_1} \\
+	{\mathbf{rep}(\leftleftarrows)} & {X_1} & \color{rgb,255:red,51;green,71;blue,255}{X_2' } & {X_1} & {X_2}
+	\arrow["{f''}"', shift right=2, color={rgb,255:red,214;green,92;blue,92}, from=1-3, to=1-2]
+	\arrow["{g''}", shift left=2, color={rgb,255:red,214;green,92;blue,92}, from=1-3, to=1-2]
+	\arrow["f", from=1-4, to=1-5]
+	\arrow["g"', from=1-4, to=2-4]
+	\arrow["{\text{推出}}"{description}, draw=none, from=1-4, to=2-5]
+	\arrow["{g''}", color={rgb,255:red,214;green,92;blue,92}, from=1-5, to=2-5]
+	\arrow["{C_1^-}", Rightarrow, from=2-1, to=1-1]
+	\arrow["f", shift left=2, from=2-2, to=2-3]
+	\arrow["g"', shift right=2, from=2-2, to=2-3]
+	\arrow["{f''}"', color={rgb,255:red,214;green,92;blue,92}, from=2-4, to=2-5]
+	\arrow["{C_2^+}"', Rightarrow, from=3-1, to=4-1]
+	\arrow["f", shift left=2, from=3-2, to=3-3]
+	\arrow["g"', shift right=2, from=3-2, to=3-3]
+	\arrow["{f'}", color={rgb,255:red,51;green,71;blue,255}, from=3-4, to=3-5]
+	\arrow["{g'}"', color={rgb,255:red,51;green,71;blue,255}, from=3-4, to=4-4]
+	\arrow["{\text{拉回}}"{description}, draw=none, from=3-4, to=4-5]
+	\arrow["f", from=3-5, to=4-5]
+	\arrow["{f'}"', shift right=2, color={rgb,255:red,51;green,71;blue,255}, from=4-3, to=4-2]
+	\arrow["{g'}", shift left=2, color={rgb,255:red,51;green,71;blue,255}, from=4-3, to=4-2]
+	\arrow["g"', from=4-4, to=4-5]
+\end{tikzcd}
+\end{document}

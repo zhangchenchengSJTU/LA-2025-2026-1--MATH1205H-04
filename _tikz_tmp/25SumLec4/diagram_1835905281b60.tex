@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNSxbMCwxLCJNX2kgIl0sWzAsMiwiTV9qIl0sWzEsMSwiWCJdLFswLDAsIk1fayJdLFsyLDEsIlxcZm9yYWxsIFxcdmFycGhpIFxcIFxcZXhpc3RzIFxccHNpIFxcIChcXHN0YXIgXFwgXFx0ZXh0e2NvbW11dGVzfSkuIl0sWzAsMSwiZl97aixpfSIsMl0sWzEsMiwiXFxleGlzdHMgXFxwc2kgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMywiZl97ayxqfSIsMCx7ImN1cnZlIjotNX1dLFswLDMsImZfe2ssaX0iXSxbMywyLCJcXGZvcmFsbCBcXHZhcnBoaSAiXSxbMCwyLCJcXHN0YXIgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	{M_k} \\
+	{M_i } \& X \& {\forall \varphi \ \exists \psi \ (\star \ \text{commutes}).} \\
+	{M_j}
+	\arrow["{\forall \varphi }", from=1-1, to=2-2]
+	\arrow["{f_{k,i}}", from=2-1, to=1-1]
+	\arrow["{\star }"{description}, draw=none, from=2-1, to=2-2]
+	\arrow["{f_{j,i}}"', from=2-1, to=3-1]
+	\arrow["{f_{k,j}}", curve={height=-30pt}, from=3-1, to=1-1]
+	\arrow["{\exists \psi }"', dashed, from=3-1, to=2-2]
+\end{tikzcd}
+\end{document}

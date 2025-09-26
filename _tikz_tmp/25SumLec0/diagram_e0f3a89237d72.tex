@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwxLCJVKFgpIl0sWzEsMSwiVShZKSJdLFsxLDAsIlMiXSxbMCwwLCJcXGJveGVke1xcbWF0aGJme0dyU2V0c319Il0sWzQsMCwiRihTKSJdLFszLDEsIlgiXSxbNCwxLCJZIl0sWzMsMCwiXFxib3hlZHtDKFIpfSJdLFswLDEsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDFdLFsyLDAsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDYsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDZdLFs0LDUsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDUsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDE0LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6NDAsInRhcmdldCI6NDB9LCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJhcnJvd2hlYWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{\boxed{\mathbf{GrSets}}} \& S \&\& {\boxed{C(R)}} \& {F(S)} \\
+	{U(X)} \& {U(Y)} \&\& X \& Y
+	\arrow[dashed, from=1-2, to=2-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, from=1-2, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, draw=none, from=1-4, to=2-4]
+	\arrow[dashed, from=1-5, to=2-4]
+	\arrow[from=1-5, to=2-5]
+	\arrow[two heads, from=2-1, to=2-2]
+	\arrow[two heads, from=2-4, to=2-5]
+	\arrow[between={0.4}{0.6}, Rightarrow, 2tail reversed, from=0, to=1]
+\end{tikzcd}
+\end{document}

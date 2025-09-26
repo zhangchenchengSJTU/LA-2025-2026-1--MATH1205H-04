@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIlxcYnVsbGV0Il0sWzIsMCwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFszLDEsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzAsMV0sWzEsMl0sWzIsM10sWzMsNF0sWzAsNV0sWzUsNl0sWzYsNywiIiwyLHsibGV2ZWwiOjJ9XSxbNyw0XSxbMiw3XSxbMSw2XV0=
+\begin{tikzcd}
+\bullet & \bullet & \bullet & \bullet \\
+\bullet & \bullet & \bullet & \bullet
+\arrow[from=1-1, to=1-2]
+\arrow[from=1-1, to=2-1]
+\arrow[from=1-2, to=1-3]
+\arrow[from=1-2, to=2-2]
+\arrow[from=1-3, to=1-4]
+\arrow[from=1-3, to=2-3]
+\arrow[from=1-4, to=2-4]
+\arrow[from=2-1, to=2-2]
+\arrow[Rightarrow, from=2-2, to=2-3]
+\arrow[from=2-3, to=2-4]
+\end{tikzcd}
+\end{document}

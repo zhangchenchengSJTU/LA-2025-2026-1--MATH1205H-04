@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwxLCJNX2kgIl0sWzIsMiwiTV9qICJdLFszLDEsIk1fayJdLFsyLDAsIk0iXSxbNCwwLCJcXGNkb3QiXSxbNCwyLCJcXGNkb3QiXSxbMCwxLCJcXCwiXSxbNiwxLCJcXCwiXSxbMCwyLCJmX3trLGl9Il0sWzAsMywiZV9pIl0sWzAsMSwiZl97aixpfSIsMl0sWzMsNCwiXFx0ZXh0e3B1cmV9IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiw0LCJcXHRleHR7cHVyZX0iLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDUsIlxcdGV4dHtwdXJlfSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsNSwiXFx0ZXh0e3B1cmV9IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMywyLCJcXHRleHR7UE99IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiXFx0ZXh0e1BPfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+	&& M && \cdot \\
+	{\,} & {M_i } && {M_k} &&& {\,} \\
+	&& {M_j } && \cdot
+	\arrow["{\text{pure}}", hook, from=1-3, to=1-5]
+	\arrow["{\text{PO}}"{description}, draw=none, from=1-3, to=2-4]
+	\arrow["{e_i}", from=2-2, to=1-3]
+	\arrow["{f_{k,i}}", from=2-2, to=2-4]
+	\arrow["{f_{j,i}}"', from=2-2, to=3-3]
+	\arrow["{\text{pure}}"', hook, from=2-4, to=1-5]
+	\arrow["{\text{pure}}", hook, from=2-4, to=3-5]
+	\arrow["{\text{PO}}"{description}, draw=none, from=3-3, to=2-4]
+	\arrow["{\text{pure}}"', hook, from=3-3, to=3-5]
+\end{tikzcd}
+\end{document}

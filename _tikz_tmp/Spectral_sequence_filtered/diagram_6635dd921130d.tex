@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzEsMSwiRl5wQV57cCtxfSJdLFsyLDIsIkZee3ArMX1BXntwK3F9Il0sWzAsMCwiRl57cC0xfUFee3ArcX0iXSxbMSwwLCJGXntwfUFee3ArcSsxfSJdLFsyLDEsIkZee3ArMX1BXntwK3ErMX0iXSxbMSwyLCJGXntwfUFee3ArcS0xfSJdLFswLDEsIkZee3AtMX1BXntwK3EtMX0iXSxbMCwyLCJcXGJveGVke1xcdGV4dHvovpPlhaV9IFxcIChBLEYpfSJdLFswLDMsIkZee3AtMX1BXlxcYnVsbGV0ICJdLFsxLDMsIkZee3B9QV5cXGJ1bGxldCAiXSxbMiwzLCJGXntwKzF9QV5cXGJ1bGxldCAiXSxbMCwyLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMl0sWzAsM10sWzUsMF0sWzEsNF0sWzgsOSwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxMCwiXFxzdXBzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	{F^{p-1}A^{p+q}} & {F^{p}A^{p+q+1}} \\
+	{F^{p-1}A^{p+q-1}} & {F^pA^{p+q}} & {F^{p+1}A^{p+q+1}} \\
+	{\boxed{\text{输入} \ (A,F)}} & {F^{p}A^{p+q-1}} & {F^{p+1}A^{p+q}} \\
+	{F^{p-1}A^\bullet } & {F^{p}A^\bullet } & {F^{p+1}A^\bullet }
+	\arrow[from=2-1, to=1-1]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=2-2, to=1-1]
+	\arrow[from=2-2, to=1-2]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=2-3, to=1-2]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=3-2, to=2-1]
+	\arrow[from=3-2, to=2-2]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=3-3, to=2-2]
+	\arrow[from=3-3, to=2-3]
+	\arrow["\supset"{description}, draw=none, from=4-1, to=4-2]
+	\arrow["\supset"{description}, draw=none, from=4-2, to=4-3]
+\end{tikzcd}
+\end{document}

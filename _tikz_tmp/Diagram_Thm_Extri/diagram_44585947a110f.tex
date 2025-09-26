@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbNCwyLCJTIl0sWzQsMCwiVCJdLFs0LDEsIkUiXSxbMywyLCJTIl0sWzMsMSwiMCJdLFs0LDMsIlxcLCJdLFs3LDEsIlxcLCJdLFswLDEsIlxcLCJdLFsxLDIsIlxcbWF0aHNme1RDb2ZpYn0iXSxbMiwwLCJcXG1hdGhzZntGaWJ9Il0sWzMsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwzLCJcXG1hdGhzZntUQ29maWJ9IiwyXSxbNCwyXSxbMCw1LCJcXGRlbHRhICJdLFszLDIsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+&&&& T \\
+{\,} &&& 0 & E &&& {\,} \\
+&&& S & S \\
+&&&& {\,}
+\arrow["{\mathsf{TCofib}}", from=1-5, to=2-5]
+\arrow[from=2-4, to=2-5]
+\arrow["{\mathsf{TCofib}}"', from=2-4, to=3-4]
+\arrow["{\mathsf{Fib}}", from=2-5, to=3-5]
+\arrow[dashed, from=3-4, to=2-5]
+\arrow[equals, from=3-4, to=3-5]
+\arrow["{\delta }", from=3-5, to=4-5]
+\end{tikzcd}
+\end{document}

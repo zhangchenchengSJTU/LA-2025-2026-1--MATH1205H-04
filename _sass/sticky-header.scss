@@ -1,0 +1,20 @@
+/* 为 h2-h4 标题添加固定效果 */
+h2, h3, h4 {
+    position: sticky;
+    top: 0;          /* 固定在视口顶部 */
+    background: var(--body-bg-color); /* 防止文字穿透背景（根据主题颜色调整） */
+    z-index: 100;    /* 确保标题在页面内容之上 */
+    padding: 10px 0; /* 增加内边距避免拥挤 */
+    // box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 可选：添加阴影增强视觉效果 */
+  }
+  
+  /* 为不同标题层级设置偏移量 */
+  h2 { top: 0px; z-index: 300; }
+  h3 { top: 50px; z-index: 200; }
+  h4 { top: 100px; z-index: 100; }
+
+  @media (max-width: 768px) {
+    h2 { top: 0px; }
+    h3 { top: 50px; }
+    h4 { top: 100px; }
+  }

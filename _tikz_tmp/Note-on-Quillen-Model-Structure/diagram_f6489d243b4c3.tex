@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJJIl0sWzIsMiwiSiJdLFs0LDAsIlxcbWF0aGNhbCBDIl0sWzUsMCwiRiJdLFs2LDEsIlxcdmFycGhpIF9cXGFzdCBGIHtcXGNvbG9ye2JsYWNrfVxcY2lyYyBcXHZhcnBoaX0iLFsyMjgsMTAwLDYwLDFdXSxbNSwyLCJSXFxjaXJjIFxcdmFycGhpIl0sWzAsMiwiRiJdLFswLDEsIlxcdmFycGhpICIsMl0sWzEsMiwiXFx2YXJwaGkgX1xcYXN0IEYiLDAseyJsYWJlbF9wb3NpdGlvbiI6NjAsImN1cnZlIjotMiwiY29sb3VyIjpbMjI4LDEwMCw2MF19LFsyMjgsMTAwLDYwLDFdXSxbMSwyLCJSIiwyLHsiY3VydmUiOjJ9XSxbNCwzLCJcXGFscGhhICIsMix7ImxldmVsIjoyLCJjb2xvdXIiOlsyMjgsMTAwLDYwXX0sWzIyOCwxMDAsNjAsMV1dLFs1LDMsIlxcZ2FtbWEgIiwwLHsibGV2ZWwiOjJ9XSxbNSw0LCJcXHRoZXRhX3tcXHZhcnBoaX0iLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzksOCwiXFx0aGV0YSIsMix7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMSw0LCJcXGNpcmNsZWFycm93bGVmdCIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDYsIlxcZ2FtbWEiLDAseyJsYWJlbF9wb3NpdGlvbiI6NjAsIm9mZnNldCI6LTUsInNob3J0ZW4iOnsic291cmNlIjozMCwidGFyZ2V0IjoyMH19XSxbMSw2LCJcXGFscGhhIiwyLHsibGFiZWxfcG9zaXRpb24iOjYwLCJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJjb2xvdXIiOlsyMjgsMTAwLDYwXX0sWzIyOCwxMDAsNjAsMV1dXQ==
+\begin{tikzcd}
+I &&&& {\mathcal C} & F \\
+&&&&&& \color{rgb,255:red,51;green,92;blue,255}{\varphi _\ast F {\color{black}\circ \varphi}} \\
+&& J &&& {R\circ \varphi}
+\arrow[""{name=0, anchor=center, inner sep=0}, "F", from=1-1, to=1-5]
+\arrow["{\varphi }"', from=1-1, to=3-3]
+\arrow["{\alpha }"', color={rgb,255:red,51;green,92;blue,255}, Rightarrow, from=2-7, to=1-6]
+\arrow[""{name=1, anchor=center, inner sep=0}, "{\varphi _\ast F}"{pos=0.6}, color={rgb,255:red,51;green,92;blue,255}, curve={height=-12pt}, from=3-3, to=1-5]
+\arrow[""{name=2, anchor=center, inner sep=0}, "R"', curve={height=12pt}, from=3-3, to=1-5]
+\arrow[""{name=3, anchor=center, inner sep=0}, "{\gamma }", Rightarrow, from=3-6, to=1-6]
+\arrow["{\theta_{\varphi}}"', Rightarrow, dashed, from=3-6, to=2-7]
+\arrow["\theta"', shorten <=4pt, shorten >=4pt, Rightarrow, dashed, from=2, to=1]
+\arrow["\gamma"{pos=0.6}, shift left=5, shorten <=11pt, shorten >=7pt, Rightarrow, from=3-3, to=0]
+\arrow["\alpha"'{pos=0.6}, color={rgb,255:red,51;green,92;blue,255}, shorten <=7pt, shorten >=7pt, Rightarrow, from=3-3, to=0]
+\arrow["\circlearrowleft"{description}, draw=none, from=3, to=2-7]
+\end{tikzcd}
+\end{document}

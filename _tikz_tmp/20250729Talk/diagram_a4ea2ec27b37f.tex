@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJYXzAiXSxbNSwwLCJBIl0sWzUsMiwiQiJdLFsyLDIsIlhfe1xcZGVsdGErMX0iXSxbNCwyLCJYX1xcYWxwaGEiXSxbMCwyLCJYX1xcZGVsdGEiXSxbMSwyLCJnIl0sWzAsMSwibSJdLFszLDQsImZfe1xcYWxwaGEgLCBcXGRlbHRhKzF9IiwyXSxbNCwyLCJuIiwyXSxbMywxLCJzX3tcXGRlbHRhKzF9IiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMywiZl97XFxkZWx0YSsxLCBcXGRlbHRhfSIsMl0sWzAsNSwiZl97XFxkZWx0YSwwfSIsMl0sWzUsMSwic19cXGRlbHRhIl1d
+\begin{tikzcd}[ampersand replacement=\&]
+	{X_0} \&\&\&\&\& A \\
+	\\
+	{X_\delta} \&\& {X_{\delta+1}} \&\& {X_\alpha} \& B
+	\arrow["m", from=1-1, to=1-6]
+	\arrow["{f_{\delta,0}}"', from=1-1, to=3-1]
+	\arrow["g", from=1-6, to=3-6]
+	\arrow["{s_\delta}", from=3-1, to=1-6]
+	\arrow["{f_{\delta+1, \delta}}"', from=3-1, to=3-3]
+	\arrow["{s_{\delta+1}}"', dashed, from=3-3, to=1-6]
+	\arrow["{f_{\alpha , \delta+1}}"', from=3-3, to=3-5]
+	\arrow["n"', from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

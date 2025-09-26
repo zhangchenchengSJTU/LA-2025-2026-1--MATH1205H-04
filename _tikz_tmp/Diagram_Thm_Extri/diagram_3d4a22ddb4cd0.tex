@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzIsMCwiXFxidWxsZXQiXSxbNCwwLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzQsMiwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFs1LDEsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbNCwxLCJcXGJ1bGxldCJdLFswLDEsIlxcLCJdLFs2LDEsIlxcLCJdLFswLDEsIltcXGV0YV0iXSxbMiwzLCJbXFxldGEnXSJdLFswLDQsIltzXSIsMix7ImxldmVsIjoyfV0sWzIsNCwiW3MnXSIsMCx7ImxldmVsIjoyfV0sWzUsMSwiW3RdIiwyLHsibGV2ZWwiOjJ9XSxbNSwzLCJbdCddIiwwLHsibGV2ZWwiOjJ9XSxbNiw0LCJbc18wXSIsMix7ImxldmVsIjoyfV0sWzUsNywiW3RfMF0iLDIseyJsZXZlbCI6Mn1dLFs2LDAsIltwXSIsMix7ImxldmVsIjoyfV0sWzYsMiwiW3AnXSIsMCx7ImxldmVsIjoyfV0sWzEsNywiW3FdIiwyLHsibGV2ZWwiOjJ9XSxbMyw3LCJbcSddIiwwLHsibGV2ZWwiOjJ9XSxbNiw3LCJbXFxldGFfMF0iXV0=
+\begin{tikzcd}
+&& \bullet && \bullet \\
+{\,} & \bullet & \bullet && \bullet & \bullet & {\,} \\
+&& \bullet && \bullet
+\arrow["{[\eta]}", from=1-3, to=1-5]
+\arrow["{[s]}"', Rightarrow, from=1-3, to=2-2]
+\arrow["{[q]}"', Rightarrow, from=1-5, to=2-5]
+\arrow["{[p]}"', Rightarrow, from=2-3, to=1-3]
+\arrow["{[s_0]}"', Rightarrow, from=2-3, to=2-2]
+\arrow["{[\eta_0]}", from=2-3, to=2-5]
+\arrow["{[p']}", Rightarrow, from=2-3, to=3-3]
+\arrow["{[t]}"', Rightarrow, from=2-6, to=1-5]
+\arrow["{[t_0]}"', Rightarrow, from=2-6, to=2-5]
+\arrow["{[t']}", Rightarrow, from=2-6, to=3-5]
+\arrow["{[s']}", Rightarrow, from=3-3, to=2-2]
+\arrow["{[\eta']}", from=3-3, to=3-5]
+\arrow["{[q']}", Rightarrow, from=3-5, to=2-5]
+\end{tikzcd}
+\end{document}

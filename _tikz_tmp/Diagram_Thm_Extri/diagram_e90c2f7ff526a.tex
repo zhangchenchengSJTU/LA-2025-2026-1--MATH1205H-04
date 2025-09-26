@@ -1,0 +1,24 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJYJyJdLFsyLDAsIlgiXSxbNCwwLCJYJyJdLFswLDEsIlknIl0sWzQsMSwiWSciXSxbNCwyLCJaJyJdLFswLDIsIlonIl0sWzIsMiwiWiJdLFswLDEsImlfWCJdLFsxLDIsInBfWCJdLFswLDMsImEnIl0sWzIsNCwiYSciXSxbNiw3LCJpX1oiXSxbNyw1LCJwX1oiXSxbMyw2LCJjJyJdLFs0LDUsImMnIl0sWzAsNiwiZyciLDIseyJvZmZzZXQiOjIsImN1cnZlIjoyfV0sWzIsNSwiZyciLDIseyJvZmZzZXQiOjIsImN1cnZlIjoyfV0sWzEsNywiZyIsMix7ImN1cnZlIjoyfV1d
+\begin{tikzcd}
+	{X'} && X && {X'} \\
+	{Y'} &&&& {Y'} \\
+	{Z'} && Z && {Z'}
+	\arrow["{i_X}", from=1-1, to=1-3]
+	\arrow["{a'}", from=1-1, to=2-1]
+	\arrow["{g'}"', shift right=2, curve={height=12pt}, from=1-1, to=3-1]
+	\arrow["{p_X}", from=1-3, to=1-5]
+	\arrow["g"', curve={height=12pt}, from=1-3, to=3-3]
+	\arrow["{a'}", from=1-5, to=2-5]
+	\arrow["{g'}"', shift right=2, curve={height=12pt}, from=1-5, to=3-5]
+	\arrow["{c'}", from=2-1, to=3-1]
+	\arrow["{c'}", from=2-5, to=3-5]
+	\arrow["{i_Z}", from=3-1, to=3-3]
+	\arrow["{p_Z}", from=3-3, to=3-5]
+\end{tikzcd}
+\end{document}

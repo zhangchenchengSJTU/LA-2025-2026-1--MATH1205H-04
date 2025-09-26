@@ -1,0 +1,24 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzAsMSwiMCJdLFsxLDEsIk0iXSxbMiwxLCJDIl0sWzMsMSwiXFxtYXRocm17Y29rfShpKSJdLFs0LDEsIjAiXSxbNCwyLCIwIl0sWzMsMiwiTV9CIl0sWzEsMiwiTSJdLFsyLDIsIk1fQyJdLFswLDIsIjAiXSxbNCwwLCJYIl0sWzEsMiwiaSJdLFsyLDNdLFs5LDddLFs3LDhdLFs4LDZdLFs2LDVdLFswLDFdLFszLDRdLFsxLDcsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsOCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzMsNiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEwLDMsIlxcdmFycGhpICIsMl1d
+\begin{tikzcd}[ampersand replacement=\&]
+	\&\&\&\& X \\
+	0 \& M \& C \& {\mathrm{cok}(i)} \& 0 \\
+	0 \& M \& {M_C} \& {M_B} \& 0
+	\arrow["{\varphi }"', from=1-5, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow["i", from=2-2, to=2-3]
+	\arrow[equals, from=2-2, to=3-2]
+	\arrow[from=2-3, to=2-4]
+	\arrow[dashed, from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow[dashed, from=2-4, to=3-4]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-4, to=3-5]
+\end{tikzcd}
+\end{document}

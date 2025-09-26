@@ -1,0 +1,32 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+   % https://q.uiver.app/#q=WzAsMTcsWzIsMSwiUiJdLFszLDEsIlIiXSxbMiwyLCJYIixbMTE5LDEwMCw2MCwxXV0sWzMsMiwiWSIsWzExOSwxMDAsNjAsMV1dLFs0LDIsIlciLFsxMTksMTAwLDYwLDFdXSxbMywzLCJaIl0sWzQsMywiVyJdLFswLDIsInJfMiJdLFswLDMsInJfMyJdLFsyLDAsImNfMSJdLFszLDAsImNfMiJdLFsxLDIsIldbLTFdIixbMTE5LDEwMCw2MCwxXV0sWzEsMywiV1stMV0iXSxbMiwzLCJTIixbMTE5LDEwMCw2MCwxXV0sWzMsNCwiUlsxXSJdLFsyLDQsIlJbMV0iXSxbNCw0LCJYWzFdIl0sWzIsMywidSIsMCx7ImNvbG91ciI6WzExOSwxMDAsNjBdfSxbMTE5LDEwMCw2MCwxXV0sWzMsNCwidiIsMCx7ImNvbG91ciI6WzExOSwxMDAsNjBdfSxbMTE5LDEwMCw2MCwxXV0sWzUsNiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMyw1LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTEsMiwiLXdbLTFdIiwwLHsiY29sb3VyIjpbMTE5LDEwMCw2MF19LFsxMTksMTAwLDYwLDFdXSxbNCw2LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMSwxMiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTNdLFsxMyw1XSxbMiwxMywieSIsMCx7ImNvbG91ciI6WzExOSwxMDAsNjBdfSxbMTE5LDEwMCw2MCwxXV0sWzE1LDE0LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDIsIngiXSxbMTMsMTUsInoiXSxbNSwxNCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsMTYsInciLDAseyJjb2xvdXIiOlszNTIsMTAwLDYwXX0sWzM1MiwxMDAsNjAsMV1dLFsxNCwxNiwieFsxXSIsMCx7ImNvbG91ciI6WzM1MiwxMDAsNjBdfSxbMzUyLDEwMCw2MCwxXV0sWzAsMSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+   \begin{tikzcd}
+   && {c_1} & {c_2} \\
+   && R & R \\
+   {r_2} & \color{rgb,255:red,54;green,255;blue,51}{W[-1]} & \color{rgb,255:red,54;green,255;blue,51}{X} & \color{rgb,255:red,54;green,255;blue,51}{Y} & \color{rgb,255:red,54;green,255;blue,51}{W} \\
+   {r_3} & {W[-1]} & \color{rgb,255:red,54;green,255;blue,51}{S} & Z & W \\
+   && {R[1]} & {R[1]} & {X[1]}
+   \arrow[equals, from=2-3, to=2-4]
+   \arrow["x", from=2-3, to=3-3]
+   \arrow[dashed, from=2-4, to=3-4]
+   \arrow["{-w[-1]}", color={rgb,255:red,54;green,255;blue,51}, from=3-2, to=3-3]
+   \arrow[equals, from=3-2, to=4-2]
+   \arrow["u", color={rgb,255:red,54;green,255;blue,51}, from=3-3, to=3-4]
+   \arrow["y", color={rgb,255:red,54;green,255;blue,51}, from=3-3, to=4-3]
+   \arrow["v", color={rgb,255:red,54;green,255;blue,51}, from=3-4, to=3-5]
+   \arrow[dashed, from=3-4, to=4-4]
+   \arrow[equals, from=3-5, to=4-5]
+   \arrow[from=4-2, to=4-3]
+   \arrow[from=4-3, to=4-4]
+   \arrow["z", from=4-3, to=5-3]
+   \arrow[equals, from=4-4, to=4-5]
+   \arrow[dashed, from=4-4, to=5-4]
+   \arrow["w", color={rgb,255:red,255;green,51;blue,78}, from=4-5, to=5-5]
+   \arrow[equals, from=5-3, to=5-4]
+   \arrow["{x[1]}", color={rgb,255:red,255;green,51;blue,78}, from=5-4, to=5-5]
+   \end{tikzcd}
+   \end{document}

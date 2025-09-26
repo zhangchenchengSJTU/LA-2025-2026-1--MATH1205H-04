@@ -1,0 +1,100 @@
+---
+layout: default
+sidebar: main
+---
+<style>
+  /* 基础设置 */
+  body {
+    font-size: 14px;  /* 基准字体减小 */
+    line-height: 1.4; /* 行高相应调整 */
+  }
+
+  /* 彻底释放宽度限制 */
+  body, .main-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 列表项布局优化 */
+  .post-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-list li {
+    display: flex;
+    gap: 15px;       /* 进一步减小间距 */
+    align-items: flex-start;
+    margin-bottom: 12px; /* 减小行间距 */
+    padding-left: 5px;
+  }
+
+  /* 左侧时间/分类 - 更紧凑 */
+  .post-meta {
+    width: 100px;    /* 最小化左侧区域 */
+    text-align: right;
+    flex-shrink: 0;
+    padding-top: 1px;
+    font-size: 0.85em; /* 更小的字体 */
+    color: hsl(42, 25%, 15%);     /* 浅色减少视觉重量 */
+  }
+
+  /* 右侧标题 */
+  .title {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.95em; /* 标题也稍减小 */
+  }
+
+  .title a {
+    word-break: break-word;
+    display: inline-block;
+    text-decoration: none; /* 可选去掉下划线 */
+    color: hsl(0, 0%, 0%);      /* 深色保持可读性 */
+  }
+
+  .title a:hover {
+    color: hsl(30, 100%, 60%);      /* 悬停加深 */
+    text-decoration: underline; /* 悬停显示下划线 */
+  }
+</style>
+
+<main class="main-container">
+  <div class="page-navigation">
+    <a
+      class="home"
+      href="{{ site.baseurl }}/"
+      title="Back to Homepage">Home</a>
+  </div>
+  <section class="post-list">
+    {% for post in site.posts %}
+    {% if post.categories contains "seminare" %}
+      <ul style="margin: 0; padding: 0; list-style: none;">
+        <li>
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            <span class="post-category">
+              {% if post.category %}{{ post.category }}{% elsif post.categories %}{{ post.categories | join: ", " }}{% endif %}
+            </span>
+          </div>
+          <div class="title">
+            <b><a href="{{ post.url | relative_url }}">{{ post.title }}</a></b>
+          </div>
+        </li>
+      </ul>
+    {% endif %}
+    {% endfor %}
+  </section>
+
+  <div class="page-navigation">
+    <a
+      class="home"
+      href="{{ site.baseurl }}/"
+      title="Back to Homepage">Home</a>
+  </div>
+</main>
+
+
+

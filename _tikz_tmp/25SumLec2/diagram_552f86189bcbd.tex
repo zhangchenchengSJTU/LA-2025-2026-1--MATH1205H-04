@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwxLCIoXFx1bmRlcmxpbmUgUiBcXG90aW1lcyBee1xcbWF0aGJmIEx9XFx1bmRlcmxpbmUgUikgIFxcb3RpbWVzIF57XFxtYXRoYmYgTH1YIl0sWzAsMCwiXFx1bmRlcmxpbmUgUiBcXG90aW1lcyBee1xcbWF0aGJmIEx9KFxcdW5kZXJsaW5lIFIgIFxcb3RpbWVzIF57XFxtYXRoYmYgTH1YKSJdLFsyLDAsIlxcdW5kZXJsaW5lIFIgIFxcb3RpbWVzIF57XFxtYXRoYmYgTH1YIl0sWzIsMSwiXFx1bmRlcmxpbmUgUiAgXFxvdGltZXMgXntcXG1hdGhiZiBMfVgiXSxbMywwLCJYIl0sWzMsMSwiWCJdLFsxLDAsIlxcYWxwaGEgXlxccmhvIiwyXSxbMSwyLCJcXHVuZGVybGluZSBSIFxcb3RpbWVzIF5cXG1hdGhiZiBMKGxeXFxyaG8gX3tcXHVuZGVybGluZSBSIFxcb3RpbWVzIF5cXG1hdGhiZiBMWH0pIl0sWzAsMywiKGxeXFxyaG8gX3tcXHVuZGVybGluZSBSIFxcb3RpbWVzIF5cXG1hdGhiZiBMXFx1bmRlcmxpbmUgUn0pXFxvdGltZXMgXlxcbWF0aGJmIEwgWCIsMl0sWzIsNCwibF5cXHJobyBfWCJdLFszLDUsImxeXFxyaG8gX1giLDJdLFs1LDQsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	{\underline R \otimes ^{\mathbf L}(\underline R  \otimes ^{\mathbf L}X)} \&\& {\underline R  \otimes ^{\mathbf L}X} \& X \\
+	{(\underline R \otimes ^{\mathbf L}\underline R)  \otimes ^{\mathbf L}X} \&\& {\underline R  \otimes ^{\mathbf L}X} \& X
+	\arrow["{\underline R \otimes ^\mathbf L(l^\rho _{\underline R \otimes ^\mathbf LX})}", from=1-1, to=1-3]
+	\arrow["{\alpha ^\rho}"', from=1-1, to=2-1]
+	\arrow["{l^\rho _X}", from=1-3, to=1-4]
+	\arrow["{(l^\rho _{\underline R \otimes ^\mathbf L\underline R})\otimes ^\mathbf L X}"', from=2-1, to=2-3]
+	\arrow["{l^\rho _X}"', from=2-3, to=2-4]
+	\arrow[equals, from=2-4, to=1-4]
+\end{tikzcd}
+\end{document}

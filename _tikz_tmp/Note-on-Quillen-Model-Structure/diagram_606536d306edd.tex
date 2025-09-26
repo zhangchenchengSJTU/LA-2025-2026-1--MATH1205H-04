@@ -1,0 +1,40 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjEsWzAsMCwiMCJdLFsxLDAsIlxcY2RvdHMiXSxbMCwxLCJrIl0sWzAsMiwiayJdLFsxLDEsIlxcY2RvdHMiXSxbMSwyLCJcXGNkb3RzIl0sWzIsMCwiay0xIl0sWzMsMCwiayJdLFsyLDIsImsiXSxbMiwxLCJrIl0sWzMsMiwiayJdLFs0LDIsImsrMSJdLFszLDEsImsiXSxbNCwxLCJrIl0sWzQsMCwiayJdLFs1LDAsIlxcY2RvdHMiXSxbNSwxLCJcXGNkb3RzIl0sWzUsMiwiXFxjZG90cyJdLFs2LDIsIm4iXSxbNiwwLCJrIl0sWzYsMSwiayJdLFswLDJdLFsyLDNdLFswLDFdLFsyLDRdLFszLDVdLFsxLDZdLFs2LDddLFs3LDEyXSxbMTIsMTBdLFs2LDldLFs5LDhdLFs0LDldLFs5LDEyXSxbNSw4XSxbOCwxMF0sWzEwLDExXSxbNywxNF0sWzEyLDEzXSxbMTQsMTVdLFsxNSwxOV0sWzE5LDIwXSxbMjAsMThdLFsxMywxNl0sWzE2LDIwXSxbMTQsMTNdLFsxMywxMV0sWzExLDE3XSxbMTcsMThdXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+0 \& \cdots \& {k-1} \& k \& k \& \cdots \& k \\
+k \& \cdots \& k \& k \& k \& \cdots \& k \\
+k \& \cdots \& k \& k \& {k+1} \& \cdots \& n
+\arrow[from=1-1, to=1-2]
+\arrow[from=1-1, to=2-1]
+\arrow[from=1-2, to=1-3]
+\arrow[from=1-3, to=1-4]
+\arrow[from=1-3, to=2-3]
+\arrow[from=1-4, to=1-5]
+\arrow[from=1-4, to=2-4]
+\arrow[from=1-5, to=1-6]
+\arrow[from=1-5, to=2-5]
+\arrow[from=1-6, to=1-7]
+\arrow[from=1-7, to=2-7]
+\arrow[from=2-1, to=2-2]
+\arrow[from=2-1, to=3-1]
+\arrow[from=2-2, to=2-3]
+\arrow[from=2-3, to=2-4]
+\arrow[from=2-3, to=3-3]
+\arrow[from=2-4, to=2-5]
+\arrow[from=2-4, to=3-4]
+\arrow[from=2-5, to=2-6]
+\arrow[from=2-5, to=3-5]
+\arrow[from=2-6, to=2-7]
+\arrow[from=2-7, to=3-7]
+\arrow[from=3-1, to=3-2]
+\arrow[from=3-2, to=3-3]
+\arrow[from=3-3, to=3-4]
+\arrow[from=3-4, to=3-5]
+\arrow[from=3-5, to=3-6]
+\arrow[from=3-6, to=3-7]
+\end{tikzcd}
+\end{document}

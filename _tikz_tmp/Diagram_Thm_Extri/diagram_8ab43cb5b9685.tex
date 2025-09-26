@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJYIl0sWzMsMCwiWSJdLFs1LDAsIloiXSxbMSwxLCJYIl0sWzUsMSwiWiJdLFszLDEsIlknIl0sWzAsMSwiXFwsIl0sWzYsMSwiXFwsIl0sWzAsMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw0LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsImYiXSxbMSwyLCJnIl0sWzMsNSwiZiciXSxbNSw0LCJnJyJdLFsxLDUsIlxcdmFycGhpICJdLFsxLDUsIlxcc2ltZXEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+& X && Y && Z \\
+{\,} & X && {Y'} && Z & {\,}
+\arrow["f", from=1-2, to=1-4]
+\arrow[equals, from=1-2, to=2-2]
+\arrow["g", from=1-4, to=1-6]
+\arrow["{\varphi }", from=1-4, to=2-4]
+\arrow["\simeq"', draw=none, from=1-4, to=2-4]
+\arrow[equals, from=1-6, to=2-6]
+\arrow["{f'}", from=2-2, to=2-4]
+\arrow["{g'}", from=2-4, to=2-6]
+\end{tikzcd}
+\end{document}

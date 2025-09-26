@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% include head.liquid %}
+	<!-- 打印设置 -->
+    <link rel="stylesheet" href="/assets/css/print.css" media="print">
+</head>
+
+<body class="latex-dark">
+
+	{% include header.liquid %}
+
+	{{ content | replace: '&#8617;', '&#8617;&#xfe0e;' }}
+
+	{% include footer.liquid %}
+
+</body>
+
+
+</html>

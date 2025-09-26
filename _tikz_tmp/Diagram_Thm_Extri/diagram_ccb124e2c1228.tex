@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzEsMCwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzQsMSwiXFxidWxsZXQiXSxbMSwxLCJQIl0sWzMsMSwiXFxidWxsZXQiXSxbMSwyLCJcXGJ1bGxldCJdLFszLDIsIlxcYnVsbGV0Il0sWzUsMCwiXFxtYXRoZnJhayBGXzEiXSxbNSwxLCJcXG1hdGhmcmFrIEZfMSciXSxbNSwyLCJcXG1hdGhmcmFrIEZfMScnIl0sWzAsMSwiW1xcZXRhXzFdIl0sWzAsMiwiW3NfMV0iLDIseyJsZXZlbCI6Mn1dLFszLDEsIlt0XzFdIiwyLHsibGV2ZWwiOjJ9XSxbNCwyLCJbc18wXSIsMix7ImxldmVsIjoyfV0sWzMsNSwiW3RfMV0iLDIseyJsZXZlbCI6Mn1dLFs0LDUsIltcXGV0YV8xJ10iXSxbNCwwLCIiLDAseyJsZXZlbCI6Mn1dLFs2LDIsIltzXzBdIiwwLHsibGV2ZWwiOjJ9XSxbNSw3LCIiLDIseyJsZXZlbCI6Mn1dLFszLDcsIlt0XzBdIiwwLHsibGV2ZWwiOjJ9XSxbNiw3LCJbXFxldGFfMScnXSJdLFs2LDQsIiIsMCx7ImxldmVsIjoyLCJjb2xvdXIiOlsyMzgsMTAwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDUsIiIsMCx7ImxldmVsIjoyLCJjb2xvdXIiOlsyMzgsMTAwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs4LDksIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs5LDEwLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}
+& \bullet && \bullet && {\mathfrak F_1} \\
+\bullet & P && \bullet & \bullet & {\mathfrak F_1'} \\
+& \bullet && \bullet && {\mathfrak F_1''}
+\arrow["{[\eta_1]}", from=1-2, to=1-4]
+\arrow["{[s_1]}"', Rightarrow, from=1-2, to=2-1]
+\arrow[draw={rgb,255:red,51;green,58;blue,255}, equals, from=1-4, to=2-4]
+\arrow[dashed, from=1-6, to=2-6]
+\arrow[Rightarrow, from=2-2, to=1-2]
+\arrow["{[s_0]}"', Rightarrow, from=2-2, to=2-1]
+\arrow["{[\eta_1']}", from=2-2, to=2-4]
+\arrow[Rightarrow, from=2-4, to=3-4]
+\arrow["{[t_1]}"', Rightarrow, from=2-5, to=1-4]
+\arrow["{[t_1]}"', Rightarrow, from=2-5, to=2-4]
+\arrow["{[t_0]}", Rightarrow, from=2-5, to=3-4]
+\arrow[dashed, from=2-6, to=3-6]
+\arrow["{[s_0]}", Rightarrow, from=3-2, to=2-1]
+\arrow[draw={rgb,255:red,51;green,58;blue,255}, equals, from=3-2, to=2-2]
+\arrow["{[\eta_1'']}", from=3-2, to=3-4]
+\end{tikzcd}
+\end{document}

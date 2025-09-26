@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYIFxcb3RpbWVzIF57XFxtYXRoYmZ7TH19IChZIFxcb3RpbWVzIF57XFxtYXRoYmZ7TH19WikiXSxbMCwxLCIoWCBcXG90aW1lcyBee1xcbWF0aGJme0x9fVkpIFxcb3RpbWVzIF57XFxtYXRoYmZ7TH19WiJdLFsxLDAsIlxccmhvIChcXHJobyBYIFxcb3RpbWVzIFxccmhvIChcXHJobyBZXFxvdGltZXMgXFxyaG8gWikpIl0sWzEsMSwiXFxyaG8gKFxccmhvIChcXHJobyBYIFxcb3RpbWVzIFxccmhvIFkpXFxvdGltZXMgXFxyaG8gWikiXSxbMCwxLCJcXGFscGhhIF5cXHJobyAiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMCwyLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiXFxyaG8gKGFecykiXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{X \otimes ^{\mathbf{L}} (Y \otimes ^{\mathbf{L}}Z)} \& {\rho (\rho X \otimes \rho (\rho Y\otimes \rho Z))} \\
+	{(X \otimes ^{\mathbf{L}}Y) \otimes ^{\mathbf{L}}Z} \& {\rho (\rho (\rho X \otimes \rho Y)\otimes \rho Z)}
+	\arrow[equals, from=1-1, to=1-2]
+	\arrow["{\alpha ^\rho }"', dashed, from=1-1, to=2-1]
+	\arrow["{\rho (a^s)}", from=1-2, to=2-2]
+	\arrow[equals, from=2-1, to=2-2]
+\end{tikzcd}
+\end{document}

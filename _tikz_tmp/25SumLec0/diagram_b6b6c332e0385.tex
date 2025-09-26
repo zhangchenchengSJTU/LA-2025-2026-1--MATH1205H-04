@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTcsWzAsMSwiSV4wKEJeaylcXFxcXFxvcGx1c1xcXFwgSV4wKEheaykiXSxbMSwxLCJJXjEoQl5rKVxcXFxcXG9wbHVzIFxcXFxJXjEoSF5rKSJdLFsyLDEsIkleMihCXmspXFxcXFxcb3BsdXMgXFxcXEleMihIXmspIl0sWzQsMSwiXFxjZG90cyJdLFsxLDIsIkleMChIXntrKzF9KSJdLFsyLDIsIkleMShIXntrKzF9KSJdLFsyLDMsIkleMChIXntrKzJ9KSJdLFswLDAsIlxcZGVnID0gMCJdLFsxLDAsIlxcZGVnID0gMSJdLFsyLDAsIlxcZGVnID0gMiJdLFszLDAsIlxcZGVnID0gMyJdLFs0LDAsIlxcY2RvdHMgIl0sWzMsMSwiSV4zKEJeaylcXFxcXFxvcGx1cyBcXFxcSV4zKEheaykiXSxbMywyLCJJXjIoSF57aysxfSkiXSxbMywzLCJJXjEoSF57aysyfSkiXSxbNCwyLCJcXGNkb3RzIl0sWzQsMywiXFxjZG90cyJdLFswLDFdLFsxLDJdLFsyLDEyXSxbMTIsM10sWzQsNV0sWzUsMTNdLFsxMywxNV0sWzYsMTRdLFsxNCwxNl0sWzEsNCwiXFxiaWdvcGx1cyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDUsIlxcYmlnb3BsdXMiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTIsMTMsIlxcYmlnb3BsdXMiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTMsMTQsIlxcYmlnb3BsdXMiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSw2LCJcXGJpZ29wbHVzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&,column sep=small]
+    {\deg = 0} \& {\deg = 1} \& {\deg = 2} \& {\deg = 3} \& {\cdots } \\
+    \begin{array}{c} I^0(B^k)\\\oplus\\ I^0(H^k) \end{array} \& \begin{array}{c} I^1(B^k)\\\oplus \\I^1(H^k) \end{array} \& \begin{array}{c} I^2(B^k)\\\oplus \\I^2(H^k) \end{array} \& \begin{array}{c} I^3(B^k)\\\oplus \\I^3(H^k) \end{array} \& \cdots \\
+    \& {I^0(H^{k+1})} \& {I^1(H^{k+1})} \& {I^2(H^{k+1})} \& \cdots \\
+    \&\& {I^0(H^{k+2})} \& {I^1(H^{k+2})} \& \cdots
+    \arrow[from=2-1, to=2-2]
+    \arrow[from=2-2, to=2-3]
+    \arrow["\bigoplus"{description}, draw=none, from=2-2, to=3-2]
+    \arrow[from=2-3, to=2-4]
+    \arrow["\bigoplus"{description}, draw=none, from=2-3, to=3-3]
+    \arrow[from=2-4, to=2-5]
+    \arrow["\bigoplus"{description}, draw=none, from=2-4, to=3-4]
+    \arrow[from=3-2, to=3-3]
+    \arrow[from=3-3, to=3-4]
+    \arrow["\bigoplus"{description}, draw=none, from=3-3, to=4-3]
+    \arrow[from=3-4, to=3-5]
+    \arrow["\bigoplus"{description}, draw=none, from=3-4, to=4-4]
+    \arrow[from=4-3, to=4-4]
+    \arrow[from=4-4, to=4-5]
+\end{tikzcd}
+\end{document}

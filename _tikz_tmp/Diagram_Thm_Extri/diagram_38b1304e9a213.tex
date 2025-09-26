@@ -1,0 +1,16 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwxLCJcXGJ1bGxldCJdLFszLDEsIlxcYnVsbGV0Il0sWzMsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFswLDEsIlxcLCJdLFs2LDEsIlxcLCJdLFsxLDAsIltwXSIsMCx7ImxldmVsIjoyLCJjb2xvdXIiOlsyMzMsMTAwLDYwXX0sWzIzMywxMDAsNjAsMV1dLFsyLDAsIltxXSIsMix7ImxldmVsIjoyLCJjb2xvdXIiOlszNTgsMTAwLDYwXX0sWzM1OCwxMDAsNjAsMV1dLFsxLDMsIltmXSIsMix7ImNvbG91ciI6WzIzMywxMDAsNjBdfSxbMjMzLDEwMCw2MCwxXV0sWzIsMywiW2ddIiwwLHsiY29sb3VyIjpbMzU4LDEwMCw2MF19LFszNTgsMTAwLDYwLDFdXSxbMiwxLCJbcl0iLDAseyJsZXZlbCI6Mn1dXQ==
+\begin{tikzcd}
+&&& \bullet \\
+{\,} & \bullet && \bullet && \bullet & {\,}
+\arrow["{[q]}"', color={rgb,255:red,255;green,51;blue,58}, Rightarrow, from=1-4, to=2-2]
+\arrow["{[r]}", Rightarrow, from=1-4, to=2-4]
+\arrow["{[g]}", color={rgb,255:red,255;green,51;blue,58}, from=1-4, to=2-6]
+\arrow["{[p]}", color={rgb,255:red,51;green,75;blue,255}, Rightarrow, from=2-4, to=2-2]
+\arrow["{[f]}"', color={rgb,255:red,51;green,75;blue,255}, from=2-4, to=2-6]
+\end{tikzcd}
+\end{document}

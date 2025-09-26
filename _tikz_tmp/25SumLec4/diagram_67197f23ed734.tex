@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJYIFxcb3RpbWVzIFxccHJvZCBfe1xcbGFtYmRhIFxcaW4gXFxMYW1iZGF9S19cXGxhbWJkYSJdLFswLDIsIk0gXFxvdGltZXMgXFxwcm9kIF97XFxsYW1iZGEgXFxpbiBcXExhbWJkYX1LX1xcbGFtYmRhIl0sWzAsMSwiWSBcXG90aW1lcyBcXHByb2QgX3tcXGxhbWJkYSBcXGluIFxcTGFtYmRhfUtfXFxsYW1iZGEiXSxbMiwxLCJcXHByb2QgX3tcXGxhbWJkYSBcXGluXFxMYW1iZGF9WSBcXG90aW1lcyBLX1xcbGFtYmRhIl0sWzIsMCwiXFxwcm9kIF97XFxsYW1iZGEgXFxpblxcTGFtYmRhfVggXFxvdGltZXMgS19cXGxhbWJkYSJdLFsyLDIsIlxccHJvZCBfe1xcbGFtYmRhIFxcaW4gXFxMYW1iZGF9IE0gXFxvdGltZXMgIEtfXFxsYW1iZGEiXSxbMCwxLCJmXFxvdGltZXMgMSIsMix7Im9mZnNldCI6NSwiY3VydmUiOjN9XSxbMCwyLCJnIFxcb3RpbWVzIDEiXSxbMiwxLCJoXFxvdGltZXMgMSJdLFsyLDMsIlxcc2ltZXEiXSxbMCw0LCJcXHNpbWVxIl0sWzQsMywiXFxwcm9kIChnIFxcb3RpbWVzIDEpIiwyXSxbMyw1LCJcXHByb2QgKGggXFxvdGltZXMgMSkiLDJdLFsxLDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsNSwiXFxwcm9kIChmIFxcb3RpbWVzIDEpIiwwLHsib2Zmc2V0IjotNSwiY3VydmUiOi0zfV1d
+\begin{tikzcd}
+	{X \otimes \prod _{\lambda \in \Lambda}K_\lambda} && {\prod _{\lambda \in\Lambda}X \otimes K_\lambda} \\
+	{Y \otimes \prod _{\lambda \in \Lambda}K_\lambda} && {\prod _{\lambda \in\Lambda}Y \otimes K_\lambda} \\
+	{M \otimes \prod _{\lambda \in \Lambda}K_\lambda} && {\prod _{\lambda \in \Lambda} M \otimes  K_\lambda}
+	\arrow["\simeq", from=1-1, to=1-3]
+	\arrow["{g \otimes 1}", from=1-1, to=2-1]
+	\arrow["{f\otimes 1}"', shift right=5, curve={height=18pt}, from=1-1, to=3-1]
+	\arrow["{\prod (g \otimes 1)}"', from=1-3, to=2-3]
+	\arrow["{\prod (f \otimes 1)}", shift left=5, curve={height=-18pt}, from=1-3, to=3-3]
+	\arrow["\simeq", from=2-1, to=2-3]
+	\arrow["{h\otimes 1}", from=2-1, to=3-1]
+	\arrow["{\prod (h \otimes 1)}"', from=2-3, to=3-3]
+	\arrow[hook, from=3-1, to=3-3]
+\end{tikzcd}
+\end{document}

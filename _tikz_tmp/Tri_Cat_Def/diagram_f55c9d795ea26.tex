@@ -1,0 +1,16 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG1hdGhybXtDb25lfShnXFxjaXJjIGYpIl0sWzIsMCwiWFsxXSJdLFswLDEsIlxcbWF0aHJte0NvbmV9KGdfXFxhc3QpIl0sWzIsMSwiWVsxXSJdLFswLDEsInAoZ1xcY2lyYyBmKSJdLFswLDIsImkoZ19cXGFzdCApIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMywiZlsxXSIsMl0sWzIsMywicChnKSIsMl0sWzAsMywiXFxzdGFyICIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+	{\mathrm{Cone}(g\circ f)} && {X[1]} \\
+	{\mathrm{Cone}(g_\ast)} && {Y[1]}
+	\arrow["{p(g\circ f)}", from=1-1, to=1-3]
+	\arrow["{i(g_\ast )}"', dashed, from=1-1, to=2-1]
+	\arrow["{\star }"{description}, draw=none, from=1-1, to=2-3]
+	\arrow["{f[1]}"', from=1-3, to=2-3]
+	\arrow["{p(g)}"', from=2-1, to=2-3]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJJIl0sWzIsMiwiSiJdLFs0LDAsIlxcbWF0aGNhbCBDIl0sWzUsMCwiRiJdLFs2LDEsIlxcdmFycGhpIF8hRiB7XFxjb2xvcntibGFja31cXGNpcmMgXFx2YXJwaGl9IixbMzU1LDEwMCw2MCwxXV0sWzUsMiwiUlxcY2lyYyBcXHZhcnBoaSJdLFswLDIsIkYiXSxbMCwxLCJcXHZhcnBoaSAiLDJdLFsxLDIsIlxcdmFycGhpIF8hIEYiLDAseyJsYWJlbF9wb3NpdGlvbiI6NjAsImN1cnZlIjotMiwiY29sb3VyIjpbMzU1LDEwMCw2MF19LFszNTUsMTAwLDYwLDFdXSxbMSwyLCJSIiwyLHsiY3VydmUiOjJ9XSxbMyw0LCJcXGFscGhhICIsMCx7ImxldmVsIjoyLCJjb2xvdXIiOlszNTUsMTAwLDYwXX0sWzM1NSwxMDAsNjAsMV1dLFszLDUsIlxcZ2FtbWEgIiwyLHsibGV2ZWwiOjJ9XSxbNCw1LCJcXHRoZXRhX3tcXHZhcnBoaX0iLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzgsOSwiXFx0aGV0YSIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDExLCJcXGNpcmNsZWFycm93bGVmdCIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs2LDEsIlxcZ2FtbWEiLDIseyJsYWJlbF9wb3NpdGlvbiI6NDAsIm9mZnNldCI6NSwic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjMwfX1dLFs2LDEsIlxcYWxwaGEiLDAseyJsYWJlbF9wb3NpdGlvbiI6NDAsInNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImNvbG91ciI6WzM1NSwxMDAsNjBdfSxbMzU1LDEwMCw2MCwxXV1d
+\begin{tikzcd}
+I &&&& {\mathcal C} & F \\
+&&&&&& \color{rgb,255:red,255;green,51;blue,68}{\varphi _!F {\color{black}\circ \varphi}} \\
+&& J &&& {R\circ \varphi}
+\arrow[""{name=0, anchor=center, inner sep=0}, "F", from=1-1, to=1-5]
+\arrow["{\varphi }"', from=1-1, to=3-3]
+\arrow["{\alpha }", color={rgb,255:red,255;green,51;blue,68}, Rightarrow, from=1-6, to=2-7]
+\arrow[""{name=1, anchor=center, inner sep=0}, "{\gamma }"', Rightarrow, from=1-6, to=3-6]
+\arrow["{\theta_{\varphi}}", Rightarrow, dashed, from=2-7, to=3-6]
+\arrow[""{name=2, anchor=center, inner sep=0}, "{\varphi _! F}"{pos=0.6}, color={rgb,255:red,255;green,51;blue,68}, curve={height=-12pt}, from=3-3, to=1-5]
+\arrow[""{name=3, anchor=center, inner sep=0}, "R"', curve={height=12pt}, from=3-3, to=1-5]
+\arrow["\gamma"'{pos=0.4}, shift right=5, shorten <=7pt, shorten >=11pt, Rightarrow, from=0, to=3-3]
+\arrow["\alpha"{pos=0.4}, color={rgb,255:red,255;green,51;blue,68}, shorten <=7pt, shorten >=7pt, Rightarrow, from=0, to=3-3]
+\arrow["\circlearrowleft"{description}, draw=none, from=2-7, to=1]
+\arrow["\theta", shorten <=4pt, shorten >=4pt, Rightarrow, dashed, from=2, to=3]
+\end{tikzcd}
+\end{document}

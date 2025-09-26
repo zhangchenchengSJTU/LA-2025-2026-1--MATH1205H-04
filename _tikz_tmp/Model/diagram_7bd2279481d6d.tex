@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJBXFxjb3Byb2QgQSJdLFszLDAsIkIiXSxbMSwxLCJBIl0sWzMsMSwiQSciXSxbNCwxLCJcXCwiXSxbMCwxLCJcXCwiXSxbMCwyLCJcXGJpbm9tIDExIiwyXSxbMCwxLCIoZixnKSJdLFszLDEsImgiLDJdLFszLDIsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzMsMiwiXFxzaWdtYSIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzAsMywiKFxccGFydGlhbF8wLCBcXHBhcnRpYWwgXzEpIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	\& {A\coprod A} \&\& B \\
+	{\,} \& A \&\& {A'} \& {\,}
+	\arrow["{(f,g)}", from=1-2, to=1-4]
+	\arrow["{\binom 11}"', from=1-2, to=2-2]
+	\arrow["{(\partial_0, \partial _1)}"{description}, squiggly, hook, from=1-2, to=2-4]
+	\arrow["h"', from=2-4, to=1-4]
+	\arrow[squiggly, from=2-4, to=2-2]
+	\arrow["\sigma", shift left, squiggly, from=2-4, to=2-2]
+\end{tikzcd}
+\end{document}

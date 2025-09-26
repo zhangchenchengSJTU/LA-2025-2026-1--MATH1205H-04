@@ -1,0 +1,43 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjQsWzYsMSwiQl8zIl0sWzUsMCwiQV8zIl0sWzUsMSwiRSJdLFswLDAsIkFfMSJdLFsxLDAsIkFfMSJdLFswLDEsIkJfMSJdLFswLDIsIkNfMSJdLFsxLDIsIkUiXSxbMSwxLCJCXzIiXSxbMiwxLCJCXzMiXSxbMiwyLCJCXzMiXSxbMywxLCJcXCwiXSxbMywyLCJcXCwiXSxbMSwzLCJcXCwiXSxbMCwzLCJcXCwiXSxbNiwwLCJBXzMiXSxbNCwxLCJDXzEiXSxbNCwyLCJDXzEiXSxbNSwyLCJDXzIiXSxbNiwyLCJDXzMiXSxbNywxLCJcXCwiXSxbNywyLCJcXCwiXSxbNiwzLCJcXCwiXSxbNSwzLCJcXCwiXSxbMSwyLCJ5IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMiwwLCJcXHZhcnBoaSAiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwzLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDUsImlfMSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsNiwicF8yIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs2LDcsIlxccHNpICIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbNSw4LCJmX0IiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzgsOSwiZ19CIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzQsOCwiaV8yIGZfQSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbOCw3LCJ4IiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzksMTAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzksMTEsIlxcZGVsdGEgX0IiXSxbMTAsMTIsIihwXzIpX1xcYXN0IFxcZGVsdGEgX0IiXSxbNiwxNCwiXFx2YXJlcHNpbG9uIF8xIl0sWzcsMTMsIlxcZXRhIl0sWzgsMTAsIlxcdHJpYW5nbGUiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTUsMCwiaV8zIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxLDE1LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNywxNiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxOSwicF8zIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzE2LDIsIlxccHNpICIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMiwxOCwieiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxNywxOCwiZl9DIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9LCJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTgsMTksImdfQyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9LCJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwyMCwiKHBfMSlfXFxhc3QgXFxkZWx0YSBfQiJdLFsxOSwyMSwiXFxkZWx0YSBfQyJdLFsxOSwyMiwiXFx2YXJlcHNpbG9uIF8zIl0sWzE4LDIzLCIoZ19BKV9cXGFzdCBcXHZhcmVwc2lsb24gXzIiXSxbMSwwLCJcXHNxdWFyZSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDEwLCJcXHZhcnBoaSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+{A_1} \& {A_1} \&\&\&\& {A_3} \& {A_3} \\
+{B_1} \& {B_2} \& {B_3} \& {\,} \& {C_1} \& E \& {B_3} \& {\,} \\
+{C_1} \& E \& {B_3} \& {\,} \& {C_1} \& {C_2} \& {C_3} \& {\,} \\
+{\,} \& {\,} \&\&\&\& {\,} \& {\,}
+\arrow["{i_1}", dashed, tail, from=1-1, to=2-1]
+\arrow[equals, from=1-2, to=1-1]
+\arrow["{i_2 f_A}", tail, from=1-2, to=2-2]
+\arrow[equals, from=1-6, to=1-7]
+\arrow["y", dashed, tail, from=1-6, to=2-6]
+\arrow["\square"{description}, draw=none, from=1-6, to=2-7]
+\arrow["{i_3}", tail, from=1-7, to=2-7]
+\arrow["{f_B}", tail, from=2-1, to=2-2]
+\arrow["{p_2}", dashed, two heads, from=2-1, to=3-1]
+\arrow["{g_B}", two heads, from=2-2, to=2-3]
+\arrow["x", two heads, from=2-2, to=3-2]
+\arrow["\triangle"{description}, draw=none, from=2-2, to=3-3]
+\arrow["{\delta _B}", from=2-3, to=2-4]
+\arrow[equals, from=2-3, to=3-3]
+\arrow["{\psi }", tail, from=2-5, to=2-6]
+\arrow["{\varphi }", two heads, from=2-6, to=2-7]
+\arrow["z", two heads, from=2-6, to=3-6]
+\arrow["{(p_1)_\ast \delta _B}", from=2-7, to=2-8]
+\arrow["{p_3}", two heads, from=2-7, to=3-7]
+\arrow["{\psi }", tail, from=3-1, to=3-2]
+\arrow["{\varepsilon _1}", from=3-1, to=4-1]
+\arrow["\varphi", two heads, from=3-2, to=3-3]
+\arrow["\eta", from=3-2, to=4-2]
+\arrow["{(p_2)_\ast \delta _B}", from=3-3, to=3-4]
+\arrow[equals, from=3-5, to=2-5]
+\arrow["{f_C}", dashed, tail, from=3-5, to=3-6]
+\arrow["{g_C}", dashed, two heads, from=3-6, to=3-7]
+\arrow["{(g_A)_\ast \varepsilon _2}", from=3-6, to=4-6]
+\arrow["{\delta _C}", from=3-7, to=3-8]
+\arrow["{\varepsilon _3}", from=3-7, to=4-7]
+\end{tikzcd}
+\end{document}

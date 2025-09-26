@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMSwxLCJYXkYiXSxbMywxLCJYXkMiXSxbNSwxLCJYIl0sWzMsMCwiQyJdLFs1LDAsIk4iXSxbMCwxLCJcXCwiXSxbNiwxLCJcXCwiXSxbMCwxLCJpIiwyXSxbMSwyLCJwIiwyXSxbMywxLCJmIiwyXSxbMyw0LCJhIl0sWzQsMiwiYiJdLFs0LDEsInMiLDJdLFsxMiwyLCJcXGNpcmNsZWFycm93cmlnaHQiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	&&& C && N \\
+	{\,} & {X^F} && {X^C} && X & {\,}
+	\arrow["a", from=1-4, to=1-6]
+	\arrow["f"', from=1-4, to=2-4]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "s"', from=1-6, to=2-4]
+	\arrow["b", from=1-6, to=2-6]
+	\arrow["i"', from=2-2, to=2-4]
+	\arrow["p"', from=2-4, to=2-6]
+	\arrow["\circlearrowright"{description}, draw=none, from=0, to=2-6]
+\end{tikzcd}
+\end{document}

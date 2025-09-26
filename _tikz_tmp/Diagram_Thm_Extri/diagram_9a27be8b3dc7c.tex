@@ -1,0 +1,29 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzYsMCwiXFwsIl0sWzAsMywiTSJdLFsyLDMsIkJfMSBcXG9wbHVzIEJfMiJdLFs0LDMsIkMiXSxbNSwzLCJcXCwiXSxbMCwyLCJBXzIiXSxbMiwyLCJCXzIiXSxbNCwyLCJDIl0sWzIsNCwiQl8xIl0sWzAsNCwiQl8xIl0sWzIsNSwiXFwsIl0sWzAsNSwiXFwsIl0sWzEsMiwiXFxiaW5vbXtcXGxhbWJkYV8xfXstXFxsYW1iZGEgXzJ9Il0sWzIsMywiKHlfMSwgeV8yJykiXSxbMyw0LCJtXzFeXFxhc3QgKFxcZGVsdGFfMSkiXSxbNSwxLCJtXzIiXSxbNiwyLCJcXGJpbm9tIDAxIl0sWzcsMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw4LCIoMSBcXCAwKSJdLFs5LDgsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsOSwiXFxsYW1iZGFfMSJdLFs4LDEwLCIwIl0sWzksMTEsIih5XzEpXlxcYXN0IFxcZGVsdGFfMiJdLFs1LDYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDcsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+	&&&&&& {\,} \\
+	\\
+	{A_2} && {B_2} && C \\
+	M && {B_1 \oplus B_2} && C & {\,} \\
+	{B_1} && {B_1} \\
+	{\,} && {\,}
+	\arrow[dashed, from=3-1, to=3-3]
+	\arrow["{m_2}", from=3-1, to=4-1]
+	\arrow[dashed, from=3-3, to=3-5]
+	\arrow["{\binom 01}", from=3-3, to=4-3]
+	\arrow[equals, from=3-5, to=4-5]
+	\arrow["{\binom{\lambda_1}{-\lambda _2}}", from=4-1, to=4-3]
+	\arrow["{\lambda_1}", from=4-1, to=5-1]
+	\arrow["{(y_1, y_2')}", from=4-3, to=4-5]
+	\arrow["{(1 \ 0)}", from=4-3, to=5-3]
+	\arrow["{m_1^\ast (\delta_1)}", from=4-5, to=4-6]
+	\arrow[equals, from=5-1, to=5-3]
+	\arrow["{(y_1)^\ast \delta_2}", from=5-1, to=6-1]
+	\arrow["0", from=5-3, to=6-3]
+\end{tikzcd}
+\end{document}

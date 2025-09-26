@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGNkb3QiXSxbMCwyLCJcXGNkb3QiXSxbMiwwLCJcXGNkb3QiXSxbMiwyLCJcXGNkb3QiXSxbMywxLCJmIFxccGl0Y2hmb3JrIGciXSxbMCwxLCJmIiwyXSxbMCwyLCJcXGZvcmFsbCBcXGFscGhhIl0sWzEsMywiXFxmb3JhbGwgXFxiZXRhIiwyXSxbMiwzLCJnIl0sWzEsMiwiXFxleGlzdHMgcyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs4LDQsIiIsMCx7InNob3J0ZW4iOnsic291cmNlIjo1MCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	\cdot \&\& \cdot \\
+	\&\&\& {f \pitchfork g} \\
+	\cdot \&\& \cdot
+	\arrow["{\forall \alpha}", from=1-1, to=1-3]
+	\arrow["f"', from=1-1, to=3-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "g", from=1-3, to=3-3]
+	\arrow["{\exists s}", dashed, from=3-1, to=1-3]
+	\arrow["{\forall \beta}"', from=3-1, to=3-3]
+	\arrow[between={0.5}{0.8}, Rightarrow, 2tail reversed, from=0, to=2-4]
+\end{tikzcd}
+\end{document}

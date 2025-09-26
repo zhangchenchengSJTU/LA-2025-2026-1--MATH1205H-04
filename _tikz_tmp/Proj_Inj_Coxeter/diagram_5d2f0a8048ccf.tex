@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+   % https://q.uiver.app/#q=WzAsOCxbMCwxLCIoaylfe2krMX0iXSxbMSwxLCJrIl0sWzEsMiwiXFxjZG90cyAiXSxbMSwwLCJNJyJdLFs0LDAsIkNfe2krMX1eLU0nIl0sWzMsMSwiMF97aSsxfSJdLFs0LDEsImsiXSxbNCwyLCJcXGNkb3RzIl0sWzAsMV0sWzEsMl0sWzEsMiwiIiwxLHsib2Zmc2V0IjotM31dLFsxLDIsIiIsMSx7Im9mZnNldCI6M31dLFs2LDddLFs2LDcsIiIsMSx7Im9mZnNldCI6LTN9XSxbNiw3LCIiLDEseyJvZmZzZXQiOjN9XSxbNiw1XSxbMyw0LCIiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}
+	& {M'} &&& {C_{i+1}^-M'} \\
+	{(k)_{i+1}} & k && {0_{i+1}} & k \\
+	& {\cdots } &&& \cdots
+	\arrow[shorten <=16pt, shorten >=16pt, Rightarrow, dashed, from=1-2, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=3-2]
+	\arrow[shift left=3, from=2-2, to=3-2]
+	\arrow[shift right=3, from=2-2, to=3-2]
+	\arrow[from=2-5, to=2-4]
+	\arrow[from=2-5, to=3-5]
+	\arrow[shift left=3, from=2-5, to=3-5]
+	\arrow[shift right=3, from=2-5, to=3-5]
+\end{tikzcd}
+   \end{document}

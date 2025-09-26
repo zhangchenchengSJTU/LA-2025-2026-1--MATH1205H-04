@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMSwwLCJcXGNvcHJvZCBfe2cgXFxpbiBcXGtlciBfbn18XFxwYXJ0aWFsIFxcRGVsdGEgXntuKzF9fCJdLFszLDAsIlxcY29wcm9kIF97ZyBcXGluIFxca2VyIF9ufXxcXERlbHRhIF57bisxfXwiXSxbMSwxLCJLX3tufSJdLFszLDEsIktfbiciXSxbMCwwLCJcXCwiXSxbNCwwLCJcXCwiXSxbNCwyLCJYIl0sWzAsMSwiXFxjb3Byb2QgX3tnIFxcaW4gXFxrZXIgX259fGkgXntuKzF9fCJdLFswLDIsIihhX2cpX3tnIFxcaW4gXFxrZXIgX259IiwyXSxbMiwzLCJcXGlvdGFfbiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsM10sWzAsMywiXFx0ZXh0e1BPfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDYsImZfbiIsMix7ImN1cnZlIjoyLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsxLDYsIiIsMix7ImN1cnZlIjotMn1dLFszLDYsImZfe24rMX0nIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+{\,} \& {\coprod _{g \in \ker _n}|\partial \Delta ^{n+1}|} \&\& {\coprod _{g \in \ker _n}|\Delta ^{n+1}|} \& {\,} \\
+\& {K_{n}} \&\& {K_n'} \\
+\&\&\&\& X
+\arrow["{\coprod _{g \in \ker _n}|i ^{n+1}|}", from=1-2, to=1-4]
+\arrow["{(a_g)_{g \in \ker _n}}"', from=1-2, to=2-2]
+\arrow["{\text{PO}}"{description}, draw=none, from=1-2, to=2-4]
+\arrow[from=1-4, to=2-4]
+\arrow[curve={height=-12pt}, from=1-4, to=3-5]
+\arrow["{\iota_n}"', hook, from=2-2, to=2-4]
+\arrow["{f_n}"', curve={height=12pt}, hook', from=2-2, to=3-5]
+\arrow["{f_{n+1}'}"', dashed, from=2-4, to=3-5]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,12 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+\begin{align*}
+\mathbf{LHS} \ni f & = \{\coprod_p X^p \otimes Y^{n-p} \to Z^n\}_{n \in \mathbb Z}\\
+& \cong \{X^p \otimes Y^{n-p} \to Z^n\}_{p, n \in\mathbb Z}\\
+& \cong \{X^p \to (Y^{n-p} , Z^n)\}_{p, n \in\mathbb Z}\\
+& \cong \{X^p \to \prod_n (Y^{n-p} , Z^n)\}_{p \in\mathbb Z}\quad = g \in\mathbf{RHS}
+\end{align*}
+\end{document}

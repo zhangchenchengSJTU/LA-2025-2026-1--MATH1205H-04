@@ -1,4 +1,29 @@
-theme: minima   # or leave blank for default
+# Site Info
+title:              "Jekyll Latex"
+description:        "A pretty good Jekyll theme"
+google_verify:      abc123 # Put your Google Verification here
+google_analytics:   UA-123
+
+# Author Info
+author_name:        "Chencheng Zhang" # Your name here
+author_email:       zhangchencheng@sjtu.edu.com # Your email here
+author_gravatar:    0f20ebcc66f10f16c36a6013e485771f # Your Gravatar md5 hash here for logo
+
+# Site Settings
+url:                "https://zhangchenchengsjtu.github.io" # Change to your site
+baseurl:            "/website"
+permalink:          posts/:title # Post permalink
+timezone:           Asia/Shanghai # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# markdown: kramdown
+# kramdown:
+#   input: Kramdown   # <---- not GFM!!
+#   disable_emphasis: true
+#   math_engine: mathjax
+#   entity_output: as_char
+#   math_engine_opts:
+#     allow_dollar_delimiter: true
+#     allow_underscore: true
 
 markdown: CustomKramdown
 kramdown:
@@ -17,3 +42,40 @@ syntax_highlighter: rouge
 hard_wrap: false
 
 mathjax: true
+
+
+sass:
+    style:          :compressed
+
+# Other Params
+include:            [ "robots.txt" ]
+exclude:            [ "LICENSE", "README.md", "CNAME", "vendor", "Gemfile", "_tikz_tmp", .jekyll-cache ]
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-toc
+
+paginate: 20
+paginate_path: "/blog/page:num/"
+
+defaults:
+  -
+    scope:
+      path:         ""
+    values:
+      layout:       "null"
+  -
+    scope:
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
+
+pdf2svg: "pdf2svg"
+
+after_build:
+  - bash move_pdfs.bat

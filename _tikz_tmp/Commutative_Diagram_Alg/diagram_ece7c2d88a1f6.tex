@@ -1,0 +1,45 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjQsWzEsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfX0iXSxbMSwyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFsxLDAsIlxcY29sb3J7Ymx1ZX1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX19Il0sWzIsMSwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfX0iXSxbMywwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfSJdLFszLDIsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMSwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMX0iXSxbMCwxLCJcXGNvbG9ye2dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMH0iXSxbNCwxLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAxfSJdLFs1LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwwLCJcXGNvbG9ye2JsdWV9XFxzdWJzdGFja3swXFxcXDAgXFwgMCBcXCAxfSJdLFsxLDMsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MFxcXFwwIFxcIDAgXFwgMX19Il0sWzEsNCwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDAgXFwgMCBcXCAwfX0iXSxbMSw1LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFsyLDQsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMX19Il0sWzMsMywiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MVxcXFwxIFxcIDEgXFwgMH0iXSxbMyw0LCJcXGNvbG9ye2N5YW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFszLDUsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9Il0sWzQsNCwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezFcXFxcMSBcXCAyIFxcIDF9fSJdLFs1LDMsIlxcY29sb3J7Y3lhbn17XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfX0iXSxbNSw0LCJcXGNvbG9ye2N5YW59e1xcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufXtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFs2LDQsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFsyLDNdLFsxLDNdLFswLDNdLFszLDRdLFszLDVdLFszLDZdLFs3LDJdLFs3LDFdLFs3LDBdLFs0LDhdLFs1LDhdLFs2LDhdLFs4LDldLFs4LDEwXSxbOCwxMV0sWzEyLDE1XSxbMTUsMTZdLFsxNiwxOV0sWzE5LDIwXSxbMTQsMTVdLFsxNSwxOF0sWzE4LDE5XSxbMTksMjJdLFsxMywxNV0sWzE1LDE3XSxbMTcsMTldLFsxOSwyMV0sWzIwLDIzXSxbMjEsMjNdLFsyMiwyM11d
+\begin{tikzcd}
+	& \begin{array}{c} \color{blue}\boxed{\substack{0\\0 \ 1 \ 1} } \end{array} && \begin{array}{c} \color{blue}\substack{1\\1 \ 1 \ 0} \end{array} && \begin{array}{c} \color{blue}\substack{0\\0 \ 0 \ 1} \end{array} \\
+	\begin{array}{c} \color{green}\substack{0\\0 \ 1 \ 0} \end{array} & \begin{array}{c} \color{blue}\boxed{\substack{1\\0 \ 1 \ 0} } \end{array} & \begin{array}{c} \color{blue}\boxed{\substack{1\\1 \ 2 \ 1} } \end{array} & \begin{array}{c} \color{blue}\substack{1\\0 \ 1 \ 1} \end{array} & \begin{array}{c} \color{blue}\substack{1\\1 \ 1 \ 1} \end{array} & \begin{array}{c} \color{blue}\substack{0\\1 \ 0 \ 0} \end{array} \\
+	& \begin{array}{c} \color{blue}\boxed{\substack{0\\1 \ 1 \ 0} } \end{array} && \begin{array}{c} \color{blue}\substack{0\\1 \ 1 \ 1} \end{array} && \begin{array}{c} \color{blue}\substack{1\\0 \ 0 \ 0} \end{array} \\
+	& \begin{array}{c} \color{cyan}\boxed{\substack{0\\0 \ 0 \ 1} } \end{array} && \begin{array}{c} \color{cyan}\substack{1\\1 \ 1 \ 0} \end{array} && \begin{array}{c} \color{cyan}{\substack{0\\0 \ 1 \ 1} } \end{array} \\
+	& \begin{array}{c} \color{cyan}\boxed{\substack{1\\0 \ 0 \ 0} } \end{array} & \begin{array}{c} \color{cyan}\boxed{\substack{1\\1 \ 1 \ 1} } \end{array} & \begin{array}{c} \color{cyan}\substack{1\\0 \ 1 \ 1} \end{array} & \begin{array}{c} \color{cyan}{\substack{1\\1 \ 2 \ 1} } \end{array} & \begin{array}{c} \color{cyan}{\substack{1\\0 \ 1 \ 0} } \end{array} & \begin{array}{c} \color{olive}\substack{0\\0 \ 1 \ 0} \end{array} \\
+	& \begin{array}{c} \color{cyan}\boxed{\substack{0\\1 \ 0 \ 0} } \end{array} && \begin{array}{c} \color{cyan}\substack{0\\1 \ 1 \ 1} \end{array} && \begin{array}{c} \color{cyan}{\substack{0\\1 \ 1 \ 0} } \end{array}
+	\arrow[from=1-2, to=2-3]
+	\arrow[from=1-4, to=2-5]
+	\arrow[from=2-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-5, to=1-6]
+	\arrow[from=2-5, to=2-6]
+	\arrow[from=2-5, to=3-6]
+	\arrow[from=3-2, to=2-3]
+	\arrow[from=3-4, to=2-5]
+	\arrow[from=4-2, to=5-3]
+	\arrow[from=4-4, to=5-5]
+	\arrow[from=4-6, to=5-7]
+	\arrow[from=5-2, to=5-3]
+	\arrow[from=5-3, to=4-4]
+	\arrow[from=5-3, to=5-4]
+	\arrow[from=5-3, to=6-4]
+	\arrow[from=5-4, to=5-5]
+	\arrow[from=5-5, to=4-6]
+	\arrow[from=5-5, to=5-6]
+	\arrow[from=5-5, to=6-6]
+	\arrow[from=5-6, to=5-7]
+	\arrow[from=6-2, to=5-3]
+	\arrow[from=6-4, to=5-5]
+	\arrow[from=6-6, to=5-7]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMSwiWCJdLFsyLDEsIlkiXSxbNCwxLCJaIl0sWzUsMSwiXFwsIl0sWzQsMCwiQyJdLFswLDAsIlgiXSxbMiwwLCJYIFxcb3BsdXMgQyJdLFs1LDAsIlxcLCJdLFswLDIsIlxccXVhZCBYJyJdLFsyLDIsIllcXHF1YWQiXSxbMiwzLCJcXGV0YSJdLFswLDEsImYiXSxbMSwyLCJnIl0sWzQsMiwicyIsMCx7ImxldmVsIjoyfV0sWzQsNywiMCJdLFs1LDAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsNiwiXFxiaW5vbSAxMCJdLFs2LDQsIigwLDEpIl0sWzYsMSwiKGYsdCkiLDAseyJsZXZlbCI6Mn1dLFs2LDUsIigxLDApIiwwLHsib2Zmc2V0IjotMywic2hvcnRlbiI6eyJzb3VyY2UiOjEwLCJ0YXJnZXQiOjEwfSwiY29sb3VyIjpbMzQ5LDEwMCw2MF19LFszNDksMTAwLDYwLDFdXSxbNSw4LCJ1IiwwLHsibGFiZWxfcG9zaXRpb24iOjcwLCJvZmZzZXQiOi0zLCJsZXZlbCI6MiwiY29sb3VyIjpbMzQ5LDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzM0OSwxMDAsNjAsMV1dLFs5LDgsIlxcYWxwaGEiLDAseyJvZmZzZXQiOjMsInNob3J0ZW4iOnsic291cmNlIjoxMCwidGFyZ2V0IjoxMH0sImNvbG91ciI6WzM0OSwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFszNDksMTAwLDYwLDFdXSxbNiw5LCIoZix0KSIsMix7ImxhYmVsX3Bvc2l0aW9uIjo4MCwib2Zmc2V0IjozLCJsZXZlbCI6MiwiY29sb3VyIjpbMzQ5LDEwMCw2MF19LFszNDksMTAwLDYwLDFdXV0=
+\begin{tikzcd}
+X && {X \oplus C} && C & {\,} \\
+X && Y && Z & {\,} \\
+{\quad X'} && {Y\quad}
+\arrow["{\binom 10}", from=1-1, to=1-3]
+\arrow[equals, from=1-1, to=2-1]
+\arrow["u"{pos=0.7}, shift left=3, color={rgb,255:red,255;green,51;blue,88}, Rightarrow, dashed, from=1-1, to=3-1]
+\arrow["{(1,0)}", shift left=3, color={rgb,255:red,255;green,51;blue,88}, shorten <=5pt, shorten >=5pt, from=1-3, to=1-1]
+\arrow["{(0,1)}", from=1-3, to=1-5]
+\arrow["{(f,t)}", Rightarrow, from=1-3, to=2-3]
+\arrow["{(f,t)}"'{pos=0.8}, shift right=3, color={rgb,255:red,255;green,51;blue,88}, Rightarrow, from=1-3, to=3-3]
+\arrow["0", from=1-5, to=1-6]
+\arrow["s", Rightarrow, from=1-5, to=2-5]
+\arrow["f", from=2-1, to=2-3]
+\arrow["g", from=2-3, to=2-5]
+\arrow["\eta", from=2-5, to=2-6]
+\arrow["\alpha", shift right=3, color={rgb,255:red,255;green,51;blue,88}, shorten <=5pt, shorten >=5pt, dashed, from=3-3, to=3-1]
+\end{tikzcd}
+\end{document}

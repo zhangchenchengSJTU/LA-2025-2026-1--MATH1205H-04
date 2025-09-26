@@ -1,0 +1,26 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzIsMSwiWF9cXGdhbW1hICJdLFsyLDIsIlkiXSxbMCwxLCJzKGopIl0sWzAsMiwidChqKSJdLFsyLDAsIlhfXFxhbHBoYSAiXSxbMywwLCJzKGopIl0sWzMsMSwidChqKSJdLFs0LDAsIlhfXFxhbHBoYSAiXSxbNCwxLCJYX3tcXGFscGhhICsxfSJdLFs1LDIsIlkiXSxbNSwxLCJYX1xcZ2FtbWEgIl0sWzAsMSwiZl9cXGdhbW1hIl0sWzIsMywiaiIsMl0sWzIsMCwidV9qIl0sWzMsMSwiZF9qIiwyXSxbNCwwXSxbMiw0LCJ0X2oiLDAseyJjdXJ2ZSI6LTIsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDhdLFs1LDcsInRfaiJdLFs1LDYsImoiLDJdLFs2LDhdLFs3LDEwXSxbNiw5LCJkX2oiLDIseyJjdXJ2ZSI6Mn1dLFs4LDksImZfe1xcYWxwaGEgKzF9IiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEwLDksImZfXFxnYW1tYSAiXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+\&\& {X_\alpha } \& {s(j)} \& {X_\alpha } \\
+{s(j)} \&\& {X_\gamma } \& {t(j)} \& {X_{\alpha +1}} \& {X_\gamma } \\
+{t(j)} \&\& Y \&\&\& Y
+\arrow[from=1-3, to=2-3]
+\arrow["{t_j}", from=1-4, to=1-5]
+\arrow["j"', from=1-4, to=2-4]
+\arrow[from=1-5, to=2-5]
+\arrow[from=1-5, to=2-6]
+\arrow["{t_j}", curve={height=-12pt}, dashed, from=2-1, to=1-3]
+\arrow["{u_j}", from=2-1, to=2-3]
+\arrow["j"', from=2-1, to=3-1]
+\arrow["{f_\gamma}", from=2-3, to=3-3]
+\arrow[from=2-4, to=2-5]
+\arrow["{d_j}"', curve={height=12pt}, from=2-4, to=3-6]
+\arrow["{f_{\alpha +1}}"', dashed, from=2-5, to=3-6]
+\arrow["{f_\gamma }", from=2-6, to=3-6]
+\arrow["{d_j}"', from=3-1, to=3-3]
+\end{tikzcd}
+\end{document}

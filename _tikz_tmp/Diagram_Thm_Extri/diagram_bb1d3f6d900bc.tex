@@ -1,0 +1,36 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTMsWzAsMCwiWiJdLFs0LDAsIlVfWCJdLFs0LDQsIlVfe1gnfSJdLFswLDQsIlonIl0sWzIsMCwiTSJdLFsyLDQsIk4iXSxbMSwzLCJBIl0sWzMsMywiQiJdLFsyLDIsIkMiXSxbNCwyLCJVX3tYJ30iXSxbMCwyLCJaIl0sWzIsMSwiRSJdLFszLDEsIj8/PyJdLFs0LDAsInMiLDIseyJjb2xvdXIiOlszNTksMTAwLDU5XX0sWzM1OSwxMDAsNTksMV1dLFs1LDMsInQiLDAseyJjb2xvdXIiOlszNTksMTAwLDU5XX0sWzM1OSwxMDAsNTksMV1dLFs0LDEsImEiXSxbNSwyLCJiIiwyXSxbNiwzLCJcXG1hdGhzZntGaWJ9IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzcsNiwiIiwyLHsiY29sb3VyIjpbMzU5LDEwMCw1OV19XSxbNyw1LCJwIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzgsNywicSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDMsIlxcbGFtYmRhIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsOSwiVV9mIl0sWzksMiwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCw5LCJiJyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMCwzLCJnIiwyXSxbMTAsNiwiXFxtYXRoc2Z7VENvZn0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOCwxMCwidCciLDIseyJjb2xvdXIiOlszNTksMTAwLDU5XX0sWzM1OSwxMDAsNTksMV1dLFswLDEwLCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCw2LCJcXG11IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzExLDQsIlxcb3ZlcmxpbmUgcyIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNTldfSxbMzU5LDEwMCw1OSwxXV0sWzExLDgsIlxcb3ZlcmxpbmUge310JyIsMix7ImNvbG91ciI6WzM1OSwxMDAsNTldfSxbMzU5LDEwMCw1OSwxXV0sWzE0LDE4LCJcXHRleHR7NMOXNH0iLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzE4LDI3LCJcXHRleHR7RVQ0fSIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XSxbMTEsMjgsIlxcdGV4dHs0w5c0fSIsMSx7InNob3J0ZW4iOnsidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+Z && M && {U_X} \\
+&& E & {???} \\
+Z && C && {U_{X'}} \\
+& A && B \\
+{Z'} && N && {U_{X'}}
+\arrow[""{name=0, anchor=center, inner sep=0}, equals, from=1-1, to=3-1]
+\arrow["s"', color={rgb,255:red,255;green,46;blue,49}, from=1-3, to=1-1]
+\arrow["a", from=1-3, to=1-5]
+\arrow["{U_f}", from=1-5, to=3-5]
+\arrow["{\overline s}", color={rgb,255:red,255;green,46;blue,49}, from=2-3, to=1-3]
+\arrow["{\overline {}t'}"', color={rgb,255:red,255;green,46;blue,49}, from=2-3, to=3-3]
+\arrow["{\mathsf{TCof}}"', dashed, from=3-1, to=4-2]
+\arrow["\mu", draw=none, from=3-1, to=4-2]
+\arrow["g"', from=3-1, to=5-1]
+\arrow[""{name=1, anchor=center, inner sep=0}, "{t'}"', color={rgb,255:red,255;green,46;blue,49}, from=3-3, to=3-1]
+\arrow["{b'}", dashed, from=3-3, to=3-5]
+\arrow["q", dashed, from=3-3, to=4-4]
+\arrow[equals, from=3-5, to=5-5]
+\arrow["{\mathsf{Fib}}", dashed, from=4-2, to=5-1]
+\arrow["\lambda"', draw=none, from=4-2, to=5-1]
+\arrow[""{name=2, anchor=center, inner sep=0}, draw={rgb,255:red,255;green,46;blue,49}, from=4-4, to=4-2]
+\arrow["p", dashed, from=4-4, to=5-3]
+\arrow[""{name=3, anchor=center, inner sep=0}, "t", color={rgb,255:red,255;green,46;blue,49}, from=5-3, to=5-1]
+\arrow["b"', from=5-3, to=5-5]
+\arrow["{\text{4×4}}"{description}, draw=none, from=2-3, to=0]
+\arrow["{\text{ET4}}"{description}, shorten <=7pt, shorten >=7pt, Rightarrow, from=2, to=1]
+\arrow["{\text{4×4}}"{description}, shorten <=7pt, shorten >=7pt, Rightarrow, from=3, to=2]
+\end{tikzcd}
+\end{document}

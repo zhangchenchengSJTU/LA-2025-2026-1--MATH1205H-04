@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMCwiWCIsWzIyOCwxMDAsNjAsMV1dLFsyLDAsIllfMiIsWzM1OSwxMDAsNjAsMV1dLFsxLDEsIllfMSIsWzIyOCwxMDAsNjAsMV1dLFsyLDEsIloiLFszNTksMTAwLDYwLDFdXSxbMywwLCJXIl0sWzMsMSwiVyJdLFswLDAsIldbLTFdIixbMjI4LDEwMCw2MCwxXV0sWzAsMSwiV1stMV0iXSxbMSwyLCJMIl0sWzEsMywiWFsxXSJdLFsyLDIsIkwiXSxbMiwzLCJZXzJbMV0iXSxbMCwyLCJiXzEiLDAseyJjb2xvdXIiOlsyMjgsMTAwLDYwXX0sWzIyOCwxMDAsNjAsMV1dLFswLDEsImFfMSIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNjBdfSxbMzU5LDEwMCw2MCwxXV0sWzEsMywiYl8yIiwwLHsiY29sb3VyIjpbMzU5LDEwMCw2MF19LFszNTksMTAwLDYwLDFdXSxbMSw0XSxbNCw1LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDMsImFfMiIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNjBdfSxbMzU5LDEwMCw2MCwxXV0sWzMsNV0sWzYsMCwiXFxsYW1iZGEiLDAseyJjb2xvdXIiOlsyMjgsMTAwLDYwXX0sWzIyOCwxMDAsNjAsMV1dLFs2LDcsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsMl0sWzIsOF0sWzgsOV0sWzgsMTAsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsMTBdLFs5LDExLCJhXzFbMV0iXSxbMTAsMTFdLFswLDMsIlxcYmxhY2tzcXVhcmUiLDMseyJjb2xvdXIiOlszNTksMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fSxbMzU5LDEwMCw2MCwxXV1d
+\begin{tikzcd}[ampersand replacement=\&]
+\color{rgb,255:red,51;green,92;blue,255}{W[-1]} \& \color{rgb,255:red,51;green,92;blue,255}{X} \& \color{rgb,255:red,255;green,51;blue,54}{Y_2} \& W \\
+{W[-1]} \& \color{rgb,255:red,51;green,92;blue,255}{Y_1} \& \color{rgb,255:red,255;green,51;blue,54}{Z} \& W \\
+\& L \& L \\
+\& {X[1]} \& {Y_2[1]}
+\arrow["\lambda", color={rgb,255:red,51;green,92;blue,255}, from=1-1, to=1-2]
+\arrow[equals, from=1-1, to=2-1]
+\arrow["{a_1}", color={rgb,255:red,255;green,51;blue,54}, from=1-2, to=1-3]
+\arrow["{b_1}", color={rgb,255:red,51;green,92;blue,255}, from=1-2, to=2-2]
+\arrow["\blacksquare"{marking, allow upside down}, color={rgb,255:red,255;green,51;blue,54}, draw=none, from=1-2, to=2-3]
+\arrow[from=1-3, to=1-4]
+\arrow["{b_2}", color={rgb,255:red,255;green,51;blue,54}, from=1-3, to=2-3]
+\arrow[equals, from=1-4, to=2-4]
+\arrow[from=2-1, to=2-2]
+\arrow["{a_2}", color={rgb,255:red,255;green,51;blue,54}, from=2-2, to=2-3]
+\arrow[from=2-2, to=3-2]
+\arrow[from=2-3, to=2-4]
+\arrow[from=2-3, to=3-3]
+\arrow[equals, from=3-2, to=3-3]
+\arrow[from=3-2, to=4-2]
+\arrow[from=3-3, to=4-3]
+\arrow["{a_1[1]}", from=4-2, to=4-3]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,44 @@
+{% assign html = include.html %}
+{% assign h_min = include.h_min | default: 2 %}
+{% assign h_max = include.h_max | default: 4 %}
+
+{% assign nodes = html | split: '<h' %}
+
+{% assign nodes = html | split: '<h' %}
+
+<nav class="numbered-toc">
+  {% assign h2_counter = 0 %}
+  {% assign h3_counter = 0 %}
+  {% assign h4_counter = 0 %}
+  
+  {% for node in nodes %}
+    {% if node == "" %}{% continue %}{% endif %}
+    {% assign level = node | slice: 0, 1 | plus: 0 %}
+    {% if level < h_min or level > h_max %}{% continue %}{% endif %}
+    
+    {% assign id = node | split: 'id="' | shift | first | split: '"' | first %}
+    {% assign title = node | split: '</h' | first | split: '>' | shift | first | strip_html %}
+    
+    {% comment %} Reset counters when level changes {% endcomment %}
+    {% if level == 2 %}
+      {% assign h2_counter = h2_counter | plus: 1 %}
+      {% assign h3_counter = 0 %}
+      {% assign h4_counter = 0 %}
+      {% assign number = h2_counter %}
+    {% elsif level == 3 %}
+      {% assign h3_counter = h3_counter | plus: 1 %}
+      {% assign h4_counter = 0 %}
+      {% assign number = h2_counter | append: '.' | append: h3_counter %}
+    {% elsif level == 4 %}
+      {% assign h4_counter = h4_counter | plus: 1 %}
+      {% assign number = h2_counter | append: '.' | append: h3_counter | append: '.' | append: h4_counter %}
+    {% endif %}
+    
+    <div class="toc-row toc-level-{{ level }}">
+      <a href="#{{ id }}">
+        <span class="toc-number">{{ number }}.</span>
+        <span class="toc-title">{{ title }}</span>
+      </a>
+    </div>
+  {% endfor %}
+</nav>

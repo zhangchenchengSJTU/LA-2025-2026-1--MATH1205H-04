@@ -1,0 +1,31 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzMsMiwiWiJdLFs0LDMsIlVfWCJdLFszLDEsIk0iLFsyLDEwMCw2MCwxXV0sWzIsMiwiTiIsWzIzNywxMDAsNjAsMV1dLFsxLDIsIlYnIl0sWzMsMCwiViJdLFsyLDAsIlYiXSxbMSwxLCJWJyJdLFsyLDEsIkYiXSxbMCwyLCJcXCwiXSxbMiwwLCJzIiwyLHsiY29sb3VyIjpbMiwxMDAsNjBdfSxbMiwxMDAsNjAsMV1dLFsyLDEsImEiLDAseyJjdXJ2ZSI6LTMsImNvbG91ciI6WzIsMTAwLDYwXX0sWzIsMTAwLDYwLDFdXSxbMywwLCJ0IiwwLHsiY29sb3VyIjpbMjM3LDEwMCw2MF19LFsyMzcsMTAwLDYwLDFdXSxbMywxLCJiIiwyLHsiY3VydmUiOjMsImNvbG91ciI6WzIzNywxMDAsNjBdfSxbMjM3LDEwMCw2MCwxXV0sWzMsMCwiXFxtYXRoc2Z7VEZpYn0iLDIseyJjb2xvdXIiOlsyMzcsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fSxbMjM3LDEwMCw2MCwxXV0sWzIsMCwiXFxtYXRoc2Z7VEZpYn0iLDAseyJjb2xvdXIiOlsyLDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX0sWzIsMTAwLDYwLDFdXSxbMCwxLCJcXG92ZXJsaW5lIHtcXGVsbChcXGRlbHRhICl9IiwyLHsib2Zmc2V0IjoxLCJjb2xvdXIiOlsyMzcsMTAwLDYwXX0sWzIzNywxMDAsNjAsMV1dLFswLDEsIlxcZWxsKFxcZGVsdGEgKSIsMCx7Im9mZnNldCI6LTEsImNvbG91ciI6WzIsMTAwLDYwXX0sWzIsMTAwLDYwLDFdXSxbNyw0LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs2LDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsOF0sWzgsMiwidCciXSxbNiw4XSxbOCwzLCJzJyIsMl0sWzQsM10sWzUsMl0sWzgsMiwiXFxtYXRoc2Z7VEZpYn0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwzLCJcXG1hdGhzZntURmlifSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+&& V & V \\
+& {V'} & F & \color{rgb,255:red,255;green,58;blue,51}{M} \\
+{\,} & {V'} & \color{rgb,255:red,51;green,61;blue,255}{N} & Z \\
+&&&& {U_X}
+\arrow[equals, from=1-3, to=1-4]
+\arrow[from=1-3, to=2-3]
+\arrow[from=1-4, to=2-4]
+\arrow[from=2-2, to=2-3]
+\arrow[equals, from=2-2, to=3-2]
+\arrow["{t'}", from=2-3, to=2-4]
+\arrow["{\mathsf{TFib}}"', draw=none, from=2-3, to=2-4]
+\arrow["{s'}"', from=2-3, to=3-3]
+\arrow["{\mathsf{TFib}}", draw=none, from=2-3, to=3-3]
+\arrow["s"', color={rgb,255:red,255;green,58;blue,51}, from=2-4, to=3-4]
+\arrow["{\mathsf{TFib}}", color={rgb,255:red,255;green,58;blue,51}, draw=none, from=2-4, to=3-4]
+\arrow["a", color={rgb,255:red,255;green,58;blue,51}, curve={height=-18pt}, from=2-4, to=4-5]
+\arrow[from=3-2, to=3-3]
+\arrow["t", color={rgb,255:red,51;green,61;blue,255}, from=3-3, to=3-4]
+\arrow["{\mathsf{TFib}}"', color={rgb,255:red,51;green,61;blue,255}, draw=none, from=3-3, to=3-4]
+\arrow["b"', color={rgb,255:red,51;green,61;blue,255}, curve={height=18pt}, from=3-3, to=4-5]
+\arrow["{\overline {\ell(\delta )}}"', shift right, color={rgb,255:red,51;green,61;blue,255}, from=3-4, to=4-5]
+\arrow["{\ell(\delta )}", shift left, color={rgb,255:red,255;green,58;blue,51}, from=3-4, to=4-5]
+\end{tikzcd}
+\end{document}

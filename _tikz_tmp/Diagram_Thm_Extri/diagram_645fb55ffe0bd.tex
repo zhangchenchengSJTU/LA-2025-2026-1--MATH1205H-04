@@ -1,0 +1,28 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJYJyJdLFsyLDAsIlgiXSxbNCwwLCJYJyJdLFs0LDIsIlknIl0sWzIsMiwiWSJdLFswLDIsIlknIl0sWzMsMSwiUCIsWzM1NywxMDAsNjAsMV1dLFsyLDEsIkUiXSxbMCwxLCJpX1giXSxbMSwyLCJwX1giXSxbMiwzLCJhJyJdLFs0LDMsInBfWSIsMl0sWzAsNSwiYSciLDJdLFs1LDQsImlfWSIsMl0sWzAsNSwiXFxtYXRoc2Z7Q29maWJ9IiwwLHsibGFiZWxfcG9zaXRpb24iOjIwLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNywiYV97dGN9Il0sWzcsNCwiYV97dGZ9Il0sWzEsNywiXFxtYXRoc2Z7VENvZmlifSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDQsIlxcbWF0aHNme1RGaWJ9IiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsNiwiayIsMix7ImNvbG91ciI6WzM1NywxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFszNTcsMTAwLDYwLDFdXSxbMiw2LCJcXG1hdGhzZntUQ29maWJ9IiwwLHsiY29sb3VyIjpbMzU3LDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzM1NywxMDAsNjAsMV1dLFs3LDIsIlxcc3F1YXJlIiwxLHsiY29sb3VyIjpbMzU3LDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX0sWzM1NywxMDAsNjAsMV1dLFs1LDcsInMiLDIseyJjdXJ2ZSI6LTIsImNvbG91ciI6WzIzMCwxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19LFsyMzAsMTAwLDYwLDFdXSxbNiwzLCJsIiwyLHsiY29sb3VyIjpbMjMwLDEwMCw2MF0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX0sWzIzMCwxMDAsNjAsMV1dXQ==
+\begin{tikzcd}
+{X'} && X && {X'} \\
+&& E & \color{rgb,255:red,255;green,51;blue,61}{P} \\
+{Y'} && Y && {Y'}
+\arrow["{i_X}", from=1-1, to=1-3]
+\arrow["{a'}"', from=1-1, to=3-1]
+\arrow["{\mathsf{Cofib}}"{pos=0.2}, no head, from=1-1, to=3-1]
+\arrow["{p_X}", from=1-3, to=1-5]
+\arrow["{a_{tc}}", from=1-3, to=2-3]
+\arrow["{\mathsf{TCofib}}"', draw=none, from=1-3, to=2-3]
+\arrow["{\mathsf{TCofib}}", color={rgb,255:red,255;green,51;blue,61}, dashed, from=1-5, to=2-4]
+\arrow["{a'}", from=1-5, to=3-5]
+\arrow["\square"{description}, color={rgb,255:red,255;green,51;blue,61}, draw=none, from=2-3, to=1-5]
+\arrow["k"', color={rgb,255:red,255;green,51;blue,61}, dashed, from=2-3, to=2-4]
+\arrow["{a_{tf}}", from=2-3, to=3-3]
+\arrow["{\mathsf{TFib}}"', draw=none, from=2-3, to=3-3]
+\arrow["l"', color={rgb,255:red,51;green,85;blue,255}, dashed, from=2-4, to=3-5]
+\arrow["s"', color={rgb,255:red,51;green,85;blue,255}, curve={height=-12pt}, dashed, from=3-1, to=2-3]
+\arrow["{i_Y}"', from=3-1, to=3-3]
+\arrow["{p_Y}"', from=3-3, to=3-5]
+\end{tikzcd}
+\end{document}

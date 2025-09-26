@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwyLCJBIl0sWzIsMiwiQiJdLFsyLDEsIk4iXSxbMCwwLCJFIl0sWzEsMSwiQSBcXHRpbWVzIF9CTiJdLFszLDIsIlxcbWF0aHJte2Nva30oZykiXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMiwxXSxbMywyLCJnIiwwLHsiY3VydmUiOi0yfV0sWzQsMiwiXFx2YXJwaGkgIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDAsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDMsIlxccHNpIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsNSwicCIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+E \\
+\& {A \times _BN} \& N \\
+\& A \& B \& {\mathrm{cok}(g)}
+\arrow["g", curve={height=-12pt}, from=1-1, to=2-3]
+\arrow["\psi", dashed, from=2-2, to=1-1]
+\arrow["{\varphi }"', dashed, two heads, from=2-2, to=2-3]
+\arrow[dashed, from=2-2, to=3-2]
+\arrow[from=2-3, to=3-3]
+\arrow["p", two heads, from=2-3, to=3-4]
+\arrow[two heads, from=3-2, to=3-3]
+\end{tikzcd}
+\end{document}

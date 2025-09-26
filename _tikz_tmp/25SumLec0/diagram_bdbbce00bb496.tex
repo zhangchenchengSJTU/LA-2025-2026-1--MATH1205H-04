@@ -1,0 +1,26 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMiwiQ157cCxxfSJdLFsxLDEsIkNee3AscS0xfSJdLFszLDIsIkNee3AtMSxxfSJdLFszLDEsIkNee3AtMSxxLTF9Il0sWzAsMSwiXFxjZG90cyAiXSxbMCwyLCJcXGNkb3RzICJdLFs0LDIsIlxcY2RvdHMgIl0sWzQsMSwiXFxjZG90cyAiXSxbMSwwLCJcXHZkb3RzICJdLFszLDAsIlxcdmRvdHMgIl0sWzMsMywiXFx2ZG90cyAiXSxbMSwzLCJcXHZkb3RzICJdLFszLDEsImRfaCIsMl0sWzIsMCwiZF9oIiwyXSxbMSwwLCJkX3YiLDJdLFszLDIsImRfdiIsMl0sWzAsNSwiZF9oIiwyXSxbNiwyLCJkX2giLDJdLFsxLDQsImRfaCIsMl0sWzcsMywiZF9oIiwyXSxbMCwxMSwiZF92IiwyXSxbOCwxLCJkX3YiLDJdLFsyLDEwLCJkX3YiLDJdLFs5LDMsImRfdiIsMl0sWzE1LDE0LCJcXHRleHR7YW50aWNvbW11dGV9IiwxLHsib2Zmc2V0IjoxLCJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	& {\vdots } && {\vdots } \\
+	{\cdots } & {C^{p,q-1}} && {C^{p-1,q-1}} & {\cdots } \\
+	{\cdots } & {C^{p,q}} && {C^{p-1,q}} & {\cdots } \\
+	& {\vdots } && {\vdots }
+	\arrow["{d_v}"', from=1-2, to=2-2]
+	\arrow["{d_v}"', from=1-4, to=2-4]
+	\arrow["{d_h}"', from=2-2, to=2-1]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{d_v}"', from=2-2, to=3-2]
+	\arrow["{d_h}"', from=2-4, to=2-2]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{d_v}"', from=2-4, to=3-4]
+	\arrow["{d_h}"', from=2-5, to=2-4]
+	\arrow["{d_h}"', from=3-2, to=3-1]
+	\arrow["{d_v}"', from=3-2, to=4-2]
+	\arrow["{d_h}"', from=3-4, to=3-2]
+	\arrow["{d_v}"', from=3-4, to=4-4]
+	\arrow["{d_h}"', from=3-5, to=3-4]
+	\arrow["{\text{anticommute}}"{description}, shift right, draw=none, from=1, to=0]
+\end{tikzcd}
+\end{document}

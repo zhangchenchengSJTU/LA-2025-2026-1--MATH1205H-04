@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTQsWzIsMiwiWCJdLFszLDIsIlkiXSxbNCwyLCJaIl0sWzMsMSwiRSJdLFs0LDEsIlMiXSxbMywwLCJWIl0sWzIsMSwiWCJdLFs0LDAsIlYiXSxbMCwxLCJcXCwiXSxbNiwxLCJcXCwiXSxbNSwyLCJcXCwiXSxbNSwxLCJcXCwiXSxbNCwzLCJcXCwiXSxbMywzLCJcXCwiXSxbMCwxLCJpIl0sWzMsMSwiaV9mIl0sWzMsNF0sWzUsM10sWzEsMiwicCJdLFs2LDMsImlfYyJdLFswLDYsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsNywiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNyw0XSxbNCwyXSxbNCwxMSwiXFxkZWx0YV97cjJ9Il0sWzIsMTAsIlxcZGVsdGFfe3IzfSJdLFsxLDEzLCJcXGRlbHRhX3tjMn0iXSxbMiwxMiwiXFxkZWx0YV97YzN9Il1d
+\begin{tikzcd}[ampersand replacement=\&]
+\&\&\& V \& V \\
+{\,} \&\& X \& E \& S \& {\,} \& {\,} \\
+\&\& X \& Y \& Z \& {\,} \\
+\&\&\& {\,} \& {\,}
+\arrow[equals, from=1-4, to=1-5]
+\arrow[from=1-4, to=2-4]
+\arrow[from=1-5, to=2-5]
+\arrow["{i_c}", from=2-3, to=2-4]
+\arrow[from=2-4, to=2-5]
+\arrow["{i_f}", from=2-4, to=3-4]
+\arrow["{\delta_{r2}}", from=2-5, to=2-6]
+\arrow[from=2-5, to=3-5]
+\arrow[equals, from=3-3, to=2-3]
+\arrow["i", from=3-3, to=3-4]
+\arrow["p", from=3-4, to=3-5]
+\arrow["{\delta_{c2}}", from=3-4, to=4-4]
+\arrow["{\delta_{r3}}", from=3-5, to=3-6]
+\arrow["{\delta_{c3}}", from=3-5, to=4-5]
+\end{tikzcd}
+\end{document}

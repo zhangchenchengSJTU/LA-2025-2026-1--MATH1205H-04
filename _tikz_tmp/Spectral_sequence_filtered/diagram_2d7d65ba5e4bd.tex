@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJGXnAg4oipIGReey0xfShGXntwKzF9KStGXntwKzF9Il0sWzAsMSwiRl5wIOKIqSAoZF57LTF9KEZee3ArcisxfSkpICsgRl57cCsxfSJdLFswLDIsIkZecCDiiKkgKFxca2VyIGQpICsgRl57cCsxfSJdLFsxLDIsIkZecCDiiKkgKFxcbWF0aHJte2ltfVxcIGQpICsgRl57cCsxfSJdLFsxLDEsIkZecCDiiKkgKGQoRl57cC1yfSkpICsgRl57cCsxfSJdLFsxLDAsIkZecCDiiKkgKDApICsgRl57cCsxfSJdLFswLDEsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzEsMiwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCJcXHN1cHNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFszLDQsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzQsNSwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMSwyLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMiwzLCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCw1LCIiLDMseyJvZmZzZXQiOi0zLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMCwxLCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxLDIsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIsMywiIiwzLHsib2Zmc2V0IjozLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMyw0LCIiLDMseyJvZmZzZXQiOjMsInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFs0LDUsIiIsMyx7Im9mZnNldCI6Mywic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV1d
+\begin{tikzcd}
+	{F^p ∩ d^{-1}(F^{p+1})+F^{p+1}} & {F^p ∩ (0) + F^{p+1}} \\
+	{F^p ∩ (d^{-1}(F^{p+r+1})) + F^{p+1}} & {F^p ∩ (d(F^{p-r})) + F^{p+1}} \\
+	{F^p ∩ (\ker d) + F^{p+1}} & {F^p ∩ (\mathrm{im}\ d) + F^{p+1}}
+	\arrow["\supset"{marking, allow upside down}, dotted, from=1-1, to=2-1]
+	\arrow[shift left=3, dotted, from=1-1, to=2-1]
+	\arrow[shift right=3, dotted, from=1-1, to=2-1]
+	\arrow["\supset"{marking, allow upside down}, dotted, from=2-1, to=3-1]
+	\arrow[shift left=3, dotted, from=2-1, to=3-1]
+	\arrow[shift right=3, dotted, from=2-1, to=3-1]
+	\arrow["\supset"{marking, allow upside down}, dotted, from=2-2, to=1-2]
+	\arrow[shift left=3, dotted, from=2-2, to=1-2]
+	\arrow[shift right=3, dotted, from=2-2, to=1-2]
+	\arrow["\supset"{marking, allow upside down}, dotted, from=3-1, to=3-2]
+	\arrow[shift left=3, dotted, from=3-1, to=3-2]
+	\arrow[shift right=3, dotted, from=3-1, to=3-2]
+	\arrow["\supset"{marking, allow upside down}, dotted, from=3-2, to=2-2]
+	\arrow[shift left=3, dotted, from=3-2, to=2-2]
+	\arrow[shift right=3, dotted, from=3-2, to=2-2]
+\end{tikzcd}
+\end{document}

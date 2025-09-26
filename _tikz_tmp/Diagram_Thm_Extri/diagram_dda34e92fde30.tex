@@ -1,0 +1,22 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJRKFVfWCkiXSxbMCwxLCJRKFVfWSkiXSxbMiwwLCJRKFVfWCcpIl0sWzIsMSwiUShVX1knKSJdLFs0LDAsIlEoVV9YKSJdLFs0LDEsIlEoVV9ZKSJdLFswLDIsIlEobF9YKSJdLFswLDEsIlEoVV9mKSIsMl0sWzEsMywiUShsX1kpIiwyXSxbNCw1LCJRKFVfZikiLDJdLFsyLDQsIlEocl9YKSJdLFszLDUsIlEocl9ZKSIsMl0sWzIsMywiUShVX2YnKSIsMl0sWzAsMiwiXFxzaW0iLDJdLFsyLDQsIlxcc2ltIiwyXSxbMSwzLCJcXHNpbSJdLFszLDUsIlxcc2ltIl1d
+\begin{tikzcd}[ampersand replacement=\&]
+{Q(U_X)} \&\& {Q(U_X')} \&\& {Q(U_X)} \\
+{Q(U_Y)} \&\& {Q(U_Y')} \&\& {Q(U_Y)}
+\arrow["{Q(l_X)}", from=1-1, to=1-3]
+\arrow["\sim"', from=1-1, to=1-3]
+\arrow["{Q(U_f)}"', from=1-1, to=2-1]
+\arrow["{Q(r_X)}", from=1-3, to=1-5]
+\arrow["\sim"', from=1-3, to=1-5]
+\arrow["{Q(U_f')}"', from=1-3, to=2-3]
+\arrow["{Q(U_f)}"', from=1-5, to=2-5]
+\arrow["{Q(l_Y)}"', from=2-1, to=2-3]
+\arrow["\sim", from=2-1, to=2-3]
+\arrow["{Q(r_Y)}"', from=2-3, to=2-5]
+\arrow["\sim", from=2-3, to=2-5]
+\end{tikzcd}
+\end{document}

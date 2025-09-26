@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwxLCIoXFx0cmlhbmdsZSAsIFxcZGVsdGEgKSJdLFswLDIsIihmXlxcYXN0IGdfXFxhc3QgXFx0cmlhbmdsZSAsIGZeXFxhc3QgZ19cXGFzdCBcXGRlbHRhICkiXSxbMCwwLCIoRlxcdHJpYW5nbGUgLCBcXHZhcnBoaSAoXFxkZWx0YSApKSJdLFsxLDIsIihGKGZeXFxhc3QgZ19cXGFzdCBcXHRyaWFuZ2xlKSAsIFxcdmFycGhpIChmXlxcYXN0IGdfXFxhc3QgXFxkZWx0YSkgKSJdLFsxLDAsIigoRmYpXlxcYXN0IChGZylfXFxhc3QgKEZcXHRyaWFuZ2xlKSwgKEZmKV5cXGFzdCAoRmcpX1xcYXN0XFx2YXJwaGkgKFxcZGVsdGEgKSkiXSxbMSwxLCIoKEZmKV5cXGFzdCAoRmcpX1xcYXN0IChGXFx0cmlhbmdsZSksIFxcdmFycGhpIChmXlxcYXN0IGdfXFxhc3QgXFxkZWx0YSkpIl0sWzAsMSwiIiwyLHsibGV2ZWwiOjJ9XSxbMCwyLCIiLDAseyJsZXZlbCI6Mn1dLFsyLDQsIiIsMCx7ImxldmVsIjoyfV0sWzEsMywiIiwyLHsibGV2ZWwiOjJ9XSxbMyw1LCIiLDIseyJsZXZlbCI6Mn1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+{(F\triangle , \varphi (\delta ))} \& {((Ff)^\ast (Fg)_\ast (F\triangle), (Ff)^\ast (Fg)_\ast\varphi (\delta ))} \\
+{(\triangle , \delta )} \& {((Ff)^\ast (Fg)_\ast (F\triangle), \varphi (f^\ast g_\ast \delta))} \\
+{(f^\ast g_\ast \triangle , f^\ast g_\ast \delta )} \& {(F(f^\ast g_\ast \triangle) , \varphi (f^\ast g_\ast \delta) )}
+\arrow[Rightarrow, from=1-1, to=1-2]
+\arrow[Rightarrow, from=2-1, to=1-1]
+\arrow[Rightarrow, from=2-1, to=3-1]
+\arrow[Rightarrow, from=3-1, to=3-2]
+\arrow[Rightarrow, from=3-2, to=2-2]
+\end{tikzcd}
+\end{document}

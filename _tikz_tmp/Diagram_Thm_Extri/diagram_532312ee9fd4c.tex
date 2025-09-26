@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMSwyLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzMsMiwiXFxidWxsZXQiXSxbMCwyLCJcXGtlciBnXFxjaXJjIGYiLFszNTMsMTAwLDYwLDFdXSxbMSwwLCJcXGtlciBnIixbMzUzLDEwMCw2MCwxXV0sWzAsMywiXFxrZXIgZiIsWzM1MywxMDAsNjAsMV1dLFszLDAsIlxcb3BlcmF0b3JuYW1le2Nva30gZiIsWzIzNCwxMDAsNjAsMV1dLFs0LDMsIlxcb3BlcmF0b3JuYW1le2Nva30gZyIsWzIzNCwxMDAsNjAsMV1dLFs0LDIsIlxcb3BlcmF0b3JuYW1le2Nva30gZ1xcY2lyYyBmIixbMjM0LDEwMCw2MCwxXV0sWzAsMSwiZiJdLFsxLDIsImciXSxbMCwyLCJnXFxjaXJjIGYiLDJdLFs1LDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSw2LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzIsNywiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzMsMCwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDgsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDMsIiIsMSx7ImNvbG91ciI6WzM1MywxMDAsNjBdLCJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzMsNCwiIiwwLHsiY3VydmUiOi0zLCJjb2xvdXIiOlszNTMsMTAwLDYwXX1dLFs0LDYsIiIsMCx7ImN1cnZlIjotMn1dLFs2LDgsIiIsMCx7ImN1cnZlIjotMywiY29sb3VyIjpbMjM0LDEwMCw2MF19XSxbOCw3LCIiLDEseyJjb2xvdXIiOlsyMzQsMTAwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d
+\begin{tikzcd}
+& \color{rgb,255:red,255;green,51;blue,75}{\ker g} && \color{rgb,255:red,51;green,71;blue,255}{\operatorname{cok} f} \\
+&& \bullet \\
+\color{rgb,255:red,255;green,51;blue,75}{\ker g\circ f} & \bullet && \bullet & \color{rgb,255:red,51;green,71;blue,255}{\operatorname{cok} g\circ f} \\
+\color{rgb,255:red,255;green,51;blue,75}{\ker f} &&&& \color{rgb,255:red,51;green,71;blue,255}{\operatorname{cok} g}
+\arrow[curve={height=-12pt}, from=1-2, to=1-4]
+\arrow[tail, from=1-2, to=2-3]
+\arrow[color={rgb,255:red,51;green,71;blue,255}, curve={height=-18pt}, from=1-4, to=3-5]
+\arrow[two heads, from=2-3, to=1-4]
+\arrow["g", from=2-3, to=3-4]
+\arrow[color={rgb,255:red,255;green,51;blue,75}, curve={height=-18pt}, from=3-1, to=1-2]
+\arrow[tail, from=3-1, to=3-2]
+\arrow["f", from=3-2, to=2-3]
+\arrow["{g\circ f}"', from=3-2, to=3-4]
+\arrow[two heads, from=3-4, to=3-5]
+\arrow[two heads, from=3-4, to=4-5]
+\arrow[color={rgb,255:red,51;green,71;blue,255}, two heads, from=3-5, to=4-5]
+\arrow[color={rgb,255:red,255;green,51;blue,75}, tail, from=4-1, to=3-1]
+\arrow[tail, from=4-1, to=3-2]
+\end{tikzcd}
+\end{document}

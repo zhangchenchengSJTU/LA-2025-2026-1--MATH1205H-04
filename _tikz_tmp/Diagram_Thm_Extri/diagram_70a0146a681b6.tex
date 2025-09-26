@@ -1,0 +1,26 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzAsMSwiWCJdLFswLDIsIlkiXSxbMiwxLCJWX1ggXFxvcGx1cyBWX1kiXSxbNCwxLCJVX1ggXFxvcGx1cyBWX1kiXSxbMiwyLCJWX1kiXSxbNCwyLCJVX1kiXSxbNSwxLCJcXCwiXSxbNSwyLCJcXCwiXSxbMCwwLCJWIl0sWzIsMCwiVl9YIl0sWzQsMCwiPyJdLFswLDIsIlxcYmlub20ge3ZfWH0wIl0sWzAsMSwicCIsMl0sWzEsNCwidl9ZIl0sWzIsNCwiKFZfcCwgMSkiLDJdLFs0LDUsInVfWSJdLFsyLDMsInVfWCBcXG9wbHVzIDFfe1ZfWX0iXSxbMyw2LCJcXGRlbHRhX1ggXFxvcGx1cyAwIl0sWzUsNywiXFxkZWx0YV9ZIl0sWzMsNSwiKFVfcCx1X1kpIiwyXSxbOSwyXSxbOCwwXSxbOCw5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOSwxMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEwLDNdXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+V \&\& {V_X} \&\& {?} \\
+X \&\& {V_X \oplus V_Y} \&\& {U_X \oplus V_Y} \& {\,} \\
+Y \&\& {V_Y} \&\& {U_Y} \& {\,}
+\arrow[dashed, from=1-1, to=1-3]
+\arrow[from=1-1, to=2-1]
+\arrow[dashed, from=1-3, to=1-5]
+\arrow[from=1-3, to=2-3]
+\arrow[from=1-5, to=2-5]
+\arrow["{\binom {v_X}0}", from=2-1, to=2-3]
+\arrow["p"', from=2-1, to=3-1]
+\arrow["{u_X \oplus 1_{V_Y}}", from=2-3, to=2-5]
+\arrow["{(V_p, 1)}"', from=2-3, to=3-3]
+\arrow["{\delta_X \oplus 0}", from=2-5, to=2-6]
+\arrow["{(U_p,u_Y)}"', from=2-5, to=3-5]
+\arrow["{v_Y}", from=3-1, to=3-3]
+\arrow["{u_Y}", from=3-3, to=3-5]
+\arrow["{\delta_Y}", from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

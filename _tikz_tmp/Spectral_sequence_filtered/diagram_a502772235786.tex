@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhzY3IgQSJdLFsyLDEsIlxcbWF0aGJme0FifSJdLFswLDAsIlxcbWF0aHNjcntBfV57XFxtYXRoYmIgTl57XFxtYXRocm17b3B9fX0iXSxbMiwwLCJcXG1hdGhiZntBYn1ee1xcbWF0aGJiIE5ee1xcbWF0aHJte29wfX19Il0sWzIsMywiRjo9IChYLC0pIl0sWzIsMCwiRzo9XFx2YXJwcm9qbGltICIsMl0sWzAsMSwiRjo9IChYLC0pIiwyXSxbMywxLCJHOj1cXHZhcnByb2psaW0gIl1d
+\begin{tikzcd}
+	{\mathscr{A}^{\mathbb N^{\mathrm{op}}}} && {\mathbf{Ab}^{\mathbb N^{\mathrm{op}}}} \\
+	{\mathscr A} && {\mathbf{Ab}}
+	\arrow["{F:= (X,-)}", from=1-1, to=1-3]
+	\arrow["{G:=\varprojlim }"', from=1-1, to=2-1]
+	\arrow["{G:=\varprojlim }", from=1-3, to=2-3]
+	\arrow["{F:= (X,-)}"', from=2-1, to=2-3]
+\end{tikzcd}
+\end{document}

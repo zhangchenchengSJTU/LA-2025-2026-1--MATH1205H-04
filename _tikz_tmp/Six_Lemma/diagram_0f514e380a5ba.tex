@@ -1,0 +1,29 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzMsMSwiXFxidWxsZXQiXSxbNCwyLCJcXGJ1bGxldCJdLFsyLDIsIlxcYnVsbGV0Il0sWzEsMywiXFxrZXIgZiJdLFswLDIsIlxca2VyIGcgXFxjaXJjIGYiXSxbNCwwLCJcXG9wZXJhdG9ybmFtZXtjb2t9ZiJdLFs2LDIsIlxcb3BlcmF0b3JuYW1le2Nva31nXFxjaXJjIGYiXSxbMiwwLCJcXGtlciBnIl0sWzUsMywiXFxvcGVyYXRvcm5hbWV7Y29rfSBnIl0sWzMsMywiMCJdLFswLDEsImciXSxbMiwxLCJnXFxjaXJjIGYiLDJdLFszLDRdLFs0LDJdLFsxLDZdLFswLDVdLFs1LDZdLFsyLDAsImYiXSxbMywyXSxbNywwXSxbMSw4XSxbNCw3XSxbNyw1XSxbNiw4XSxbOSwzXSxbOCw5XV0=
+\begin{tikzcd}
+	&& {\ker g} && {\operatorname{cok}f} \\
+	&&& \bullet \\
+	{\ker g \circ f} && \bullet && \bullet && {\operatorname{cok}g\circ f} \\
+	& {\ker f} && 0 && {\operatorname{cok} g}
+	\arrow[from=1-3, to=1-5]
+	\arrow[from=1-3, to=2-4]
+	\arrow[from=1-5, to=3-7]
+	\arrow[from=2-4, to=1-5]
+	\arrow["g", from=2-4, to=3-5]
+	\arrow[from=3-1, to=1-3]
+	\arrow[from=3-1, to=3-3]
+	\arrow["f", from=3-3, to=2-4]
+	\arrow["{g\circ f}"', from=3-3, to=3-5]
+	\arrow[from=3-5, to=3-7]
+	\arrow[from=3-5, to=4-6]
+	\arrow[from=3-7, to=4-6]
+	\arrow[from=4-2, to=3-1]
+	\arrow[from=4-2, to=3-3]
+	\arrow[from=4-4, to=4-2]
+	\arrow[from=4-6, to=4-4]
+\end{tikzcd}
+\end{document}

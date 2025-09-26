@@ -1,0 +1,40 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTUsWzAsMiwiWzAgXFxtaWQgMV0iLFsyMzIsMTAwLDYwLDFdXSxbMSwyLCJbMSBcXG1pZCAyXSIsWzIzMiwxMDAsNjAsMV1dLFsxLDMsIlsyIFxcbWlkIDNdIixbMjA2LDEwMCw2MCwxXV0sWzIsMywiWzNcXG1pZCA0XSIsWzIwNiwxMDAsNjAsMV1dLFsyLDQsIlxcY2RvdHMiLFsyMDYsMTAwLDYwLDFdXSxbNCwwLCJcXGNkb3RzIixbMTksMTAwLDYwLDFdXSxbNCwxLCJbNCBcXG1pZCAzXSIsWzE5LDEwMCw2MCwxXV0sWzUsMSwiWzNcXG1pZDJdIixbMTksMTAwLDYwLDFdXSxbNSwyLCJbMlxcbWlkMV0iLFszNTcsMTAwLDYwLDFdXSxbNiwyLCJbMVxcbWlkMF0iLFszNTcsMTAwLDYwLDFdXSxbMiwyLCJcXHRleHR7cHJvan0iLFsyMzIsMTAwLDYwLDFdXSxbMywzLCJcXHRleHR7cHJlLXByb2p9IixbMjA2LDEwMCw2MCwxXV0sWzMsMSwiXFx0ZXh0e3ByZS1pbmp9IixbMTksMTAwLDYwLDFdXSxbNCwyLCJcXHRleHR7aW5qfSIsWzM1NywxMDAsNjAsMV1dLFszLDIsIlxcYm94ZWR7XFx0ZXh0e3JlZ3VsYXIgbW9kfX0iLFsxMjAsNjAsNjAsMV1dLFswLDFdLFsxLDJdLFsyLDNdLFszLDRdLFswLDEsIiIsMSx7Im9mZnNldCI6LTN9XSxbMSwyLCIiLDEseyJvZmZzZXQiOi0zfV0sWzIsMywiIiwxLHsib2Zmc2V0IjotM31dLFszLDQsIiIsMSx7Im9mZnNldCI6LTN9XSxbNiw3XSxbNyw4XSxbNiw3LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOSwiIiwxLHsib2Zmc2V0IjotM31dLFs1LDZdLFs1LDYsIiIsMSx7Im9mZnNldCI6LTN9XSxbMiwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMywxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNCwyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw1LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOCw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbOSw3LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTEsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwxMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMTIsMTQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzEzLDEyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbNyw4LCIiLDEseyJvZmZzZXQiOi0zfV0sWzgsOV1d
+\begin{tikzcd}
+	&&&& \color{rgb,255:red,255;green,116;blue,51}{\cdots} \\
+	&&& \color{rgb,255:red,255;green,116;blue,51}{\text{pre-inj}} & \color{rgb,255:red,255;green,116;blue,51}{[4 \mid 3]} & \color{rgb,255:red,255;green,116;blue,51}{[3\mid2]} \\
+	\color{rgb,255:red,51;green,78;blue,255}{[0 \mid 1]} & \color{rgb,255:red,51;green,78;blue,255}{[1 \mid 2]} & \color{rgb,255:red,51;green,78;blue,255}{\text{proj}} & \color{rgb,255:red,92;green,214;blue,92}{\boxed{\text{regular mod}}} & \color{rgb,255:red,255;green,51;blue,61}{\text{inj}} & \color{rgb,255:red,255;green,51;blue,61}{[2\mid1]} & \color{rgb,255:red,255;green,51;blue,61}{[1\mid0]} \\
+	& \color{rgb,255:red,51;green,167;blue,255}{[2 \mid 3]} & \color{rgb,255:red,51;green,167;blue,255}{[3\mid 4]} & \color{rgb,255:red,51;green,167;blue,255}{\text{pre-proj}} \\
+	&& \color{rgb,255:red,51;green,167;blue,255}{\cdots}
+	\arrow[from=1-5, to=2-5]
+	\arrow[shift left=3, from=1-5, to=2-5]
+	\arrow[squiggly, from=2-4, to=3-4]
+	\arrow[from=2-5, to=2-6]
+	\arrow[shift left=3, from=2-5, to=2-6]
+	\arrow[dotted, from=2-6, to=1-5]
+	\arrow[from=2-6, to=3-6]
+	\arrow[shift left=3, from=2-6, to=3-6]
+	\arrow[from=3-1, to=3-2]
+	\arrow[shift left=3, from=3-1, to=3-2]
+	\arrow[from=3-2, to=4-2]
+	\arrow[shift left=3, from=3-2, to=4-2]
+	\arrow[squiggly, from=3-4, to=4-4]
+	\arrow[dotted, from=3-5, to=2-4]
+	\arrow[dotted, from=3-6, to=2-5]
+	\arrow[shift left=3, from=3-6, to=3-7]
+	\arrow[from=3-6, to=3-7]
+	\arrow[dotted, from=3-7, to=2-6]
+	\arrow[dotted, from=4-2, to=3-1]
+	\arrow[from=4-2, to=4-3]
+	\arrow[shift left=3, from=4-2, to=4-3]
+	\arrow[dotted, from=4-3, to=3-2]
+	\arrow[from=4-3, to=5-3]
+	\arrow[shift left=3, from=4-3, to=5-3]
+	\arrow[dotted, from=4-4, to=3-3]
+	\arrow[dotted, from=5-3, to=4-2]
+\end{tikzcd}
+\end{document}

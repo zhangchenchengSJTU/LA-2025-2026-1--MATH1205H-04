@@ -1,0 +1,34 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzEsMCwiXFxidWxsZXQiXSxbMSwxLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzIsMiwiXFxidWxsZXQiXSxbMCwxLCJcXGJ1bGxldCJdLFsxLDIsIlxcYnVsbGV0Il0sWzAsMiwiXFxidWxsZXQiXSxbMywwLCJcXGJ1bGxldCJdLFs0LDAsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs1LDIsIlxcYnVsbGV0Il0sWzMsMSwiXFxidWxsZXQiXSxbNCwxLCJcXGJ1bGxldCJdLFs0LDIsIlxcYnVsbGV0Il0sWzIsMCwiXFxidWxsZXQiXSxbMCwxXSxbMSwyXSxbMiwzXSxbNCwxXSxbMSw1XSxbNSwzXSxbNCw2LCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs2LDVdLFs3LDhdLFs4LDldLFs5LDEwXSxbMTAsMTFdLFs3LDEyLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMiwxM10sWzEzLDE0XSxbMTQsMTEsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTNdLFsxMywxMF0sWzE1LDJdLFswLDE1LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDMsIlxcc3F1YXJlIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzgsMTAsIlxcc3F1YXJlIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}
+& \bullet & \bullet & \bullet & \bullet & \bullet \\
+\bullet & \bullet & \bullet & \bullet & \bullet & \bullet \\
+\bullet & \bullet & \bullet && \bullet & \bullet
+\arrow[equals, from=1-2, to=1-3]
+\arrow[from=1-2, to=2-2]
+\arrow[from=1-3, to=2-3]
+\arrow[from=1-4, to=1-5]
+\arrow[equals, from=1-4, to=2-4]
+\arrow[from=1-5, to=1-6]
+\arrow[from=1-5, to=2-5]
+\arrow["\square"{description}, draw=none, from=1-5, to=2-6]
+\arrow[from=1-6, to=2-6]
+\arrow[from=2-1, to=2-2]
+\arrow[equals, from=2-1, to=3-1]
+\arrow[from=2-2, to=2-3]
+\arrow[from=2-2, to=3-2]
+\arrow["\square"{description}, draw=none, from=2-2, to=3-3]
+\arrow[from=2-3, to=3-3]
+\arrow[from=2-4, to=2-5]
+\arrow[from=2-5, to=2-6]
+\arrow[from=2-5, to=3-5]
+\arrow[from=2-6, to=3-6]
+\arrow[from=3-1, to=3-2]
+\arrow[from=3-2, to=3-3]
+\arrow[equals, from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

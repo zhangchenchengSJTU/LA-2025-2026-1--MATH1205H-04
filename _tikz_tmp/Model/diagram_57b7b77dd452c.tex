@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+   % https://q.uiver.app/#q=WzAsNixbMCwxLCJcXCwiXSxbMSwwLCJBIl0sWzMsMCwiQiBcXHByb2QgQiJdLFszLDEsIkIiXSxbMSwxLCJCJyJdLFs0LDEsIlxcLCJdLFszLDIsIlxcYmlub20gMTEiLDJdLFsxLDIsIlxcYmlub20gZmciXSxbMSw0LCJoIiwyXSxbNCwyLCJcXGJpbm9te2RfMH17ZF8xfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFszLDQsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzMsNCwiXFxzaWdtYSIsMCx7Im9mZnNldCI6LTEsInN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV1d
+   \begin{tikzcd}[ampersand replacement=\&]
+   	\& A \&\& {B \prod B} \\
+   	{\,} \& {B'} \&\& B \& {\,}
+   	\arrow["{\binom fg}", from=1-2, to=1-4]
+   	\arrow["h"', from=1-2, to=2-2]
+   	\arrow["{\binom{d_0}{d_1}}"{description}, squiggly, two heads, from=2-2, to=1-4]
+   	\arrow["{\binom 11}"', from=2-4, to=1-4]
+   	\arrow[squiggly, hook, from=2-4, to=2-2]
+   	\arrow["\sigma", shift left, squiggly, hook, from=2-4, to=2-2]
+   \end{tikzcd}
+   \end{document}

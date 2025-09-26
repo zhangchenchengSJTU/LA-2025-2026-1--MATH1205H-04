@@ -1,0 +1,8 @@
+{
+    "liquid.format.enable": true,
+    "C_Cpp.errorSquiggles": "enabled",
+    "languages": [{
+  "id": "Jekyllmd",
+  "configuration": "./Jekyllmd-language-configuration.json"
+}]
+}

@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMywwLCJJIl0sWzQsMSwiXFx7XFxhc3RcXH0iXSxbNSwwLCJcXG1hdGhjYWwgQyJdLFswLDAsIkkiXSxbMiwwLCJcXG1hdGhjYWwgQyJdLFsxLDEsIlxce1xcYXN0XFx9Il0sWzAsMiwiRiJdLFswLDEsIlxcdmFycGhpICIsMl0sWzEsMiwiXFx2YXJwaGkgX1xcYXN0IEY9XFx2YXJpbmpsaW0gRiIsMix7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFszLDUsIlxcdmFycGhpICIsMl0sWzMsNCwiRiJdLFs1LDQsIlxcdmFycGhpIF8hIEYgPSBcXHZhcnByb2psaW0gRiIsMix7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFs2LDEsIiIsMix7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XSxbNSwxMCwiIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dXQ==
+\begin{tikzcd}
+I && {\mathcal C} & I && {\mathcal C} \\
+& {\{\ast\}} &&& {\{\ast\}}
+\arrow[""{name=0, anchor=center, inner sep=0}, "F", from=1-1, to=1-3]
+\arrow["{\varphi }"', from=1-1, to=2-2]
+\arrow[""{name=1, anchor=center, inner sep=0}, "F", from=1-4, to=1-6]
+\arrow["{\varphi }"', from=1-4, to=2-5]
+\arrow["{\varphi _! F = \varprojlim F}"'{pos=0.7}, from=2-2, to=1-3]
+\arrow["{\varphi _\ast F=\varinjlim F}"'{pos=0.7}, from=2-5, to=1-6]
+\arrow[shorten <=3pt, shorten >=3pt, Rightarrow, from=1, to=2-5]
+\arrow[shorten <=3pt, shorten >=3pt, Rightarrow, from=2-2, to=0]
+\end{tikzcd}
+\end{document}

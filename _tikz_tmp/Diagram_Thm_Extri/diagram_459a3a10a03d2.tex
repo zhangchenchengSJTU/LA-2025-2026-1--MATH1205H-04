@@ -1,0 +1,36 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTgsWzEsMywiQyIsWzIyMSwxMDAsNDQsMV1dLFsxLDEsIkFfMVxcb3BsdXMgQV8yIixbMjIxLDEwMCw0NCwxXV0sWzEsMiwiTSIsWzIyMSwxMDAsNDQsMV1dLFsyLDEsIkFfMiJdLFswLDEsIkFfMSJdLFswLDIsIkFfMSJdLFsyLDIsIkJfMiJdLFsyLDMsIkMiXSxbMywwLCJBXzIiXSxbNCwwLCJBXzIiXSxbMywxLCJBXzFcXG9wbHVzIEFfMiIsWzIyMSwxMDAsNDQsMV1dLFszLDIsIkFfMSJdLFs0LDIsIkJfMSJdLFs1LDIsIkMiXSxbNSwxLCJDIixbMjIxLDEwMCw0NCwxXV0sWzQsMSwiTSIsWzIyMSwxMDAsNDQsMV1dLFs2LDEsIlxcLCJdLFsxLDQsIlxcLCJdLFsyLDAsImsiLDAseyJjb2xvdXIiOlsyMjEsMTAwLDQ0XX0sWzIyMSwxMDAsNDQsMV1dLFsxLDIsIm0iLDAseyJjb2xvdXIiOlsyMjEsMTAwLDQ0XX0sWzIyMSwxMDAsNDQsMV1dLFsxLDMsInBfMiJdLFszLDYsInhfMiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDcsInlfMiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDIsIm1fMSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs0LDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw2LCJcXGxhbWJkYV8yIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzgsOSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwxMCwiZV8yIiwyXSxbNCwxLCJlXzEiXSxbMTAsMTEsInBfMSIsMl0sWzEwLDE1LCJtIiwyLHsiY29sb3VyIjpbMjIxLDEwMCw0NF19LFsyMjEsMTAwLDQ0LDFdXSxbMTUsMTQsImsiLDIseyJjb2xvdXIiOlsyMjEsMTAwLDQ0XX0sWzIyMSwxMDAsNDQsMV1dLFs5LDE1LCJtXzIiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTEsMTIsInhfMSIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxMiwxMywieV8xIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzE1LDEyLCJcXGxhbWJkYV8xIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzE0LDEzLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNCwxNiwiXFxiaW5vbSAxMSB7fV4qIChcXGRlbHRhIF8xIFxcb3BsdXMgXFxkZWx0YSBfMikiLDAseyJjb2xvdXIiOlsyMjEsMTAwLDQ0XX0sWzIyMSwxMDAsNDQsMV1dLFswLDE3LCJcXGJpbm9tIDExIHt9XiogKFxcZGVsdGEgXzEgXFxvcGx1cyBcXGRlbHRhIF8yKSIsMCx7ImNvbG91ciI6WzIyMSwxMDAsNDRdfSxbMjIxLDEwMCw0NCwxXV1d
+\begin{tikzcd}
+&&& {A_2} & {A_2} \\
+{A_1} & \color{rgb,255:red,0;green,71;blue,224}{A_1\oplus A_2} & {A_2} & \color{rgb,255:red,0;green,71;blue,224}{A_1\oplus A_2} & \color{rgb,255:red,0;green,71;blue,224}{M} & \color{rgb,255:red,0;green,71;blue,224}{C} & {\,} \\
+{A_1} & \color{rgb,255:red,0;green,71;blue,224}{M} & {B_2} & {A_1} & {B_1} & C \\
+& \color{rgb,255:red,0;green,71;blue,224}{C} & C \\
+& {\,}
+\arrow[equals, from=1-4, to=1-5]
+\arrow["{e_2}"', from=1-4, to=2-4]
+\arrow["{m_2}"', dashed, from=1-5, to=2-5]
+\arrow["{e_1}", from=2-1, to=2-2]
+\arrow[equals, from=2-1, to=3-1]
+\arrow["{p_2}", from=2-2, to=2-3]
+\arrow["m", color={rgb,255:red,0;green,71;blue,224}, from=2-2, to=3-2]
+\arrow["{x_2}", dashed, from=2-3, to=3-3]
+\arrow["m"', color={rgb,255:red,0;green,71;blue,224}, from=2-4, to=2-5]
+\arrow["{p_1}"', from=2-4, to=3-4]
+\arrow["k"', color={rgb,255:red,0;green,71;blue,224}, from=2-5, to=2-6]
+\arrow["{\lambda_1}"', dashed, from=2-5, to=3-5]
+\arrow["{\binom 11 {}^* (\delta _1 \oplus \delta _2)}", color={rgb,255:red,0;green,71;blue,224}, from=2-6, to=2-7]
+\arrow[equals, from=2-6, to=3-6]
+\arrow["{m_1}", dashed, from=3-1, to=3-2]
+\arrow["{\lambda_2}", dashed, from=3-2, to=3-3]
+\arrow["k", color={rgb,255:red,0;green,71;blue,224}, from=3-2, to=4-2]
+\arrow["{y_2}", dashed, from=3-3, to=4-3]
+\arrow["{x_1}"', dashed, from=3-4, to=3-5]
+\arrow["{y_1}"', dashed, from=3-5, to=3-6]
+\arrow["{\binom 11 {}^* (\delta _1 \oplus \delta _2)}", color={rgb,255:red,0;green,71;blue,224}, from=4-2, to=5-2]
+\arrow[equals, from=4-3, to=4-2]
+\end{tikzcd}
+\end{document}

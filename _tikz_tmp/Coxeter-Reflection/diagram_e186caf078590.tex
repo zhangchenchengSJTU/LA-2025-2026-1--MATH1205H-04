@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFxidWxsZXQiXSxbMiwxLCJpIixbMjQwLDYwLDYwLDFdXSxbMywxLCJcXGJ1bGxldCJdLFswLDEsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNSwxLCJcXGJ1bGxldCJdLFs0LDEsIlxcYnVsbGV0Il0sWzUsMCwiXFxidWxsZXQiXSxbNiwxLCJpIixbMCw2MCw2MCwxXV0sWzcsMSwiXFxidWxsZXQiXSxbMiwyLCJRIl0sWzYsMiwiQ19pIFEiXSxbMiwxLCJcXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlxcYWxwaGEgIiwwLHsib2Zmc2V0IjotMywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzAsMSwiXFxiZXRhICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMjQwLDYwLDYwXX0sWzI0MCw2MCw2MCwxXV0sWzUsNl0sWzcsNV0sWzgsNSwiXFxhbHBoYSAnICIsMix7Im9mZnNldCI6MywiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbOCw1LCJcXGJldGEgJyIsMCx7Im9mZnNldCI6LTMsImNvbG91ciI6WzAsNjAsNjBdfSxbMCw2MCw2MCwxXV0sWzgsOSwiXFxnYW1tYSAnIiwwLHsiY29sb3VyIjpbMCw2MCw2MF19LFswLDYwLDYwLDFdXSxbMTAsMTEsIkNfaSAiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJsZXZlbCI6Mn1dXQ==
+\begin{tikzcd}
+	& \bullet &&&& \bullet \\
+	\bullet & \bullet & \color{rgb,255:red,92;green,92;blue,214}{i} & \bullet & \bullet & \bullet & \color{rgb,255:red,214;green,92;blue,92}{i} & \bullet \\
+	&& Q &&&& {C_i Q}
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-6, to=2-6]
+	\arrow[from=2-2, to=2-1]
+	\arrow["{\alpha }", shift left=3, color={rgb,255:red,92;green,92;blue,214}, from=2-2, to=2-3]
+	\arrow["{\beta }"', shift right=3, color={rgb,255:red,92;green,92;blue,214}, from=2-2, to=2-3]
+	\arrow["{\gamma }"', color={rgb,255:red,92;green,92;blue,214}, from=2-4, to=2-3]
+	\arrow[from=2-6, to=2-5]
+	\arrow["{\alpha ' }"', shift right=3, color={rgb,255:red,214;green,92;blue,92}, from=2-7, to=2-6]
+	\arrow["{\beta '}", shift left=3, color={rgb,255:red,214;green,92;blue,92}, from=2-7, to=2-6]
+	\arrow["{\gamma '}", color={rgb,255:red,214;green,92;blue,92}, from=2-7, to=2-8]
+	\arrow["{C_i }", shorten <=22pt, shorten >=22pt, Rightarrow, from=3-3, to=3-7]
+\end{tikzcd}
+\end{document}

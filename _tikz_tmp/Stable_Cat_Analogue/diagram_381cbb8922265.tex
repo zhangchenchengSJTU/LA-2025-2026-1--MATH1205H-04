@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXG1hdGhiYiBFKFggXFxvcGx1cyBYLFkgXFxvcGx1cyBZKSJdLFszLDAsIlxcbWF0aGJiIEUoWCxZKSJdLFswLDEsIlxcbWF0aGJiIEUoWCBcXG9wbHVzIFgsWScgXFxvcGx1cyBZJykiXSxbMywxLCJcXG1hdGhiYiBFKFgsWScpIl0sWzAsMSwiKDEsMSlfXFxhc3RcXGJpbm9tIDExXlxcYXN0Il0sWzIsMywiKDEsMSlfXFxhc3RcXGJpbm9tIDExXlxcYXN0Il0sWzEsMywiZl9cXGFzdCJdLFswLDIsIihmIFxcb3BsdXMgZilfXFxhc3QgIiwyXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{\mathbb E(X \oplus X,Y \oplus Y)} \&\&\& {\mathbb E(X,Y)} \\
+	{\mathbb E(X \oplus X,Y' \oplus Y')} \&\&\& {\mathbb E(X,Y')}
+	\arrow["{(1,1)_\ast\binom 11^\ast}", from=1-1, to=1-4]
+	\arrow["{(f \oplus f)_\ast }"', from=1-1, to=2-1]
+	\arrow["{f_\ast}", from=1-4, to=2-4]
+	\arrow["{(1,1)_\ast\binom 11^\ast}", from=2-1, to=2-4]
+\end{tikzcd}
+\end{document}

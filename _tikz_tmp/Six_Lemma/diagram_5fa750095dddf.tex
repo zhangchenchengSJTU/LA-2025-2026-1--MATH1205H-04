@@ -1,0 +1,49 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjgsWzMsMSwiXFxidWxsZXQiXSxbNCwxLCJcXGJ1bGxldCJdLFs0LDIsIlxcYnVsbGV0Il0sWzMsMiwiXFxidWxsZXQiXSxbMiwxLCJcXGtlciBmIl0sWzIsMiwiXFxrZXIgZyBcXGNpcmMgZiJdLFs1LDEsIlxcb3BlcmF0b3JuYW1le2Nva31mIl0sWzUsMiwiXFxvcGVyYXRvcm5hbWV7Y29rfWdcXGNpcmMgZiJdLFs0LDAsIlxca2VyIGciXSxbNCwzLCJcXG9wZXJhdG9ybmFtZXtjb2t9IGciXSxbMywzLCIwIl0sWzUsMCwiWSJdLFs1LDMsIloiXSxbMiwzLCJYIl0sWzYsMCwiMCJdLFsxLDMsIjAiXSxbNiwxLCIwIl0sWzYsMiwiMCJdLFsxLDEsIjAiXSxbMSwyLCIwIl0sWzEsNCwiXFxrZXIgZiJdLFsyLDQsIlxca2VyIGcgXFxjaXJjIGYiXSxbMyw0LCJcXGtlciBnIl0sWzQsNCwiXFxvcGVyYXRvcm5hbWV7Y29rfWYiXSxbNSw0LCJcXG9wZXJhdG9ybmFtZXtjb2t9Z1xcY2lyYyBmIl0sWzYsNCwiXFxvcGVyYXRvcm5hbWV7Y29rfSBnIl0sWzAsNCwiMCJdLFs3LDQsIjAiXSxbMCwzLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDEsImYiXSxbMSwyLCJnIl0sWzMsMiwiZ1xcY2lyYyBmIiwyXSxbNCw1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFs1LDNdLFs0LDBdLFsyLDddLFsxLDZdLFs2LDddLFs4LDExLCIiLDEseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMTEsMTRdLFsxMywxMF0sWzEwLDldLFs5LDEyLCJcXHNpbWVxIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwxMywiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTEsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzE0LDksIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsMTMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxMSw2LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs4LDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsOSwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzcsMTIsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxNSwxM10sWzYsMTZdLFs3LDE3XSxbMTgsNF0sWzE5LDVdLFsyMSwyMiwiWCJdLFsyMCwyMV0sWzIyLDIzLCJZIl0sWzIzLDI0XSxbMjQsMjVdLFsyNiwyMF0sWzI1LDI3XV0=
+\begin{tikzcd}
+	&&&& {\ker g} & Y & 0 \\
+	& 0 & {\ker f} & \bullet & \bullet & {\operatorname{cok}f} & 0 \\
+	& 0 & {\ker g \circ f} & \bullet & \bullet & {\operatorname{cok}g\circ f} & 0 \\
+	& 0 & X & 0 & {\operatorname{cok} g} & Z \\
+	0 & {\ker f} & {\ker g \circ f} & {\ker g} & {\operatorname{cok}f} & {\operatorname{cok}g\circ f} & {\operatorname{cok} g} & 0
+	\arrow[two heads, from=1-5, to=1-6]
+	\arrow[hook, from=1-5, to=2-5]
+	\arrow[dotted, no head, from=1-5, to=4-3]
+	\arrow[from=1-6, to=1-7]
+	\arrow[hook, from=1-6, to=2-6]
+	\arrow[dotted, no head, from=1-6, to=4-4]
+	\arrow[dotted, no head, from=1-7, to=4-5]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[hook', from=2-3, to=3-3]
+	\arrow["f", from=2-4, to=2-5]
+	\arrow[equals, from=2-4, to=3-4]
+	\arrow[from=2-5, to=2-6]
+	\arrow["g", from=2-5, to=3-5]
+	\arrow[from=2-6, to=2-7]
+	\arrow[from=2-6, to=3-6]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[two heads, from=3-3, to=4-3]
+	\arrow["{g\circ f}"', from=3-4, to=3-5]
+	\arrow[from=3-5, to=3-6]
+	\arrow[two heads, from=3-5, to=4-5]
+	\arrow[from=3-6, to=3-7]
+	\arrow[two heads, from=3-6, to=4-6]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-3, to=4-4]
+	\arrow[from=4-4, to=4-5]
+	\arrow["\simeq", equals, from=4-5, to=4-6]
+	\arrow[from=5-1, to=5-2]
+	\arrow[from=5-2, to=5-3]
+	\arrow["X", from=5-3, to=5-4]
+	\arrow["Y", from=5-4, to=5-5]
+	\arrow[from=5-5, to=5-6]
+	\arrow[from=5-6, to=5-7]
+	\arrow[from=5-7, to=5-8]
+\end{tikzcd}
+\end{document}

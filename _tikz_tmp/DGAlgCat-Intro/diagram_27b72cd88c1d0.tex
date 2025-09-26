@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzAsMSwiWCJdLFsxLDEsIlkiXSxbMiwxLCJcXG1hdGhybXtDb25lfShmKSJdLFszLDEsIlxcbWF0aHJte0NvbmV9XFxiaW5vbSAwMSJdLFsxLDIsIlkiXSxbMiwyLCJcXG1hdGhybXtDb25lfShmKSJdLFszLDIsIlxcU2lnbWEgWCJdLFs0LDEsIlxcbWF0aHJte0NvbmV9XFxiaW5vbSAwMSJdLFs0LDIsIlxcU2lnbWEgWSJdLFsxLDAsIlxcdGV4dHtjMn0iXSxbMCwwLCJcXHRleHR7YzF9Il0sWzIsMCwiXFx0ZXh0e2MzfSJdLFszLDAsIlxcdGV4dHtjNH0iXSxbNCwwLCJcXHRleHR7YzV9Il0sWzUsMSwiXFx0ZXh0e3IxfSJdLFs1LDIsIlxcdGV4dHtyMn0iXSxbMCwxLCJmIl0sWzEsMiwiXFxiaW5vbSAwMSJdLFsyLDMsIlxcYmlub20gMDEiXSxbMSw0LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDUsIlxcYmlub20gMDEiXSxbMiw1LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDZdLFszLDcsIlxcYmlub20gMDEiXSxbNiwzLCJcXGxlZnQoXFxzdWJzdGFja3stXFxTaWdtYSBmXFxcXDFcXFxcMH1cXHJpZ2h0KSJdLFs2LDgsIi1cXFNpZ21hIGYiXSxbOCw3LCJcXGxlZnQoXFxzdWJzdGFja3stXFxiaW5vbSAwMVxcXFwxXFxcXDB9XFxyaWdodCkiLDJdXQ==
+\begin{tikzcd}
+	{\text{c1}} & {\text{c2}} & {\text{c3}} & {\text{c4}} & {\text{c5}} \\
+	X & Y & {\mathrm{Cone}(f)} & {\mathrm{Cone}\binom 01} & {\mathrm{Cone}\binom 01} & {\text{r1}} \\
+	& Y & {\mathrm{Cone}(f)} & {\Sigma X} & {\Sigma Y} & {\text{r2}}
+	\arrow["f", from=2-1, to=2-2]
+	\arrow["{\binom 01}", from=2-2, to=2-3]
+	\arrow[equals, from=2-2, to=3-2]
+	\arrow["{\binom 01}", from=2-3, to=2-4]
+	\arrow[equals, from=2-3, to=3-3]
+	\arrow["{\binom 01}", from=2-4, to=2-5]
+	\arrow["{\binom 01}", from=3-2, to=3-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow["\begin{array}{c} \left(\substack{-\Sigma f\\1\\0}\right) \end{array}", from=3-4, to=2-4]
+	\arrow["{-\Sigma f}", from=3-4, to=3-5]
+	\arrow["\begin{array}{c} \left(\substack{-\binom 01\\1\\0}\right) \end{array}"', from=3-5, to=2-5]
+\end{tikzcd}
+\end{document}

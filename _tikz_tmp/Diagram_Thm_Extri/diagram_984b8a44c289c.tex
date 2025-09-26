@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTQsWzMsMywiXFwsIl0sWzIsMywiXFwsIl0sWzIsMCwiS15YIl0sWzIsMSwiSV97S15YfSJdLFsyLDIsIkNfe0teWH0iXSxbMywwLCJQXlgiXSxbNCwwLCJYIl0sWzUsMCwiXFwsICJdLFszLDIsIkNfe0teWH0iXSxbNCwxLCJYIl0sWzMsMSwiRSJdLFs1LDEsIlxcLCJdLFswLDEsIlxcLCJdLFs2LDEsIlxcLCJdLFs0LDEsIlxcZGVsdGEgX3tLXlh9Il0sWzIsMywiaV97S15YfSJdLFsyLDUsImpeWCJdLFs1LDYsInFeWCJdLFs2LDcsIlxcbXVfWCJdLFs2LDksIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsOCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw0LCJwX3tLXlh9Il0sWzMsMTBdLFsxMCw5LCJzX1giLDAseyJjb2xvdXIiOlszNTUsMTAwLDYwXX0sWzM1NSwxMDAsNjAsMV1dLFs1LDEwXSxbMTAsOCwidF5YIiwwLHsiY29sb3VyIjpbMzU1LDEwMCw2MF19LFszNTUsMTAwLDYwLDFdXSxbOCwwXSxbOSwxMV1d
+\begin{tikzcd}[ampersand replacement=\&]
+\&\& {K^X} \& {P^X} \& X \& {\, } \\
+{\,} \&\& {I_{K^X}} \& E \& X \& {\,} \& {\,} \\
+\&\& {C_{K^X}} \& {C_{K^X}} \\
+\&\& {\,} \& {\,}
+\arrow["{j^X}", from=1-3, to=1-4]
+\arrow["{i_{K^X}}", from=1-3, to=2-3]
+\arrow["{q^X}", from=1-4, to=1-5]
+\arrow[from=1-4, to=2-4]
+\arrow["{\mu_X}", from=1-5, to=1-6]
+\arrow[equals, from=1-5, to=2-5]
+\arrow[from=2-3, to=2-4]
+\arrow["{p_{K^X}}", from=2-3, to=3-3]
+\arrow["{s_X}", color={rgb,255:red,255;green,51;blue,68}, from=2-4, to=2-5]
+\arrow["{t^X}", color={rgb,255:red,255;green,51;blue,68}, from=2-4, to=3-4]
+\arrow[from=2-5, to=2-6]
+\arrow[equals, from=3-3, to=3-4]
+\arrow["{\delta _{K^X}}", from=3-3, to=4-3]
+\arrow[from=3-4, to=4-4]
+\end{tikzcd}
+\end{document}

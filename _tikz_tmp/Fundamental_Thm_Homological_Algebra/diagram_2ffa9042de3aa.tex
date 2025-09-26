@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjcsWzEsMiwiS15wICJdLFswLDEsIlhecCJdLFswLDAsIlhee3ArMX0iXSxbMCwyLCJYXntwLTF9Il0sWzEsMSwiS157cCsxfSJdLFsxLDMsIktee3AtMX0iXSxbMSwwLCJLXntwKzJ9Il0sWzAsMywiWF57cC0yfSJdLFswLDQsIlxcYm94ZWR7XFx0ZXh0e+WInX19Il0sWzIsNCwiXFxib3hlZHtFXzB9Il0sWzIsMywiUV57cC0yfSJdLFsyLDIsIlFee3AtMX0iXSxbMiwxLCJRXntwfSJdLFsyLDAsIlFee3ArMX0iXSxbMywzLCJLXntwLTF9Il0sWzMsMiwiS15wICJdLFszLDEsIktee3ArMX0iXSxbMywwLCJLXntwKzJ9Il0sWzQsNCwiXFxib3hlZHtFXzF9Il0sWzQsMywiSF57cC0yfShRKSJdLFs0LDIsIkhee3AtMX0oUSkiXSxbNCwxLCJIXntwfShRKSJdLFs0LDAsIkhee3ArMX0oUSkiXSxbNSwzLCJIXntwLTF9KEspIl0sWzUsMiwiSF57cH0oSykiXSxbNSwxLCJIXntwKzF9KEspIl0sWzUsMCwiSF57cCsyfShLKSJdLFsxMCwxMV0sWzExLDEyXSxbMTIsMTNdLFsxNCwxNV0sWzE1LDE2XSxbMTYsMTddLFsyLDQsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwwLCJcXHN1cHNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNSwiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMiwyNiwiXFxkZWx0YSBee3ArMX0iXSxbMjEsMjUsIlxcZGVsdGEgXntwfSJdLFsyMCwyNCwiXFxkZWx0YSBee3AtMX0iXSxbMTksMjMsIlxcZGVsdGEgXntwLTJ9Il1d
+\begin{tikzcd}
+	{X^{p+1}} & {K^{p+2}} & {Q^{p+1}} & {K^{p+2}} & {H^{p+1}(Q)} & {H^{p+2}(K)} \\
+	{X^p} & {K^{p+1}} & {Q^{p}} & {K^{p+1}} & {H^{p}(Q)} & {H^{p+1}(K)} \\
+	{X^{p-1}} & {K^p } & {Q^{p-1}} & {K^p } & {H^{p-1}(Q)} & {H^{p}(K)} \\
+	{X^{p-2}} & {K^{p-1}} & {Q^{p-2}} & {K^{p-1}} & {H^{p-2}(Q)} & {H^{p-1}(K)} \\
+	{\boxed{\text{初}}} && {\boxed{E_0}} && {\boxed{E_1}}
+	\arrow["\supset"{marking, allow upside down}, dotted, no head, from=1-1, to=2-2]
+	\arrow["{\delta ^{p+1}}", from=1-5, to=1-6]
+	\arrow["\supset"{marking, allow upside down}, dotted, no head, from=2-1, to=3-2]
+	\arrow[from=2-3, to=1-3]
+	\arrow[from=2-4, to=1-4]
+	\arrow["{\delta ^{p}}", from=2-5, to=2-6]
+	\arrow["\supset"{marking, allow upside down}, dotted, no head, from=3-1, to=4-2]
+	\arrow[from=3-3, to=2-3]
+	\arrow[from=3-4, to=2-4]
+	\arrow["{\delta ^{p-1}}", from=3-5, to=3-6]
+	\arrow[from=4-3, to=3-3]
+	\arrow[from=4-4, to=3-4]
+	\arrow["{\delta ^{p-2}}", from=4-5, to=4-6]
+\end{tikzcd}
+\end{document}

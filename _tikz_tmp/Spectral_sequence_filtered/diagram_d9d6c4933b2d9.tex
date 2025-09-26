@@ -1,0 +1,16 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwxLCJcXGZyYWN7Rl5wQV57cCtxfX17Rl57cCsxfUFee3ArcX19Il0sWzIsMiwiXFxmcmFje0Zee3ArMX1BXntwK3F9fXtGXntwKzJ9QV57cCtxfX0iXSxbMCwwLCJcXGZyYWN7Rl57cC0xfUFee3ArcX19e0ZecEFee3ArcX19Il0sWzEsMCwiXFxmcmFje0Zee3B9QV57cCtxKzF9fXtGXntwKzF9QV57cCtxKzF9fSJdLFsyLDEsIlxcZnJhY3tGXntwKzF9QV57cCtxKzF9fXtGXntwKzJ9QV57cCtxKzF9fSJdLFsxLDIsIlxcZnJhY3tGXntwfUFee3ArcS0xfX17Rl57cCsxfUFee3ArcS0xfX0iXSxbMCwxLCJcXGZyYWN7Rl57cC0xfUFee3ArcS0xfX17Rl57cH1BXntwK3EtMX19Il0sWzAsMiwiXFxib3hlZHtFXzAoQSxGKX0iXSxbMSw0XSxbNSwwXSxbMCwzXSxbNiwyXV0=
+\begin{tikzcd}
+	{\frac{F^{p-1}A^{p+q}}{F^pA^{p+q}}} & {\frac{F^{p}A^{p+q+1}}{F^{p+1}A^{p+q+1}}} \\
+	{\frac{F^{p-1}A^{p+q-1}}{F^{p}A^{p+q-1}}} & {\frac{F^pA^{p+q}}{F^{p+1}A^{p+q}}} & {\frac{F^{p+1}A^{p+q+1}}{F^{p+2}A^{p+q+1}}} \\
+	{\boxed{E_0(A,F)}} & {\frac{F^{p}A^{p+q-1}}{F^{p+1}A^{p+q-1}}} & {\frac{F^{p+1}A^{p+q}}{F^{p+2}A^{p+q}}}
+	\arrow[from=2-1, to=1-1]
+	\arrow[from=2-2, to=1-2]
+	\arrow[from=3-2, to=2-2]
+	\arrow[from=3-3, to=2-3]
+\end{tikzcd}
+\end{document}

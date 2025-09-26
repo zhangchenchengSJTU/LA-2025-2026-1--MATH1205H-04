@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJYX1xcYnVsbGV0Il0sWzEsMiwiWV9cXGJ1bGxldCJdLFszLDAsIkFeXFxMYW1iZGEiXSxbMywyLCJCXlxcTGFtYmRhIl0sWzQsMSwiXFwsIl0sWzAsMSwiXFwsIl0sWzAsMSwiZl9cXGJ1bGxldCIsMl0sWzAsMiwibV9cXGJ1bGxldCJdLFsyLDMsImdeXFxMYW1iZGEiXSxbMSwzLCJuX1xcYnVsbGV0IiwyXSxbMSwyLCJzX1xcYnVsbGV0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	\& {X_\bullet} \&\& {A^\Lambda} \\
+	{\,} \&\&\&\& {\,} \\
+	\& {Y_\bullet} \&\& {B^\Lambda}
+	\arrow["{m_\bullet}", from=1-2, to=1-4]
+	\arrow["{f_\bullet}"', from=1-2, to=3-2]
+	\arrow["{g^\Lambda}", from=1-4, to=3-4]
+	\arrow["{s_\bullet}"{description}, dashed, from=3-2, to=1-4]
+	\arrow["{n_\bullet}"', from=3-2, to=3-4]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJcXG1hdGhiYiBFKFggXFxvcGx1cyBYLFkgXFxvcGx1cyBZKSJdLFswLDAsIlxcZGVsdGFfMSBcXG9wbHVzIFxcZGVsdGEgXzIiXSxbMSwxLCJcXG1hdGhiYiBFKFgsWSBcXG9wbHVzIFkpIl0sWzMsMSwiXFxtYXRoYmIgRShYLFkpIl0sWzMsMCwiXFxtYXRoYmIgRShYICxZIFxcb3BsdXMgWSkiXSxbNCwxLCJcXGRlbHRhIF8xIFxcb3BsdXMgXFxkZWx0YSBfMiJdLFsxLDAsIlxcaW4gIiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMiwiXFxiaW5vbSAxMV5cXGFzdCIsMl0sWzQsMywiXFxiaW5vbSAxMV5cXGFzdCJdLFswLDQsIigxLDEpX1xcYXN0Il0sWzIsMywiKDEsMSlfXFxhc3QiLDJdLFszLDUsIlxcbmkiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{\delta_1 \oplus \delta _2} \& {\mathbb E(X \oplus X,Y \oplus Y)} \&\& {\mathbb E(X ,Y \oplus Y)} \\
+	\& {\mathbb E(X,Y \oplus Y)} \&\& {\mathbb E(X,Y)} \& {\delta _1 \oplus \delta _2}
+	\arrow["{\in }"{marking, allow upside down}, draw=none, from=1-1, to=1-2]
+	\arrow["{(1,1)_\ast}", from=1-2, to=1-4]
+	\arrow["{\binom 11^\ast}"', from=1-2, to=2-2]
+	\arrow["{\binom 11^\ast}", from=1-4, to=2-4]
+	\arrow["{(1,1)_\ast}"', from=2-2, to=2-4]
+	\arrow["\ni"{marking, allow upside down}, draw=none, from=2-4, to=2-5]
+\end{tikzcd}
+\end{document}

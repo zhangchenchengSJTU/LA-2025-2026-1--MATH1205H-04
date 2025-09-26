@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCIoWCwgLSApX1xcbWF0aHNjciBYIl0sWzIsMCwiKEMsIGkoLSkpX1xcbWF0aHNjciBDIl0sWzAsMiwiKFgsIC0gKV9cXG1hdGhzY3IgWCJdLFsyLDIsIihDLCBpKC0pKV9cXG1hdGhzY3IgQyJdLFs0LDEsIlxcYWxwaGEgXFxpbiBcXG1hdGhybXtBdXR9KGheWCkiXSxbMCwxLCJmXlxcYXN0ICIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDIsIlxcdGhldGEiLDJdLFsxLDMsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiZl5cXGFzdCAiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNyw0LCIiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6NDAsInRhcmdldCI6MjB9fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+{(X, - )_\mathscr X} \&\& {(C, i(-))_\mathscr C} \\
+\&\&\&\& {\alpha \in \mathrm{Aut}(h^X)} \\
+{(X, - )_\mathscr X} \&\& {(C, i(-))_\mathscr C}
+\arrow["{f^\ast }", two heads, from=1-1, to=1-3]
+\arrow["\theta"', from=1-1, to=3-1]
+\arrow[""{name=0, anchor=center, inner sep=0}, equals, from=1-3, to=3-3]
+\arrow["{f^\ast }"', two heads, from=3-1, to=3-3]
+\arrow[shorten <=26pt, shorten >=13pt, Rightarrow, from=0, to=2-5]
+\end{tikzcd}
+\end{document}

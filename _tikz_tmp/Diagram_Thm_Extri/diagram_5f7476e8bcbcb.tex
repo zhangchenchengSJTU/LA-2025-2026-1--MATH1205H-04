@@ -1,0 +1,32 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzIsMSwiTSJdLFs0LDEsIkJfMiJdLFs0LDAsIkFfMiJdLFsyLDAsIkFfMiJdLFswLDEsIkFfMSJdLFswLDIsIkFfMSJdLFsyLDIsIkJfMSJdLFs1LDIsIlxcLCJdLFs0LDIsIkMiXSxbNCwzLCJcXCwiXSxbMiwzLCJcXCwiXSxbNSwxLCJcXCwiXSxbMCw0LCJNIl0sWzIsNCwiQl8xIFxcb3BsdXMgQl8yIl0sWzQsNCwiQyJdLFs1LDQsIlxcLCJdLFswLDEsIlxcbGFtYmRhXzIiLDAseyJjb2xvdXIiOlszNTgsMTAwLDYwXX0sWzM1OCwxMDAsNjAsMV1dLFsyLDEsInhfMiJdLFszLDIsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsMCwibV8yIl0sWzAsNiwiXFxsYW1iZGFfMSJdLFs0LDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMCwibV8xIiwwLHsiY29sb3VyIjpbMjMzLDEwMCw2MF19LFsyMzMsMTAwLDYwLDFdXSxbMSw4LCJ5XzIiXSxbNiw4LCJ5XzEiXSxbNSw2LCJ4XzEiXSxbMSwxMSwiKHlfMileXFxhc3RcXGRlbHRhIF8xIl0sWzgsNywiXFxkZWx0YV8xIiwwLHsiY29sb3VyIjpbMjMzLDEwMCw2MF19LFsyMzMsMTAwLDYwLDFdXSxbOCw5LCJcXGRlbHRhXzIiXSxbNiwxMCwiKHlfMSleXFxhc3QgXFxkZWx0YV8yIl0sWzEyLDEzLCJcXGJpbm9te1xcbGFtYmRhXzF9ey1cXGxhbWJkYSBfMn0iXSxbMTMsMTQsIih5XzEsIHlfMicpIl0sWzE0LDE1LCJtXzFeXFxhc3QgKFxcZGVsdGFfMSkiXV0=
+\begin{tikzcd}
+	&& {A_2} && {A_2} \\
+	{A_1} && M && {B_2} & {\,} \\
+	{A_1} && {B_1} && C & {\,} \\
+	&& {\,} && {\,} \\
+	M && {B_1 \oplus B_2} && C & {\,}
+	\arrow[equals, from=1-3, to=1-5]
+	\arrow["{m_2}", from=1-3, to=2-3]
+	\arrow["{x_2}", from=1-5, to=2-5]
+	\arrow["{m_1}", color={rgb,255:red,51;green,75;blue,255}, from=2-1, to=2-3]
+	\arrow[equals, from=2-1, to=3-1]
+	\arrow["{\lambda_2}", color={rgb,255:red,255;green,51;blue,58}, from=2-3, to=2-5]
+	\arrow["{\lambda_1}", from=2-3, to=3-3]
+	\arrow["{(y_2)^\ast\delta _1}", from=2-5, to=2-6]
+	\arrow["{y_2}", from=2-5, to=3-5]
+	\arrow["{x_1}", from=3-1, to=3-3]
+	\arrow["{y_1}", from=3-3, to=3-5]
+	\arrow["{(y_1)^\ast \delta_2}", from=3-3, to=4-3]
+	\arrow["{\delta_1}", color={rgb,255:red,51;green,75;blue,255}, from=3-5, to=3-6]
+	\arrow["{\delta_2}", from=3-5, to=4-5]
+	\arrow["{\binom{\lambda_1}{-\lambda _2}}", from=5-1, to=5-3]
+	\arrow["{(y_1, y_2')}", from=5-3, to=5-5]
+	\arrow["{m_1^\ast (\delta_1)}", from=5-5, to=5-6]
+\end{tikzcd}
+\end{document}

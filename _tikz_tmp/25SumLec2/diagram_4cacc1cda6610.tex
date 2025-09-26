@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMCwxLCIoRV9rKV5wIl0sWzEsMSwiXFxtYXRocm17a2VyfShkX3tFX2t9XntwfSkiXSxbMiwxLCJaXnAoRSkiXSxbMywxLCJCXnAoRSkiXSxbMywwLCJFXntwLTF9Il0sWzEsMCwiUV57cC0xfSJdLFswLDAsIihFX2spXntwLTF9Il0sWzEsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMiwzLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDMsImRee3AtMX1fRSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsxLDIsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsNCwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifSwiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMSwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs2LDBdLFs2LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn0sImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+	{(E_k)^{p-1}} & {Q^{p-1}} && {E^{p-1}} \\
+	{(E_k)^p} & {\mathrm{ker}(d_{E_k}^{p})} & {Z^p(E)} & {B^p(E)}
+	\arrow[dashed, hook, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[dashed, hook, from=1-2, to=1-4]
+	\arrow[dashed, two heads, from=1-2, to=2-2]
+	\arrow["{d^{p-1}_E}", two heads, from=1-4, to=2-4]
+	\arrow[hook', from=2-2, to=2-1]
+	\arrow[hook, from=2-2, to=2-3]
+	\arrow[equals, from=2-3, to=2-4]
+\end{tikzcd}
+\end{document}

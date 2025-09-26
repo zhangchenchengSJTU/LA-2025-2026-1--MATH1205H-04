@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwxLCJcXGJ1bGxldCJdLFsxLDAsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbNCwxLCJcXGJ1bGxldCJdLFszLDAsIlxcYnVsbGV0Il0sWzEsMSwiXFxidWxsZXQiXSxbMSwwLCJbcV0iLDIseyJsZXZlbCI6MiwiY29sb3VyIjpbMzUzLDEwMCw2MF19LFszNTMsMTAwLDYwLDFdXSxbMSwyLCJbZ10iLDAseyJjb2xvdXIiOlszNTMsMTAwLDYwXX0sWzM1MywxMDAsNjAsMV1dLFszLDIsIltzXSIsMCx7ImxldmVsIjoyLCJjb2xvdXIiOlsxMTgsMTAwLDE4XX0sWzExOCwxMDAsMTgsMV1dLFs0LDEsIltzJ10iLDIseyJsZXZlbCI6Mn1dLFs0LDMsIltnJ10iXSxbNSwwLCJbcF0iLDAseyJsZXZlbCI6MiwiY29sb3VyIjpbMjM0LDEwMCw2MF19LFsyMzQsMTAwLDYwLDFdXSxbNSwyLCJbZl0iLDIseyJjb2xvdXIiOlsyMzQsMTAwLDYwXX0sWzIzNCwxMDAsNjAsMV1dLFsxLDUsIltyXSIsMix7ImxldmVsIjoyfV0sWzQsMiwiXFxzcXVhcmUiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+\& \bullet \&\& \bullet \\
+\bullet \& \bullet \& \bullet \&\& \bullet
+\arrow["{[q]}"', color={rgb,255:red,255;green,51;blue,75}, Rightarrow, from=1-2, to=2-1]
+\arrow["{[r]}"', Rightarrow, from=1-2, to=2-2]
+\arrow["{[g]}", color={rgb,255:red,255;green,51;blue,75}, from=1-2, to=2-3]
+\arrow["{[s']}"', Rightarrow, from=1-4, to=1-2]
+\arrow["\square"{description}, draw=none, from=1-4, to=2-3]
+\arrow["{[g']}", from=1-4, to=2-5]
+\arrow["{[p]}", color={rgb,255:red,51;green,71;blue,255}, Rightarrow, from=2-2, to=2-1]
+\arrow["{[f]}"', color={rgb,255:red,51;green,71;blue,255}, from=2-2, to=2-3]
+\arrow["{[s]}", color={rgb,255:red,3;green,92;blue,0}, Rightarrow, from=2-5, to=2-3]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzEsMCwiWSJdLFszLDAsIlxcbWF0aHJte0NvbmV9KGYpIl0sWzMsMSwiXFxtYXRocm17Q29uZX0oZykiXSxbMSwxLCJZIl0sWzUsMCwiXFxTaWdtYSBYIl0sWzUsMSwiXFxTaWdtYSBYIl0sWzAsMCwiMCJdLFswLDEsIjAiXSxbNiwwLCIwIl0sWzYsMSwiMCJdLFswLDMsIiIsMix7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCJcXGJpbm9tIDAxIl0sWzMsMiwiXFxiaW5vbSAwMSIsMl0sWzEsMiwiXFxiaW5vbSB7MSBcXCAwfXtzIFxcIDF9IiwyXSxbMSw0LCIoMSBcXCAwKSJdLFsyLDUsIigxIFxcIDApIiwyXSxbMSwyLCJcXHNpbWVxIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMF0sWzcsM10sWzQsOF0sWzUsOV1d
+\begin{tikzcd}
+	0 & Y && {\mathrm{Cone}(f)} && {\Sigma X} & 0 \\
+	0 & Y && {\mathrm{Cone}(g)} && {\Sigma X} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\binom 01}", from=1-2, to=1-4]
+	\arrow[equals, from=1-2, to=2-2]
+	\arrow["{(1 \ 0)}", from=1-4, to=1-6]
+	\arrow["{\binom {1 \ 0}{s \ 1}}"', from=1-4, to=2-4]
+	\arrow["\simeq", draw=none, from=1-4, to=2-4]
+	\arrow[from=1-6, to=1-7]
+	\arrow[equals, from=1-6, to=2-6]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\binom 01}"', from=2-2, to=2-4]
+	\arrow["{(1 \ 0)}"', from=2-4, to=2-6]
+	\arrow[from=2-6, to=2-7]
+\end{tikzcd}
+\end{document}

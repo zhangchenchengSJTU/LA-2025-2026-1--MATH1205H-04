@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+    % https://q.uiver.app/#q=WzAsMTIsWzEsMSwiQSJdLFsyLDEsIkIiXSxbMywxLCJDIl0sWzIsMiwiRCJdLFsyLDMsIkUiXSxbMSwyLCJBIl0sWzMsMiwiRiJdLFszLDMsIkUiXSxbMCwxLCJcXG1hdGhmcmFrIHMoXFxkZWx0YV97cjF9KSJdLFswLDIsIlxcbWF0aGZyYWsgcyhcXGRlbHRhX3tyMn0pIl0sWzIsMCwiXFxtYXRoZnJhayBzKFxcZGVsdGFfe2MyfSkiXSxbMywwLCJcXG1hdGhmcmFrIHMoXFxkZWx0YV97YzN9KSJdLFswLDEsIngiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMSwyLCJ5IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMywiYSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDQsImIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNSwzLCJwIl0sWzMsNiwicSJdLFswLDUsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw2LCJyIl0sWzYsNywicyJdXQ==
+\begin{tikzcd}
+	&& {\mathfrak s(\delta_{c2})} & {\mathfrak s(\delta_{c3})} \\
+	{\mathfrak s(\delta_{r1})} & A & B & C \\
+	{\mathfrak s(\delta_{r2})} & A & D & F \\
+	&& E & E
+	\arrow["x", dashed, from=2-2, to=2-3]
+	\arrow[equals, from=2-2, to=3-2]
+	\arrow["y", dashed, from=2-3, to=2-4]
+	\arrow["a", dashed, from=2-3, to=3-3]
+	\arrow["r", from=2-4, to=3-4]
+	\arrow["p", from=3-2, to=3-3]
+	\arrow["q", from=3-3, to=3-4]
+	\arrow["b", dashed, from=3-3, to=4-3]
+	\arrow["s", from=3-4, to=4-4]
+	\arrow[equals, from=4-3, to=4-4]
+\end{tikzcd}
+    \end{document}

@@ -1,0 +1,34 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzAsMCwiMCJdLFsxLDAsIlxcdmFycHJvamxpbSBZIl0sWzIsMCwiXFx2YXJwcm9qbGltIEleMCJdLFszLDAsIlxcdmFycHJvamxpbSBDIl0sWzAsMSwiMCJdLFswLDIsIjAiXSxbNCwxLCIwIl0sWzQsMiwiMCJdLFsxLDEsIlxccHJvZCBZIl0sWzEsMiwiXFxwcm9kIFkiXSxbMiwxLCJcXHByb2QgSV4wIl0sWzIsMiwiXFxwcm9kIEleMCJdLFszLDEsIlxccHJvZCBDIl0sWzMsMiwiXFxwcm9kIEMiXSxbMSwzLCJcXHZhcnByb2psaW0ge31eMVkiXSxbMiwzLCIwIl0sWzEsMl0sWzIsM10sWzAsMV0sWzQsOF0sWzgsMTBdLFsxMCwxMl0sWzEyLDZdLFs1LDldLFs5LDExXSxbMTEsMTNdLFsxMyw3XSxbMSw4XSxbOCw5XSxbOSwxNF0sWzIsMTBdLFsxMCwxMV0sWzExLDE1XSxbMywxMl0sWzEyLDEzXSxbMTQsMTVdLFszLDE0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	0 \& {\varprojlim Y} \& {\varprojlim I^0} \& {\varprojlim C} \\
+	0 \& {\prod Y} \& {\prod I^0} \& {\prod C} \& 0 \\
+	0 \& {\prod Y} \& {\prod I^0} \& {\prod C} \& 0 \\
+	\& {\varprojlim {}^1Y} \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow[dashed, from=1-4, to=4-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-4, to=3-4]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=4-2, to=4-3]
+\end{tikzcd}
+\end{document}

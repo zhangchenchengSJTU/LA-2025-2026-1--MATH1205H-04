@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMSwyLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzMsMiwiXFxidWxsZXQiXSxbMCwzLCJcXGJ1bGxldCJdLFszLDAsIlxcYnVsbGV0Il0sWzEsMCwiXFxidWxsZXQiXSxbNCwzLCJcXGJ1bGxldCJdLFswLDIsIlxcYnVsbGV0Il0sWzQsMiwiXFxidWxsZXQiXSxbMCwxLCIiLDAseyJsZXZlbCI6Mn1dLFsxLDIsIiIsMCx7ImxldmVsIjoyfV0sWzAsMiwiIiwyLHsibGV2ZWwiOjJ9XSxbMywwLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzEsNCwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsMSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsyLDYsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDAsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMiw4LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw3LCIiLDEseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtb25vIn19fV0sWzcsNSwiIiwxLHsibGV2ZWwiOjJ9XSxbNSw0LCIiLDEseyJsZXZlbCI6Mn1dLFs0LDgsIiIsMSx7ImxldmVsIjoyfV0sWzgsNiwiIiwxLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV1d
+\begin{tikzcd}
+	& \bullet && \bullet \\
+	&& \bullet \\
+	\bullet & \bullet && \bullet & \bullet \\
+	\bullet &&&& \bullet
+	\arrow[Rightarrow, from=1-2, to=1-4]
+	\arrow[tail, from=1-2, to=2-3]
+	\arrow[Rightarrow, from=1-4, to=3-5]
+	\arrow[two heads, from=2-3, to=1-4]
+	\arrow[Rightarrow, from=2-3, to=3-4]
+	\arrow[Rightarrow, from=3-1, to=1-2]
+	\arrow[tail, from=3-1, to=3-2]
+	\arrow[Rightarrow, from=3-2, to=2-3]
+	\arrow[Rightarrow, from=3-2, to=3-4]
+	\arrow[two heads, from=3-4, to=3-5]
+	\arrow[two heads, from=3-4, to=4-5]
+	\arrow[two heads, from=3-5, to=4-5]
+	\arrow[tail, from=4-1, to=3-1]
+	\arrow[tail, from=4-1, to=3-2]
+\end{tikzcd}
+\end{document}

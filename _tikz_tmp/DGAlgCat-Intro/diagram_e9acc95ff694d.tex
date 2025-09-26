@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMiwwLCJcXHZhcnByb2psaW1eMSAoWCxcXHByb2QgQV9cXGJ1bGxldCBeKykiXSxbMiwxLCJcXG1hdGhybSBSXjEoXFx2YXJwcm9qbGltICgtLCBcXHByb2QgQV9cXGJ1bGxldCBeKykpKFgpIl0sWzIsMiwiXFx2YXJwcm9qbGltIFxcbWF0aHJte0V4dH1eMShYLCBcXHByb2QgQV9cXGJ1bGxldCBeKykiXSxbMSwxLCJcXG1hdGhybXtFeHR9XjEoWCwgWSkiXSxbMCwxLCIwIl0sWzMsMSwiKFgsXFx2YXJwcm9qbGltXjEgXFxwcm9kIEFfXFxidWxsZXQgXisgKSJdLFs0LDEsIlxcY2RvdHMiXSxbMCwxLCIiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsxLDIsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDNdLFszLDFdLFsxLDVdLFs1LDZdXQ==
+\begin{tikzcd}
+	&& {\varprojlim^1 (X,\prod A_\bullet ^+)} \\
+	0 & {\mathrm{Ext}^1(X, Y)} & {\mathrm R^1(\varprojlim (-, \prod A_\bullet ^+))(X)} & {(X,\varprojlim^1 \prod A_\bullet ^+ )} & \cdots \\
+	&& {\varprojlim \mathrm{Ext}^1(X, \prod A_\bullet ^+)}
+	\arrow[hook', from=1-3, to=2-3]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[two heads, from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJYIl0sWzIsMCwiWVxcb3BsdXMgSSJdLFs0LDAsIlonJyJdLFs0LDEsIlonIl0sWzIsMSwiWSciXSxbMCwxLCJYJyJdLFs1LDAsIlxcLCJdLFs1LDEsIlxcLCJdLFsxLDIsImcnJyJdLFswLDEsIlxcYmlub20gZmkiXSxbNCwzLCJnJyJdLFsxLDQsIihcXGJldGEsaikiXSxbNSw0LCJmJyJdLFswLDUsIlxcYWxwaGEiXSxbMiw2LCJcXGRlbHRhJyciXSxbMyw3LCJcXGRlbHRhJyJdXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+X \&\& {Y\oplus I} \&\& {Z''} \& {\,} \\
+{X'} \&\& {Y'} \&\& {Z'} \& {\,}
+\arrow["{\binom fi}", from=1-1, to=1-3]
+\arrow["\alpha", from=1-1, to=2-1]
+\arrow["{g''}", from=1-3, to=1-5]
+\arrow["{(\beta,j)}", from=1-3, to=2-3]
+\arrow["{\delta''}", from=1-5, to=1-6]
+\arrow["{f'}", from=2-1, to=2-3]
+\arrow["{g'}", from=2-3, to=2-5]
+\arrow["{\delta'}", from=2-5, to=2-6]
+\end{tikzcd}
+\end{document}

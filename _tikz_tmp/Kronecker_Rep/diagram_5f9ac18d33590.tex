@@ -1,0 +1,40 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTgsWzYsMCwia15uIl0sWzYsMSwia15uIl0sWzQsMCwia15uIl0sWzQsMSwia157Mm59Il0sWzIsMCwiMCJdLFsyLDEsImtebiJdLFs2LDIsIk0iXSxbNCwyLCJQXzFebiJdLFsyLDIsIlBfMl5uIl0sWzQsMywiSV8xXm4iXSxbMiwzLCJJXzJebiJdLFswLDMsIlxcdGF1IE0iXSxbMiw1LCJrXm4iXSxbMiw0LCJrXnsybn0iXSxbNCw0LCJrXm4iXSxbNCw1LCIwIl0sWzAsNCwia15uIl0sWzAsNSwia15uIl0sWzAsMSwiSl9uKFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJJIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiXFxiaW5vbXtPfXtJfSIsMCx7Im9mZnNldCI6LTJ9XSxbMiwzLCJcXGJpbm9te0l9e099IiwyLHsib2Zmc2V0IjoyfV0sWzIsMCwiSSJdLFszLDEsIihJIFxcIEpfbihcXGxhbWJkYSkpIiwyXSxbNCw1LCIiLDEseyJvZmZzZXQiOjJ9XSxbNCw1LCIiLDEseyJvZmZzZXQiOi0yfV0sWzUsMywiXFxiaW5vbXstSl9uKFxcbGFtYmRhKX17SX0iLDJdLFs0LDJdLFs4LDddLFs3LDZdLFsxMCw5XSxbMTEsMTBdLFsxMywxMiwiKEkgXFwgTykiLDIseyJvZmZzZXQiOjJ9XSxbMTMsMTIsIihPIFxcIEkpIiwwLHsib2Zmc2V0IjotMn1dLFsxMywxNCwiKC0gSl9uIChcXGxhbWJkYSkgXFwgTykiXSxbMTIsMTVdLFsxNCwxNSwiIiwxLHsib2Zmc2V0IjoyfV0sWzE0LDE1LCIiLDEseyJvZmZzZXQiOi0yfV0sWzE2LDE3LCJJIiwyLHsib2Zmc2V0IjoyfV0sWzE2LDE3LCJKX24oXFxsYW1iZGEpIiwwLHsib2Zmc2V0IjotMn1dLFsxNiwxMywiXFxiaW5vbXtJfXtKX24oXFxsYW1iZGEpfSJdLFsxNywxMl0sWzYsMTEsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+	&& 0 && {k^n} && {k^n} \\
+	&& {k^n} && {k^{2n}} && {k^n} \\
+	&& {P_2^n} && {P_1^n} && M \\
+	{\tau M} && {I_2^n} && {I_1^n} \\
+	{k^n} && {k^{2n}} && {k^n} \\
+	{k^n} && {k^n} && 0
+	\arrow[from=1-3, to=1-5]
+	\arrow[shift right=2, from=1-3, to=2-3]
+	\arrow[shift left=2, from=1-3, to=2-3]
+	\arrow["I", from=1-5, to=1-7]
+	\arrow["{\binom{O}{I}}", shift left=2, from=1-5, to=2-5]
+	\arrow["{\binom{I}{O}}"', shift right=2, from=1-5, to=2-5]
+	\arrow["{J_n(\lambda)}", shift left=2, from=1-7, to=2-7]
+	\arrow["I"', shift right=2, from=1-7, to=2-7]
+	\arrow["{\binom{-J_n(\lambda)}{I}}"', from=2-3, to=2-5]
+	\arrow["{(I \ J_n(\lambda))}"', from=2-5, to=2-7]
+	\arrow[from=3-3, to=3-5]
+	\arrow[from=3-5, to=3-7]
+	\arrow[dashed, from=3-7, to=4-1]
+	\arrow[from=4-1, to=4-3]
+	\arrow[from=4-3, to=4-5]
+	\arrow["{\binom{I}{J_n(\lambda)}}", from=5-1, to=5-3]
+	\arrow["I"', shift right=2, from=5-1, to=6-1]
+	\arrow["{J_n(\lambda)}", shift left=2, from=5-1, to=6-1]
+	\arrow["{(- J_n (\lambda) \ O)}", from=5-3, to=5-5]
+	\arrow["{(I \ O)}"', shift right=2, from=5-3, to=6-3]
+	\arrow["{(O \ I)}", shift left=2, from=5-3, to=6-3]
+	\arrow[shift right=2, from=5-5, to=6-5]
+	\arrow[shift left=2, from=5-5, to=6-5]
+	\arrow[from=6-1, to=6-3]
+	\arrow[from=6-3, to=6-5]
+\end{tikzcd}
+\end{document}

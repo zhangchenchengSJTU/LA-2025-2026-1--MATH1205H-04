@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTUsWzEsMSwiQV8xIl0sWzIsMSwiQl8xIl0sWzEsMiwiQV8yIl0sWzIsMiwiQl8yIl0sWzMsMSwiQ18xIl0sWzMsMiwiQ18yIl0sWzAsMSwiY18xIl0sWzAsMiwiY18yIl0sWzAsMywiY18zIl0sWzEsMywiQV8zIl0sWzIsMywiQl8zIl0sWzMsMywiQ18zIl0sWzEsMCwicl8xIl0sWzIsMCwicl8yIl0sWzMsMCwicl8zIl0sWzIsMywiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1vbm8ifX19XSxbMSw0LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMyw1LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbOSwxMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibW9ubyJ9fX1dLFsxMCwxMSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzAsMiwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsOSwiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzEsMywiIiwyLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsNSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzUsMTEsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFszLDEwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	\& {r_1} \& {r_2} \& {r_3} \\
+	{c_1} \& {A_1} \& {B_1} \& {C_1} \\
+	{c_2} \& {A_2} \& {B_2} \& {C_2} \\
+	{c_3} \& {A_3} \& {B_3} \& {C_3}
+	\arrow[tail, from=2-2, to=2-3]
+	\arrow[dashed, from=2-2, to=3-2]
+	\arrow[two heads, from=2-3, to=2-4]
+	\arrow[dashed, from=2-3, to=3-3]
+	\arrow[dashed, from=2-4, to=3-4]
+	\arrow[tail, from=3-2, to=3-3]
+	\arrow[dashed, from=3-2, to=4-2]
+	\arrow[two heads, from=3-3, to=3-4]
+	\arrow[dashed, from=3-3, to=4-3]
+	\arrow[dashed, from=3-4, to=4-4]
+	\arrow[tail, from=4-2, to=4-3]
+	\arrow[two heads, from=4-3, to=4-4]
+\end{tikzcd}
+\end{document}

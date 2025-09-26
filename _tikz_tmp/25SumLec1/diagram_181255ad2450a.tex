@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHZhcmluamxpbSBfe1xcYmV0YSA8IFxcZGVsdGEgfShYXzApXlxcZGVsdGEiXSxbMiwwLCJBIl0sWzAsMiwiXFx2YXJpbmpsaW1fe1xcYmV0YSA8IFxcZGVsdGEgfSBYX1xcYmV0YSJdLFszLDAsIihYXzApXlxcZGVsdGEiXSxbMywyLCJYX3s8XFxkZWx0YX0iXSxbNSwwLCJBXlxcZGVsdGEiXSxbMCwxLCJtIl0sWzAsMiwiXFx2YXJpbmpsaW1fe1xcYmV0YSA8IFxcZGVsdGF9IGZfe1xcYmV0YSwgMH0iLDJdLFsyLDEsInNfXFxkZWx0YSIsMl0sWzMsNCwiKGZfey0sIDB9KSIsMl0sWzMsNSwiKG0pXlxcZGVsdGEiXSxbNCw1LCJzXy0iLDJdXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+    {\varinjlim _{\beta < \delta }(X_0)^\delta} \&\& A \& {(X_0)^\delta} \&\& {A^\delta} \\
+    \\
+    {\varinjlim_{\beta < \delta } X_\beta} \&\&\& {X_{<\delta}}
+    \arrow["m", from=1-1, to=1-3]
+    \arrow["{\varinjlim_{\beta < \delta} f_{\beta, 0}}"', from=1-1, to=3-1]
+    \arrow["{(m)^\delta}", from=1-4, to=1-6]
+    \arrow["{(f_{-, 0})}"', from=1-4, to=3-4]
+    \arrow["{s_\delta}"', from=3-1, to=1-3]
+    \arrow["{s_-}"', from=3-4, to=1-6]
+\end{tikzcd}
+\end{document}

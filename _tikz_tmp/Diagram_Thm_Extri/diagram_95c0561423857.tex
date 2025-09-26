@@ -1,0 +1,24 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMCwiWCJdLFs0LDAsIloiXSxbMiwwLCJZIl0sWzUsMCwiXFwsIl0sWzAsMSwiQSJdLFsyLDEsIkIiXSxbNCwxLCJaIl0sWzUsMSwiXFwsIl0sWzAsMiwiWCJdLFsyLDIsIkEgXFxvcGx1cyBZIl0sWzQsMiwiQiJdLFs1LDIsIlxcLCJdLFswLDIsImEiXSxbMiwxLCJiIl0sWzEsMywiXFxkZWx0YSAiXSxbNCw1LCJcXGNvbG9ye3JlZH0geCJdLFs1LDYsIlxcY29sb3J7Ymx1ZX0geSJdLFsxLDYsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsNSwidyIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDcsIlxcbGFtYmRhIF9cXGFzdCBcXGRlbHRhICJdLFs4LDksIlxcYmlub20gXFxsYW1iZGEgYSJdLFs5LDEwLCIoe1xcY29sb3J7cmVkfSAteH0sdykiXSxbMCw0LCJcXGxhbWJkYSAiXSxbMTAsMTEsIntcXGNvbG9ye2JsdWV9IHl9XlxcYXN0IFxcZGVsdGEgIl1d
+\begin{tikzcd}
+X && Y && Z & {\,} \\
+A && B && Z & {\,} \\
+X && {A \oplus Y} && B & {\,}
+\arrow["a", from=1-1, to=1-3]
+\arrow["{\lambda }", from=1-1, to=2-1]
+\arrow["b", from=1-3, to=1-5]
+\arrow["w", dashed, from=1-3, to=2-3]
+\arrow["{\delta }", from=1-5, to=1-6]
+\arrow[equals, from=1-5, to=2-5]
+\arrow["{\color{red} x}", from=2-1, to=2-3]
+\arrow["{\color{blue} y}", from=2-3, to=2-5]
+\arrow["{\lambda _\ast \delta }", from=2-5, to=2-6]
+\arrow["{\binom \lambda a}", from=3-1, to=3-3]
+\arrow["{({\color{red} -x},w)}", from=3-3, to=3-5]
+\arrow["{ {\color{blue} y}^\ast \delta }", from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzMsMiwiR197LTJ9Rl4yTSJdLFsyLDIsIkdfey0yfUZeMU0iXSxbMSwyLCJHX3stMn1GTSJdLFsxLDEsIkdfey0xfUZNIl0sWzIsMSwiR197LTF9Rl4xTSJdLFszLDEsIkdfey0xfUZeMk0iXSxbMywwLCJHRl4yTSJdLFsyLDAsIkdGXjFNIl0sWzEsMCwiR0ZNIl0sWzAsMiwiXFwsIl0sWzQsMiwiXFwsIl0sWzAsN10sWzEsOF1d
+\begin{tikzcd}
+	& GFM & {GF^1M} & {GF^2M} \\
+	& {G_{-1}FM} & {G_{-1}F^1M} & {G_{-1}F^2M} \\
+	{\,} & {G_{-2}FM} & {G_{-2}F^1M} & {G_{-2}F^2M} & {\,}
+	\arrow[from=3-3, to=1-2]
+	\arrow[from=3-4, to=1-3]
+\end{tikzcd}
+\end{document}

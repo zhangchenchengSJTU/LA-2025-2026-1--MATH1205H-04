@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzMsMSwiXFxidWxsZXQiXSxbMiwyLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzMsMiwiXFxidWxsZXQiXSxbMiwwLCJWXzEiXSxbMywwLCJWXzIiXSxbNCwxLCI/Il0sWzQsMCwiPyJdLFswLDEsIlxcLCJdLFs2LDEsIlxcLCJdLFsyLDAsIlxcbWF0aHNme0NvZn0iXSxbMiwxLCJcXG1hdGhzZntURmlifSIsMl0sWzAsMywiXFxtYXRoc2Z7VEZpYn0iXSxbMSwzLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDJdLFs1LDBdLFswLDZdLFs0LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs1LDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs3LDYsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMCwiZiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDMsImciLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwxLCJnZiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+&& {V_1} & {V_2} & {?} \\
+{\,} && \bullet & \bullet & {?} && {\,} \\
+&& \bullet & \bullet
+\arrow[dashed, from=1-3, to=1-4]
+\arrow[from=1-3, to=2-3]
+\arrow[dashed, from=1-4, to=1-5]
+\arrow[from=1-4, to=2-4]
+\arrow[equals, from=1-5, to=2-5]
+\arrow["{\mathsf{Cof}}", from=2-3, to=2-4]
+\arrow["f"', draw=none, from=2-3, to=2-4]
+\arrow["{\mathsf{TFib}}"', from=2-3, to=3-3]
+\arrow["gf", draw=none, from=2-3, to=3-3]
+\arrow[from=2-4, to=2-5]
+\arrow["{\mathsf{TFib}}", from=2-4, to=3-4]
+\arrow["g"', draw=none, from=2-4, to=3-4]
+\arrow[equals, from=3-3, to=3-4]
+\end{tikzcd}
+\end{document}

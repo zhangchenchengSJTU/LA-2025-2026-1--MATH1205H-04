@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJYIl0sWzIsMCwiWSJdLFs0LDAsIloiXSxbNSwwLCJcXCwiXSxbNSwxLCJcXCwiXSxbMCwxLCJYIl0sWzIsMSwiSV9YIl0sWzQsMSwiQ19YIl0sWzAsMSwiZiJdLFsxLDIsImciXSxbMiwzLCJcXGV0YSJdLFs1LDYsImlfWCJdLFs2LDcsInBfWCJdLFs3LDQsIlxcZGVsdGEgX1giXSxbMCw1LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDYsIlxcbGFtYmRhICIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDcsIlxca2FwcGEgIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+X \&\& Y \&\& Z \& {\,} \\
+X \&\& {I_X} \&\& {C_X} \& {\,}
+\arrow["f", from=1-1, to=1-3]
+\arrow[equals, from=1-1, to=2-1]
+\arrow["g", from=1-3, to=1-5]
+\arrow["{\lambda }", dashed, from=1-3, to=2-3]
+\arrow["\eta", from=1-5, to=1-6]
+\arrow["{\kappa }", dashed, from=1-5, to=2-5]
+\arrow["{i_X}", from=2-1, to=2-3]
+\arrow["{p_X}", from=2-3, to=2-5]
+\arrow["{\delta _X}", from=2-5, to=2-6]
+\end{tikzcd}
+\end{document}

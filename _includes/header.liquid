@@ -1,0 +1,7 @@
+<script>
+  // 根据当前页URL动态修改
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    document.getElementById('logo-link').href = "{{ site.baseurl }}";
+    document.getElementById('logo-prompt').textContent = 'Back to Home';
+  }
+</script>

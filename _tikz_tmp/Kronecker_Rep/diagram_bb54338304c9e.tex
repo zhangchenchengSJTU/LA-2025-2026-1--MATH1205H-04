@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzUsMCwia15uIl0sWzUsMSwia15uIl0sWzMsMCwia157Mm59Il0sWzMsMSwia157Mm59Il0sWzEsMCwia15uIl0sWzEsMSwia15uIl0sWzAsMCwiMCJdLFswLDEsIjAiXSxbNiwwLCIwIl0sWzYsMSwiMCJdLFswLDEsIkpfe259KFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMCwxLCJJIiwyLHsib2Zmc2V0IjoyfV0sWzIsMywiSl97Mm59KFxcbGFtYmRhKSIsMCx7Im9mZnNldCI6LTJ9XSxbMiwzLCJJX3sybn0iLDIseyJvZmZzZXQiOjJ9XSxbMiwwLCIoTyBcXCBJKSJdLFszLDEsIihPIFxcIEkpIiwyXSxbNCw1LCJJIiwyLHsib2Zmc2V0IjoyfV0sWzUsMywiXFxiaW5vbSB7SX17T30iLDJdLFs0LDIsIlxcYmlub20ge0l9e099Il0sWzQsNSwiSl97bn0oXFxsYW1iZGEpIiwwLHsib2Zmc2V0IjotMn1dLFs2LDRdLFs3LDVdLFswLDhdLFsxLDldXQ==
+\begin{tikzcd}
+	0 & {k^n} && {k^{2n}} && {k^n} & 0 \\
+	0 & {k^n} && {k^{2n}} && {k^n} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\binom {I}{O}}", from=1-2, to=1-4]
+	\arrow["I"', shift right=2, from=1-2, to=2-2]
+	\arrow["{J_{n}(\lambda)}", shift left=2, from=1-2, to=2-2]
+	\arrow["{(O \ I)}", from=1-4, to=1-6]
+	\arrow["{J_{2n}(\lambda)}", shift left=2, from=1-4, to=2-4]
+	\arrow["{I_{2n}}"', shift right=2, from=1-4, to=2-4]
+	\arrow[from=1-6, to=1-7]
+	\arrow["{J_{n}(\lambda)}", shift left=2, from=1-6, to=2-6]
+	\arrow["I"', shift right=2, from=1-6, to=2-6]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\binom {I}{O}}"', from=2-2, to=2-4]
+	\arrow["{(O \ I)}"', from=2-4, to=2-6]
+	\arrow[from=2-6, to=2-7]
+\end{tikzcd}
+\end{document}

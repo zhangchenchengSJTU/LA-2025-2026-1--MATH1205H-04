@@ -1,0 +1,14 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+ % https://q.uiver.app/#q=WzAsNCxbMSwxLCJcXGJ1bGxldCJdLFsxLDAsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbMCwwLCJcXGJ1bGxldCJdLFsxLDAsIiIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In0sImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDBdLFszLDIsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn0sImJvZHkiOnsibmFtZSI6InNxdWlnZ2x5In19fV0sWzMsMV0sWzIsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	\bullet \& \bullet \\
+	\bullet \& \bullet
+	\arrow[from=1-1, to=1-2]
+	\arrow[squiggly, hook', from=1-1, to=2-1]
+	\arrow[squiggly, two heads, from=1-2, to=2-2]
+	\arrow[dashed, from=2-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd} \end{document}

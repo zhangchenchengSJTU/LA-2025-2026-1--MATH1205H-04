@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJYX24gXFx0aW1lcyB8XFxEZWx0YSBebnwiXSxbMSwwLCJYX24gXFx0aW1lcyB8XFxEZWx0YSBebXwiXSxbMiwwLCJYX20gXFx0aW1lcyB8XFxEZWx0YSBebXwiXSxbMCwxLCIoYSx4KSJdLFsyLDEsIihiLHkpIl0sWzEsMSwiXFxidWxsZXQiXSxbMCwxLCIoMSx8XFxEZWx0YV5cXHZhcnBoaSB8KSJdLFsyLDEsIihYX1xcdmFycGhpLCAxKSIsMl0sWzMsNSwiIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFs0LDUsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XV0=
+\begin{tikzcd}
+{X_n \times |\Delta ^n|} & {X_n \times |\Delta ^m|} & {X_m \times |\Delta ^m|} \\
+{(a,x)} & \bullet & {(b,y)}
+\arrow["{(1,|\Delta^\varphi |)}", from=1-1, to=1-2]
+\arrow["{(X_\varphi, 1)}"', from=1-3, to=1-2]
+\arrow[maps to, from=2-1, to=2-2]
+\arrow[maps to, from=2-3, to=2-2]
+\end{tikzcd}
+\end{document}

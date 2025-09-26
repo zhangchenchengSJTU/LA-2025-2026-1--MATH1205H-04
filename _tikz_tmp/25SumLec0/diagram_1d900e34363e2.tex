@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMywwLCJNXm4iXSxbNSwwLCJNXm0iXSxbMiwxLCIoWCwgTSkiXSxbMSwwLCJNXmwgIl0sWzAsMCwiXFwsIl0sWzYsMCwiXFwsIl0sWzAsMSwiXFxtYXRoYmYgQl5UXFxjZG90ICJdLFsyLDAsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMCwiXFxtYXRoYmYgQV5UIFxcY2RvdCJdLFszLDIsIiIsMSx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	{\,} \& {M^l } \&\& {M^n} \&\& {M^m} \& {\,} \\
+	\&\& {(X, M)}
+	\arrow["{\mathbf A^T \cdot}", from=1-2, to=1-4]
+	\arrow[two heads, from=1-2, to=2-3]
+	\arrow["{\mathbf B^T\cdot }", from=1-4, to=1-6]
+	\arrow[hook, from=2-3, to=1-4]
+\end{tikzcd}
+\end{document}

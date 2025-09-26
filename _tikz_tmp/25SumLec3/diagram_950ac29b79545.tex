@@ -1,0 +1,29 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMSwiXFx2YXJpbmpsaW1ee2ZpbH1QX1xcYnVsbGV0IFxcb3BsdXMgUV9cXGJ1bGxldCAiXSxbMSwwLCJcXHZhcmluamxpbV57ZmlsfVBfXFxidWxsZXQiXSxbMiwwLCJGIl0sWzIsMSwiUCJdLFswLDIsIksiXSxbMCwxLCJQX2kgXFxvcGx1cyBRX2kiXSxbMCwwLCJQX2kgIl0sWzMsMCwiSyJdLFs0LDEsIlBfaSBcXG9wbHVzIFFfaSJdLFs1LDEsIlBfaSJdLFs0LDIsIlAiXSxbNSwyLCJGIl0sWzAsMSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsMiwiXFxzaW0gIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywyLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMCwzLCJxIl0sWzQsMCwiXFxhbHBoYSAiLDFdLFs0LDMsIjAiLDIseyJjdXJ2ZSI6Mn1dLFs1LDAsImdfaSJdLFs0LDUsIlxcYWxwaGEgX2kiXSxbNSw2LCIoMSwwKSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs2LDEsImZfaSJdLFs4LDksIigxLDApIiwyXSxbOCwxMCwicVxcY2lyYyBnX2kiLDJdLFsxMCwxMSwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzksMTEsImZfaSJdLFs3LDgsIlxcYWxwaGEgX2kiXSxbNywxMCwiXFxhbHBoYSAiLDIseyJjdXJ2ZSI6M31dLFs3LDksIihcXGFscGhhIF9pLCAwKSIsMCx7ImN1cnZlIjotMn1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+    {P_i } \& {\varinjlim^{fil}P_\bullet} \& F \& K \\
+    {P_i \oplus Q_i} \& {\varinjlim^{fil}P_\bullet \oplus Q_\bullet } \& P \&\& {P_i \oplus Q_i} \& {P_i} \\
+    K \&\&\&\& P \& F
+    \arrow["{f_i}", from=1-1, to=1-2]
+    \arrow["{\sim }", equals, from=1-2, to=1-3]
+    \arrow["{\alpha _i}", from=1-4, to=2-5]
+    \arrow["{(\alpha _i, 0)}", curve={height=-12pt}, from=1-4, to=2-6]
+    \arrow["{\alpha }"', curve={height=18pt}, from=1-4, to=3-5]
+    \arrow["{(1,0)}", two heads, from=2-1, to=1-1]
+    \arrow["{g_i}", from=2-1, to=2-2]
+    \arrow[two heads, from=2-2, to=1-2]
+    \arrow["q", from=2-2, to=2-3]
+    \arrow[two heads, from=2-3, to=1-3]
+    \arrow["{(1,0)}"', from=2-5, to=2-6]
+    \arrow["{q\circ g_i}"', from=2-5, to=3-5]
+    \arrow["{f_i}", from=2-6, to=3-6]
+    \arrow["{\alpha _i}", from=3-1, to=2-1]
+    \arrow["{\alpha }"{description}, from=3-1, to=2-2]
+    \arrow["0"', curve={height=12pt}, from=3-1, to=2-3]
+    \arrow[two heads, from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

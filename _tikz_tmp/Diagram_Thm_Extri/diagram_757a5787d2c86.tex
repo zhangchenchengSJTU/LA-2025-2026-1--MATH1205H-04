@@ -1,0 +1,28 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMSwiQSJdLFsyLDEsIkIiXSxbNCwxLCJDIl0sWzUsMSwiXFwsIl0sWzAsMCwiQSciXSxbMiwwLCJCJyJdLFs0LDAsIkMnIl0sWzQsMiwiQyciXSxbMiwyLCJCJyJdLFswLDIsIkEnIl0sWzUsMiwiXFwsIl0sWzUsMCwiXFwsIl0sWzIsMywiXFxkZWx0YSJdLFswLDEsImkiXSxbMSwyLCJwIl0sWzQsMCwial9BIl0sWzAsOSwicV9BIl0sWzUsMSwial9CIl0sWzEsOCwicV9CIl0sWzYsMiwial9DIl0sWzIsNywicV9DIl0sWzQsNSwiaSciXSxbNSw2LCJwJyJdLFs5LDgsImknIl0sWzgsNywiaSciXSxbNiwxMSwiXFxkZWx0YSciXSxbNywxMCwiXFxkZWx0YSciXV0=
+\begin{tikzcd}
+	{A'} && {B'} && {C'} & {\,} \\
+	A && B && C & {\,} \\
+	{A'} && {B'} && {C'} & {\,}
+	\arrow["{i'}", from=1-1, to=1-3]
+	\arrow["{j_A}", from=1-1, to=2-1]
+	\arrow["{p'}", from=1-3, to=1-5]
+	\arrow["{j_B}", from=1-3, to=2-3]
+	\arrow["{\delta'}", from=1-5, to=1-6]
+	\arrow["{j_C}", from=1-5, to=2-5]
+	\arrow["i", from=2-1, to=2-3]
+	\arrow["{q_A}", from=2-1, to=3-1]
+	\arrow["p", from=2-3, to=2-5]
+	\arrow["{q_B}", from=2-3, to=3-3]
+	\arrow["\delta", from=2-5, to=2-6]
+	\arrow["{q_C}", from=2-5, to=3-5]
+	\arrow["{i'}", from=3-1, to=3-3]
+	\arrow["{i'}", from=3-3, to=3-5]
+	\arrow["{\delta'}", from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

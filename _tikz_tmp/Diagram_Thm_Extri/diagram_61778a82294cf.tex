@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMCwxLCJcXG1hdGhiYiBFKFosWCkiXSxbMCwwLCJcXG1hdGhiYiBGKExaLExYKSJdLFszLDAsIlxcbWF0aGJiIEYoTFJMWixMUkxYKSJdLFszLDEsIlxcbWF0aGJiIEUoUkxaLFJMWCkiXSxbMCwzLCIoXFxldGFfe1h9KV9cXGFzdCAoXFxldGEgX1peXFxhc3QpXnstMX0iXSxbMCwxLCJsX3taLFh9Il0sWzMsMiwibF97UkxaLFJMWH0iXSxbMSwyLCJcXHZhcmVwc2lsb24gX3tMWn1eXFxhc3QgXFxjaXJjIChcXHZhcmVwc2lsb24gX3tMWH0pX1xcYXN0IF57LTF9Il1d
+\begin{tikzcd}
+{\mathbb F(LZ,LX)} &&& {\mathbb F(LRLZ,LRLX)} \\
+{\mathbb E(Z,X)} &&& {\mathbb E(RLZ,RLX)}
+\arrow["{\varepsilon _{LZ}^\ast \circ (\varepsilon _{LX})_\ast ^{-1}}", from=1-1, to=1-4]
+\arrow["{l_{Z,X}}", from=2-1, to=1-1]
+\arrow["{(\eta_{X})_\ast (\eta _Z^\ast)^{-1}}", from=2-1, to=2-4]
+\arrow["{l_{RLZ,RLX}}", from=2-4, to=1-4]
+\end{tikzcd}
+\end{document}

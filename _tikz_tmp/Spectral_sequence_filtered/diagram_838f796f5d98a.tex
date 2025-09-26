@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjAsWzEsMSwiWF57cSxwfSJdLFswLDAsIlhee3EtMSwgcCsxfSJdLFsyLDIsIlhee3ErMSwgcC0xfSJdLFsxLDAsIlhee3EscCsxfSJdLFsxLDIsIlhee3EscC0xfSJdLFsyLDEsIlhee3ErMSwgcH0iXSxbMiwwLCJYXntxKzEsIHArMX0iXSxbMCwxLCJYXntxLTEsIHB9Il0sWzAsMiwiWF57cS0xLCBwLTF9Il0sWzAsMywiXFxib3hlZHtFXzB9Il0sWzMsMywiXFxib3hlZHtFXzF9Il0sWzMsMiwiSF9cXHVwYXJyb3cgXntxLTEscC0xfSJdLFszLDEsIkhfXFx1cGFycm93IF57cS0xLHB9Il0sWzMsMCwiSF9cXHVwYXJyb3cgXntxLTEscCsxfSJdLFs0LDIsIkhfXFx1cGFycm93IF57cSxwLTF9Il0sWzUsMiwiSF9cXHVwYXJyb3cgXntxKzEscC0xfSJdLFs1LDEsIkhfXFx1cGFycm93IF57cSsxLHB9Il0sWzUsMCwiSF9cXHVwYXJyb3cgXntxKzEscCsxfSJdLFs0LDEsIkhfXFx1cGFycm93IF57cSxwfSJdLFs0LDAsIkhfXFx1cGFycm93IF57cSxwKzF9Il0sWzgsNywiZF9cXHVwYXJyb3cgIl0sWzcsMSwiZF9cXHVwYXJyb3cgIl0sWzQsMCwiZF9cXHVwYXJyb3cgIl0sWzAsMywiZF9cXHVwYXJyb3cgIl0sWzIsNSwiZF9cXHVwYXJyb3cgIl0sWzUsNiwiZF9cXHVwYXJyb3cgIl0sWzEzLDE5LCI/Il0sWzE5LDE3LCI/Il0sWzEyLDE4LCI/Il0sWzE4LDE2LCI/Il0sWzExLDE0LCI/Il0sWzE0LDE1LCI/Il1d
+\begin{tikzcd}
+	{X^{q-1, p+1}} & {X^{q,p+1}} & {X^{q+1, p+1}} & {H_\uparrow ^{q-1,p+1}} & {H_\uparrow ^{q,p+1}} & {H_\uparrow ^{q+1,p+1}} \\
+	{X^{q-1, p}} & {X^{q,p}} & {X^{q+1, p}} & {H_\uparrow ^{q-1,p}} & {H_\uparrow ^{q,p}} & {H_\uparrow ^{q+1,p}} \\
+	{X^{q-1, p-1}} & {X^{q,p-1}} & {X^{q+1, p-1}} & {H_\uparrow ^{q-1,p-1}} & {H_\uparrow ^{q,p-1}} & {H_\uparrow ^{q+1,p-1}} \\
+	{\boxed{E_0}} &&& {\boxed{E_1}}
+	\arrow["{?}", from=1-4, to=1-5]
+	\arrow["{?}", from=1-5, to=1-6]
+	\arrow["{d_\uparrow }", from=2-1, to=1-1]
+	\arrow["{d_\uparrow }", from=2-2, to=1-2]
+	\arrow["{d_\uparrow }", from=2-3, to=1-3]
+	\arrow["{?}", from=2-4, to=2-5]
+	\arrow["{?}", from=2-5, to=2-6]
+	\arrow["{d_\uparrow }", from=3-1, to=2-1]
+	\arrow["{d_\uparrow }", from=3-2, to=2-2]
+	\arrow["{d_\uparrow }", from=3-3, to=2-3]
+	\arrow["{?}", from=3-4, to=3-5]
+	\arrow["{?}", from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

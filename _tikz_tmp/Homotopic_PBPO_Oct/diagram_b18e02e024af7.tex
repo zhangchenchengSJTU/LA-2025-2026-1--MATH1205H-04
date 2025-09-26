@@ -1,0 +1,33 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTgsWzAsMCwiWCIsWzM1OSwxMDAsNjAsMV1dLFsxLDAsIllfMiIsWzM1OSwxMDAsNjAsMV1dLFswLDEsIllfMSIsWzM1OSwxMDAsNjAsMV1dLFsxLDEsIloiLFszNTksMTAwLDYwLDFdXSxbMiwwLCJXIixbMzU5LDEwMCw2MCwxXV0sWzMsMCwiWFsxXSJdLFsyLDEsIlciLFsyMjgsMTAwLDYwLDFdXSxbMywxLCJZXzFbMV0iXSxbMCwyLCJYIixbMzU5LDEwMCw2MCwxXV0sWzEsMiwiWV8yIixbMzU5LDEwMCw2MCwxXV0sWzMsMiwiWFsxXSJdLFsyLDIsIlcnIixbMTEyLDEwMCwzMywxXV0sWzAsMywiWV8xIixbMzU5LDEwMCw2MCwxXV0sWzEsMywiWiciLFsxMTIsMTAwLDMzLDFdXSxbMiwzLCJXJyIsWzExMiwxMDAsMzMsMV1dLFszLDMsIllfMVsxXSJdLFs0LDEsIjMuIl0sWzQsMywiMi4iXSxbMCwyLCJiXzEiLDAseyJjb2xvdXIiOlszNTksMTAwLDYwXX0sWzM1OSwxMDAsNjAsMV1dLFswLDEsImFfMSIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNjBdfSxbMzU5LDEwMCw2MCwxXV0sWzEsMywiYl8yIiwwLHsiY29sb3VyIjpbMzU5LDEwMCw2MF19LFszNTksMTAwLDYwLDFdXSxbMSw0LCIiLDAseyJjb2xvdXIiOlszNTksMTAwLDYwXX1dLFs0LDYsIiIsMCx7ImxldmVsIjoyLCJjb2xvdXIiOlsyMjgsMTAwLDYwXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDUsIiIsMCx7ImNvbG91ciI6WzM1OSwxMDAsNjBdfV0sWzUsN10sWzIsMywiYV8yIiwwLHsiY29sb3VyIjpbMzU5LDEwMCw2MF19LFszNTksMTAwLDYwLDFdXSxbMyw2LCIiLDAseyJjb2xvdXIiOlsyMjgsMTAwLDYwXX1dLFs2LDcsIiIsMCx7ImNvbG91ciI6WzIyOCwxMDAsNjBdfV0sWzgsOSwiYV8xIiwwLHsiY29sb3VyIjpbMzU5LDEwMCw2MF19LFszNTksMTAwLDYwLDFdXSxbOCwxMiwiYl8xIiwyLHsiY29sb3VyIjpbMzU5LDEwMCw2MF19LFszNTksMTAwLDYwLDFdXSxbOSwxMywiYl8yJyIsMCx7ImNvbG91ciI6WzExMiwxMDAsMzNdfSxbMTEyLDEwMCwzMywxXV0sWzEyLDEzLCJhXzInIiwyLHsiY29sb3VyIjpbMTEyLDEwMCwzM119LFsxMTIsMTAwLDMzLDFdXSxbOSwxMSwiIiwyLHsiY29sb3VyIjpbMTEyLDEwMCwzM119XSxbMTEsMTAsIiIsMix7ImNvbG91ciI6WzExMiwxMDAsMzNdfV0sWzEzLDE0LCIiLDIseyJjb2xvdXIiOlsxMTIsMTAwLDMzXX1dLFsxNCwxNSwiIiwyLHsiY29sb3VyIjpbMTEyLDEwMCwzM119XSxbMTEsMTQsIiIsMSx7ImxldmVsIjoyLCJjb2xvdXIiOlsxMTIsMTAwLDMzXSwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMCwxNV1d
+\begin{tikzcd}[ampersand replacement=\&]
+	\color{rgb,255:red,255;green,51;blue,54}{X} \& \color{rgb,255:red,255;green,51;blue,54}{Y_2} \& \color{rgb,255:red,255;green,51;blue,54}{W} \& {X[1]} \\
+	\color{rgb,255:red,255;green,51;blue,54}{Y_1} \& \color{rgb,255:red,255;green,51;blue,54}{Z} \& \color{rgb,255:red,51;green,92;blue,255}{W} \& {Y_1[1]} \& {3.} \\
+	\color{rgb,255:red,255;green,51;blue,54}{X} \& \color{rgb,255:red,255;green,51;blue,54}{Y_2} \& \color{rgb,255:red,22;green,168;blue,0}{W'} \& {X[1]} \\
+	\color{rgb,255:red,255;green,51;blue,54}{Y_1} \& \color{rgb,255:red,22;green,168;blue,0}{Z'} \& \color{rgb,255:red,22;green,168;blue,0}{W'} \& {Y_1[1]} \& {2.}
+	\arrow["{a_1}", color={rgb,255:red,255;green,51;blue,54}, from=1-1, to=1-2]
+	\arrow["{b_1}", color={rgb,255:red,255;green,51;blue,54}, from=1-1, to=2-1]
+	\arrow[color={rgb,255:red,255;green,51;blue,54}, from=1-2, to=1-3]
+	\arrow["{b_2}", color={rgb,255:red,255;green,51;blue,54}, from=1-2, to=2-2]
+	\arrow[color={rgb,255:red,255;green,51;blue,54}, from=1-3, to=1-4]
+	\arrow[color={rgb,255:red,51;green,92;blue,255}, equals, from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow["{a_2}", color={rgb,255:red,255;green,51;blue,54}, from=2-1, to=2-2]
+	\arrow[color={rgb,255:red,51;green,92;blue,255}, from=2-2, to=2-3]
+	\arrow[color={rgb,255:red,51;green,92;blue,255}, from=2-3, to=2-4]
+	\arrow["{a_1}", color={rgb,255:red,255;green,51;blue,54}, from=3-1, to=3-2]
+	\arrow["{b_1}"', color={rgb,255:red,255;green,51;blue,54}, from=3-1, to=4-1]
+	\arrow[color={rgb,255:red,22;green,168;blue,0}, from=3-2, to=3-3]
+	\arrow["{b_2'}", color={rgb,255:red,22;green,168;blue,0}, from=3-2, to=4-2]
+	\arrow[color={rgb,255:red,22;green,168;blue,0}, from=3-3, to=3-4]
+	\arrow[color={rgb,255:red,22;green,168;blue,0}, equals, from=3-3, to=4-3]
+	\arrow[from=3-4, to=4-4]
+	\arrow["{a_2'}"', color={rgb,255:red,22;green,168;blue,0}, from=4-1, to=4-2]
+	\arrow[color={rgb,255:red,22;green,168;blue,0}, from=4-2, to=4-3]
+	\arrow[color={rgb,255:red,22;green,168;blue,0}, from=4-3, to=4-4]
+\end{tikzcd}
+\end{document}

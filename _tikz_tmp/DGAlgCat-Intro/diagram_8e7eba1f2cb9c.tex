@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMCwiXFxTaWdtYSBZIl0sWzAsMSwiXFxTaWdtYSBYIl0sWzAsMiwiWSJdLFszLDAsIlxcU2lnbWFeMiBZIl0sWzMsMSwiXFxTaWdtYV4yWCJdLFszLDIsIlxcU2lnbWEgWSJdLFs0LDAsIi1kIl0sWzQsMSwiMCJdLFs0LDIsIjEiXSxbNSwyLCJmIl0sWzUsMSwiLWQiXSxbNiwyLCJkIl0sWzAsMywiLWQiXSxbMSw0LCItZCIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFsyLDUsImQiLDJdLFsxLDUsIlxcU2lnbWEgZiIsMix7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFswLDUsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMSwiXFxvcGx1cyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDIsIlxcb3BsdXMiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw0LCJcXG9wbHVzIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiXFxvcGx1cyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+	{\Sigma Y} &&& {\Sigma^2 Y} & {-d} \\
+	{\Sigma X} &&& {\Sigma^2X} & 0 & {-d} \\
+	Y &&& {\Sigma Y} & 1 & f & d
+	\arrow["{-d}", from=1-1, to=1-4]
+	\arrow["\oplus"{description}, draw=none, from=1-1, to=2-1]
+	\arrow[equals, from=1-1, to=3-4]
+	\arrow["\oplus"{description}, draw=none, from=1-4, to=2-4]
+	\arrow["{-d}"{pos=0.7}, from=2-1, to=2-4]
+	\arrow["\oplus"{description}, draw=none, from=2-1, to=3-1]
+	\arrow["{\Sigma f}"'{pos=0.3}, from=2-1, to=3-4]
+	\arrow["\oplus"{description}, draw=none, from=2-4, to=3-4]
+	\arrow["d"', from=3-1, to=3-4]
+\end{tikzcd}
+\end{document}

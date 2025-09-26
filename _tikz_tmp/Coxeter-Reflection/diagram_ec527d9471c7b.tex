@@ -1,0 +1,24 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzIsMSwiWF9iIl0sWzMsMSwiWF9pIixbMjQwLDYwLDYwLDFdXSxbNCwxLCJYX2QiXSxbMSwxLCJYX2EiXSxbMiwwLCJYX2MiXSxbMiwzLCJYX2IiXSxbMSwzLCJYX2EiXSxbMiwyLCJYX2MiXSxbMywzLCJcXGtlciBcXGxlZnRbXFxiaWdvcGx1c197dChmKSA9IDF9WF97cyhmKX0gXFx4cmlnaHRhcnJvd3tcXHN1bSBYX2Z9IFhfaVxccmlnaHRdIixbMCw2MCw2MCwxXV0sWzQsMywiWF9kIl0sWzAsMSwiXFxtYXRoYmZ7cmVwfV9rKFEpIl0sWzAsMywiXFxtYXRoYmZ7cmVwfV9rKENfaVEpIl0sWzIsMSwiWF9cXGdhbW1hICIsMix7ImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFswLDNdLFs0LDBdLFswLDEsIlhfXFxhbHBoYSAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlsyNDAsNjAsNjBdfSxbMjQwLDYwLDYwLDFdXSxbMCwxLCJYX1xcYmV0YSAiLDIseyJvZmZzZXQiOjMsImNvbG91ciI6WzI0MCw2MCw2MF19LFsyNDAsNjAsNjAsMV1dLFs1LDZdLFs4LDUsInAgIiwyLHsib2Zmc2V0IjozLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDUsInAiLDAseyJvZmZzZXQiOi0zLCJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFs4LDksInAiLDAseyJjb2xvdXIiOlswLDYwLDYwXX0sWzAsNjAsNjAsMV1dLFsxMCwxMSwiQ19pICIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sImxldmVsIjoyfV0sWzcsNV1d
+\begin{tikzcd}
+	&& {X_c} \\
+	{\mathbf{rep}_k(Q)} & {X_a} & {X_b} & \color{rgb,255:red,92;green,92;blue,214}{X_i} & {X_d} \\
+	&& {X_c} \\
+	{\mathbf{rep}_k(C_iQ)} & {X_a} & {X_b} & \color{rgb,255:red,214;green,92;blue,92}{\ker \left[\bigoplus_{t(f) = 1}X_{s(f)} \xrightarrow{\sum X_f} X_i\right]} & {X_d}
+	\arrow[from=1-3, to=2-3]
+	\arrow["{C_i }", shorten <=6pt, shorten >=6pt, Rightarrow, from=2-1, to=4-1]
+	\arrow[from=2-3, to=2-2]
+	\arrow["{X_\alpha }", shift left=3, color={rgb,255:red,92;green,92;blue,214}, from=2-3, to=2-4]
+	\arrow["{X_\beta }"', shift right=3, color={rgb,255:red,92;green,92;blue,214}, from=2-3, to=2-4]
+	\arrow["{X_\gamma }"', color={rgb,255:red,92;green,92;blue,214}, from=2-5, to=2-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=4-3, to=4-2]
+	\arrow["{p }"', shift right=3, color={rgb,255:red,214;green,92;blue,92}, from=4-4, to=4-3]
+	\arrow["p", shift left=3, color={rgb,255:red,214;green,92;blue,92}, from=4-4, to=4-3]
+	\arrow["p", color={rgb,255:red,214;green,92;blue,92}, from=4-4, to=4-5]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,29 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+    % https://q.uiver.app/#q=WzAsMTIsWzEsMSwiWCJdLFsyLDEsIllfMSJdLFsyLDIsIloiXSxbMSwyLCJZXzIiXSxbMCwxLCJLXzEiXSxbMCwyLCJLXzEiXSxbMSwwLCJLXzIiXSxbMiwwLCJLXzIiXSxbMywxLCJDXzEiXSxbMywyLCJDXzEiXSxbMSwzLCJDXzIiXSxbMiwzLCJDXzIiXSxbMCwxLCJiXzEiXSxbMSwyLCJhXzIiXSxbMCwzLCJhXzEiLDJdLFszLDIsImJfMiIsMl0sWzQsMCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMSw4LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsyLDksIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs2LDAsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzMsMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs3LDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsMTEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs1LDQsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsNywiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCw5LCIiLDEseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxMSwxMCwiIiwxLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	& {K_2} & {K_2} \\
+	{K_1} & X & {Y_1} & {C_1} \\
+	{K_1} & {Y_2} & Z & {C_1} \\
+	& {C_2} & {C_2}
+	\arrow[equals, from=1-2, to=1-3]
+	\arrow[hook, from=1-2, to=2-2]
+	\arrow[hook, from=1-3, to=2-3]
+	\arrow[hook, from=2-1, to=2-2]
+	\arrow["{b_1}", from=2-2, to=2-3]
+	\arrow["{a_1}"', from=2-2, to=3-2]
+	\arrow[two heads, from=2-3, to=2-4]
+	\arrow["{a_2}", from=2-3, to=3-3]
+	\arrow[equals, from=2-4, to=3-4]
+	\arrow[equals, from=3-1, to=2-1]
+	\arrow[hook, from=3-1, to=3-2]
+	\arrow["{b_2}"', from=3-2, to=3-3]
+	\arrow[two heads, from=3-2, to=4-2]
+	\arrow[two heads, from=3-3, to=3-4]
+	\arrow[two heads, from=3-3, to=4-3]
+	\arrow[equals, from=4-3, to=4-2]
+\end{tikzcd}
+    \end{document}

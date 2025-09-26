@@ -1,0 +1,33 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzEsMywiQyJdLFsxLDEsIkFfMVxcb3BsdXMgQV8yIl0sWzEsMiwiTSJdLFsyLDEsIkFfMiJdLFswLDEsIkFfMSJdLFswLDIsIkFfMSJdLFsyLDIsIkJfMiJdLFsyLDMsIkMiXSxbMywwLCJBXzIiXSxbNCwwLCJBXzIiXSxbMywxLCJBXzFcXG9wbHVzIEFfMiJdLFszLDIsIkFfMSJdLFs0LDIsIkJfMSJdLFs1LDIsIkMiXSxbNSwxLCJDIl0sWzQsMSwiTSJdLFsyLDAsImsiXSxbMSwyLCJtIl0sWzEsMywicF8yIl0sWzMsNiwieF8yIl0sWzYsNywieV8yIl0sWzUsMiwibV8xIl0sWzQsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNywwLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDYsIlxcbGFtYmRhXzIiXSxbOCw5LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs4LDEwLCJlXzIiLDJdLFs0LDEsImVfMSJdLFsxMCwxMSwicF8xIiwyXSxbMTAsMTUsIm0iLDJdLFsxNSwxNCwiayIsMl0sWzksMTUsIm1fMiIsMl0sWzExLDEyLCJ4XzEiLDJdLFsxMiwxMywieV8xIiwyXSxbMTUsMTIsIlxcbGFtYmRhXzEiLDJdLFsxNCwxMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	&&& {A_2} & {A_2} \\
+	{A_1} & {A_1\oplus A_2} & {A_2} & {A_1\oplus A_2} & M & C \\
+	{A_1} & M & {B_2} & {A_1} & {B_1} & C \\
+	& C & C
+	\arrow[equals, from=1-4, to=1-5]
+	\arrow["{e_2}"', from=1-4, to=2-4]
+	\arrow["{m_2}"', from=1-5, to=2-5]
+	\arrow["{e_1}", from=2-1, to=2-2]
+	\arrow[equals, from=2-1, to=3-1]
+	\arrow["{p_2}", from=2-2, to=2-3]
+	\arrow["m", from=2-2, to=3-2]
+	\arrow["{x_2}", from=2-3, to=3-3]
+	\arrow["m"', from=2-4, to=2-5]
+	\arrow["{p_1}"', from=2-4, to=3-4]
+	\arrow["k"', from=2-5, to=2-6]
+	\arrow["{\lambda_1}"', from=2-5, to=3-5]
+	\arrow[equals, from=2-6, to=3-6]
+	\arrow["{m_1}", from=3-1, to=3-2]
+	\arrow["{\lambda_2}", from=3-2, to=3-3]
+	\arrow["k", from=3-2, to=4-2]
+	\arrow["{y_2}", from=3-3, to=4-3]
+	\arrow["{x_1}"', from=3-4, to=3-5]
+	\arrow["{y_1}"', from=3-5, to=3-6]
+	\arrow[equals, from=4-3, to=4-2]
+\end{tikzcd}
+\end{document}

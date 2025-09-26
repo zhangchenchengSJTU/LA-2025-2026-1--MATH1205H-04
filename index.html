@@ -1,15 +1,64 @@
 ---
 layout: default
-title: Home
 ---
 
-<h1>Homework Index</h1>
-<ul>
-  {% assign sorted_posts = site.posts | sort: "date" | reverse %}
-  {% for post in sorted_posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small>({{ post.date | date: "%Y-%m-%d" }})</small>
-    </li>
-  {% endfor %}
-</ul>
+<h1>This is a Jekyll LaTeX Website for Math Notes</h1>
+
+<h2>Seminare (Last 2)</h2>
+
+{% assign sorted_posts=site.posts | where_exp: "post", "post.categories contains 'seminare'" | sort: "date" | reverse %}
+{% for post in sorted_posts limit:2 %}
+  <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
+  <p>{{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}</p>
+{% endfor %}
+
+<hr>
+
+<a href="seminare">More...</a>
+
+<h2>Notes (Last 2)</h2>
+
+{% assign sorted_posts=site.posts | where_exp: "post", "post.categories contains 'notes'" | sort: "date" | reverse %}
+{% for post in sorted_posts limit:2 %}
+  <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
+  <p>{{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}</p>
+{% endfor %}
+
+<hr>
+
+<a href="notes">More...</a>
+
+<h2>Statistics</h2>
+
+{% assign total_posts=site.posts | size %}
+
+{% assign notes_posts=0 %}
+{% for post in site.posts %}
+  {% if post.categories contains "notes" %}
+    {% assign notes_posts=notes_posts | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign seminare_posts=0 %}
+{% for post in site.posts %}
+  {% if post.categories contains "seminare" %}
+    {% assign seminare_posts=seminare_posts | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+<p>The website was last built on {{ site.time | date: "%Y-%m-%d %H:%M:%S" }}, and <a href="directory">this</a> is a directory for {{ total_posts }} published posts, including {{ seminare_posts }} <a href="seminare">seminares</a>, {{ notes_posts }} <a href="notes">notes</a>, etc.
+
+<h2>Acknowledgement</h2>
+
+<p>This website is based on <a href="https://github.com/ryanmcdermott/jekyll-latex">this outstanding repository</a>, to whose author we extend our sincere gratitude.</p>
+
+<h2>Collections</h2>
+
+{% for post in site.posts %}
+  {% if
+    post.categories contains "collection"
+  %}
+    <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
+    <p>{{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}</p>
+  {% endif %}
+{% endfor %}

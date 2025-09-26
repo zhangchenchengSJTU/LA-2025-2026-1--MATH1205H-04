@@ -1,0 +1,109 @@
+/* assets/css/print.css */
+@media print {
+    main {
+    margin-left: -73px !important;
+  }
+    .sidebar-column {
+    display: none !important;
+  }
+    .footer {
+    display: none !important;
+  }
+    h2 {
+    font-size: 19pt !important;
+  }
+  h3 {
+    font-size: 15pt !important;
+  }
+  h4 {
+    font-size: 13pt !important;
+  }
+
+    /* 整体缩小字体 */
+    body {
+        font-size: 0.8em !important;  /* 缩小一号 */
+        line-height: 1.4;
+    }
+
+    /* 打印页眉页脚设置 */
+    @page {
+        size: auto;
+        margin: 15mm 5mm;  /* 调整边距 */
+
+        @top-left {
+            content: attr(href, url);
+            font-size: 0.8em;
+            color: #666;
+        }
+        @bottom-right {
+            content: "PAGE " counter(page);
+            font-size: 0.8em;
+        }
+        @bottom-left {
+            content: "https://zhangchenchengsjtu.github.io/website/";
+            font-size: 0.8em;
+            color: #666;
+        }
+    }
+    /* 防止内容被分割到不同页面 */
+    h1, h2, h3, blockquote {
+        page-break-after: avoid;
+    }
+    
+    pre, code {
+        page-break-inside: avoid;
+        white-space: pre-wrap !important;
+    }
+}
+
+
+// /* assets/css/print.css */
+// @media print {
+//     /* 1. 禁用 sticky-header */
+//     .sticky-header, 
+//         header[role="banner"],
+//         #navbar, 
+//         #header {
+//             display: none !important;
+//     }
+
+//     /* 2. 隐藏导航栏内容 */
+//     .page-navigation {
+//     display: none !important;
+//     }
+
+//     /* 整体缩小字体 */
+//     body {
+//         font-size: 0.8em !important;  /* 缩小一号 */
+//         line-height: 1.4;
+//     }
+
+//     /* 打印页眉页脚设置 */
+//     @page {
+//         size: auto;
+//         margin: 15mm 10mm;  /* 调整边距 */
+
+//         /* 页眉内容（可选） */
+//         @top-left {
+//             content: "https://zhangchenchengsjtu.github.io/website/";
+//             font-size: 0.8em;
+//             color: #666;
+//         }
+        
+//         /* 页脚页码 */
+//         @bottom-right {
+//             content: "PAGE " counter(page);
+//             font-size: 0.8em;
+//         }
+//     }
+    
+//     /* 防止内容被分割到不同页面 */
+//     h1, h2, h3, blockquote {
+//         page-break-after: avoid;
+//     }
+    
+//     pre, code {
+//         page-break-inside: avoid;
+//         white-space: pre-wrap !important;
+//     }
+// }

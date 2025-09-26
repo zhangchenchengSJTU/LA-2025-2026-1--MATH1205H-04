@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMSwwLCJYIl0sWzEsMSwiWSJdLFswLDAsInMoaikiXSxbMCwxLCJ0KGopIl0sWzIsMCwiXFxjb3Byb2RfaiBzKGopIl0sWzIsMSwiXFxjb3Byb2RfaiB0KGopIl0sWzMsMCwiWF8wIl0sWzQsMiwiWSJdLFszLDEsIlhfMSJdLFswLDEsImYiXSxbMiwzLCJqIiwyXSxbMiwwLCJ1X2oiXSxbMywxLCJkX2oiLDJdLFsyLDEsIlxcY2lyY2xlYXJyb3dyaWdodCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDUsIlxcY29wcm9kX2ogaiIsMl0sWzQsNiwiKHVfaikiXSxbNiw3LCJmIl0sWzUsNywiKGRfaikiLDJdLFs2LDhdLFs1LDhdLFs0LDgsIlxcdGV4dHtQT30iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCw3LCJmXzEiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+{s(j)} \& X \& {\coprod_j s(j)} \& {X_0} \\
+{t(j)} \& Y \& {\coprod_j t(j)} \& {X_1} \\
+\&\&\&\& Y
+\arrow["{u_j}", from=1-1, to=1-2]
+\arrow["j"', from=1-1, to=2-1]
+\arrow["\circlearrowright"{description}, draw=none, from=1-1, to=2-2]
+\arrow["f", from=1-2, to=2-2]
+\arrow["{(u_j)}", from=1-3, to=1-4]
+\arrow["{\coprod_j j}"', from=1-3, to=2-3]
+\arrow["{\text{PO}}"{description}, draw=none, from=1-3, to=2-4]
+\arrow[from=1-4, to=2-4]
+\arrow["f", from=1-4, to=3-5]
+\arrow["{d_j}"', from=2-1, to=2-2]
+\arrow[from=2-3, to=2-4]
+\arrow["{(d_j)}"', from=2-3, to=3-5]
+\arrow["{f_1}"{description}, dashed, from=2-4, to=3-5]
+\end{tikzcd}
+\end{document}

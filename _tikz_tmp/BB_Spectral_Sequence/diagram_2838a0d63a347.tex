@@ -1,0 +1,33 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjksWzAsMCwiR0ZNIixbMzAsNjAsNjAsMV1dLFsxLDAsIkdGSV4wICIsWzE4MCw2MCw2MCwxXV0sWzIsMCwiR0ZJXjEiLFsxODAsNjAsNjAsMV1dLFszLDAsIkdGSV4yIixbMTgwLDYwLDYwLDFdXSxbMCwxLCJGTVxcb3RpbWVzIChUXjAsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwyLCJGTVxcb3RpbWVzIChUXjEsIFQpIixbMTgwLDYwLDYwLDFdXSxbMCwzLCJGTVxcb3RpbWVzIChUXjIsIFQpIixbMTgwLDYwLDYwLDFdXSxbMSwxLCIoVF4wLEleMCkiXSxbMSwyLCIoVF4xLEleMCkiXSxbMiwxLCIoVF4wLEleMSkiXSxbMywxLCIoVF4wLEleMikiXSxbMiwyLCIoVF4xLEleMSkiXSxbMywyLCIoVF4xLEleMikiXSxbMSwzLCIoVF4yLEleMCkiXSxbMiwzLCIoVF4yLEleMSkiXSxbMywzLCIoVF4yLEleMikiXSxbNCwzLCJcXGJveGVke0VfMH0iXSxbMSw0LCIoQSwgSV4wICkiXSxbMSw1LCIoSF4xKFQpLCBJXjApIixbMCwwLDc1LDFdXSxbMiw0LCIoQSwgSV4xKSJdLFszLDQsIihBLCBJXjIpIl0sWzIsNSwiKEheMShUKSwgSV4xKSIsWzAsMCw3NSwxXV0sWzMsNSwiKEheMShUKSwgSV4yKSIsWzAsMCw3NSwxXV0sWzQsNSwiXFxib3hlZHtFXzF9Il0sWzAsNSwiXFx0ZXh0e+a2iOWksSF9IixbMCwwLDc1LDFdXSxbMSw2LCIoQSxNKSJdLFsyLDYsIjAiLFswLDAsNzUsMV1dLFszLDYsIjAiLFswLDAsNzUsMV1dLFs0LDYsIlxcYm94ZWR7RV8yfSJdLFswLDEsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbMSwyLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzIsMywiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFs1LDQsIiIsMix7ImNvbG91ciI6WzE4MCw2MCw2MF19XSxbNCwwLCIiLDIseyJjb2xvdXIiOlsxODAsNjAsNjBdfV0sWzEyLDEwXSxbMTUsMTJdLFs4LDddLFsxMyw4XSxbMTEsOV0sWzYsNSwiIiwyLHsiY29sb3VyIjpbMTgwLDYwLDYwXX1dLFsxNCwxMV0sWzE3LDE5XSxbMTksMjBdLFsxOCwyMSwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dLFsyMSwyMiwiIiwyLHsiY29sb3VyIjpbMCwwLDc1XX1dXQ==
+\begin{tikzcd}
+	\textcolor{rgb,255:red,214;green,153;blue,92}{GFM} & \textcolor{rgb,255:red,92;green,214;blue,214} & \textcolor{rgb,255:red,92;green,214;blue,214} & \textcolor{rgb,255:red,92;green,214;blue,214} \\
+	\textcolor{rgb,255:red,92;green,214;blue,214} & {(T^0,I^0)} & {(T^0,I^1)} & {(T^0,I^2)} \\
+	\textcolor{rgb,255:red,92;green,214;blue,214} & {(T^1,I^0)} & {(T^1,I^1)} & {(T^1,I^2)} \\
+	\textcolor{rgb,255:red,92;green,214;blue,214} & {(T^2,I^0)} & {(T^2,I^1)} & {(T^2,I^2)} & {\boxed{E_0}} \\
+	& {(A, I^0 )} & {(A, I^1)} & {(A, I^2)} \\
+	\textcolor{rgb,255:red,191;green,191;blue,191}} & \textcolor{rgb,255:red,191;green,191;blue,191} & \textcolor{rgb,255:red,191;green,191;blue,191} & \textcolor{rgb,255:red,191;green,191;blue,191} & {\boxed{E_1}} \\
+	& {(A,M)} & \textcolor{rgb,255:red,191;green,191;blue,191}{0} & \textcolor{rgb,255:red,191;green,191;blue,191}{0} & {\boxed{E_2}}
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=1-1, to=1-2]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=1-2, to=1-3]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=1-3, to=1-4]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=2-1, to=1-1]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=3-1, to=2-1]
+	\arrow[from=3-2, to=2-2]
+	\arrow[from=3-3, to=2-3]
+	\arrow[from=3-4, to=2-4]
+	\arrow[draw={rgb,255:red,92;green,214;blue,214}, from=4-1, to=3-1]
+	\arrow[from=4-2, to=3-2]
+	\arrow[from=4-3, to=3-3]
+	\arrow[from=4-4, to=3-4]
+	\arrow[from=5-2, to=5-3]
+	\arrow[from=5-3, to=5-4]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, from=6-2, to=6-3]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, from=6-3, to=6-4]
+\end{tikzcd}
+\end{document}

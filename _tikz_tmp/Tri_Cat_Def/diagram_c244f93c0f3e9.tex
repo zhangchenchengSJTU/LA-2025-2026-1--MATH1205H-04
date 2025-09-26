@@ -1,0 +1,32 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTcsWzEsMSwiWCJdLFsyLDEsIlkiXSxbMywxLCJXIl0sWzQsMSwiWFsxXSJdLFsxLDIsIlgiXSxbMiwyLCJaIl0sWzMsMiwiUiJdLFs0LDIsIlhbMV0iXSxbMiwzLCJTIl0sWzMsMywiUyJdLFsyLDQsIllbMV0iXSxbMyw0LCJXWzFdIl0sWzAsMSwicl8xIl0sWzAsMiwicl8yIl0sWzIsMCwiY18yIl0sWzMsMCwiY18zIl0sWzQsMywiWVsxXSJdLFswLDEsInUiXSxbMSwyLCJ2Il0sWzIsMywidyJdLFs0LDUsIngiXSxbNSw2LCJ5Il0sWzYsNywieiJdLFswLDQsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSw1LCJhIl0sWzUsOCwiYiJdLFsyLDYsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs2LDksIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFs5LDExLCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOCwxMCwiYyJdLFsxMCwxMSwidlsxXSIsMCx7ImNvbG91ciI6WzM1MiwxMDAsNjBdfSxbMzUyLDEwMCw2MCwxXV0sWzgsOSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOSwxNiwiYyJdLFs3LDE2LCJ1WzFdIiwwLHsiY29sb3VyIjpbMzUyLDEwMCw2MF19LFszNTIsMTAwLDYwLDFdXV0=
+\begin{tikzcd}
+&& {c_2} & {c_3} \\
+{r_1} & X & Y & W & {X[1]} \\
+{r_2} & X & Z & R & {X[1]} \\
+&& S & S & {Y[1]} \\
+&& {Y[1]} & {W[1]}
+\arrow["u", from=2-2, to=2-3]
+\arrow[equals, from=2-2, to=3-2]
+\arrow["v", from=2-3, to=2-4]
+\arrow["a", from=2-3, to=3-3]
+\arrow["w", from=2-4, to=2-5]
+\arrow[dashed, from=2-4, to=3-4]
+\arrow[equals, from=2-5, to=3-5]
+\arrow["x", from=3-2, to=3-3]
+\arrow["y", from=3-3, to=3-4]
+\arrow["b", from=3-3, to=4-3]
+\arrow["z", from=3-4, to=3-5]
+\arrow[dashed, from=3-4, to=4-4]
+\arrow["{u[1]}", color={red}, from=3-5, to=4-5]
+\arrow[equals, from=4-3, to=4-4]
+\arrow["c", from=4-3, to=5-3]
+\arrow["c", from=4-4, to=4-5]
+\arrow[dashed, from=4-4, to=5-4]
+\arrow["{v[1]}", color={red}, from=5-3, to=5-4]
+\end{tikzcd}
+\end{document}

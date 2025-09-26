@@ -1,0 +1,24 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMSwiWCJdLFsyLDEsIllcXG9wbHVzIEkiXSxbMywxLCJaIFxcb3BsdXMgSSJdLFs0LDEsIlxcLCJdLFsxLDIsIlgiXSxbMiwyLCJZIl0sWzIsMCwiSSJdLFszLDIsIloiXSxbNCwyLCJcXCwiXSxbMywwLCJJIl0sWzAsMiwiXFwsIl0sWzUsMiwiXFwsIl0sWzAsMSwiXFxiaW5vbSBmaSJdLFsxLDIsIlxcYmlub20ge2cgXFwgMH17YyBcXCAxfSJdLFsyLDMsIlxcZGVsdGEnJyJdLFswLDQsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNV0sWzEsNSwiKDEsMCkiXSxbNiwxLCJcXGJpbm9tIDAxIl0sWzUsNywiZyJdLFs3LDgsIlxcZGVsdGEiXSxbNiw5LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDIsIlxcYmlub20gMDEiXSxbMiw3LCIoMSwwKSJdXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+\&\& I \& I \\
+\& X \& {Y\oplus I} \& {Z \oplus I} \& {\,} \\
+{\,} \& X \& Y \& Z \& {\,} \& {\,}
+\arrow[equals, from=1-3, to=1-4]
+\arrow["{\binom 01}", from=1-3, to=2-3]
+\arrow["{\binom 01}", from=1-4, to=2-4]
+\arrow["{\binom fi}", from=2-2, to=2-3]
+\arrow[equals, from=2-2, to=3-2]
+\arrow["{\binom {g \ 0}{c \ 1}}", from=2-3, to=2-4]
+\arrow["{(1,0)}", from=2-3, to=3-3]
+\arrow["{\delta''}", from=2-4, to=2-5]
+\arrow["{(1,0)}", from=2-4, to=3-4]
+\arrow[from=3-2, to=3-3]
+\arrow["g", from=3-3, to=3-4]
+\arrow["\delta", from=3-4, to=3-5]
+\end{tikzcd}
+\end{document}

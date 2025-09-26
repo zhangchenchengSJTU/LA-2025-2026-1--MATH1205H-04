@@ -1,0 +1,45 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjYsWzUsMSwiXFxidWxsZXQiXSxbNiwxLCJcXGJ1bGxldCJdLFs3LDEsIlxcYnVsbGV0Il0sWzcsMiwiXFxidWxsZXQiXSxbNSwyLCJcXGJ1bGxldCJdLFs2LDIsIlxcYnVsbGV0Il0sWzUsMywiXFxidWxsZXQiXSxbNiwzLCJcXGJ1bGxldCJdLFs3LDMsIlxcYnVsbGV0Il0sWzcsMCwiMCJdLFs0LDEsIjAiXSxbNCwyLCIwIl0sWzQsMywiMCJdLFswLDMsIjAiXSxbMSwzLCJcXGJ1bGxldCJdLFsyLDMsIlxcYnVsbGV0Il0sWzMsMywiXFxidWxsZXQiXSxbMSwwLCIwIl0sWzIsMCwiMCJdLFszLDAsIjAiXSxbMSwxLCJcXGJ1bGxldCJdLFsxLDIsIlxcYnVsbGV0Il0sWzIsMSwiXFxidWxsZXQiXSxbMiwyLCJcXGJ1bGxldCJdLFszLDEsIlxcYnVsbGV0Il0sWzMsMiwiXFxidWxsZXQiXSxbMCwxXSxbMSwyXSxbMiwzXSxbNCw1XSxbNSwzXSxbMSw1XSxbNiw3XSxbNyw4XSxbMyw4XSxbNSw3XSxbOSwyXSxbMTAsMF0sWzExLDRdLFsxMiw2XSxbMCw0LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbNCw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMTMsMTRdLFsxNCwxNV0sWzE1LDE2XSxbMTcsMjBdLFsyMCwyMV0sWzIxLDE0XSxbMTgsMjJdLFsyMiwyM10sWzIzLDE1XSxbMTksMjRdLFsyNCwyNV0sWzI1LDE2XSxbMjEsMjNdLFsyMywyNV0sWzIwLDIyLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjIsMjQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==
+\begin{tikzcd}
+	& 0 & 0 & 0 &&&& 0 \\
+	& \bullet & \bullet & \bullet & 0 & \bullet & \bullet & \bullet \\
+	& \bullet & \bullet & \bullet & 0 & \bullet & \bullet & \bullet \\
+	0 & \bullet & \bullet & \bullet & 0 & \bullet & \bullet & \bullet
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=1-8, to=2-8]
+	\arrow[dashed, from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[dashed, from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=3-4]
+	\arrow[from=2-5, to=2-6]
+	\arrow[from=2-6, to=2-7]
+	\arrow[dashed, from=2-6, to=3-6]
+	\arrow[from=2-7, to=2-8]
+	\arrow[from=2-7, to=3-7]
+	\arrow[from=2-8, to=3-8]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-4, to=4-4]
+	\arrow[from=3-5, to=3-6]
+	\arrow[from=3-6, to=3-7]
+	\arrow[dashed, from=3-6, to=4-6]
+	\arrow[from=3-7, to=3-8]
+	\arrow[from=3-7, to=4-7]
+	\arrow[from=3-8, to=4-8]
+	\arrow[from=4-1, to=4-2]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-3, to=4-4]
+	\arrow[from=4-5, to=4-6]
+	\arrow[from=4-6, to=4-7]
+	\arrow[from=4-7, to=4-8]
+\end{tikzcd}
+\end{document}

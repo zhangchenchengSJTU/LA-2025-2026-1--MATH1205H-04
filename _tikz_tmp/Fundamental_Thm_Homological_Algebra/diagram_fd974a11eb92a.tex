@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjIsWzMsNCwiXFxib3hlZHtFXzB9Il0sWzEsNCwiXFxib3hlZHtcXHRleHR75YidfX0iXSxbMSwzLCJFXntwLTJ9Il0sWzIsMywiWV57cC0xfSJdLFszLDMsIlhee3AtMX0iXSxbNCwyLCJZXnAgIl0sWzMsMiwiWF57cH0iXSxbMiwyLCJZXnAgIl0sWzEsMiwiRV57cC0xfSJdLFsxLDEsIkVecCJdLFsyLDEsIllee3ArMX0iXSxbMywxLCJYXntwKzF9Il0sWzQsMSwiWV57cCsxfSJdLFs0LDAsIllee3ArMn0iXSxbMywwLCJYXntwKzJ9Il0sWzIsMCwiWV57cCsyfSJdLFsxLDAsIkVee3ArMX0iXSxbNCwzLCJZXntwLTF9Il0sWzAsMCwiWF57cCsyfVxcb3BsdXMgWV57cCsxfSJdLFswLDEsIlhee3ArMX1cXG9wbHVzIFlee3B9Il0sWzAsMiwiWF57cH1cXG9wbHVzIFlee3AtMX0iXSxbMCwzLCJYXntwLTF9XFxvcGx1cyBZXntwLTJ9Il0sWzQsNl0sWzgsMywiXFxzdXBzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwxMV0sWzUsMTJdLFsxMiwxM10sWzExLDE0XSxbMTYsMTAsIlxcc3Vwc2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMTcsNV0sWzIxLDIwLCJcXGJpbm9tey1kX1ggXFwgMH17XFwgXFwgXFwgZlxcIFxcIFxcIGRfWX0iXSxbMjAsMTksIlxcYmlub217LWRfWCBcXCAwfXtcXCBcXCBcXCBmXFwgXFwgXFwgZF9ZfSJdLFsxOSwxOCwiXFxiaW5vbXstZF9YIFxcIDB9e1xcIFxcIFxcIGZcXCBcXCBcXCBkX1l9Il0sWzE4LDE2LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxOSw5LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMCw4LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyMSwyLCIiLDIseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}
+	{X^{p+2}\oplus Y^{p+1}} & {E^{p+1}} & {Y^{p+2}} & {X^{p+2}} & {Y^{p+2}} \\
+	{X^{p+1}\oplus Y^{p}} & {E^p} & {Y^{p+1}} & {X^{p+1}} & {Y^{p+1}} \\
+	{X^{p}\oplus Y^{p-1}} & {E^{p-1}} & {Y^p } & {X^{p}} & {Y^p } \\
+	{X^{p-1}\oplus Y^{p-2}} & {E^{p-2}} & {Y^{p-1}} & {X^{p-1}} & {Y^{p-1}} \\
+	& {\boxed{\text{初}}} && {\boxed{E_0}}
+	\arrow[equals, from=1-1, to=1-2]
+	\arrow["\supset"{marking, allow upside down}, dotted, no head, from=1-2, to=2-3]
+	\arrow["{\binom{-d_X \ 0}{\ \ \ f\ \ \ d_Y}}", from=2-1, to=1-1]
+	\arrow[equals, from=2-1, to=2-2]
+	\arrow["\supset"{marking, allow upside down}, dotted, no head, from=2-2, to=3-3]
+	\arrow[from=2-4, to=1-4]
+	\arrow[from=2-5, to=1-5]
+	\arrow["{\binom{-d_X \ 0}{\ \ \ f\ \ \ d_Y}}", from=3-1, to=2-1]
+	\arrow[equals, from=3-1, to=3-2]
+	\arrow["\supset"{marking, allow upside down}, dotted, no head, from=3-2, to=4-3]
+	\arrow[from=3-4, to=2-4]
+	\arrow[from=3-5, to=2-5]
+	\arrow["{\binom{-d_X \ 0}{\ \ \ f\ \ \ d_Y}}", from=4-1, to=3-1]
+	\arrow[equals, from=4-1, to=4-2]
+	\arrow[from=4-4, to=3-4]
+	\arrow[from=4-5, to=3-5]
+\end{tikzcd}
+\end{document}

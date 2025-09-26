@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXG1hdGhjYWwgQyJdLFsyLDAsIlxcbWF0aGNhbCBEIl0sWzQsMCwiXFxtYXRoY2FsIEUiXSxbMCwxLCJGXzIiLDFdLFsxLDIsIkdfMiIsMV0sWzAsMSwiRl8xIiwwLHsib2Zmc2V0IjotMywiY3VydmUiOi0zfV0sWzEsMiwiR18xIiwwLHsib2Zmc2V0IjotMywiY3VydmUiOi0zfV0sWzAsMSwiRl8zIiwyLHsib2Zmc2V0IjozLCJjdXJ2ZSI6M31dLFsxLDIsIkdfMyIsMix7Im9mZnNldCI6MywiY3VydmUiOjN9XSxbNSwzLCJcXHRoZXRhXzEiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzMsNywiXFx0aGV0YV8yIiwwLHsic2hvcnRlbiI6eyJzb3VyY2UiOjIwLCJ0YXJnZXQiOjIwfX1dLFs2LDQsIlxcdGF1XzEiLDAseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9fV0sWzQsOCwiXFx0YXVfMiIsMCx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH19XV0=
+\begin{tikzcd}[ampersand replacement=\&]
+{\mathcal C} \&\& {\mathcal D} \&\& {\mathcal E}
+\arrow[""{name=0, anchor=center, inner sep=0}, "{F_2}"{description}, from=1-1, to=1-3]
+\arrow[""{name=1, anchor=center, inner sep=0}, "{F_1}", shift left=3, curve={height=-18pt}, from=1-1, to=1-3]
+\arrow[""{name=2, anchor=center, inner sep=0}, "{F_3}"', shift right=3, curve={height=18pt}, from=1-1, to=1-3]
+\arrow[""{name=3, anchor=center, inner sep=0}, "{G_2}"{description}, from=1-3, to=1-5]
+\arrow[""{name=4, anchor=center, inner sep=0}, "{G_1}", shift left=3, curve={height=-18pt}, from=1-3, to=1-5]
+\arrow[""{name=5, anchor=center, inner sep=0}, "{G_3}"', shift right=3, curve={height=18pt}, from=1-3, to=1-5]
+\arrow["{\theta_1}", shorten <=3pt, shorten >=3pt, Rightarrow, from=1, to=0]
+\arrow["{\theta_2}", shorten <=3pt, shorten >=3pt, Rightarrow, from=0, to=2]
+\arrow["{\tau_1}", shorten <=3pt, shorten >=3pt, Rightarrow, from=4, to=3]
+\arrow["{\tau_2}", shorten <=3pt, shorten >=3pt, Rightarrow, from=3, to=5]
+\end{tikzcd},
+\end{document}

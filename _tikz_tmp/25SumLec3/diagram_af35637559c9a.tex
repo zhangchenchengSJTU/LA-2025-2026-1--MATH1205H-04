@@ -1,0 +1,31 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTUsWzAsMSwiTSJdLFsxLDAsIlEiXSxbMSwxLCJcXHdpZGV0aWxkZSBQIl0sWzEsMiwiUCJdLFszLDEsIk0iXSxbMywwLCJNIl0sWzAsMCwiTSJdLFswLDIsIk0iXSxbMywyLCJNIl0sWzQsMCwiWSJdLFs1LDAsIkNfMCJdLFs1LDEsIkNfMiJdLFs0LDEsIlxcd2lkZXRpbGRlIFgiXSxbNCwyLCJYIl0sWzUsMiwiQ18zIl0sWzAsMiwiXFx3aWRldGlsZGUgcCJdLFsxLDJdLFsyLDNdLFs2LDEsInEiXSxbNywzLCJwIl0sWzUsNCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw4LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFswLDcsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsOSwiaiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzksMTAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs0LDEyLCJcXHdpZGV0aWxkZSBpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMTIsMTEsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs5LDEyXSxbMTAsMTFdLFsxMiwxM10sWzgsMTMsImkiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxMywxNCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzExLDE0XSxbNiwwLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	M \& Q \&\& M \& Y \& {C_0} \\
+	M \& {\widetilde P} \&\& M \& {\widetilde X} \& {C_2} \\
+	M \& P \&\& M \& X \& {C_3}
+	\arrow["q", from=1-1, to=1-2]
+	\arrow[equals, from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["j", hook, from=1-4, to=1-5]
+	\arrow[equals, from=1-4, to=2-4]
+	\arrow[two heads, from=1-5, to=1-6]
+	\arrow[from=1-5, to=2-5]
+	\arrow[from=1-6, to=2-6]
+	\arrow["{\widetilde p}", from=2-1, to=2-2]
+	\arrow[equals, from=2-1, to=3-1]
+	\arrow[from=2-2, to=3-2]
+	\arrow["{\widetilde i}", hook, from=2-4, to=2-5]
+	\arrow[equals, from=2-4, to=3-4]
+	\arrow[two heads, from=2-5, to=2-6]
+	\arrow[from=2-5, to=3-5]
+	\arrow[from=2-6, to=3-6]
+	\arrow["p", from=3-1, to=3-2]
+	\arrow["i", hook, from=3-4, to=3-5]
+	\arrow[two heads, from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

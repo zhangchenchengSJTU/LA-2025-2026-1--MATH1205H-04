@@ -1,0 +1,15 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools, latexcolors}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMSwxLCIoKFxcUGhpIEYpKFgnKSkoWSkiXSxbMywxLCIoKFxcUGhpIEcpKFgnKSkoWSkiXSxbMSwwLCIoKFxcUGhpIEYpKFgnKSkoWScpIl0sWzMsMCwiKChcXFBoaSBHKShYJykpKFknKSJdLFswLDEsIlxcLCJdLFs0LDEsIlxcLCJdLFswLDEsIlxcYmV0YSBfe1gnfShZKSIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDAsImdeXFxhc3QiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMywxLCJnXlxcYXN0Il0sWzIsMywiXFxiZXRhIF97WCd9KFknKSJdXQ==
+\begin{tikzcd}
+	& {((\Phi F)(X'))(Y')} && {((\Phi G)(X'))(Y')} \\
+	{\,} & {((\Phi F)(X'))(Y)} && {((\Phi G)(X'))(Y)} & {\,}
+	\arrow["{\beta _{X'}(Y')}", from=1-2, to=1-4]
+	\arrow["{g^\ast}", dashed, from=1-2, to=2-2]
+	\arrow["{g^\ast}", from=1-4, to=2-4]
+	\arrow["{\beta _{X'}(Y)}", dashed, from=2-2, to=2-4]
+\end{tikzcd}
+\end{document}

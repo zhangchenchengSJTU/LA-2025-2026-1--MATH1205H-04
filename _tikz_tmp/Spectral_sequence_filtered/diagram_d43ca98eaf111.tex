@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMSwiRl4xRyJdLFsyLDEsIihGRyleMSJdLFsyLDAsIkdeMUYiXSxbMiwyLCJHRl4xIl0sWzMsMSwiRkdeMSJdLFs0LDEsIkZeMkciXSxbNSwxLCIoRkcpXjIiXSxbNiwxLCJGXjFHXjEiXSxbNSwwLCJHXjFGXjEiXSxbNSwyLCJHRl4yIl0sWzAsMSwiMCJdLFs3LDEsIlxcY2RvdHMgIl0sWzEwLDBdLFswLDFdLFsxLDRdLFs0LDVdLFs1LDZdLFs2LDddLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzEsMywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzgsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw5LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNywxMV1d
+\begin{tikzcd}
+	&& {G^1F} &&& {G^1F^1} \\
+	0 & {F^1G} & {(FG)^1} & {FG^1} & {F^2G} & {(FG)^2} & {F^1G^1} & {\cdots } \\
+	&& {GF^1} &&& {GF^2}
+	\arrow[hook, from=1-3, to=2-3]
+	\arrow[hook, from=1-6, to=2-6]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[two heads, from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-5, to=2-6]
+	\arrow[from=2-6, to=2-7]
+	\arrow[two heads, from=2-6, to=3-6]
+	\arrow[from=2-7, to=2-8]
+\end{tikzcd}
+\end{document}

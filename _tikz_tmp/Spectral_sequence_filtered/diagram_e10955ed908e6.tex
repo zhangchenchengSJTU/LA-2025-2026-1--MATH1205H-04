@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzEsMSwi4oiQX3tzK3QgPSBwK3F9XntzIFxcZ2VxIHF9IFhee3MsdH0iXSxbMCwwLCLiiJBfe3MrdCA9IHArcX1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzIsMiwi4oiQX3tzK3QgPSBwK3F9XntzIFxcZ2VxIHErMX0gWF57cyx0fSJdLFsxLDAsIuKIkF97cyt0ID0gcCtxKzF9XntzIFxcZ2VxIHF9IFhee3MsdH0iXSxbMSwyLCLiiJBfe3MrdCA9IHArcS0xfV57cyBcXGdlcSBxfSBYXntzLHR9Il0sWzIsMSwi4oiQX3tzK3QgPSBwK3ErMX1ee3MgXFxnZXEgcSsxfSBYXntzLHR9Il0sWzIsMCwi4oiQX3tzK3QgPSBwK3ErMn1ee3MgXFxnZXEgcSsxfSBYXntzLHR9Il0sWzAsMSwi4oiQX3tzK3QgPSBwK3EtMX1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzAsMiwi4oiQX3tzK3QgPSBwK3EtMn1ee3MgXFxnZXEgcS0xfSBYXntzLHR9Il0sWzEsMywiRl5xKFxcbWF0aHJte1RvdH0oWCkpIl0sWzAsMywiRl57cS0xfShcXG1hdGhybXtUb3R9KFgpKSJdLFsyLDMsIkZee3ErMX0oXFxtYXRocm17VG90fShYKSkiXSxbOCw3XSxbNywxXSxbNCwwXSxbMCwzXSxbMiw1XSxbNSw2XSxbMCwxLCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMCwiXFxzdWJzZXQiLDMseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDMsIlxcc3Vic2V0IiwzLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCw3LCJcXHN1YnNldCIsMyx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEwLDksIlxcc3Vwc2V0ZXEgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzksMTEsIlxcc3Vwc2V0ZXEgIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\begin{tikzcd}
+	{∐_{s+t = p+q}^{s \geq q-1} X^{s,t}} & {∐_{s+t = p+q+1}^{s \geq q} X^{s,t}} & {∐_{s+t = p+q+2}^{s \geq q+1} X^{s,t}} \\
+	{∐_{s+t = p+q-1}^{s \geq q-1} X^{s,t}} & {∐_{s+t = p+q}^{s \geq q} X^{s,t}} & {∐_{s+t = p+q+1}^{s \geq q+1} X^{s,t}} \\
+	{∐_{s+t = p+q-2}^{s \geq q-1} X^{s,t}} & {∐_{s+t = p+q-1}^{s \geq q} X^{s,t}} & {∐_{s+t = p+q}^{s \geq q+1} X^{s,t}} \\
+	{F^{q-1}(\mathrm{Tot}(X))} & {F^q(\mathrm{Tot}(X))} & {F^{q+1}(\mathrm{Tot}(X))}
+	\arrow[from=2-1, to=1-1]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=2-2, to=1-1]
+	\arrow[from=2-2, to=1-2]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=2-3, to=1-2]
+	\arrow[from=2-3, to=1-3]
+	\arrow[from=3-1, to=2-1]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=3-2, to=2-1]
+	\arrow[from=3-2, to=2-2]
+	\arrow["\subset"{marking, allow upside down}, dotted, no head, from=3-3, to=2-2]
+	\arrow[from=3-3, to=2-3]
+	\arrow["{\supseteq }"{description}, draw=none, from=4-1, to=4-2]
+	\arrow["{\supseteq }"{description}, draw=none, from=4-2, to=4-3]
+\end{tikzcd}
+\end{document}

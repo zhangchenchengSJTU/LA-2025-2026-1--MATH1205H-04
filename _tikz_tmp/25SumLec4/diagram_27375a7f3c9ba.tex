@@ -1,0 +1,28 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTEsWzAsMCwiXFxjb3Byb2QgX3tJX2l9TSJdLFsyLDAsIlxcY29wcm9kIF97SV9pfSBcXGNvcHJvZCBfe0pfaX1NIl0sWzIsMSwiXFxjb3Byb2QgX3tJfSBcXGNvcHJvZCBfe0pfaX1NIl0sWzMsMiwiXFxjb3Byb2QgX3tKX2l9TSJdLFsyLDIsIlxccHJvZCBfe0l9IFxcY29wcm9kIF97Sl9pfU0iXSxbMCwxLCJcXGNvcHJvZCBfe0l9TSJdLFsyLDMsIlxccHJvZCBfe0l9IFxcY29wcm9kIF97Sn1NIl0sWzMsMywiXFxjb3Byb2QgX3tKfU0iXSxbMCw0LCJcXHRleHR7dmFyaWFibGVzfSJdLFsyLDQsIlxcdGV4dHtlcXVhdGlvbnN9Il0sWzMsNCwiXFx0ZXh0e3N1bXN9Il0sWzAsMSwiXFxjZG90IFxcbWF0aGJmIFJfaSJdLFsyLDMsIlxcY29wcm9kX3tKXzB9XFxTaWdtYSIsMCx7ImN1cnZlIjotMiwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzEsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNCwzLCJcXGNvcHJvZF97Sl9pfVxcd2lkZXRpbGRlIHtcXFNpZ21hfSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDQsIlxcY29wcm9kIF97Sl9pfVxcc2lnbWEiLDJdLFswLDUsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzUsMiwiXFx2YXJpbmpsaW0gX2koXFxjZG90IFxcbWF0aGJmIFJfaSkiXSxbNSw0LCIiLDEseyJjdXJ2ZSI6Mn1dLFszLDcsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNiw3LCJcXGNvcHJvZF97Sn1cXHdpZGV0aWxkZSB7XFxTaWdtYX0iLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbNSw2LCIiLDAseyJjdXJ2ZSI6NH1dLFs4LDldLFs5LDEwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=
+\begin{tikzcd}
+	{\coprod _{I_i}M} && {\coprod _{I_i} \coprod _{J_i}M} \\
+	{\coprod _{I}M} && {\coprod _{I} \coprod _{J_i}M} \\
+	&& {\prod _{I} \coprod _{J_i}M} & {\coprod _{J_i}M} \\
+	&& {\prod _{I} \coprod _{J}M} & {\coprod _{J}M} \\
+	{\text{variables}} && {\text{equations}} & {\text{sums}}
+	\arrow["{\cdot \mathbf R_i}", from=1-1, to=1-3]
+	\arrow[hook, from=1-1, to=2-1]
+	\arrow[hook, from=1-3, to=2-3]
+	\arrow["{\varinjlim _i(\cdot \mathbf R_i)}", from=2-1, to=2-3]
+	\arrow[curve={height=12pt}, from=2-1, to=3-3]
+	\arrow[curve={height=24pt}, from=2-1, to=4-3]
+	\arrow["{\coprod _{J_i}\sigma}"', from=2-3, to=3-3]
+	\arrow["{\coprod_{J_0}\Sigma}", curve={height=-12pt}, two heads, from=2-3, to=3-4]
+	\arrow["{\coprod_{J_i}\widetilde {\Sigma}}", two heads, from=3-3, to=3-4]
+	\arrow[hook, from=3-3, to=4-3]
+	\arrow[hook, from=3-4, to=4-4]
+	\arrow["{\coprod_{J}\widetilde {\Sigma}}", two heads, from=4-3, to=4-4]
+	\arrow[from=5-1, to=5-3]
+	\arrow[two heads, from=5-3, to=5-4]
+\end{tikzcd}
+\end{document}

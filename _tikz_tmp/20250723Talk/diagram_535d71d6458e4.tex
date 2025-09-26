@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJcXHtcXGNvcHJvZF9wIFhecCBcXG90aW1lcyBZXntuLXB9IFxcdG8gWl5uXFx9X3tuIFxcaW4gXFxtYXRoYmIgWn0iXSxbMCwwLCJcXG1hdGhiZntMSFN9IFxcbmkgZiJdLFsxLDEsIlxce1hecCBcXG90aW1lcyBZXntuLXB9IFxcdG8gWl5uXFx9X3twLCBuIFxcaW5cXG1hdGhiYiBafSJdLFsxLDIsIlxce1hecCBcXHRvIChZXntuLXB9ICwgWl5uKVxcfV97cCwgbiBcXGluXFxtYXRoYmIgWn0iXSxbMSwzLCJcXHtYXnAgXFx0byBcXHByb2RfbiAoWV57bi1wfSAsIFpebilcXH1fe3AgXFxpblxcbWF0aGJiIFp9Il0sWzAsMywiXFxtYXRoYmZ7UkhTfVxcbmkgZyJdLFswLDEsIlxcLCJdLFswLDIsIlxcLCJdLFs1LDQsIiIsMCx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNiwyLCJcXHNpbSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwic2hvcnRlbiI6eyJzb3VyY2UiOjQwLCJ0YXJnZXQiOjIwfSwibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNywzLCJcXHNpbSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo2MCwic2hvcnRlbiI6eyJzb3VyY2UiOjQwLCJ0YXJnZXQiOjIwfSwibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&,column sep=small]
+	{\mathbf{LHS} \ni f} \& {\{\coprod_p X^p \otimes Y^{n-p} \to Z^n\}_{n \in \mathbb Z}} \\
+	{\,} \& {\{X^p \otimes Y^{n-p} \to Z^n\}_{p, n \in\mathbb Z}} \\
+	{\,} \& {\{X^p \to (Y^{n-p} , Z^n)\}_{p, n \in\mathbb Z}} \\
+	{\mathbf{RHS}\ni g} \& {\{X^p \to \prod_n (Y^{n-p} , Z^n)\}_{p \in\mathbb Z}}
+	\arrow[equals, from=1-1, to=1-2]
+	\arrow["\sim"{pos=0.6}, between={0.4}{0.8}, equals, from=2-1, to=2-2]
+	\arrow["\sim"{pos=0.6}, between={0.4}{0.8}, equals, from=3-1, to=3-2]
+	\arrow[equals, from=4-1, to=4-2]
+\end{tikzcd}
+\end{document}

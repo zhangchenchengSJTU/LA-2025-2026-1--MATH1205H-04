@@ -1,0 +1,22 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMSwyLCJQIl0sWzQsMiwiRiJdLFszLDEsIlBfaSAiXSxbMiwxLCJQX2kgXFxvcGx1cyBRX2kiXSxbMCwyLCJcXCwiXSxbNCwwLCJQX2oiXSxbMSwwLCJQX2ogXFxvcGx1cyBRX2oiXSxbMCwxLCJcXHBpICIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDEsImZfaSIsMl0sWzMsMiwiKDEsMCkiXSxbMywwLCJnX2kiLDJdLFsyLDUsIlxcdmFycGhpX3tqLGl9Il0sWzYsNSwiKDEsMCkiXSxbNSwxLCJmX2oiXSxbNiwwLCJnX2ogIiwyXSxbMyw2LCJcXHBzaSBfe2osaX0iLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\begin{tikzcd}
+	& {P_j \oplus Q_j} &&& {P_j} \\
+	&& {P_i \oplus Q_i} & {P_i } \\
+	{\,} & P &&& F
+	\arrow["{(1,0)}", from=1-2, to=1-5]
+	\arrow["{g_j }"', from=1-2, to=3-2]
+	\arrow["{f_j}", from=1-5, to=3-5]
+	\arrow["{\psi _{j,i}}"', dashed, from=2-3, to=1-2]
+	\arrow["{(1,0)}", from=2-3, to=2-4]
+	\arrow["{g_i}"', from=2-3, to=3-2]
+	\arrow["{\varphi_{j,i}}", from=2-4, to=1-5]
+	\arrow["{f_i}"', from=2-4, to=3-5]
+	\arrow["{\pi }", two heads, from=3-2, to=3-5]
+\end{tikzcd}
+\end{document}

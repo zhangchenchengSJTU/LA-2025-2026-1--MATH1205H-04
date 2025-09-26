@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJYXnAgXFxvdGltZXMgWV5xIl0sWzMsMCwiWV5xIFxcb3RpbWVzIFhecCJdLFswLDIsIlhee3AgKzF9IFxcb3RpbWVzIFlecVxcXFwgXFxvcGx1cyBcXFxcIFhecCBcXG90aW1lcyBZXntxKzF9Il0sWzMsMiwiWV5xIFxcb3RpbWVzIFhee3ArMX1cXFxcIFxcb3BsdXMgXFxcXCBZXntxKzF9IFxcb3RpbWVzIFhecCJdLFswLDEsIlxcdmFyZXBzaWxvbiAocCxxKVxcY2RvdCBcXHRhdSJdLFswLDIsImQiLDJdLFsxLDMsImQiXSxbMiwzLCJcXHZhcmVwc2lsb24gKHArMSxxKVxcY2RvdCBcXHRhdSIsMCx7Im9mZnNldCI6LTV9XSxbMiwzLCJcXHZhcmVwc2lsb24gKHAscSsxKVxcY2RvdCBcXHRhdSIsMix7Im9mZnNldCI6NX1dLFs3LDgsIlxcb3BsdXMiLDMseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}[ampersand replacement=\&,column sep=small]
+	{X^p \otimes Y^q} \&\&\& {Y^q \otimes X^p} \\
+	\\
+	\begin{array}{c} X^{p +1} \otimes Y^q\\ \oplus \\ X^p \otimes Y^{q+1} \end{array} \&\&\& \begin{array}{c} Y^q \otimes X^{p+1}\\ \oplus \\ Y^{q+1} \otimes X^p \end{array}
+	\arrow["{\varepsilon (p,q)\cdot \tau}", from=1-1, to=1-4]
+	\arrow["d"', from=1-1, to=3-1]
+	\arrow["d", from=1-4, to=3-4]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{\varepsilon (p+1,q)\cdot \tau}", shift left=5, from=3-1, to=3-4]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\varepsilon (p,q+1)\cdot \tau}"', shift right=5, from=3-1, to=3-4]
+	\arrow["\oplus"{marking, allow upside down}, draw=none, from=0, to=1]
+\end{tikzcd}
+\end{document}

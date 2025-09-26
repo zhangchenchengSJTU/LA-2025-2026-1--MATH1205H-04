@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+   % https://q.uiver.app/#q=WzAsMTIsWzEsMCwiSF57cC0xfShFKSJdLFsyLDAsIkhee3B9KFgpIl0sWzMsMCwiSF57cH0oWSkiXSxbNCwwLCJIXnAoRSkiXSxbMSwxLCJIXntwLTF9KEUpIl0sWzQsMSwiSF5wKEUpIl0sWzIsMSwiXFxtYXRocm17Y29rfV57cC0xfSJdLFszLDEsIlxca2VyXntwKzF9Il0sWzAsMCwiXFxjZG90cyAiXSxbMCwxLCJcXGNkb3RzICJdLFs1LDAsIlxcY2RvdHMgIl0sWzUsMSwiXFxjZG90cyAiXSxbMCwxXSxbMSwyXSxbMiwzXSxbNiw3XSxbNyw1XSxbNCw2XSxbOCwwXSxbOSw0XSxbMCw0LCIiLDMseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDUsIiIsMyx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsMTFdLFszLDEwXV0=
+\begin{tikzcd}
+	{\cdots } & {H^{p-1}(E)} & {H^{p}(X)} & {H^{p}(Y)} & {H^p(E)} & {\cdots } \\
+	{\cdots } & {H^{p-1}(E)} & {\mathrm{cok}^{p-1}} & {\ker^{p+1}} & {H^p(E)} & {\cdots }
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[equals, from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-5, to=1-6]
+	\arrow[equals, from=1-5, to=2-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=2-5, to=2-6]
+\end{tikzcd}
+   \end{document}

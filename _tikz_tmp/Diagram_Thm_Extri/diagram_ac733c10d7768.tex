@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzIsMCwiWiJdLFswLDAsIlgiXSxbMSwwLCJZIl0sWzQsMCwiXFwsIl0sWzIsMiwiVV9YIl0sWzQsMiwiXFwsIl0sWzEsMiwiVl9YIl0sWzAsMiwiWCJdLFsxLDEsIk0iLFsyLDEwMCw2MCwxXV0sWzMsMSwiTiIsWzIzNywxMDAsNjAsMV1dLFsxLDIsImYiXSxbMiwwLCJnIl0sWzAsMywiXFxldGEiXSxbNCw1LCJcXGRlbHRhX1giLDJdLFs2LDQsInVfWCIsMl0sWzEsNywiIiwyLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNyw2LCJ2X1giLDJdLFs4LDAsInMiLDIseyJjb2xvdXIiOlsyLDEwMCw2MF19LFsyLDEwMCw2MCwxXV0sWzgsNCwiYSIsMix7ImNvbG91ciI6WzIsMTAwLDYwXX0sWzIsMTAwLDYwLDFdXSxbOSwwLCJ0IiwwLHsiY29sb3VyIjpbMjM3LDEwMCw2MF19LFsyMzcsMTAwLDYwLDFdXSxbOSw0LCJiIiwwLHsiY29sb3VyIjpbMjM3LDEwMCw2MF19LFsyMzcsMTAwLDYwLDFdXSxbOSwwLCJcXG1hdGhzZntURmlifSIsMix7ImNvbG91ciI6WzIzNywxMDAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19LFsyMzcsMTAwLDYwLDFdXSxbOCwwLCJcXG1hdGhzZntURmlifSIsMCx7ImNvbG91ciI6WzIsMTAwLDYwXSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fSxbMiwxMDAsNjAsMV1dXQ==
+\begin{tikzcd}
+X & Y & Z && {\,} \\
+& \color{rgb,255:red,255;green,58;blue,51}{M} && \color{rgb,255:red,51;green,61;blue,255}{N} \\
+X & {V_X} & {U_X} && {\,}
+\arrow["f", from=1-1, to=1-2]
+\arrow[equals, from=1-1, to=3-1]
+\arrow["g", from=1-2, to=1-3]
+\arrow["\eta", from=1-3, to=1-5]
+\arrow["s"', color={rgb,255:red,255;green,58;blue,51}, from=2-2, to=1-3]
+\arrow["{\mathsf{TFib}}", color={rgb,255:red,255;green,58;blue,51}, draw=none, from=2-2, to=1-3]
+\arrow["a"', color={rgb,255:red,255;green,58;blue,51}, from=2-2, to=3-3]
+\arrow["t", color={rgb,255:red,51;green,61;blue,255}, from=2-4, to=1-3]
+\arrow["{\mathsf{TFib}}"', color={rgb,255:red,51;green,61;blue,255}, draw=none, from=2-4, to=1-3]
+\arrow["b", color={rgb,255:red,51;green,61;blue,255}, from=2-4, to=3-3]
+\arrow["{v_X}"', from=3-1, to=3-2]
+\arrow["{u_X}"', from=3-2, to=3-3]
+\arrow["{\delta_X}"', from=3-3, to=3-5]
+\end{tikzcd}
+\end{document}

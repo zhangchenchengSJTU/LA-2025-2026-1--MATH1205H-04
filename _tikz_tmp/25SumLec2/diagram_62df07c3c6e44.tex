@@ -1,0 +1,22 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNyxbMiwwLCJQXntrLTF9Il0sWzIsMSwiQ157ay0xfSJdLFs0LDEsIkNeayJdLFs0LDAsIlBeayJdLFswLDEsIkNee2stMn0iXSxbMCwwLCJQXntrLTJ9Il0sWzEsMiwiQl57ay0xfShDKSJdLFswLDMsImRfUF57ay0xfSJdLFsxLDIsImRfWF57ay0xfSIsMl0sWzMsMiwiZl5rIl0sWzAsMSwiZl57ay0xfSJdLFs1LDBdLFs0LDEsImRfWF57ay0xfSJdLFs1LDRdLFszLDEsInNeayJdLFs0LDYsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFs2LDEsIiIsMix7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
+\begin{tikzcd}
+	{P^{k-2}} && {P^{k-1}} && {P^k} \\
+	{C^{k-2}} && {C^{k-1}} && {C^k} \\
+	& {B^{k-1}(C)}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow["{d_P^{k-1}}", from=1-3, to=1-5]
+	\arrow["{f^{k-1}}", from=1-3, to=2-3]
+	\arrow["{s^k}", from=1-5, to=2-3]
+	\arrow["{f^k}", from=1-5, to=2-5]
+	\arrow["{d_X^{k-1}}", from=2-1, to=2-3]
+	\arrow[two heads, from=2-1, to=3-2]
+	\arrow["{d_X^{k-1}}"', from=2-3, to=2-5]
+	\arrow[hook, from=3-2, to=2-3]
+\end{tikzcd}
+\end{document}

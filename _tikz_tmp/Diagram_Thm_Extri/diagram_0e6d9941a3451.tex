@@ -1,0 +1,30 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMCwiXFxidWxsZXQiXSxbMiwwLCJcXGJ1bGxldCJdLFs0LDAsIlxcYnVsbGV0Il0sWzAsMiwiXFxidWxsZXQiXSxbMiwyLCJcXGJ1bGxldCJdLFs0LDIsIlxcYnVsbGV0Il0sWzAsMSwiXFxidWxsZXQiXSxbNCwxLCJcXGJ1bGxldCJdLFsyLDEsIlxcYnVsbGV0Il0sWzUsMCwiXFwsIl0sWzUsMiwiXFwsIl0sWzUsMSwiXFwsIl0sWzAsMV0sWzEsMl0sWzMsNF0sWzQsNV0sWzAsNiwiXFxsYW1iZGEiXSxbNyw1LCJcXG11Il0sWzYsMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw3LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs2LDhdLFs4LDddLFsxLDgsIlxcYWxwaGEgIl0sWzgsNCwiXFxiZXRhIl0sWzIsOSwiXFxkZWx0YSJdLFs1LDEwLCJcXHZhcmVwc2lsb24gIl0sWzcsMTEsIlxcZXRhIl0sWzIzLDE3LCJcXHNxdWFyZSIsMSx7InNob3J0ZW4iOnsic291cmNlIjoyMCwidGFyZ2V0IjoyMH0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxNiwyMiwiXFxzcXVhcmUiLDEseyJzaG9ydGVuIjp7InNvdXJjZSI6MjAsInRhcmdldCI6MjB9LCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\begin{tikzcd}
+	\bullet && \bullet && \bullet & {\,} \\
+	\bullet && \bullet && \bullet & {\,} \\
+	\bullet && \bullet && \bullet & {\,}
+	\arrow[from=1-1, to=1-3]
+	\arrow[""{name=0, anchor=center, inner sep=0}, "\lambda", from=1-1, to=2-1]
+	\arrow[from=1-3, to=1-5]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{\alpha }", from=1-3, to=2-3]
+	\arrow["\delta", from=1-5, to=1-6]
+	\arrow[equals, from=1-5, to=2-5]
+	\arrow[from=2-1, to=2-3]
+	\arrow[equals, from=2-1, to=3-1]
+	\arrow[from=2-3, to=2-5]
+	\arrow[""{name=2, anchor=center, inner sep=0}, "\beta", from=2-3, to=3-3]
+	\arrow["\eta", from=2-5, to=2-6]
+	\arrow[""{name=3, anchor=center, inner sep=0}, "\mu", from=2-5, to=3-5]
+	\arrow[from=3-1, to=3-3]
+	\arrow[from=3-3, to=3-5]
+	\arrow["{\varepsilon }", from=3-5, to=3-6]
+	\arrow["\square"{description}, draw=none, from=0, to=1]
+	\arrow["\square"{description}, draw=none, from=2, to=3]
+\end{tikzcd}
+\end{document}

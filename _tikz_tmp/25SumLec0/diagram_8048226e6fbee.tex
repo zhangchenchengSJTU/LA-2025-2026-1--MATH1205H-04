@@ -1,0 +1,17 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMSwwLCJNLCJdLFsxLDEsIlxcYWxwaGEgKHIpICsgXFx2YXJwaGkgKHEpLiJdLFsyLDAsIkkiXSxbMywwLCJSIl0sWzIsMSwiUSJdLFszLDEsIk0iXSxbMCwwLCJuIFxcY2RvdCBSICsgUSJdLFswLDEsIm5yICsgcSJdLFsyLDMsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzIsNCwibiBcXGNkb3QgIiwyXSxbNCw1XSxbMyw1LCJcXGV4aXN0cyBcXGFscGhhIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsMF0sWzcsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+	{n \cdot R + Q} \& {M,} \& I \& R \\
+	{nr + q} \& {\alpha (r) + \varphi (q).} \& Q \& M
+	\arrow[from=1-1, to=1-2]
+	\arrow[hook, from=1-3, to=1-4]
+	\arrow["{n \cdot }"', from=1-3, to=2-3]
+	\arrow["{\exists \alpha}", dashed, from=1-4, to=2-4]
+	\arrow[maps to, from=2-1, to=2-2]
+	\arrow[from=2-3, to=2-4]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiMCJdLFswLDEsIjAiXSxbMSwwLCJLXntcXGNvcHJvZCAoSywgTV9cXGdhbW1hICl9Il0sWzIsMCwiUF57XFxjb3Byb2QgKEssIE1fXFxnYW1tYSApfSJdLFszLDAsIlNee1xcY29wcm9kIChLLCBNX1xcZ2FtbWEgKX0iXSxbNCwwLCIwIl0sWzEsMSwiTV9cXGdhbW1hICJdLFsyLDEsIk1fe1xcZ2FtbWEgKzF9Il0sWzMsMSwiU157XFxjb3Byb2QgKEssIE1fXFxnYW1tYSApfSJdLFs0LDEsIjAiXSxbMCwyXSxbMiwzLCJpXntcXGNvcHJvZH0iXSxbMyw0LCJwXntcXGNvcHJvZH0iXSxbNCw1XSxbMiw2LCJcXFBoaV9cXGdhbW1hICIsMl0sWzEsNl0sWzMsNywiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzYsNywiZl9cXGdhbW1hICIsMix7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyLDcsIlxcdGV4dHtQQlBPfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDgsIiIsMSx7ImxldmVsIjoyLCJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzcsOF0sWzgsOV1d
+\begin{tikzcd}[ampersand replacement=\&]
+    0 \& {K^{\coprod (K, M_\gamma )}} \& {P^{\coprod (K, M_\gamma )}} \& {S^{\coprod (K, M_\gamma )}} \& 0 \\
+    0 \& {M_\gamma } \& {M_{\gamma +1}} \& {S^{\coprod (K, M_\gamma )}} \& 0
+    \arrow[from=1-1, to=1-2]
+    \arrow["{i^{\coprod}}", from=1-2, to=1-3]
+    \arrow["{\Phi_\gamma }"', from=1-2, to=2-2]
+    \arrow["{\text{PBPO}}"{description}, draw=none, from=1-2, to=2-3]
+    \arrow["{p^{\coprod}}", from=1-3, to=1-4]
+    \arrow[dashed, from=1-3, to=2-3]
+    \arrow[from=1-4, to=1-5]
+    \arrow[equals, from=1-4, to=2-4]
+    \arrow[from=2-1, to=2-2]
+    \arrow["{f_\gamma }"', dashed, from=2-2, to=2-3]
+    \arrow[from=2-3, to=2-4]
+    \arrow[from=2-4, to=2-5]
+\end{tikzcd}
+\end{document}

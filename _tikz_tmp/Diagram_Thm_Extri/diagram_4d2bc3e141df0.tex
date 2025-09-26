@@ -1,0 +1,31 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMywzLCJCIl0sWzEsMywiXFxidWxsZXQiXSxbMiwyLCJDIl0sWzAsMSwiRCJdLFs0LDIsIlxcY29sb3J7Z3JheX1cXGJ1bGxldCJdLFszLDEsIlxcY29sb3J7Z3JheX1cXGJ1bGxldCJdLFsxLDAsIlxcY29sb3J7Z3JheX1cXGJ1bGxldCJdLFs0LDAsIlxcY29sb3J7Z3JheX1cXGJ1bGxldCJdLFsyLDEsIlAiXSxbMCwxLCJzX3sxLDJ9IiwyLHsiY3VydmUiOi0xLCJsZXZlbCI6MiwiY29sb3VyIjpbMzQ5LDEwMCw2MF19LFszNDksMTAwLDYwLDFdXSxbMiwxLCJzXzIiLDAseyJsZXZlbCI6Mn1dLFszLDEsInNfezIsM30iLDAseyJjdXJ2ZSI6MSwibGV2ZWwiOjIsImNvbG91ciI6WzM0OSwxMDAsNjBdfSxbMzQ5LDEwMCw2MCwxXV0sWzIsNSwiXFxldGFfMiIsMCx7ImNvbG91ciI6WzAsMCw2OV19LFswLDAsNjksMV1dLFszLDYsIlxcZXRhX3syLDN9IiwwLHsiY29sb3VyIjpbMCw2MCw4MF19LFswLDYwLDgwLDFdXSxbNyw0LCJ0X3sxLDJ9IiwyLHsiY3VydmUiOi0xLCJsZXZlbCI6MiwiY29sb3VyIjpbMCw2MCw4MF19LFswLDYwLDgwLDFdXSxbNyw1LCJ0XzIiLDAseyJsZXZlbCI6MiwiY29sb3VyIjpbMCwwLDY5XX0sWzAsMCw2OSwxXV0sWzcsNiwidF97MiwzfSIsMCx7ImN1cnZlIjoxLCJsZXZlbCI6MiwiY29sb3VyIjpbMCw2MCw4MF19LFswLDYwLDgwLDFdXSxbMCwyLCIiLDAseyJsZXZlbCI6Mn1dLFszLDIsIiIsMCx7ImxldmVsIjoyfV0sWzUsNCwiIiwwLHsibGV2ZWwiOjIsImNvbG91ciI6WzAsMCw2OV19XSxbNSw2LCIiLDAseyJsZXZlbCI6MiwiY29sb3VyIjpbMCwwLDY5XX1dLFswLDQsIlxcZXRhX3sxLDJ9IiwwLHsiY29sb3VyIjpbMCw2MCw4MF19LFswLDYwLDgwLDFdXSxbOCwwLCIiLDIseyJsZXZlbCI6MiwiY29sb3VyIjpbMjM2LDEwMCw2MF19XSxbOCwzLCIiLDAseyJsZXZlbCI6MiwiY29sb3VyIjpbMjM2LDEwMCw2MF19XSxbOCw1LCIiLDAseyJjb2xvdXIiOlsxMjAsNjAsNjBdfV0sWzgsNCwiIiwwLHsiY29sb3VyIjpbMTIwLDYwLDYwXX1dLFs4LDYsIiIsMCx7ImNvbG91ciI6WzEyMCw2MCw2MF19XV0=
+\begin{tikzcd}
+& {\color{gray}\bullet} &&& {\color{gray}\bullet} \\
+D && P & {\color{gray}\bullet} \\
+&& C && {\color{gray}\bullet} \\
+& \bullet && B
+\arrow["{t_{2,3}}", color={rgb,255:red,235;green,173;blue,173}, curve={height=6pt}, Rightarrow, from=1-5, to=1-2]
+\arrow["{t_2}", color={rgb,255:red,176;green,176;blue,176}, Rightarrow, from=1-5, to=2-4]
+\arrow["{t_{1,2}}"', color={rgb,255:red,235;green,173;blue,173}, curve={height=-6pt}, Rightarrow, from=1-5, to=3-5]
+\arrow["{\eta_{2,3}}", color={rgb,255:red,235;green,173;blue,173}, from=2-1, to=1-2]
+\arrow[Rightarrow, from=2-1, to=3-3]
+\arrow["{s_{2,3}}", color={rgb,255:red,255;green,51;blue,88}, curve={height=6pt}, Rightarrow, from=2-1, to=4-2]
+\arrow[draw={rgb,255:red,92;green,214;blue,92}, from=2-3, to=1-2]
+\arrow[draw={rgb,255:red,51;green,65;blue,255}, Rightarrow, from=2-3, to=2-1]
+\arrow[draw={rgb,255:red,92;green,214;blue,92}, from=2-3, to=2-4]
+\arrow[draw={rgb,255:red,92;green,214;blue,92}, from=2-3, to=3-5]
+\arrow[draw={rgb,255:red,51;green,65;blue,255}, Rightarrow, from=2-3, to=4-4]
+\arrow[draw={rgb,255:red,176;green,176;blue,176}, Rightarrow, from=2-4, to=1-2]
+\arrow[draw={rgb,255:red,176;green,176;blue,176}, Rightarrow, from=2-4, to=3-5]
+\arrow["{\eta_2}", color={rgb,255:red,176;green,176;blue,176}, from=3-3, to=2-4]
+\arrow["{s_2}", Rightarrow, from=3-3, to=4-2]
+\arrow[Rightarrow, from=4-4, to=3-3]
+\arrow["{\eta_{1,2}}", color={rgb,255:red,235;green,173;blue,173}, from=4-4, to=3-5]
+\arrow["{s_{1,2}}"', color={rgb,255:red,255;green,51;blue,88}, curve={height=-6pt}, Rightarrow, from=4-4, to=4-2]
+\end{tikzcd}
+\end{document}

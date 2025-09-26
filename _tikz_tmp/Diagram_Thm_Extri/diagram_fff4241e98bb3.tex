@@ -1,0 +1,27 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTMsWzEsMSwiTSJdLFsxLDIsIkJfMiJdLFszLDEsIlxcLCJdLFsyLDIsIkMiXSxbMCwyLCJBXzIiXSxbMywyLCJcXCwiXSxbMiwxLCJDIl0sWzAsMSwiQV8xXFxvcGx1cyBBXzIiXSxbMSwwLCJBXzEiXSxbMCwwLCJBXzEiXSxbMSwzLCJcXCwiXSxbMCwzLCJcXCwiXSxbNCwyLCJcXCwiXSxbMCwxLCJcXGxhbWJkYV8yIl0sWzQsMSwieF8yIl0sWzEsMywieV8yIl0sWzMsNSwiXFxkZWx0YV8yIl0sWzYsMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCw2LCJ5XzEgXFxsYW1iZGFfMSJdLFs3LDAsIihzLG1fMikiXSxbNiwyLCJcXGthcHBhIl0sWzcsNCwiKGwsMSkiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOCwwLCJtXzEiXSxbOSw4LCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcYmlub20gMXstbH0iLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMSwxMCwiXFx2YXJlcHNpbG9uICJdLFs0LDExLCIwIl1d
+\begin{tikzcd}
+{A_1} & {A_1} \\
+{A_1\oplus A_2} & M & C & {\,} \\
+{A_2} & {B_2} & C & {\,} & {\,} \\
+{\,} & {\,}
+\arrow[equals, from=1-1, to=1-2]
+\arrow["{\binom 1{-l}}", dashed, from=1-1, to=2-1]
+\arrow["{m_1}", from=1-2, to=2-2]
+\arrow["{(s,m_2)}", from=2-1, to=2-2]
+\arrow["{(l,1)}", dashed, from=2-1, to=3-1]
+\arrow["{y_1 \lambda_1}", from=2-2, to=2-3]
+\arrow["{\lambda_2}", from=2-2, to=3-2]
+\arrow["\kappa", from=2-3, to=2-4]
+\arrow[equals, from=2-3, to=3-3]
+\arrow["{x_2}", from=3-1, to=3-2]
+\arrow["0", from=3-1, to=4-1]
+\arrow["{y_2}", from=3-2, to=3-3]
+\arrow["{\varepsilon }", from=3-2, to=4-2]
+\arrow["{\delta_2}", from=3-3, to=3-4]
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOSxbMSwwLCJLIFxcb3RpbWVzIFxccHJvZCBOX1xcYnVsbGV0ICJdLFsyLDAsIk0gXFxvdGltZXMgXFxwcm9kIE5fXFxidWxsZXQgIl0sWzEsMSwiXFxwcm9kIChLIFxcb3RpbWVzIE5fXFxidWxsZXQgKSJdLFsyLDEsIlxccHJvZCAoTSBcXG90aW1lcyBOX1xcYnVsbGV0ICkiXSxbMCwxLCIwIl0sWzMsMCwiQyBcXG90aW1lcyBcXHByb2QgTl9cXGJ1bGxldCAiXSxbMCwwLCIwIl0sWzMsMSwiXFxwcm9kIChDIFxcb3RpbWVzIE5fXFxidWxsZXQgKSJdLFs0LDAsIjAiXSxbMiwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDUsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV0sWzQsMl0sWzYsMF0sWzMsNywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsOF0sWzAsMiwiXFxhbHBoYSAiXSxbMSwzLCJcXGJldGEiXSxbNSw3LCJcXGdhbW1hIl1d
+\begin{tikzcd}
+	0 & {K \otimes \prod N_\bullet } & {M \otimes \prod N_\bullet } & {C \otimes \prod N_\bullet } & 0 \\
+	0 & {\prod (K \otimes N_\bullet )} & {\prod (M \otimes N_\bullet )} & {\prod (C \otimes N_\bullet )}
+	\arrow[from=1-1, to=1-2]
+	\arrow[hook, from=1-2, to=1-3]
+	\arrow["{\alpha }", from=1-2, to=2-2]
+	\arrow[two heads, from=1-3, to=1-4]
+	\arrow["\beta", from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow["\gamma", from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[hook, from=2-2, to=2-3]
+	\arrow[two heads, from=2-3, to=2-4]
+\end{tikzcd}
+\end{document}

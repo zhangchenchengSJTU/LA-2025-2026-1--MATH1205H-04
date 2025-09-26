@@ -1,0 +1,25 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMCwiWCJdLFsyLDAsIlkiXSxbNCwwLCJaIl0sWzUsMCwiXFwsIl0sWzQsMSwiQyJdLFswLDEsIlgiXSxbMiwxLCJCIl0sWzUsMSwiXFwsIl0sWzAsMiwiWSJdLFsyLDIsIkIgXFxvcGx1cyBaIl0sWzQsMiwiQyJdLFs1LDIsIlxcLCJdLFswLDEsImEiXSxbMSwyLCJiIl0sWzIsMywiXFxtdV5cXGFzdCBcXGRlbHRhIl0sWzUsNiwieCJdLFs2LDQsInkiXSxbMSw2LCJ1IiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzQsNywiXFxkZWx0YSJdLFs5LDEwLCIoeSBcXCBcXG11KSJdLFsxMCwxMSwiYV9cXGFzdCBcXGRlbHRhIl0sWzAsNSwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw0LCJcXG11Il0sWzgsOSwiXFxiaW5vbSB1IHstYn0iXV0=
+\begin{tikzcd}
+	X && Y && Z & {\,} \\
+	X && B && C & {\,} \\
+	Y && {B \oplus Z} && C & {\,}
+	\arrow["a", from=1-1, to=1-3]
+	\arrow[equals, from=1-1, to=2-1]
+	\arrow["b", from=1-3, to=1-5]
+	\arrow["u", dashed, from=1-3, to=2-3]
+	\arrow["{\mu^\ast \delta}", from=1-5, to=1-6]
+	\arrow["\mu", from=1-5, to=2-5]
+	\arrow["x", from=2-1, to=2-3]
+	\arrow["y", from=2-3, to=2-5]
+	\arrow["\delta", from=2-5, to=2-6]
+	\arrow["{\binom u {-b}}", from=3-1, to=3-3]
+	\arrow["{(y \ \mu)}", from=3-3, to=3-5]
+	\arrow["{a_\ast \delta}", from=3-5, to=3-6]
+\end{tikzcd}
+\end{document}

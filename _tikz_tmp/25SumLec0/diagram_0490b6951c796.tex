@@ -1,0 +1,18 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJNXm4gXFxvcGx1cyBNXntuLTF9Il0sWzIsMCwiTV57bisxfSBcXG9wbHVzIE1ee259Il0sWzQsMCwiTV57bisyfSBcXG9wbHVzIE1ee24rMX0iXSxbMCwxLCJDXm4iXSxbMiwxLCJDXntuKzF9Il0sWzQsMSwiQ157bisyfSJdLFswLDEsIlxcYmlub20gezAgXFwgMH17MSBcXCAwfSJdLFsxLDIsIlxcYmlub20gezAgXFwgMH17MSBcXCAwfSJdLFszLDQsImRfQ15uIiwyXSxbNCw1LCJkX0Nee24rMX0iLDJdLFswLDMsIihmX24sIGRfQ157bi0xfVxcY2lyYyBmX3tuLTF9KSIsMl0sWzEsNCwiKGZfe24rMX0sIGRfQ157bn1cXGNpcmMgZl97bn0pIiwyXSxbMiw1LCIoZl97bisyfSwgZF9DXntuKzF9XFxjaXJjIGZfe24rMX0pIiwyXV0=
+\begin{tikzcd}[ampersand replacement=\&]
+	{M^n \oplus M^{n-1}} \&\& {M^{n+1} \oplus M^{n}} \&\& {M^{n+2} \oplus M^{n+1}} \\
+	{C^n} \&\& {C^{n+1}} \&\& {C^{n+2}}
+	\arrow["{\binom {0 \ 0}{1 \ 0}}", from=1-1, to=1-3]
+	\arrow["{(f_n, d_C^{n-1}\circ f_{n-1})}"', from=1-1, to=2-1]
+	\arrow["{\binom {0 \ 0}{1 \ 0}}", from=1-3, to=1-5]
+	\arrow["{(f_{n+1}, d_C^{n}\circ f_{n})}"', from=1-3, to=2-3]
+	\arrow["{(f_{n+2}, d_C^{n+1}\circ f_{n+1})}"', from=1-5, to=2-5]
+	\arrow["{d_C^n}"', from=2-1, to=2-3]
+	\arrow["{d_C^{n+1}}"', from=2-3, to=2-5]
+\end{tikzcd}
+\end{document}

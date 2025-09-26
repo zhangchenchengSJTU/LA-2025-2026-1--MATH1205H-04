@@ -1,0 +1,68 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMzMsWzYsNCwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDAgXFxcXCAxfSJdLFs2LDYsIlxcY29sb3J7Y3lhbn1cXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAwIFxcXFwgMH0iXSxbNCw0LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezEgXFxcXCAwIFxccXVhZCAxIFxcXFwgMH19Il0sWzUsNSwiXFxjb2xvcntjeWFufVxcc3Vic3RhY2t7MSBcXFxcIDAgXFxxdWFkIDEgXFxcXCAxfSJdLFsyLDUsIlxcY29sb3J7Y3lhbn1cXGJveGVke1xcc3Vic3RhY2t7MCBcXFxcIDAgXFxxdWFkIDEgXFxcXCAwfX0iXSxbNCw2LCJcXGNvbG9ye2N5YW59XFxib3hlZHtcXHN1YnN0YWNrezAgXFxcXCAwIFxccXVhZCAxIFxcXFwgMX19Il0sWzYsNSwiXFxjb2xvcntjeWFufVxcYm94ZWR7XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMSBcXFxcIDF9fSJdLFs3LDUsIlxcY29sb3J7b2xpdmV9XFxzdWJzdGFja3sxIFxcXFwgMSBcXHF1YWQgMCBcXFxcIDF9Il0sWzgsNCwiXFxjb2xvcntvbGl2ZX1cXHN1YnN0YWNrezEgXFxcXCAxIFxccXVhZCAwIFxcXFwgMH0iXSxbOCw2LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAxfSJdLFsxMCw1LCJcXGNvbG9ye29saXZlfVxcc3Vic3RhY2t7MCBcXFxcIDEgXFxxdWFkIDAgXFxcXCAwfSJdLFs1LDAsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezBcXFxcMCBcXCAwIFxcIDF9Il0sWzUsMiwiXFxjb2xvcntibHVlfVxcc3Vic3RhY2t7MVxcXFwwIFxcIDAgXFwgMH0iXSxbNSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAwIFxcIDB9fSJdLFs0LDEsIlxcY29sb3J7Ymx1ZX1cXHN1YnN0YWNrezFcXFxcMSBcXCAxIFxcIDF9Il0sWzMsMCwiXFxjb2xvcntibHVlfVxcYm94ZWR7XFxzdWJzdGFja3sxXFxcXDEgXFwgMSBcXCAwfX0iXSxbMywyLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDF9fSJdLFszLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFsyLDEsIlxcc3Vic3RhY2t7MVxcXFwxIFxcIDIgXFwgMX0iXSxbMSwwLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MFxcXFwwIFxcIDEgXFwgMX0iXSxbMSwyLCJcXGNvbG9ye0dyZWVufVxcc3Vic3RhY2t7MVxcXFwwIFxcIDEgXFwgMH0iXSxbMSwxLCJcXGNvbG9ye2JsdWV9XFxib3hlZHtcXHN1YnN0YWNrezBcXFxcMSBcXCAxIFxcIDB9fSJdLFswLDEsIlxcY29sb3J7R3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs2LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDIsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAwfSJdLFs3LDAsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3swXFxcXDAgXFwgMSBcXCAxfSJdLFs3LDEsIlxcY29sb3J7WWVsbG93fVxcYm94ZWR7XFxzdWJzdGFja3swXFxcXDEgXFwgMSBcXCAwfX0iXSxbOCwxLCJcXGNvbG9ye0dyYXl9XFxzdWJzdGFja3sxXFxcXDEgXFwgMiBcXCAxfSJdLFs5LDEsIlxcY29sb3J7U3ByaW5nR3JlZW59XFxzdWJzdGFja3sxXFxcXDAgXFwgMSBcXCAxfSJdLFs0LDUsIjAiXSxbMiw0LCIwIl0sWzIsNiwiMCJdLFsxLDUsIjAiXSxbNCw1XSxbNSwzXSxbNCwyXSxbMiwzXSxbMywwXSxbMywxXSxbMSw3XSxbMCw3XSxbNyw5XSxbNyw4XSxbMyw2XSxbNiw3XSxbOSwxMF0sWzgsMTBdLFsyMiwxOV0sWzE5LDE4XSxbMTgsMTddLFsxNywxNF0sWzE0LDExXSxbMjIsMjFdLFsyMSwxOF0sWzE4LDE1XSxbMTUsMTRdLFsyMiwyMF0sWzE4LDE2XSxbMTYsMTRdLFsxNCwxMl0sWzE0LDEzXSxbMTUsMiwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE2LDUsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxNCwzLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMTIsMSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIxLDQsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMyw2LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjAsMThdLFsyMywyNSwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzI1LDI3LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjMsMjQsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNCwyNywiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDI2LCIiLDEseyJjb2xvdXIiOlswLDAsNzVdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbMjYsMjcsIiIsMSx7ImNvbG91ciI6WzAsMCw3NV0sInN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsyNywyOCwiIiwxLHsiY29sb3VyIjpbMCwwLDc1XSwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIzLDcsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsyNSw4LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjQsOSwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzE3LDI5LCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjIsMzIsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxOSwzMCwiIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZG90dGVkIn19fV0sWzIwLDMxLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XSxbMjgsMTAsIiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRvdHRlZCJ9fX1dLFsxMSwwLCIiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19XV0=
+\begin{tikzcd}
+	& \begin{array}{c} \color{green}\substack{0\\0 \ 1 \ 1} \end{array} && \begin{array}{c} \color{blue}\boxed{\substack{1\\1 \ 1 \ 0} } \end{array} && \begin{array}{c} \color{blue}\substack{0\\0 \ 0 \ 1} \end{array} && \begin{array}{c} \color{SpringGreen}\substack{0\\0 \ 1 \ 1} \end{array} \\
+	\begin{array}{c} \color{green}\substack{0\\0 \ 1 \ 0} \end{array} & \begin{array}{c} \color{blue}\boxed{\substack{0\\1 \ 1 \ 0} } \end{array} & \begin{array}{c} \substack{1\\1 \ 2 \ 1} \end{array} & \begin{array}{c} \color{green}\substack{1\\0 \ 1 \ 1} \end{array} & \begin{array}{c} \color{blue}\substack{1\\1 \ 1 \ 1} \end{array} & \begin{array}{c} \color{blue}\boxed{\substack{0\\1 \ 0 \ 0} } \end{array} & \begin{array}{c} \color{SpringGreen}\substack{0\\0 \ 1 \ 0} \end{array} & \begin{array}{c} \color{Yellow}\boxed{\substack{0\\1 \ 1 \ 0} } \end{array} & \begin{array}{c} \color{Gray}\substack{1\\1 \ 2 \ 1} \end{array} & \begin{array}{c} \color{SpringGreen}\substack{1\\0 \ 1 \ 1} \end{array} \\
+	& \begin{array}{c} \color{green}\substack{1\\0 \ 1 \ 0} \end{array} && \begin{array}{c} \color{blue}\boxed{\substack{0\\1 \ 1 \ 1} } \end{array} && \begin{array}{c} \color{blue}\substack{1\\0 \ 0 \ 0} \end{array} && \begin{array}{c} \color{SpringGreen}\substack{1\\0 \ 1 \ 0} \end{array} \\
+	\\
+	&& 0 && \begin{array}{c} \color{cyan}\boxed{\substack{1 \\ 0 \quad 1 \\ 0} } \end{array} && \begin{array}{c} \color{cyan}\substack{0 \\ 0 \quad 0 \\ 1} \end{array} && \begin{array}{c} \color{olive}\substack{1 \\ 1 \quad 0 \\ 0} \end{array} \\
+	& 0 & \begin{array}{c} \color{cyan}\boxed{\substack{0 \\ 0 \quad 1 \\ 0} } \end{array} && 0 & \begin{array}{c} \color{cyan}\substack{1 \\ 0 \quad 1 \\ 1} \end{array} & \begin{array}{c} \color{cyan}\boxed{\substack{1 \\ 1 \quad 1 \\ 1} } \end{array} & \begin{array}{c} \color{olive}\substack{1 \\ 1 \quad 0 \\ 1} \end{array} &&& \begin{array}{c} \color{olive}\substack{0 \\ 1 \quad 0 \\ 0} \end{array} \\
+	&& 0 && \begin{array}{c} \color{cyan}\boxed{\substack{0 \\ 0 \quad 1 \\ 1} } \end{array} && \begin{array}{c} \color{cyan}\substack{1 \\ 0 \quad 0 \\ 0} \end{array} && \begin{array}{c} \color{olive}\substack{0 \\ 1 \quad 0 \\ 1} \end{array}
+	\arrow[from=1-2, to=2-3]
+	\arrow[dotted, from=1-2, to=5-3]
+	\arrow[from=1-4, to=2-5]
+	\arrow[dotted, from=1-4, to=5-5]
+	\arrow[dotted, from=1-6, to=5-7]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=1-8, to=2-9]
+	\arrow[dotted, from=1-8, to=5-9]
+	\arrow[from=2-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-2]
+	\arrow[dotted, from=2-1, to=6-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[dotted, from=2-2, to=6-3]
+	\arrow[from=2-3, to=1-4]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow[dotted, from=2-4, to=6-5]
+	\arrow[from=2-5, to=1-6]
+	\arrow[from=2-5, to=2-6]
+	\arrow[from=2-5, to=3-6]
+	\arrow[dotted, from=2-5, to=6-6]
+	\arrow[dotted, from=2-6, to=6-7]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=2-7, to=1-8]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=2-7, to=2-8]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=2-7, to=3-8]
+	\arrow[dotted, from=2-7, to=6-8]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=2-8, to=2-9]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=2-9, to=2-10]
+	\arrow[dotted, from=2-10, to=6-11]
+	\arrow[from=3-2, to=2-3]
+	\arrow[dotted, from=3-2, to=7-3]
+	\arrow[from=3-4, to=2-5]
+	\arrow[dotted, from=3-4, to=7-5]
+	\arrow[dotted, from=3-6, to=7-7]
+	\arrow[draw={rgb,255:red,191;green,191;blue,191}, dashed, from=3-8, to=2-9]
+	\arrow[dotted, from=3-8, to=7-9]
+	\arrow[from=5-5, to=6-6]
+	\arrow[from=5-7, to=6-8]
+	\arrow[from=5-9, to=6-11]
+	\arrow[from=6-3, to=5-5]
+	\arrow[from=6-3, to=7-5]
+	\arrow[from=6-6, to=5-7]
+	\arrow[from=6-6, to=6-7]
+	\arrow[from=6-6, to=7-7]
+	\arrow[from=6-7, to=6-8]
+	\arrow[from=6-8, to=5-9]
+	\arrow[from=6-8, to=7-9]
+	\arrow[from=7-5, to=6-6]
+	\arrow[from=7-7, to=6-8]
+	\arrow[from=7-9, to=6-11]
+\end{tikzcd}
+\end{document}

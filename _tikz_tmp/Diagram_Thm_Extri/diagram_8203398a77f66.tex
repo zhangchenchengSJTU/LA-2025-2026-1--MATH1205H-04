@@ -1,0 +1,28 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTAsWzAsMCwiKEEsWCkiXSxbMSwwLCIoQSxaKSJdLFswLDIsIlxcbWF0aGJiIEUoQyxYKSJdLFsxLDIsIlxcbWF0aGJiIEUoQyxZKSJdLFszLDAsIlxcbWF0aGJiIEUoQSxLKSJdLFszLDIsIlxcZnJhY3tcXG1hdGhiYiBFKEMsWSl9e1xcbWF0aGJiIEUoQyxYKX0gXFxzcWN1cF97XFxvcGVyYXRvcm5hbWUge2ltfVxcdmFyZXBzaWxvbiBfIX0gXFxtYXRoYmIgRShBLEspIl0sWzQsMCwiXFxidWxsZXQiXSxbNCwyLCJcXGJ1bGxldCJdLFsyLDMsIlxcZnJhY3tcXG1hdGhiYiBFKEMsWSl9e1xcbWF0aGJiIEUoQyxYKX0iXSxbMiwxLCJcXG9wZXJhdG9ybmFtZSB7aW19XFx2YXJlcHNpbG9uIF8hIl0sWzIsMywiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMCwxLCJwX1xcYXN0ICJdLFsxLDQsIlxcdmFyZXBzaWxvbiBfISJdLFszLDVdLFs0LDVdLFswLDIsIlxcZGVsdGEgXiEiXSxbMSwzLCJcXGRlbHRhIF4hIl0sWzQsNiwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzUsNywiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzYsN10sWzEsOSwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoiZXBpIn19fV0sWzksNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMyw4LCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbOSw4LCIiLDAseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XSxbOCw1LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+{(A,X)} \& {(A,Z)} \&\& {\mathbb E(A,K)} \& \bullet \\
+\&\& {\operatorname {im}\varepsilon _!} \\
+{\mathbb E(C,X)} \& {\mathbb E(C,Y)} \&\& {\frac{\mathbb E(C,Y)}{\mathbb E(C,X)} \sqcup_{\operatorname {im}\varepsilon _!} \mathbb E(A,K)} \& \bullet \\
+\&\& {\frac{\mathbb E(C,Y)}{\mathbb E(C,X)}}
+\arrow["{p_\ast }", from=1-1, to=1-2]
+\arrow["{\delta ^!}", from=1-1, to=3-1]
+\arrow["{\varepsilon _!}", from=1-2, to=1-4]
+\arrow[two heads, from=1-2, to=2-3]
+\arrow["{\delta ^!}", from=1-2, to=3-2]
+\arrow[two heads, from=1-4, to=1-5]
+\arrow[from=1-4, to=3-4]
+\arrow[from=1-5, to=3-5]
+\arrow[hook, from=2-3, to=1-4]
+\arrow[dashed, from=2-3, to=4-3]
+\arrow[hook, from=3-1, to=3-2]
+\arrow[from=3-2, to=3-4]
+\arrow[two heads, from=3-2, to=4-3]
+\arrow[two heads, from=3-4, to=3-5]
+\arrow[hook, from=4-3, to=3-4]
+\end{tikzcd}
+\end{document}

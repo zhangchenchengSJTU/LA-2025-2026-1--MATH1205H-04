@@ -1,0 +1,20 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsOCxbMCwxLCJYIl0sWzIsMSwiWSJdLFs0LDEsIloiXSxbNSwxLCJcXCwiXSxbNCwwLCJDIl0sWzAsMCwiWCJdLFsyLDAsIlggXFxvcGx1cyBDIl0sWzUsMCwiXFwsIl0sWzIsMywiXFxldGEiXSxbMCwxLCJmIl0sWzEsMiwiZyJdLFs0LDIsInMiLDAseyJsZXZlbCI6Mn1dLFs0LDcsIjAiXSxbNSwwLCIiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDYsIlxcYmlub20gMTAiXSxbNiw0LCIoMCwxKSJdLFs2LDEsInEiLDAseyJsZXZlbCI6Miwic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d
+\begin{tikzcd}[ampersand replacement=\&]
+X \&\& {X \oplus C} \&\& C \& {\,} \\
+X \&\& Y \&\& Z \& {\,}
+\arrow["{\binom 10}", from=1-1, to=1-3]
+\arrow[equals, from=1-1, to=2-1]
+\arrow["{(0,1)}", from=1-3, to=1-5]
+\arrow["q", Rightarrow, dashed, from=1-3, to=2-3]
+\arrow["0", from=1-5, to=1-6]
+\arrow["s", Rightarrow, from=1-5, to=2-5]
+\arrow["f", from=2-1, to=2-3]
+\arrow["g", from=2-3, to=2-5]
+\arrow["\eta", from=2-5, to=2-6]
+\end{tikzcd}
+\end{document}

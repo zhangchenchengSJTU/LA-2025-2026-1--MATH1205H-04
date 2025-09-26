@@ -1,0 +1,36 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMjEsWzAsMSwiKFosWCcpIl0sWzEsMSwiKFosWScpIl0sWzIsMSwiKFosWicpIl0sWzMsMSwiXjEoWixYJykiXSxbMCwyLCIoWSxYJykiXSxbMSwyLCIoWSxZJykiXSxbMiwyLCIoWSxaJykiXSxbMywyLCJeMShZLFgnKSJdLFswLDMsIihYLFgnKSJdLFsxLDMsIihYLFknKSJdLFsyLDMsIihYLFonKSJdLFszLDMsIl4xKFgsWCcpIl0sWzAsNCwiXjEoWixYJykiXSxbMSw0LCJeMShaLFknKSJdLFsyLDQsIl4xKFosWicpIl0sWzIsMCwiXFxzd2Fycm93IDEiXSxbMSwwLCJcXHN3YXJyb3cgMCJdLFszLDAsIlxcc3dhcnJvdyAyIl0sWzQsMCwiXFxzd2Fycm93IDMiXSxbNCwxLCJcXHN3YXJyb3cgNCJdLFs0LDIsIlxcc3dhcnJvdyA1Il0sWzAsMV0sWzEsMl0sWzIsM10sWzAsNF0sWzQsOF0sWzgsMTJdLFsxMiwxM10sWzEzLDE0XSxbNCw1XSxbNSw2XSxbNiw3XSxbMSw1XSxbNSw5XSxbOSwxM10sWzgsOV0sWzksMTBdLFsxMCwxMV0sWzIsNl0sWzYsMTBdLFsxMCwxNF0sWzMsN10sWzcsMTFdXQ==
+\begin{tikzcd}[ampersand replacement=\&]
+\& {\swarrow 0} \& {\swarrow 1} \& {\swarrow 2} \& {\swarrow 3} \\
+{(Z,X')} \& {(Z,Y')} \& {(Z,Z')} \& {^1(Z,X')} \& {\swarrow 4} \\
+{(Y,X')} \& {(Y,Y')} \& {(Y,Z')} \& {^1(Y,X')} \& {\swarrow 5} \\
+{(X,X')} \& {(X,Y')} \& {(X,Z')} \& {^1(X,X')} \\
+{^1(Z,X')} \& {^1(Z,Y')} \& {^1(Z,Z')}
+\arrow[from=2-1, to=2-2]
+\arrow[from=2-1, to=3-1]
+\arrow[from=2-2, to=2-3]
+\arrow[from=2-2, to=3-2]
+\arrow[from=2-3, to=2-4]
+\arrow[from=2-3, to=3-3]
+\arrow[from=2-4, to=3-4]
+\arrow[from=3-1, to=3-2]
+\arrow[from=3-1, to=4-1]
+\arrow[from=3-2, to=3-3]
+\arrow[from=3-2, to=4-2]
+\arrow[from=3-3, to=3-4]
+\arrow[from=3-3, to=4-3]
+\arrow[from=3-4, to=4-4]
+\arrow[from=4-1, to=4-2]
+\arrow[from=4-1, to=5-1]
+\arrow[from=4-2, to=4-3]
+\arrow[from=4-2, to=5-2]
+\arrow[from=4-3, to=4-4]
+\arrow[from=4-3, to=5-3]
+\arrow[from=5-1, to=5-2]
+\arrow[from=5-2, to=5-3]
+\end{tikzcd}
+\end{document}

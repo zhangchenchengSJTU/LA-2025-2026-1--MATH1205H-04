@@ -1,0 +1,32 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzIsMSwiTSJdLFsyLDAsIkJfMSJdLFs1LDAsIlxcLCJdLFs0LDAsIkNfMSJdLFs1LDEsIlxcLCJdLFswLDQsIkEiXSxbMiw0LCJCXzEgXFxvcGx1cyBCXzIiXSxbNCw0LCJNIl0sWzUsNCwiXFwsIl0sWzAsMCwiQSJdLFswLDEsIkJfMiJdLFswLDIsIkNfMiJdLFswLDMsIlxcLCJdLFsyLDIsIkNfMiJdLFs0LDEsIkNfMSJdLFsyLDMsIlxcLCJdLFsxLDAsIm1fMiJdLFsxLDMsInlfMSJdLFszLDIsIlxcZGVsdGFfMSIsMCx7ImNvbG91ciI6WzIzMywxMDAsNjBdfSxbMjMzLDEwMCw2MCwxXV0sWzUsNiwiXFxiaW5vbSB7eF8xfXt4XzJ9Il0sWzYsNywiKG1fMiBcXCAtbV8xKSJdLFs3LDgsIihcXG11XzEpXlxcYXN0IFxcZGVsdGEgXzEiXSxbOSwxLCJ4XzEiXSxbOSwxMCwieF8yIl0sWzEwLDExLCJ5XzIiXSxbMTEsMTIsIlxcZGVsdGFfMiJdLFsxMCwwLCJtXzEiLDAseyJjb2xvdXIiOlszNTgsMTAwLDYwXX0sWzM1OCwxMDAsNjAsMV1dLFsxMSwxMywiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMywxNCwiIiwwLHsibGV2ZWwiOjIsInN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxMywiXFxtdV8yIl0sWzAsMTQsIlxcbXVfMSIsMCx7ImNvbG91ciI6WzIzMywxMDAsNjBdfSxbMjMzLDEwMCw2MCwxXV0sWzE0LDQsIih4XzIpX1xcYXN0IFxcZGVsdGFfMSJdLFsxMywxNSwiKHhfMSlfXFxhc3QgXFxkZWx0YV8yIl1d
+\begin{tikzcd}
+	A && {B_1} && {C_1} & {\,} \\
+	{B_2} && M && {C_1} & {\,} \\
+	{C_2} && {C_2} \\
+	{\,} && {\,} \\
+	A && {B_1 \oplus B_2} && M & {\,}
+	\arrow["{x_1}", from=1-1, to=1-3]
+	\arrow["{x_2}", from=1-1, to=2-1]
+	\arrow["{y_1}", from=1-3, to=1-5]
+	\arrow["{m_2}", from=1-3, to=2-3]
+	\arrow["{\delta_1}", color={rgb,255:red,51;green,75;blue,255}, from=1-5, to=1-6]
+	\arrow[equals, from=1-5, to=2-5]
+	\arrow["{m_1}", color={rgb,255:red,255;green,51;blue,58}, from=2-1, to=2-3]
+	\arrow["{y_2}", from=2-1, to=3-1]
+	\arrow["{\mu_1}", color={rgb,255:red,51;green,75;blue,255}, from=2-3, to=2-5]
+	\arrow["{\mu_2}", from=2-3, to=3-3]
+	\arrow["{(x_2)_\ast \delta_1}", from=2-5, to=2-6]
+	\arrow[equals, from=3-1, to=3-3]
+	\arrow["{\delta_2}", from=3-1, to=4-1]
+	\arrow["{(x_1)_\ast \delta_2}", from=3-3, to=4-3]
+	\arrow["{\binom {x_1}{x_2}}", from=5-1, to=5-3]
+	\arrow["{(m_2 \ -m_1)}", from=5-3, to=5-5]
+	\arrow["{(\mu_1)^\ast \delta _1}", from=5-5, to=5-6]
+\end{tikzcd}
+\end{document}

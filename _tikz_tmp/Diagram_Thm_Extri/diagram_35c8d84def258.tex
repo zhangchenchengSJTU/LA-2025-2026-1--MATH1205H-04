@@ -1,0 +1,28 @@
+\documentclass[preview]{standalone}
+\usepackage{amsthm, amsfonts, amsmath, amssymb, mathrsfs, tikz-cd, tikz, ctex, mathtools}
+\usepackage{quiver}
+\begin{document}
+
+% https://q.uiver.app/#q=WzAsMTYsWzEsMCwiQV8xIl0sWzIsMCwiQl8xIl0sWzMsMCwiQ18xIl0sWzQsMCwiXFwsIl0sWzQsMSwiXFwsIl0sWzQsMiwiXFwsIl0sWzMsMywiXFwsIl0sWzIsMywiXFwsIl0sWzEsMiwiQV8zIl0sWzEsMSwiQV8yIl0sWzIsMSwiQl8yIl0sWzMsMSwiQ18yIl0sWzMsMiwiQ18zIl0sWzIsMiwiQl8zIl0sWzAsMSwiXFwsIl0sWzUsMSwiXFwsIl0sWzEsMiwicF8xIl0sWzIsMywiXFxkZWx0YSBfMSJdLFs5LDEwLCJpXzIiXSxbMTAsMTEsInBfMiJdLFsxMSw0LCJcXGRlbHRhXzIiXSxbOCwxMywiaV8zIl0sWzEzLDEyLCJwXzMiXSxbMTIsNSwiXFxkZWx0YSBfMyJdLFswLDEsImlfMSJdLFsxLDEwLCJmX0IiXSxbMTAsMTMsImdfQiJdLFsyLDExLCJmX0MiXSxbMTEsMTIsImdfQyJdLFsxMyw3LCJcXHZhcmVwc2lsb24gX0IiXSxbMTIsNiwiXFx2YXJlcHNpbG9uIF9DIl1d
+\begin{tikzcd}[ampersand replacement=\&]
+\& {A_1} \& {B_1} \& {C_1} \& {\,} \\
+{\,} \& {A_2} \& {B_2} \& {C_2} \& {\,} \& {\,} \\
+\& {A_3} \& {B_3} \& {C_3} \& {\,} \\
+\&\& {\,} \& {\,}
+\arrow["{i_1}", from=1-2, to=1-3]
+\arrow["{p_1}", from=1-3, to=1-4]
+\arrow["{f_B}", from=1-3, to=2-3]
+\arrow["{\delta _1}", from=1-4, to=1-5]
+\arrow["{f_C}", from=1-4, to=2-4]
+\arrow["{i_2}", from=2-2, to=2-3]
+\arrow["{p_2}", from=2-3, to=2-4]
+\arrow["{g_B}", from=2-3, to=3-3]
+\arrow["{\delta_2}", from=2-4, to=2-5]
+\arrow["{g_C}", from=2-4, to=3-4]
+\arrow["{i_3}", from=3-2, to=3-3]
+\arrow["{p_3}", from=3-3, to=3-4]
+\arrow["{\varepsilon _B}", from=3-3, to=4-3]
+\arrow["{\delta _3}", from=3-4, to=3-5]
+\arrow["{\varepsilon _C}", from=3-4, to=4-4]
+\end{tikzcd}
+\end{document}
