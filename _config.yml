@@ -1,2 +1,2 @@
 theme: minima   # or leave blank for default
-markdown: kramdown
+markdown: GFM
