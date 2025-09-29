@@ -27,11 +27,23 @@ layout: default
 <h2>作业解答 (最近三次)</h2>
 
 {% assign solution_posts = site.posts | where: "categories", "solution" %}
-{% for post in solution_posts limit:3 %}
-  <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
-  <p>
-    {{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}
-  </p>
+{% assign now_unix = site.time | date: "%s" | plus: 0 %}
+{% assign eight_days_seconds = 8 | times: 24 | times: 60 | times: 60 %}
+
+{% assign count = 0 %}
+{% for post in solution_posts %}
+  {% capture post_unix %}{{ post.date | date: "%s" | plus: 0 }}{% endcapture %}
+  {% assign diff = now_unix | minus: post_unix %}
+  {% if diff >= eight_days_seconds and diff %}
+    <h5><a href="{{ post.url | relative_url}}">{{ post.title }}</a></h5>
+    <p>
+      {{ post.date | date: "%Y-%m-%d" }} • {{ post.categories | join: ", " }}
+    </p>
+    {% assign count = count | plus: 1 %}
+    {% if count == 3 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
 <h2>Statistics</h2>

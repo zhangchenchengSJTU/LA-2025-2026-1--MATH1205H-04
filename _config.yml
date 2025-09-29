@@ -79,3 +79,5 @@ pdf2svg: "pdf2svg"
 
 after_build:
   - bash move_pdfs.bat
+
+future: true
