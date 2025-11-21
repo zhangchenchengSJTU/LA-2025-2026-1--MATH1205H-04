@@ -4,5 +4,7 @@
     "languages": [{
   "id": "Jekyllmd",
   "configuration": "./Jekyllmd-language-configuration.json"
-}]
+}
+],
+"markdown.validate.enabled": false
 }
