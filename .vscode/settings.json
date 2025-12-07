@@ -6,5 +6,5 @@
   "configuration": "./Jekyllmd-language-configuration.json"
 }
 ],
-"markdown.validate.enabled": false
+"markdown.validate.enabled": true
 }
